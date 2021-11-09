@@ -1,0 +1,274 @@
+﻿# Kodi Media Center language file
+# Addon Name: KiKA plus
+# Addon id: plugin.video.kika_de
+# Addon Provider: realvito
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: 2021-01-30 17:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: realvito\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#strings start
+# SETTINGS-CATEGORIES
+
+msgctxt "#30000"
+msgid "Choice"
+msgstr "Auswahl"
+
+msgctxt "#30001"
+msgid "General"
+msgstr "Allgemein"
+
+msgctxt "#30002"
+msgid "Advanced"
+msgstr "Fortgeschritten"
+
+msgctxt "#30003"
+msgid "View"
+msgstr "Ansicht"
+
+# empty strings from id 30004 to 30109
+# SETTINGS-BUTTONS
+
+msgctxt "#30110"
+msgid "     Show RUBRIK: New Videos"
+msgstr "     Zeige RUBRIK: Neue Videos"
+
+msgctxt "#30111"
+msgid "     Show RUBRIK: Mostviewed Videos"
+msgstr "     Zeige RUBRIK: Meistgesehene Videos"
+
+msgctxt "#30112"
+msgid "     Show RUBRIK: KiKANiNCHEN"
+msgstr "     Zeige RUBRIK: KiKANiNCHEN"
+
+msgctxt "#30113"
+msgid "     Show RUBRIK: Sesamstrasse"
+msgstr "     Zeige RUBRIK: Sesamstrasse"
+
+msgctxt "#30114"
+msgid "     Show RUBRIK: Videos from 3 years"
+msgstr "     Zeige RUBRIK: Videos ab 3 Jahren"
+
+msgctxt "#30115"
+msgid "     Show RUBRIK: Videos from 6 years"
+msgstr "     Zeige RUBRIK: Videos ab 6 Jahren"
+
+msgctxt "#30116"
+msgid "     Show RUBRIK: Videos from 10 years"
+msgstr "     Zeige RUBRIK: Videos ab 10 Jahren"
+
+msgctxt "#30117"
+msgid "     Show RUBRIK: All Videos"
+msgstr "     Zeige RUBRIK: Alle Videos"
+
+# empty strings from id 30118 to 30129
+
+msgctxt "#30130"
+msgid "     Play Videos with [COLOR yellow]*Inputstream.Adaptive*[/COLOR] (since KODI-17+ possible)"
+msgstr "     Videos mit [COLOR yellow]*Inputstream.Adaptive*[/COLOR] abspielen (ab KODI-17+ möglich)"
+
+msgctxt "#30131"
+msgid "     Preferred video file format [COLOR yellow](m3u8|mp4)[/COLOR]"
+msgstr "     Bevorzugtes Video-Dateiformat [COLOR yellow](m3u8|mp4)[/COLOR]"
+
+msgctxt "#30132"
+msgid "     Preferred Video-Resolution [COLOR yellow](without Inputstream)[/COLOR]"
+msgstr "     Bevorzugte Video-Auflösung [COLOR yellow](ohne Inputstream)[/COLOR]"
+
+msgctxt "#30133"
+msgid "Automatic Selection  [COLOR yellow](Highest Display)[/COLOR]"
+msgstr "Automatische Auswahl  [COLOR yellow](höchste Auflösung)[/COLOR]"
+
+msgctxt "#30134"
+msgid "UHD/HD Quality  [COLOR yellow](w: 1920|1280)[/COLOR]"
+msgstr "UHD/HD Qualität  [COLOR yellow](w: 1920|1280)[/COLOR]"
+
+msgctxt "#30135"
+msgid "Good Quality  [COLOR yellow](w: 1024|960)[/COLOR]"
+msgstr "Gute Qualität  [COLOR yellow](w: 1024|960)[/COLOR]"
+
+msgctxt "#30136"
+msgid "Medium Quality  [COLOR yellow](w: 852|720)[/COLOR]"
+msgstr "Mittlere Qualität  [COLOR yellow](w: 852|720)[/COLOR]"
+
+msgctxt "#30137"
+msgid "Lowest Quality  [COLOR yellow](w: 640|512)[/COLOR]"
+msgstr "Niedrigste Qualität  [COLOR yellow](w: 640|512)[/COLOR]"
+
+msgctxt "#30138"
+msgid "     Max. listed pages of a Series [COLOR yellow](time consuming)[/COLOR]"
+msgstr "     Max. gelistete Seiten einer Serie [COLOR yellow](zeitaufwendig)[/COLOR]"
+
+msgctxt "#30139"
+msgid "     If avail. show broadcast date in title"
+msgstr "     Wenn vorh. Ausstrahlungsdatum im Titel anzeigen"
+
+msgctxt "#30140"
+msgid "     Hide Broadcasts that CANNOT be played [COLOR yellow](otherwise Marking)[/COLOR]."
+msgstr "     NICHT abspielbare Sendungen ausblenden [COLOR yellow](sonst Markierung)[/COLOR]"
+
+msgctxt "#30141"
+msgid "     Use Thumb as Background-Fanart"
+msgstr "     Thumb als Hintergrund-Fanart nutzen"
+
+# empty strings from id 30142 to 30149
+
+msgctxt "#30150"
+msgid "     Show Addon-Settings in the overview"
+msgstr "     Addon-Einstellungen in der Übersicht anzeigen"
+
+msgctxt "#30151"
+msgid "     Detailed Addon-Debug (otherwise only Minimal-Log)"
+msgstr "     Addon-Debug mit Details (sonst nur Minimal-Log)"
+
+# empty strings from id 30152 to 30159
+
+msgctxt "#30160"
+msgid "     Force View"
+msgstr "     Darstellungsansicht forcieren"
+
+msgctxt "#30161"
+msgid "     ViewID (Alphabet)"
+msgstr "     DarstellungsID (Alphabet)"
+
+msgctxt "#30162"
+msgid "     ViewID (Shows)"
+msgstr "     DarstellungsID (Sendungen)"
+
+msgctxt "#30163"
+msgid "     ViewID (Videos)"
+msgstr "     DarstellungsID (Videos)"
+
+# empty strings from id 30164 to 30229
+# SETTINGS-TITLES
+
+msgctxt "#30230"
+msgid "[B][COLOR ff0099ff]FOLDER[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]ORDNER[/COLOR][/B]"
+
+msgctxt "#30231"
+msgid "[B][COLOR ff0099ff]PLAYBACK/QUALITY[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]WIEDERGABE/QUALITÄT[/COLOR][/B]"
+
+msgctxt "#30232"
+msgid "[B][COLOR ff0099ff]EPISODES[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]EPISODEN[/COLOR][/B]"
+
+msgctxt "#30233"
+msgid "[B][COLOR ff0099ff]TITLE/DISPLAY[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]TITEL/ANZEIGE[/COLOR][/B]"
+
+msgctxt "#30234"
+msgid "[B][COLOR ff0099ff]FANART[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]FANART[/COLOR][/B]"
+
+msgctxt "#30235"
+msgid "[B][COLOR ff0099ff]SETTINGS[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]EINSTELLUNGEN[/COLOR][/B]"
+
+msgctxt "#30236"
+msgid "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+
+msgctxt "#30237"
+msgid "[B][COLOR ff0099ff]VIEWS[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]ANSICHT[/COLOR][/B]"
+
+# empty strings from id 30238 to 30349
+# SETTINGS-DESCRIPTIONS
+
+# empty strings from id 30350 to 30500
+# WARNING/INFORMATION-MESSAGES-OK
+
+msgctxt "#30501"
+msgid "[COLOR orangered]ATTENTION : ... the required addon *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* is NOT installed !!![/COLOR]"
+msgstr "[COLOR orangered]ACHTUNG : ... das benötigte Addon *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* ist NICHT installiert !!![/COLOR]"
+
+# empty strings from id 30502 to 30520
+# WARNING/INFORMATION-MESSAGES-NOTIFICATION
+
+msgctxt "#30521"
+msgid "KiKA plus : [COLOR red]!!! {0:s} - ERROR !!![/COLOR]"
+msgstr "KiKA plus : [COLOR red]!!! {0:s} - ERROR !!![/COLOR]"
+
+msgctxt "#30522"
+msgid "[COLOR red]An error has occured, please check *LOG* ![/COLOR]"
+msgstr "[COLOR red]Es ist ein Fehler aufgetreten, bitte *LOG* einsehen ![/COLOR]"
+
+msgctxt "#30523"
+msgid "ERROR = [COLOR red]The requested *VideoLink* does NOT exist ![/COLOR]"
+msgstr "ERROR = [COLOR red]Der angeforderte *VideoLink* existiert NICHT ![/COLOR]"
+
+msgctxt "#30524"
+msgid "ERROR = [COLOR red]Unfortunately no Live-Stream found ![/COLOR]"
+msgstr "ERROR = [COLOR red]Leider keinen Live-Stream gefunden ![/COLOR]"
+
+# empty strings from id 30525 to 30600
+# PLUGIN-MAIN and SIDEMENU
+
+msgctxt "#30601"
+msgid "New Videos"
+msgstr "Neue Videos"
+
+msgctxt "#30602"
+msgid "Mostviewed Videos"
+msgstr "Meistgesehene Videos"
+
+msgctxt "#30603"
+msgid "KiKANiNCHEN"
+msgstr "KiKANiNCHEN"
+
+msgctxt "#30604"
+msgid "Sesamstrasse"
+msgstr "Sesamstrasse"
+
+msgctxt "#30605"
+msgid "Videos from 3 years"
+msgstr "Videos ab 3 Jahren"
+
+msgctxt "#30606"
+msgid "Videos from 6 years"
+msgstr "Videos ab 6 Jahren"
+
+msgctxt "#30607"
+msgid "Videos from 10 years"
+msgstr "Videos ab 10 Jahren"
+
+msgctxt "#30608"
+msgid "All Videos"
+msgstr "Alle Videos"
+
+msgctxt "#30609"
+msgid "[COLOR lime]* Livestream - Kinderkanal von ARD und ZDF *[/COLOR]"
+msgstr "[COLOR lime]* Livestream - Kinderkanal von ARD und ZDF *[/COLOR]"
+
+msgctxt "#30610"
+msgid "KiKA plus Settings"
+msgstr "KiKA plus Einstellungen"
+
+msgctxt "#30611"
+msgid "Inputstream Settings"
+msgstr "Inputstream Einstellungen"
+
+# empty strings from id 30612 to 30620
+
+msgctxt "#30621"
+msgid "Broadcastdate: [COLOR chartreuse]{0:s}[/COLOR] | Views: [COLOR deepskyblue]{1:s}[/COLOR][CR]"
+msgstr "Sendetermin: [COLOR chartreuse]{0:s}[/COLOR] | Views: [COLOR deepskyblue]{1:s}[/COLOR][CR]"
+
+msgctxt "#30622"
+msgid "Broadcastdate: [COLOR chartreuse]{0:s}[/COLOR][CR]"
+msgstr "Sendetermin: [COLOR chartreuse]{0:s}[/COLOR][CR]"
+
+msgctxt "#30654"
+msgid "[COLOR yellow]Add to KiKA-Playlist[/COLOR]"
+msgstr "[COLOR yellow]In KiKA-Abspielliste einreihen[/COLOR]"

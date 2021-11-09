@@ -1,0 +1,194 @@
+﻿# Kodi Media Center language file
+# Addon Name: Sport-Total TV
+# Addon id: plugin.video.sporttotal
+# Addon Provider: L0RE, realvito
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: 2020-09-25 17:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: realvito\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# strings start
+# SETTINGS-CATEGORIES
+
+msgctxt "#30000"
+msgid "General"
+msgstr "Generale"
+
+# empty strings from id 30001 to 30109
+# SETTINGS-BUTTONS
+
+msgctxt "#30110"
+msgid "     Sporttotal - Language"
+msgstr "     Sporttotal - Lingua"
+
+msgctxt "#30111"
+msgid "German"
+msgstr "Tedesco"
+
+msgctxt "#30112"
+msgid "English"
+msgstr "Inglese"
+
+msgctxt "#30113"
+msgid "French"
+msgstr "Francese"
+
+msgctxt "#30114"
+msgid "Italian"
+msgstr "Italiano"
+
+msgctxt "#30115"
+msgid "Dutch"
+msgstr "Olandese"
+
+msgctxt "#30120"
+msgid "     Play HLS-Videos with [COLOR yellow]*Inputstream.Adaptive*[/COLOR] (since KODI-17+ possible)"
+msgstr "     Riproduzione di Video-HLS con [COLOR yellow]*Inputstream.Adaptive*[/COLOR] (possibile da KODI-17+)"
+
+msgctxt "#30121"
+msgid "     Show Addon-Settings in the overview"
+msgstr "     Mostra Impostazioni componenti aggiuntivi nella panoramica"
+
+msgctxt "#30122"
+msgid "     Detailed Addon-Debug (otherwise only Minimal-Log)"
+msgstr "     Addon-Debug dettagliato (altrimenti solo Minimal-Log)"
+
+# empty strings from id 30123 to 30229
+# SETTINGS-TITLES
+
+msgctxt "#30230"
+msgid "[B][COLOR ff0099ff]LANGUAGE[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]LINGUAGGIO[/COLOR][/B]"
+
+msgctxt "#30231"
+msgid "[B][COLOR ff0099ff]PLAY[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]GIOCARE[/COLOR][/B]"
+
+msgctxt "#30232"
+msgid "[B][COLOR ff0099ff]SETTINGS[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]IMPOSTAZIONI[/COLOR][/B]"
+
+msgctxt "#30233"
+msgid "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+
+# empty strings from id 30234 to 30349
+# SETTINGS-DESCRIPTIONS
+
+# empty strings from id 30349 to 30500
+# WARNING/INFORMATION-MESSAGES-OK
+
+msgctxt "#30501"
+msgid "[COLOR orangered]ATTENTION : ... the required addon *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* is NOT installed !!![/COLOR]"
+msgstr "[COLOR orangered]ATTENZIONE : ... l'Addon richiesto *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* NON è installata !!![/COLOR]"
+
+# empty strings from id 30502 to 30520
+# WARNING/INFORMATION-MESSAGES-NOTIFICATION
+
+msgctxt "#30521"
+msgid "Sport-Total TV : [COLOR red]!!! {0:s} - ERROR !!![/COLOR]"
+msgstr "Sport-Total TV : [COLOR red]!!! {0:s} - ERRORE !!![/COLOR]"
+
+msgctxt "#30522"
+msgid "[COLOR red]Unfortunately, there are NO {0:s} :[/COLOR]"
+msgstr "[COLOR red]Sfortunatamente, non ci sono {0:s} :[/COLOR]"
+
+msgctxt "#30523"
+msgid "[COLOR red]An error has occured, please check *LOG* ![/COLOR]"
+msgstr "[COLOR red]Si è verificato un errore, per favore controlla *LOG* ![/COLOR]"
+
+msgctxt "#30524"
+msgid "* [COLOR blue]Under this Category[/COLOR] * at sporttotal.tv"
+msgstr "* [COLOR blue]In questa Categoria[/COLOR] * su sporttotal.tv"
+
+msgctxt "#30525"
+msgid "* [COLOR blue]In the Category: {0:s}[/COLOR] * at sporttotal.tv"
+msgstr "* [COLOR blue]Nella Categoria: {0:s}[/COLOR] * su sporttotal.tv"
+
+msgctxt "#30526"
+msgid "ERROR = [COLOR red]NO Stream entry found ![/COLOR]"
+msgstr "ERROR = [COLOR red]NO Voce stream trovata ![/COLOR]"
+
+msgctxt "#30527"
+msgid "ERROR = [COLOR red]The Stream-Url is OFFLINE ![/COLOR]"
+msgstr "ERROR = [COLOR red]Lo Stream-Url è OFFLINE ![/COLOR]"
+
+# empty strings from id 30528 to 30600
+# PLUGIN-MAIN and SIDEMENU
+
+msgctxt "#30601"
+msgid ""
+msgstr ""
+
+msgctxt "#30602"
+msgid ""
+msgstr ""
+
+msgctxt "#30603"
+msgid ""
+msgstr ""
+
+msgctxt "#30604"
+msgid ""
+msgstr ""
+
+msgctxt "#30605"
+msgid ""
+msgstr ""
+
+msgctxt "#30606"
+msgid "[COLOR deepskyblue]• • • Regional and Events • • •[/COLOR]"
+msgstr "[COLOR deepskyblue]• • • Regionale ed Eventi • • •[/COLOR]"
+
+msgctxt "#30607"
+msgid "SPORT-TOTAL Settings"
+msgstr "Impostazioni di SPORT-TOTAL"
+
+msgctxt "#30608"
+msgid "Inputstream Settings"
+msgstr "Impostazioni di Inputstream"
+
+msgctxt "#30620"
+msgid "[COLOR yellow]{0:s}[/COLOR]"
+msgstr "[COLOR yellow]{0:s}[/COLOR]"
+
+msgctxt "#30621"
+msgid "[COLOR deepskyblue]- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -[/COLOR]"
+msgstr "[COLOR deepskyblue]- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -[/COLOR]"
+
+msgctxt "#30622"
+msgid "[B][COLOR chartreuse]•  •  •  •  •  •  •  [/COLOR]Now LIVE[COLOR chartreuse] - {0:s} - [/COLOR]LIVESTREAMS[COLOR chartreuse]  •  •  •  •  •  •  •[/COLOR][/B]"
+msgstr "[B][COLOR chartreuse]•  •  •  •  •  •  •  [/COLOR]Ora LIVE[COLOR chartreuse] - {0:s} - [/COLOR]LIVESTREAMS[COLOR chartreuse]  •  •  •  •  •  •  •[/COLOR][/B]"
+
+msgctxt "#30623"
+msgid "[B][COLOR orangered]•  •  •  •  •  •  •  •  [/COLOR]Following Broadcasts[COLOR orangered]  •  •  •  •  •  •  •  •[/COLOR][/B]"
+msgstr "[B][COLOR orangered]•  •  •  •  •  •  •  •  [/COLOR]Trasmissioni Successive[COLOR orangered]  •  •  •  •  •  •  •  •[/COLOR][/B]"
+
+msgctxt "#30624"
+msgid "LEAGUES - general overview"
+msgstr "LEGHE - Quadro generale"
+
+msgctxt "#30625"
+msgid "[COLOR FFFF5AAA]  ({0:s})[/COLOR]"
+msgstr "[COLOR FFFF5AAA]  ({0:s})[/COLOR]"
+
+msgctxt "#30626"
+msgid "[COLOR deepskyblue]  ({0:s})[/COLOR]"
+msgstr "[COLOR deepskyblue]  ({0:s})[/COLOR]"
+
+msgctxt "#30627"
+msgid "[COLOR chartreuse][B]~ ~ ~  ( LIVE )[/B][/COLOR]  [{0:s}]  {1:s}  [COLOR chartreuse][B]~ ~ ~[/B][/COLOR]"
+msgstr "[COLOR chartreuse][B]~ ~ ~  ( LIVE )[/B][/COLOR]  [{0:s}]  {1:s}  [COLOR chartreuse][B]~ ~ ~[/B][/COLOR]"
+
+msgctxt "#30654"
+msgid "[COLOR yellow]Add to SPTT-Playlist[/COLOR]"
+msgstr "[COLOR yellow]Aggiungi alla playlist di SPTT[/COLOR]"

@@ -1,0 +1,47 @@
+﻿
+[B]Version 3.0.4+matrix.1  (26.06.2021)[/B]
+- fixed: Manchmal wird nicht der richtige Titel der Sendung in den Addon-Favoriten gespeichert
+
+[B]Version 3.0.3+matrix.1  (08.06.2021)[/B]
+- fixed: Manchmal wird der Auth-Token bei der Url-Abfrage nicht mitgesendet
+
+[B]Version 3.0.2+matrix.1  (15.05.2021)[/B]
+- fixed: System - Plattform wird auf iOS-Systemen nicht erkannt und Ergebnisse werden nicht angezeigt (IOError: [Errno 10] No child processes)
+
+[B]Version 3.0.1+matrix.1  (13.04.2021)[/B]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Autor bisher @L0RE
+- Ab jetzt übernommen durch @realvito
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- fixed: Addon neu aufgesetzt mit Anlehnung des Aufbaus und der Struktur an die neue Android-APP von ServusTV
+- added: Gültigkeitsdauer für eigenen Token festlegen - ist jetzt Vorraussetzung zur Funktion des Addons (settings)
+- added: Anzeige des aktuellen Geobereichs
+- optimized: Livestream in alter Form mittels m3u8 oder neuer Form mittels Token abspielen (settings)
+- optimized: Alle Videos auch Livestreams werden jetzt grundsätzlich mit 'Inputstream.Adaptive' abgespielt (keine Aussetzer und Hänger mehr)
+
+[B]Version 2.2.5+matrix.1  (28.12.2020)[/B] by realvito
+- fixed: Error beim anlegen von Addon-Favoriten
+
+[B]Version 2.2.4+matrix.1  (05.12.2020)[/B] by realvito
+- optimized: Code cleanup
+
+[B]Version 2.2.3+matrix.1  (04.10.2020)[/B] = only MATRIX by realvito
+- fixed: Notwendige Codeanpassungen für neue Matrix-Versionen (exceptions)
+
+[B]Version 2.2.2+matrix.1  (15.06.2020)[/B] by realvito
+- fixed: Encodingfehler in KODI-Linux Versionen (KODI-18)
+
+[B]Version 2.2.1+matrix.1  (13.06.2020)[/B] by realvito
+- fixed: Teilweise werden keine Bilder angezeigt
+- optimized: Rubrikenübersicht verbessert
+
+[B]Version 2.2.0  (01.12.2019)[/B] by realvito
+- optimized: Filterverfahren für leere Ordner verbessert und Meldung eingebaut
+- optimized: Doppelte Sendungen werden herausgefiltert
+- fixed: LiveTV funktioniert nicht mehr
+- changed: Sprach-Files from "strings.xml" to "strings.po"
+- added: Addon kompatibel mit PYTHON vers.3 gemacht (für KODI-19+) :-)
+
+:::
+
+0.1.0 - Initial Source by @L0RE

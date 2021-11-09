@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.cobramod" name="[COLOR gold]CobraMod Repository[/COLOR]" version="1.0.2" provider-name="CobraMod">
+	<extension point="xbmc.addon.repository" name="Multi Test Repository">
+        <info compressed="false">https://cobramod.zapto.org/Kodi/repo/xml/addons.xml</info>
+        <checksum>https://cobramod.zapto.org/Kodi/repo/xml/addons.xml.md5</checksum>
+        <datadir zip="true">https://cobramod.zapto.org/Kodi/repo/
+		</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+	<summary></summary>
+	<description></description>
+	<disclaimer></disclaimer>
+	<language></language>
+	<platform>all</platform>
+	<license></license>
+	<forum></forum>
+	<website></website>
+	<email></email>
+	<source></source>
+	<news></news>
+    <assets>
+		<icon>resources/icon.png</icon>
+		<fanart>resources/fanart.jpg</fanart>
+		<banner></banner>
+		<clearlogo></clearlogo>
+		<screenshot></screenshot>
+	</assets>
+	</extension>
+</addon>

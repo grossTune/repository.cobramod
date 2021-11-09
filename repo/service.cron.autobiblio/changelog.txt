@@ -1,0 +1,44 @@
+﻿
+[B]Version 2.0.9+matrix.1  11.04.2021)[/B] by realvito
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Autor bisher @L0RE
+- Ab jetzt übernommen durch @realvito
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- fixed: Datetime-Errors
+- optimized: Keine Ausführung wenn die Bibliothek-Funktion im zugehörigen Addon wieder deaktiviert wurde (bzw. zugehöriges Addon deaktiviert ist)
+
+[B]Version 2.0.8+matrix.1  (04.10.2020)[/B] = only MATRIX by realvito
+- fixed: Notwendige Codeanpassungen für neue Matrix-Versionen (exceptions)
+
+[B]Version 2.0.7+matrix.1  (02.08.2020)[/B] by realvito
+- fixed: Falsche oder gar keine Darstellung der Titel der gespeicherten Serien in der Datenbank (Übersicht)
+- fixed: Datenbank-Error beim Speichern, wenn in Seriennamen bestimmte Sonderzeichen vorhanden sind
+
+[B]Version 2.0.6+matrix.1  (26.06.2020)[/B] by realvito
+- fixed: Fehler beim Löschen von Eintrag und Ordner
+
+[B]Version 2.0.5  (25.02.2020)[/B] by realvito
+- fixed: NameError: global name 'addon' is not defined
+- added: Anpassungen für 'plugin.video.rtlnow' damit auch einzelne Jahrgänge hinzugefügt und gelöscht werden können
+
+[B]Version 2.0.4  (03.02.2020)[/B] by realvito
+- Pluginname changed for KODI-compatibility (old=service.L0RE.cron -> new=service.cron.autobiblio)
+- added: Addon kompatibel mit PYTHON-Vers.3 gemacht (für KODI-19+) :-)
+
+==============================================================
+
+B]Version 1.0.3  (03.02.2020)[/B] by realvito
+- last OLDVERSION with Path = service.L0RE.cron
+
+[B]Version 1.0.2  (20.10.2019)[/B] by realvito
+- fixed: Azeige und Löschen von Titeln mit Sonderzeichen fehlerhaft
+
+[B]Version 1.0.1  (06.10.2018)[/B] by realvito
+- fixed: Bei jedem autom. Update der vom User gemachten Einträge wird nicht die aktuelle Uhrzeit übergeben
+- fixed: Ausführung/Update der vom User gemachten Einträge findet unabhängig des übergebenen Stunden-Intervalls - immer stündlich statt
+- optimized: Man kann jetzt sowohl den Eintrag in "Crontab" als auch den erstellten Ordner der Serie in der KODI-Medienbibliothek löschen (settings)
+- optimized: Script komplett überarbeitet
+- added: Direkte LOG-Meldungen sowohl bei normaler Ausführung als auch bei Fehlern (nicht Debugmodus)
+
+[B]Version 0.1  (29.03.2018)[/B]
+- Initial release by @L0RE

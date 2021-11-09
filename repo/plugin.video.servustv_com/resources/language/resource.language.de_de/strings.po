@@ -1,0 +1,304 @@
+﻿# Kodi Media Center language file
+# Addon Name: ServusTV.com
+# Addon id: plugin.video.servustv_com
+# Addon Provider: realvito
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: 2021-04-12 17:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: realvito\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# strings start
+# SETTINGS-CATEGORIES
+
+msgctxt "#30000"
+msgid "General"
+msgstr "Allgemein"
+
+msgctxt "#30001"
+msgid "Advanced"
+msgstr "Fortgeschritten"
+
+# empty strings from id 30002 to 30109
+# SETTINGS-BUTTONS
+
+msgctxt "#30110"
+msgid "     [COLOR orangered]<<<>>> SESSION renew = CLICK HERE <<<>>>[/COLOR]"
+msgstr "     [COLOR orangered]<<<>>> SESSION erneuern = HIER KLICKEN  <<<>>>[/COLOR]"
+
+msgctxt "#30111"
+msgid "     Update interval of the Auth-Token (Hours)"
+msgstr "     Aktualisierungsintervall des Auth-Token (Stunden)"
+
+msgctxt "#30112"
+msgid "     Preferred Livestream-procedure"
+msgstr "     Bevorzugtes Livestream-Verfahren"
+
+msgctxt "#30113"
+msgid "Standard method  [COLOR yellow](m3u8)[/COLOR]"
+msgstr "Standard Methode  [COLOR yellow](m3u8)[/COLOR]"
+
+msgctxt "#30114"
+msgid "New method  [COLOR yellow](mit Token)[/COLOR]"
+msgstr "Neue Methode  [COLOR yellow](mit Token)[/COLOR]"
+
+msgctxt "#30115"
+msgid "     Turn on SSL Certificate validation"
+msgstr "     SSL Zertifikatprüfung einschalten"
+
+msgctxt "#30116"
+msgid "     Show Addon-Settings in the overview"
+msgstr "     Addon-Einstellungen in der Übersicht anzeigen"
+
+msgctxt "#30117"
+msgid "     Arrangement of the Textdisplay:"
+msgstr "     Anordnung der Textanzeige:"
+
+msgctxt "#30118"
+msgid "Settings afterwards Auth-TOKEN  [COLOR yellow](default)[/COLOR]"
+msgstr "Einstellungen danach Auth-TOKEN  [COLOR yellow](default)[/COLOR]"
+
+msgctxt "#30119"
+msgid "Auth-TOKEN afterwards Settings"
+msgstr "Auth-TOKEN danach Einstellungen"
+
+msgctxt "#30120"
+msgid "Only Auth-TOKEN"
+msgstr "Nur Auth-TOKEN"
+
+msgctxt "#30121"
+msgid "Only Settings"
+msgstr "Nur Einstellungen"
+
+msgctxt "#30122"
+msgid "     Detailed Addon-Debug (otherwise only Minimal-Log)"
+msgstr "     Addon-Debug mit Details (sonst nur Minimal-Log)"
+
+# empty strings from id 30123 to 30229
+# SETTINGS-TITLES
+
+msgctxt "#30230"
+msgid "[B][COLOR ff0099ff]ACTIONS[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]AKTIONEN[/COLOR][/B]"
+
+msgctxt "#30231"
+msgid "[B][COLOR ff0099ff]AUTHENTIFICATION[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]AUTHENTIFIZIERUNG[/COLOR][/B]"
+
+msgctxt "#30232"
+msgid "[B][COLOR ff0099ff]LIVESTREAM[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]LIVESTREAM[/COLOR][/B]"
+
+msgctxt "#30233"
+msgid "[B][COLOR ff0099ff]CERTIFICATE[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]ZERTIFIKAT[/COLOR][/B]"
+
+msgctxt "#30234"
+msgid "[B][COLOR ff0099ff]SETTINGS[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]EINSTELLUNGEN[/COLOR][/B]"
+
+msgctxt "#30235"
+msgid "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+msgstr "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+
+# empty strings from id 30236 to 30349
+# SETTINGS-DESCRIPTIONS
+
+msgctxt "#30350"
+msgid "     * [COLOR yellow]In the event of Connection -Problems or -Interruptions, with this the Auth-Token is renewed[/COLOR] *"
+msgstr "     * [COLOR yellow]Bei Verbindungs -Problemen bzw. -Abrüchen wird hiermit der Auth-Token erneuert[/COLOR] *"
+
+# empty strings from id 30351 to 30500
+# WARNING/INFORMATION-MESSAGES-OK
+
+msgctxt "#30501"
+msgid "[COLOR orangered]ATTENTION : ... the required addon *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* is NOT installed !!![/COLOR]"
+msgstr "[COLOR orangered]ACHTUNG : ... das benötigte Addon *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* ist NICHT installiert !!![/COLOR]"
+
+msgctxt "#30502"
+msgid "There is NO *Auth-Token* available !"
+msgstr "Es ist leider KEIN *Auth-Token* vorhanden !"
+
+# empty strings from id 30503 to 30520
+# WARNING/INFORMATION-MESSAGES-NOTIFICATION
+
+msgctxt "#30521"
+msgid "ServusTV : [COLOR red]!!! {0:s} - ERROR !!![/COLOR]"
+msgstr "ServusTV : [COLOR red]!!! {0:s} - ERROR !!![/COLOR]"
+
+msgctxt "#30522"
+msgid "[COLOR red]Unfortunately there are NO {0:s} :[/COLOR]"
+msgstr "[COLOR red]Leider gibt es KEINE {0:s} :[/COLOR]"
+
+msgctxt "#30523"
+msgid "[COLOR red]An error has occured, please check *LOG* ![/COLOR]"
+msgstr "[COLOR red]Es ist ein Fehler aufgetreten, bitte *LOG* einsehen ![/COLOR]"
+
+msgctxt "#30524"
+msgid "* [COLOR blue]To the respective search term[/COLOR] * at ServusTV"
+msgstr "* [COLOR blue]Zu dem betr. Suchbegriff[/COLOR] * bei ServusTV"
+
+msgctxt "#30525"
+msgid "* [COLOR blue]In the Category: {0:s}[/COLOR] * at ServusTV"
+msgstr "* [COLOR blue]In der Rubrik: {0:s}[/COLOR] * bei ServusTV"
+
+msgctxt "#30526"
+msgid "[COLOR red]Unfortunately NO suitable Video-Url found ![/COLOR]"
+msgstr "[COLOR red]Leider KEINE passende Video-Url gefunden ![/COLOR]"
+
+msgctxt "#30527"
+msgid "[COLOR orangered]A TOKEN is required for the function of this Addon ![/COLOR]"
+msgstr "[COLOR orangered]Für die Funktion dieses Addons wird ein TOKEN benötigt ![/COLOR]"
+
+msgctxt "#30528"
+msgid "[COLOR blue]* YOUR TOKEN WAS SUCCESSFULLY DELETED *[/COLOR]"
+msgstr "[COLOR blue]* IHR TOKEN WURDE ERFOLGREICH GELÖSCHT *[/COLOR]"
+
+msgctxt "#30529"
+msgid "[COLOR FF008B00]You can proceed now...[/COLOR]"
+msgstr "[COLOR FF008B00]Sie können jetzt fortfahren...[/COLOR]"
+
+msgctxt "#30530"
+msgid "My SERVUSTV-Favourites :"
+msgstr "Meine SERVUSTV-Favoriten :"
+
+msgctxt "#30531"
+msgid "* [COLOR blue]{0:s}[/COLOR] *[COLOR FF008B00] successfully added !!![/COLOR]"
+msgstr "* [COLOR blue]{0:s}[/COLOR] *[COLOR FF008B00] erfolgreich hinzugefügt !!![/COLOR]"
+
+msgctxt "#30532"
+msgid "* [COLOR blue]{0:s}[/COLOR] *[COLOR red] has been deleted !!![/COLOR]"
+msgstr "* [COLOR blue]{0:s}[/COLOR] *[COLOR red] wurde gelöscht !!![/COLOR]"
+
+# empty strings from id 30533 to 30600
+# PLUGIN-MAIN and SIDEMENU
+
+msgctxt "#30601"
+msgid "* My SERVUSTV-Favourites *"
+msgstr "* Meine SERVUSTV-Favoriten *"
+
+msgctxt "#30602"
+msgid "Calendar"
+msgstr "Kalender"
+
+msgctxt "#30603"
+msgid "New Videos"
+msgstr "Neue Videos"
+
+msgctxt "#30604"
+msgid "Last Chance"
+msgstr "Letzte Chance"
+
+msgctxt "#30605"
+msgid "Recommendations"
+msgstr "Empfehlungen"
+
+msgctxt "#30606"
+msgid "Themes"
+msgstr "Themen"
+
+msgctxt "#30607"
+msgid "Films"
+msgstr "Filme"
+
+msgctxt "#30608"
+msgid "Broadcasts"
+msgstr "Sendungen"
+
+msgctxt "#30609"
+msgid "Starting page"
+msgstr "Startseite"
+
+msgctxt "#30610"
+msgid "Search ..."
+msgstr "Suche ..."
+
+msgctxt "#30611"
+msgid "[COLOR lime]* LIVESTREAM *[/COLOR]"
+msgstr "[COLOR lime]* LIVESTREAM *[/COLOR]"
+
+msgctxt "#30612"
+msgid "SERVUSTV Settings  "
+msgstr "SERVUSTV Einstellungen  "
+
+msgctxt "#30613"
+msgid "Inputstream Settings"
+msgstr "Inputstream Einstellungen"
+
+# empty strings from id 30614 to 30620
+
+msgctxt "#30621"
+msgid "[COLOR deepskyblue]***  (GEO-TOKEN >> {0:s} <<)  ***  [/COLOR]"
+msgstr "[COLOR deepskyblue]***  (GEO-TOKEN >> {0:s} <<)  ***  [/COLOR]"
+
+msgctxt "#30622"
+msgid "[COLOR orangered]~~~  (!!! NO Authentication possible !!!)  ~~~  [/COLOR]"
+msgstr "[COLOR orangered]~~~  (!!! KEINE Authentifizierung möglich !!!)  ~~~  [/COLOR]"
+
+msgctxt "#30623"
+msgid "Austria"
+msgstr "Österreich"
+
+msgctxt "#30624"
+msgid "Germany"
+msgstr "Deutschland"
+
+msgctxt "#30625"
+msgid "Switzerland"
+msgstr "Schweiz"
+
+# empty strings from id 30626 to 30630
+
+msgctxt "#30631"
+msgid "From Age {0:s}"
+msgstr "Ab {0:s} Jahren"
+
+msgctxt "#30632"
+msgid "[COLOR lime]Next Page ({0:d})  >>>[/COLOR]"
+msgstr "[COLOR lime]Nächste Seite ({0:d})  >>>[/COLOR]"
+
+msgctxt "#30633"
+msgid "Search on ServusTV ..."
+msgstr "Suche auf ServusTV ..."
+
+# empty strings from id 30634 to 30640
+
+msgctxt "#30641"
+msgid "[COLOR lime]* ServusTV-DE LIVE-TV *[/COLOR]"
+msgstr "[COLOR lime]* ServusTV-DE LIVE-TV *[/COLOR]"
+
+msgctxt "#30642"
+msgid "[COLOR lime]* ServusTV-AT LIVE-TV *[/COLOR]"
+msgstr "[COLOR lime]* ServusTV-AT LIVE-TV *[/COLOR]"
+
+# empty strings from id 30643 to 30650
+
+msgctxt "#30651"
+msgid "[COLOR chartreuse]Add to SERVUSTV-Favourites[/COLOR]"
+msgstr "[COLOR chartreuse]Zu SERVUSTV-Favoriten hinzufügen[/COLOR]"
+
+msgctxt "#30652"
+msgid "[COLOR orangered]Remove from SERVUSTV-Favourites[/COLOR]"
+msgstr "[COLOR orangered]Aus SERVUSTV-Favoriten entfernen[/COLOR]"
+
+msgctxt "#30654"
+msgid "[COLOR yellow]Add to SERVUSTV-Playlist[/COLOR]"
+msgstr "[COLOR yellow]In SERVUSTV-Abspielliste einreihen[/COLOR]"
+
+# empty strings from id 30655 to 32100
+
+msgctxt "#32101"
+msgid "From [COLOR chartreuse]{0:s}[/COLOR] to [COLOR orangered]{1:s}[/COLOR][CR][CR]"
+msgstr "Vom [COLOR chartreuse]{0:s}[/COLOR] bis [COLOR orangered]{1:s}[/COLOR][CR][CR]"
+
+msgctxt "#32102"
+msgid "From [COLOR chartreuse]{0:s}[/COLOR][CR][CR]"
+msgstr "Vom [COLOR chartreuse]{0:s}[/COLOR][CR][CR]"

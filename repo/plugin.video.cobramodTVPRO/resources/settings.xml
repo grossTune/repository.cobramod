@@ -1,0 +1,18 @@
+<settings>
+  
+  <category label="Config Settings">
+    <setting id="save_location" type="folder"  label="Select a download location ." default=""/>
+    <setting id="use_thumb" type="bool" label="Use Thumbnails like Fanart " default="false" />
+    <setting id="logo-folderPath" type="folder"  label="Select the directory for the logo ." default=""/>
+    <setting id="add_playlist" type="bool" label="Add items with multiple links like playlists " default="true"/>
+    <setting id="ask_playlist_items" type="bool" label="Request playlist items to choose the dialog box " default="true" />
+    <setting id="debug" type="bool" label="Enable add-on debugging " default="false"/>
+    <setting id="1080pquality" label="Plays 1080p video on demand, if available (Not Live)" type="bool" default=""/>
+    <setting id="genesisorpulsar" type="enum" values="Genesis | Pulsar "label =" Play IMDBid with :" default="Genesis"/>
+    <setting id="donotshowbychannels" label="Do not show items in the channel name " type="bool" default="false"/>
+    <setting id="parentalblockedpin" label="Parental Control Pin " type="text"  option="hidden"  default=""/>
+    <setting id="parentalblocked" label="Want to apply Parental Control ?" type="bool" default="false" enable="false"/>
+    
+  </category>
+
+</settings>

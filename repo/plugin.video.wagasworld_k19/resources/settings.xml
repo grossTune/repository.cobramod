@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Benutzerdaten">
+        <setting label="Benutzername" type="text"  id="username" default=""/>
+        <setting label="Passwort" type="text"  id="password" option="hidden"  enable="!eq(-1,)" default=""/>
+		<setting type="sep"/>
+		<setting id="renew_playlist" type="action" label="Playlist erneuern" action="RunPlugin(plugin://$ID/?action=renew_playlist)"/>
+		<setting label="Cookie" visible="false" type="text"  id="cookie" default=""/>
+    </category>
+</settings>

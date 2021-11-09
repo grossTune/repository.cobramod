@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" ?>
+<settings version="1">
+	<section id="service.cron.autobiblio">
+		<category id="allgemein" label="30000" help="">
+			<group id="1" label="30230">
+				<setting id="show_warnings" type="boolean" label="30110" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<group id="2"/>
+			<group id="3" label="30231">
+				<setting id="zz_dummy_01" type="action" label="30111" help="30350">
+					<level>0</level>
+					<data>RunPlugin(plugin://service.cron.autobiblio/?mode=clearEntireBase)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="zz_dummy_02" type="string" label="30350" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30350</heading>
+					</control>
+				</setting>
+			</group>
+			<group id="4"/>
+			<group id="5" label="30232">
+				<setting id="force_removing" type="boolean" label="30112" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="zz_dummy_03" type="string" label="30351" help="30351">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30351</heading>
+					</control>
+				</setting>
+				<setting id="zz_dummy_04" type="string" label="30352" help="30352">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30352</heading>
+					</control>
+				</setting>
+				<setting id="zz_dummy_05" type="string" label="30353" help="30353">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30353</heading>
+					</control>
+				</setting>
+				<setting id="zz_dummy_06" type="string" label="30354" help="30354">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30354</heading>
+					</control>
+				</setting>
+			</group>
+		</category>
+	</section>
+</settings>
