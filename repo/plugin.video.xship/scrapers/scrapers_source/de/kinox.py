@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#2021-06-03
+#2021-08-17
 
 import json
 import re
@@ -9,7 +9,7 @@ import requests
 import urlresolver
 from scrapers.modules.tools import cParser  # re - alternative
 from resources.lib.requestHandler import cRequestHandler
-from resources.lib.control import urlparse, quote_plus, urljoin, parse_qs, getSetting
+from resources.lib.control import urlparse, quote_plus, urljoin, parse_qs, getSetting, setSetting
 from scrapers.modules import cleantitle, dom_parser, source_utils
 
 # kinox
@@ -17,18 +17,20 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['de']
-        self.domains = ['KinoX.to', 'ww8.kinox.to', 'ww1.kinox.to', 'kinoS.TO', 'kinox.TV', 'kinox.ME', 'kinoz.TO', 'kinox.IO', 'kinox.SX', 'kinox.AM', 'kinox.NU', 'kinox.SG', 'kinox.GRATIS', 'kinox.MOBI', 'kinox.SH', 'kinox.LOL', 'kinox.WTF', 'kinox.FUN', 'kinox.FYI', 'kinox.CLOUD', 'kinox.AI', 'kinox.CLICK', 'kinox.TUBE', 'kinox.CLUB', 'kinox.DIGITAL', 'kinox.DIRECT', 'kinox.PUB', 'kinox.EXPRESS', 'kinox.PARTY', 'kinox.BZ']
+        self.domains, self.base_link = self.getdomain()
+        #self.domains = ['KinoX.to', 'ww8.kinox.to', 'ww1.kinox.to', 'kinoS.TO', 'kinox.TV', 'kinox.ME', 'kinoz.TO', 'kinox.IO', 'kinox.SX', 'kinox.AM', 'kinox.NU', 'kinox.SG', 'kinox.GRATIS', 'kinox.MOBI', 'kinox.SH', 'kinox.LOL', 'kinox.WTF', 'kinox.FUN', 'kinox.FYI', 'kinox.CLOUD', 'kinox.AI', 'kinox.CLICK', 'kinox.TUBE', 'kinox.CLUB', 'kinox.DIGITAL', 'kinox.DIRECT', 'kinox.PUB', 'kinox.EXPRESS', 'kinox.PARTY', 'kinox.BZ']
         #self.domains = ['kinos.to', 'kinox.tv', 'kinox.to', 'kinox.nu', 'kinox.sh']
-        self.base_link = self._base_link
+        #self.base_link = self._base_link
         self.search_link = self.base_link +'/Search.html?q=%s'
         self.get_links_epi = '/aGET/MirrorByEpisode/?Addr=%s&SeriesID=%s&Season=%s&Episode=%s'
         self.mirror_link = '/aGET/Mirror/%s&Hoster=%s&Mirror=%s'
         self.checkHoster = False if getSetting('provider.kinox.checkHoster') == 'false' else True
         self.sources = []
 
-    @property
-    def _base_link(self):
-        for domain in self.domains:
+    def getdomain(self, check=False):
+        if getSetting('kinox.base_link') and check == False: return [getSetting('kinox.domain')], getSetting('kinox.base_link')
+        domains = ['KinoX.to', 'ww8.kinox.to', 'ww1.kinox.to', 'kinoS.TO', 'kinox.TV', 'kinox.ME', 'kinoz.TO', 'kinox.IO', 'kinox.SX', 'kinox.AM', 'kinox.NU', 'kinox.SG', 'kinox.GRATIS', 'kinox.MOBI', 'kinox.SH', 'kinox.LOL', 'kinox.WTF', 'kinox.FUN', 'kinox.FYI', 'kinox.CLOUD', 'kinox.AI', 'kinox.CLICK', 'kinox.TUBE', 'kinox.CLUB', 'kinox.DIGITAL', 'kinox.DIRECT', 'kinox.PUB', 'kinox.EXPRESS', 'kinox.PARTY', 'kinox.BZ']
+        for domain in domains:
             try:
                 url = 'http://%s' % domain
                 resp = requests.get(url)
@@ -36,7 +38,13 @@ class source:
                 if resp.status_code == 200:
                     r = dom_parser.parse_dom(resp.content, 'meta', attrs={'name': 'keywords'}, req='content')
                     if r and 'kinox.to' in r[0].attrs.get('content').lower():
-                        return  url
+                        setSetting('kinox.domain', urlparse(url).netloc)
+                        setSetting('kinox.base_link', url[:-1])
+                        if check:
+                            self.domains = [urlparse(url).netloc]
+                            self.base_link = url[:-1]
+                            return self.domains, self.base_link
+                        return  [urlparse(url).netloc], url[:-1]
             except:
                 pass
 
@@ -49,7 +57,11 @@ class source:
                 query = self.search_link % (quote_plus(title))
                 oRequest = cRequestHandler(query)
                 sHtmlContent = oRequest.request()
-                #r = cache.get(client.request, 48, urlparse.urljoin(self.base_link, self.search_link % title))
+                if not sHtmlContent:
+                    self.getdomain(True)
+                    query = self.search_link % (quote_plus(title))
+                    sHtmlContent = cRequestHandler(query).request()
+
                 r = dom_parser.parse_dom(sHtmlContent, 'table', attrs={'id': 'RsltTableStatic'})
                 r = dom_parser.parse_dom(r, 'tr')
                 r = [(dom_parser.parse_dom(i, 'a', req='href'), dom_parser.parse_dom(i, 'img', attrs={'alt': 'language'}, req='src'), dom_parser.parse_dom(i, 'span')) for i in r]

@@ -1,7 +1,7 @@
 ﻿# -*- coding: utf-8 -*-
 
 '''
-    Copyright (C) 2020 realvito
+    Copyright (C) 2021 realvito
 
     MTV Germany
 
@@ -21,6 +21,7 @@
 
 import os
 import xbmc
+import xbmcaddon
 import xbmcvfs
 import shutil
 from resources.lib.common import *
@@ -29,8 +30,8 @@ from resources.lib import navigator
 
 def run():
 	SEP = os.sep
-	if mode == 'root':
-		DONE = False
+	if mode == 'root': ##### Delete complete old Userdata-Folder to cleanup old Entries #####
+		DONE = False    ##### [plugin.video.tyl0re.mtv v.1.2.7] - 28.10.2020 #####
 		firstSCRIPT = TRANS_PATH(os.path.join('special://home'+SEP+'addons'+SEP+addon_id+SEP+'lib'+SEP)).encode('utf-8').decode('utf-8')
 		UNO = os.path.join(firstSCRIPT, 'only_at_FIRSTSTART')
 		if xbmcvfs.exists(UNO):
@@ -89,9 +90,9 @@ def run():
 		navigator.AddToQueue()
 	elif mode == 'clearCache':
 		navigator.clearCache()
-	elif mode == 'aSettings':
-		navigator.addon.openSettings()
-	elif mode == 'iSettings':
-		navigator.xbmcaddon.Addon('inputstream.adaptive').openSettings()
+	elif mode == 'aConfigs':
+		addon.openSettings()
+	elif mode == 'iConfigs':
+		xbmcaddon.Addon('inputstream.adaptive').openSettings()
 
 run()

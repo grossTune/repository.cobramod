@@ -1,14 +1,15 @@
-Version 5.1.39 (Aug 19, 2021)
+Version 5.1.49 (Oct 28, 2021)
 - Code Base Changes:
     - None
 
 - Resolvers Added:
-    - VideoVard
+    - videoo
  
 - Resolvers Fixed/Updated:
-    - Streamsb
+    - fembed
+    - streamingcommunity
     - streamtape
-    - Vupload
+    - streamz
     - youdbox
 
 - Resolvers Removed

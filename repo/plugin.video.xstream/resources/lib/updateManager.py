@@ -24,7 +24,7 @@ def urlResolverUpdate(silent=False):
     username = 'streamxstream'
     plugin_id = 'script.module.urlresolver'
     branch = 'nightly'
-    token = 'YTg1OWU1OGE1ZDU5M2QwN2EwZjEwNDg0MWJjMDE4ZWE3ZDIxM2VhYQ=='
+    token = 'Z2hwXzFlaEVGb0QzVzFIM3FFZVVZVzZqQ3V2emg3cTFYSTNjZDJOcQ=='
     token = base64.b64decode(token)
     try:
         return Update(username, plugin_id, branch, token, silent)
@@ -141,7 +141,7 @@ def doUpdate(LocalDir, REMOTE_PATH, Title, localFileName, auth):
 
 
 def removeFilesNotInRepo(updateFile, LocalDir):
-    ignored_files = ['settings.xml']
+    ignored_files = ['settings.xml', 'anicloud.py', 'anicloud.png']
     updateFileNameList = [i.split("/")[-1] for i in updateFile.namelist()]
 
     for root, dirs, files in os.walk(LocalDir):

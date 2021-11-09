@@ -11,9 +11,9 @@ class source:
     def __init__(self):
         self.priority = 2
         self.language = ['de']
-        #self.domains = ['serien.sx']
-        #self.base_link = 'https://serien.sx'
-        self.domains, self.base_link = self.getdomain()
+        self.domains = ['serien.sx']
+        self.base_link = 'http://190.115.18.20'
+        #self.domains, self.base_link = self.getdomain()
         self.search_link = '/serien'
         self.login = getSetting('serienstream.user')
         self.password = getSetting('serienstream.pass')

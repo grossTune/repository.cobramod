@@ -1,4 +1,7 @@
 ﻿
+[B]Version 1.2.9+matrix.1  (08.06.2021)[/B] by realvito
+- fixed: System - Plattform wird auf iOS-Systemen nicht erkannt und Ergebnisse werden nicht angezeigt (IOError: [Errno 10] No child processes)
+
 [B]Version 1.2.8+matrix.1  (28.12.2020)[/B] by realvito
 - optimized: Code cleanup
 

@@ -31,11 +31,11 @@ def mainMenu():
 	addDir(translation(30606), artpic+'livestream.png', {'mode': 'playLIVE', 'url': BASE_URL+'/live/0h9eak/mtv-germany-live'}, folder=False)
 	addDir(translation(30607).format(str(cachePERIOD)), artpic+'remove.png', {'mode': 'clearCache'})
 	if enableADJUSTMENT:
-		addDir(translation(30608), artpic+'settings.png', {'mode': 'aSettings'})
+		addDir(translation(30608), artpic+'settings.png', {'mode': 'aConfigs'}, folder=False)
 		if enableINPUTSTREAM and ADDON_operate('inputstream.adaptive'):
-			addDir(translation(30609), artpic+'settings.png', {'mode': 'iSettings'})
-		else:
-			addon.setSetting('useInputstream', 'false')
+			addDir(translation(30609), artpic+'settings.png', {'mode': 'iConfigs'}, folder=False)
+	if not ADDON_operate('inputstream.adaptive'):
+		addon.setSetting('useInputstream', 'false')
 	xbmcplugin.endOfDirectory(ADDON_HANDLE)
 
 def listBroadcasts(url):
@@ -117,9 +117,7 @@ def seasonVideos(url, transmit):
 	pageNUMBER = 1
 	total = 1
 	while (total > 0):
-		newURL = url
-		if pageNUMBER > 1:
-			newURL =url+'&pageNumber='+str(pageNUMBER)+'&fullEpisodes=1'
+		newURL =url+'&pageNumber='+str(pageNUMBER)+'&fullEpisodes=1' if pageNUMBER > 1 else url
 		content = makeREQUEST(newURL, XMLH=True)
 		DATA = json.loads(content, object_pairs_hook=OrderedDict)
 		if 'result' in DATA and 'data' in DATA['result'] and 'items' in DATA['result']['data'] and len(DATA['result']['data']['items']) > 0:
@@ -137,7 +135,7 @@ def seasonVideos(url, transmit):
 						elif transmit == 'standard':
 							Note_1 = '[COLOR yellow]'+cleaning(item['headline'])+'[/COLOR][CR]'
 							seriesname = cleaning(item['headline'])
-					if item.get('publishDate', '').isdigit():
+					if str(item.get('publishDate', '')).isdigit():
 						startDATES = datetime(1970, 1, 1) + timedelta(seconds=int(item['publishDate']))
 						startTIMES = startDATES.strftime('%d{0}%m{0}%Y').format('.')
 						year = startDATES.strftime('%Y')
@@ -415,7 +413,7 @@ def artistVideos(url, SECTOR):
 					if IDD in UNIKAT:
 						continue
 					UNIKAT.add(IDD)
-					if item.get('airDate', '').isdigit():
+					if str(item.get('airDate', '')).isdigit():
 						startDATES = datetime(1970, 1, 1) + timedelta(seconds=int(item['airDate']))
 						startTIMES = startDATES.strftime('%d{0}%m{0}%Y').format('-')
 					if startTIMES and not '1970' in startTIMES: Note_1 = '[COLOR chartreuse]'+str(startTIMES)+'[/COLOR][CR]'
@@ -512,9 +510,9 @@ def playVideo(url, transmit):
 			xbmc.executeJSONRPC('{"jsonrpc":"2.0", "id":1, "method":"Player.SetSubtitle", "params":{"playerid":1, "subtitle":"on"}}')
 			#xbmc.executeJSONRPC('{"jsonrpc":"2.0", "id":1, "method":"Player.SetSubtitle", "params":{"playerid":1, "subtitle":"off"}}')
 		if enableINPUTSTREAM and ADDON_operate('inputstream.adaptive') and 'm3u8' in finalURL:
+			listitem.setMimeType('application/vnd.apple.mpegurl')
 			listitem.setProperty(INPUT_APP, 'inputstream.adaptive')
 			listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
-			listitem.setMimeType('application/vnd.apple.mpegurl')
 		xbmcplugin.setResolvedUrl(ADDON_HANDLE, True, listitem)
 	else:
 		failing("(navigator.playVideo) ##### Abspielen des Streams NICHT möglich ##### URL : {0} #####\n   ########## KEINEN Stream-Eintrag auf der Webseite von *mtv.de* gefunden !!! ##########".format(url))
@@ -543,7 +541,7 @@ def addDir(name, image, params={}, plot=None, folder=True):
 	liz = xbmcgui.ListItem(name)
 	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': plot})
 	liz.setArt({'icon': icon, 'thumb': image, 'poster': image, 'fanart': defaultFanart})
-	if useThumbAsFanart and image != icon and not artpic in image:
+	if image and useThumbAsFanart and image != icon and not artpic in image:
 		liz.setArt({'fanart': image})
 	return xbmcplugin.addDirectoryItem(handle=ADDON_HANDLE, url=u, listitem=liz, isFolder=folder)
 
@@ -566,7 +564,7 @@ def addLink(name, image, params={}, plot=None, duration=None, seriesname=None, s
 	info['Mediatype'] = params.get('cineType')
 	liz.setInfo(type='Video', infoLabels=info)
 	liz.setArt({'icon': icon, 'thumb': image, 'poster': image, 'fanart': defaultFanart})
-	if useThumbAsFanart and image != icon and not artpic in image:
+	if image and useThumbAsFanart and image != icon and not artpic in image:
 		liz.setArt({'fanart': image})
 	liz.addStreamInfo('Video', {'Duration': duration})
 	liz.setProperty('IsPlayable', 'true')

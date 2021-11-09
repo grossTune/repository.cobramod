@@ -51,7 +51,7 @@ class player(xbmc.Player):
 
             if int(getKodiVersion()) == 18:
                 self.videoDB = os.path.join(control.translatePath('special://database/'), 'MyVideos116.db')
-            elif int(getKodiVersion()) == 19:
+            elif int(getKodiVersion()) >= 19:
                 self.videoDB = os.path.join(control.translatePath('special://database/'), 'MyVideos119.db')
             elif int(getKodiVersion()) == 17:
                 self.videoDB = os.path.join(control.translatePath('special://database/'), 'MyVideos107.db')

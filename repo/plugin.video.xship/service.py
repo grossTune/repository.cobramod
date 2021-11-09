@@ -71,7 +71,7 @@ def script_module_urlresolver(ADDONID):
     username = 'streamxstream'
     plugin_id = ADDONID
     branch = 'nightly'
-    token = 'Z2hwX01CajdnYm5MZWpMd2JGbFJPeUpXQ2dOUmZpTEJMaDNhSzVLMQ=='
+    token = 'Z2hwXzNmQ2ZDbHR3TUlwN3NMVHVvcnppd0dLVWdjS2piUTNUeFZFUQ=='
     #token = Addon.getSetting('update.git_token')
     return updateManager.Update(username, plugin_id, branch, token, silent)
 # ------------------------------------

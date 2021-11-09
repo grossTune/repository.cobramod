@@ -63,9 +63,8 @@ cj = http_cookiejar.LWPCookieJar(TRANSLATEPATH(cookiePath))
 Request = urllib_request.Request
 
 handlers = [urllib_request.HTTPBasicAuthHandler(), urllib_request.HTTPHandler(), urllib_request.HTTPSHandler()]
-ssl_context = ssl.create_default_context()
-ssl_context.check_hostname = False
-ssl_context.verify_mode = ssl.CERT_NONE
+ssl_context = ssl._create_unverified_context()
+ssl._create_default_https_context = ssl._create_unverified_context
 handlers.append(urllib_request.HTTPSHandler(context=ssl_context))
 
 
@@ -632,14 +631,15 @@ def _getHtml2(url):
     return data
 
 
-def getVideoLink(url, referer, headers=None, data=None):
+def getVideoLink(url, referer, headers=None, data=None, get_method='HEAD'):
     if not headers:
         headers = base_hdrs
 
     req2 = Request(url, data, headers)
     if len(referer) > 1:
         req2.add_header('Referer', referer)
-    req2.get_method = lambda: 'HEAD'
+    if get_method:
+        req2.get_method = lambda: get_method
     resp = urlopen(req2)
     url2 = resp.geturl()
     return url2

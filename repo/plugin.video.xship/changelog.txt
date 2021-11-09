@@ -1,5 +1,11 @@
 xShip Changelog
 
+"2021.10.28~nightly2"
+- Neuer und eigener URLResolver Tokken 
+
+"2021.09.29~nightly1"
+- Kodi 20
+
 "2021.07.29~nightly1"
 - edit services.py /settings (Wartung On/Off)
 

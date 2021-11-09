@@ -7,14 +7,12 @@ import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
-import platform
 import json
 import xbmcvfs
 import shutil
 import socket
 import time
 from datetime import datetime, timedelta
-import calendar
 from collections import OrderedDict
 from bs4 import BeautifulSoup
 import requests
@@ -56,7 +54,6 @@ useThumbAsFanart             = addon.getSetting('useThumbAsFanart') == 'true'
 enableADJUSTMENT           = addon.getSetting('show_settings') == 'true'
 DEB_LEVEL                           = (LOG_MESSAGE if addon.getSetting('enableDebug') == 'true' else xbmc.LOGDEBUG)
 BASE_URL                             = 'http://www.mtv.de'
-response                               = requests.Session()
 
 xbmcplugin.setContent(ADDON_HANDLE, 'tvshows')
 
@@ -90,34 +87,59 @@ def log(msg, level=LOG_MESSAGE): # kompatibel mit Python-2 und Python-3
 	msg = py2_enc(msg)
 	return xbmc.log('[{0} v.{1}]{2}'.format(addon_id, addon_version, msg), level)
 
-def get_Description(info):
-	depl = ""
-	if 'fullDescription' in info and info['fullDescription'] and len(info['fullDescription']) > 10:
-		depl = cleaning(info['fullDescription'])
-	if depl == "" and 'description' in info and info['description'] and len(info['description']) > 10:
-		depl = cleaning(info['description'])
-	if depl == "" and 'shortDescription' in info and info['shortDescription'] and len(info['shortDescription']) > 10:
-		depl = cleaning(info['shortDescription'])
-	return depl
+def makeREQUEST(url, method='GET', REF=None, XMLH=None):
+	return cache.cacheFunction(getUrl, url, method, REF, XMLH)
 
-def get_Seconds(info):
+def get_userAgent():
+	base = 'Mozilla/5.0 {0} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
+	if xbmc.getCondVisibility('System.Platform.Android'):
+		if 'arm' in os.uname()[4]: return base.format('(X11; CrOS armv7l 7647.78.0)') # ARM based Linux
+		return base.format('(X11; Linux x86_64)') # x86 Linux
+	elif xbmc.getCondVisibility('System.Platform.Windows'):
+		return base.format('(Windows NT 10.0; WOW64)') # Windows
+	elif xbmc.getCondVisibility('System.Platform.IOS'):
+		return base.format('(iPhone; CPU iPhone OS 10_3 like Mac OS X)') # iOS iPhone/iPad
+	elif xbmc.getCondVisibility('System.Platform.Darwin'):
+		return base.format('(Macintosh; Intel Mac OS X 10_10_1)') # Mac OSX
+	return base.format('(X11; Linux x86_64)') # x86 Linux
+
+def _header(REFERRER=None, XTYPE=None):
+	header = {}
+	header['Connection'] = 'keep-alive'
+	header['Pragma'] = 'no-cache'
+	header['Cache-Control'] = 'no-cache'
+	header['User-Agent'] = get_userAgent()
+	header['DNT'] = '1'
+	header['Upgrade-Insecure-Requests'] = '1'
+	header['Accept-Encoding'] = 'gzip'
+	header['Accept-Language'] = 'en-US,en;q=0.8,de;q=0.7'
+	if REFERRER:
+		header['Referer'] = REFERRER
+	if XTYPE:
+		header['Host'] = 'www.mtv.de'
+		header['X-Requested-With'] = 'XMLHttpRequest'
+		header['Content-Type'] = 'application/json'
+	return header
+
+def getUrl(url, method='GET', REF=None, XMLH=None, headers=None, cookies=None, allow_redirects=True, verify=True, stream=None, data=None, json=None):
+	simple = requests.Session()
+	debug_MS("(common.getUrl) === URL that wanted : {0} ===".format(url))
+	result = None
+	simple.headers.update(_header(REF, XMLH))
 	try:
-		info = re.sub('[a-z]', '', info)
-		first = info.split(':')[0]
-		if len(info) > 5 and len(first) < 3:
-			h, m, s = info.split(':')
-			return int(h)*3600+int(m)*60+int(s)
-		elif len(info) < 6 or len(first) > 2:
-			m, s = info.split(':')
-			return int(m)*60+int(s)
-	except: return '0'
-
-def clearCache():
-	debug_MS("(common.clearCache) -------------------------------------------------- START = clearCache --------------------------------------------------")
-	debug_MS("(common.clearCache) ========== Lösche jetzt den Addon-Cache ==========")
-	cache.delete('%')
-	xbmc.sleep(1000)
-	dialog.ok(addon_id, translation(30502))
+		if method == 'GET':
+			result = simple.get(url, headers=headers, allow_redirects=allow_redirects, verify=verify, stream=stream, timeout=40)
+			if stream is None:
+				result = py2_enc(result.text)
+		elif method == 'POST':
+			result = simple.post(url, headers=headers, allow_redirects=allow_redirects, verify=verify, data=data, json=json, timeout=40)
+		debug_MS("(common.getUrl) === send url-HEADERS : {0} ===".format(str(simple.headers)))
+	except requests.exceptions.RequestException as e:
+		failure = str(e)
+		failing("(common.getUrl) ERROR - ERROR - ERROR : ##### {0} === {1} #####".format(url, failure))
+		dialog.notification(translation(30521).format('URL'), "ERROR = [COLOR red]{0}[/COLOR]".format(failure), icon, 12000)
+		return sys.exit(0)
+	return result
 
 def ADDON_operate(IDD):
 	js_query = xbmc.executeJSONRPC('{"jsonrpc":"2.0", "id":1, "method":"Addons.GetAddonDetails", "params":{"addonid":"'+IDD+'", "properties":["enabled"]}}')
@@ -133,62 +155,48 @@ def ADDON_operate(IDD):
 	if '"enabled":true' in js_query:
 		return True
 
-def build_url(query):
-	return '{0}?{1}'.format(HOST_AND_PATH, urlencode(query))
+def clearCache():
+	debug_MS("(common.clearCache) -------------------------------------------------- START = clearCache --------------------------------------------------")
+	debug_MS("(common.clearCache) ========== Lösche jetzt den Addon-Cache ==========")
+	cache.delete('%')
+	xbmc.sleep(1000)
+	dialog.ok(addon_id, translation(30502))
 
-def makeREQUEST(url, method='GET', REF='Unknown', XMLH=False):
-	return cache.cacheFunction(getUrl, url, method, REF, XMLH)
+def get_Description(info):
+	if 'fullDescription' in info and info['fullDescription'] and len(info['fullDescription']) > 10:
+		return cleaning(info['fullDescription'])
+	elif 'description' in info and info['description'] and len(info['description']) > 10:
+		return cleaning(info['description'])
+	elif 'shortDescription' in info and info['shortDescription'] and len(info['shortDescription']) > 10:
+		return cleaning(info['shortDescription'])
+	return ""
 
-def load_header(REF, XMLH):
-	if REF is 'Unknown':
-		HEADERS = response.headers.update({'User-Agent': get_userAgent()})
-	else:
-		HEADERS = response.headers.update({'User-Agent': get_userAgent(), 'Referer': REF})
-	if XMLH is True:
-		HEADERS = response.headers.update({'Host': 'www.mtv.de', 'DNT': '1', 'X-Requested-With': 'XMLHttpRequest', 'Content-Type': 'application/json'})
-	return HEADERS
-
-def get_userAgent():
-	base = 'Mozilla/5.0 {0} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
-	system = platform.system()
-	if system == 'Darwin':
-		return base.format('(Macintosh; Intel Mac OS X 10_10_1)') # Mac OSX
-	if system == 'Windows':
-		return base.format('(Windows NT 10.0; WOW64)') # Windows
-	if platform.machine().startswith('arm'):
-		return base.format('(X11; CrOS armv7l 7647.78.0)') # ARM based Linux
-	return base.format('(X11; Linux x86_64)') # x86 Linux
-
-def getUrl(url, method='GET', REF='Unknown', XMLH=False, headers=None, cookies=None, allow_redirects=True, verify=True, stream=None, data=None):
-	if headers is None:
-		headers = load_header(REF, XMLH)
+def get_Seconds(info):
 	try:
-		if method == 'GET':
-			content = response.get(url, headers=headers, allow_redirects=allow_redirects, verify=verify, stream=stream, timeout=40)
-			if stream is None:
-				content = py2_enc(content.text)
-		elif method == 'POST':
-			content = response.post(url, headers=headers, allow_redirects=allow_redirects, verify=verify, data=data, timeout=40)
-	except requests.exceptions.RequestException as e:
-		failure = str(e)
-		failing("(common.getUrl) ERROR - ERROR - ERROR : ##### {0} === {1} #####".format(url, failure))
-		dialog.notification(translation(30521).format('URL'), "ERROR = [COLOR red]{0}[/COLOR]".format(failure), icon, 12000)
-		return sys.exit(0)
-	return content
-
-def utc_to_local(utcDT):
-	timestamp = calendar.timegm(utcDT.timetuple())
-	localDT = datetime.fromtimestamp(timestamp)
-	assert utcDT.resolution >= timedelta(microseconds=1)
-	return localDT.replace(microsecond=utcDT.microsecond)
+		info = re.sub('[a-z]', '', info)
+		first = info.split(':')[0]
+		if len(info) > 5 and len(first) < 3:
+			h, m, s = info.split(':')
+			return int(h)*3600+int(m)*60+int(s)
+		elif len(info) < 6 or len(first) > 2:
+			m, s = info.split(':')
+			return int(m)*60+int(s)
+	except: return '0'
 
 def cleaning(text):
 	text = py2_enc(text)
-	for n in (('&lt;', '<'), ('&gt;', '>'), ('&amp;', '&'), ('&apos;', "'"), ("&#x27;", "'"), ('&#34;', '"'), ('&#39;', '\''), ('&#039;', '\''), ('►', '>'),
-				('&#x00c4', 'Ä'), ('&#x00e4', 'ä'), ('&#x00d6', 'Ö'), ('&#x00f6', 'ö'), ('&#x00dc', 'Ü'), ('&#x00fc', 'ü'), ('&#x00df', 'ß'), ('&#xD;', ''), ('\xc2\xb7', '-'),
-				('&quot;', '"'), ('&szlig;', 'ß'), ('&ndash;', '-'), ('&Auml;', 'Ä'), ('&Ouml;', 'Ö'), ('&Uuml;', 'Ü'), ('&auml;', 'ä'), ('&ouml;', 'ö'), ('&uuml;', 'ü'),
-				('&agrave;', 'à'), ('&aacute;', 'á'), ('&acirc;', 'â'), ('&egrave;', 'è'), ('&eacute;', 'é'), ('&ecirc;', 'ê'), ('&igrave;', 'ì'), ('&iacute;', 'í'), ('&icirc;', 'î'),
-				('&ograve;', 'ò'), ('&oacute;', 'ó'), ('&ocirc;', 'ô'), ('&ugrave;', 'ù'), ('&uacute;', 'ú'), ('&ucirc;', 'û'), ("\\'", "'")):
+	for n in (('&lt;', '<'), ('&gt;', '>'), ('&amp;', '&'), ('&Amp;', '&'), ('&apos;', "'"), ("&quot;", "\""), ("&Quot;", "\""), ('&szlig;', 'ß'), ('&mdash;', '-'), ('&ndash;', '-'), ('&nbsp;', ' '), ('&hellip;', '...'), ('\xc2\xb7', '-'),
+				("&#x27;", "'"), ('&#34;', '"'), ('&#39;', '\''), ('&#039;', '\''), ('&#x00c4', 'Ä'), ('&#x00e4', 'ä'), ('&#x00d6', 'Ö'), ('&#x00f6', 'ö'), ('&#x00dc', 'Ü'), ('&#x00fc', 'ü'), ('&#x00df', 'ß'), ('&#xD;', ''),
+				('&#xC4;', 'Ä'), ('&#xE4;', 'ä'), ('&#xD6;', 'Ö'), ('&#xF6;', 'ö'), ('&#xDC;', 'Ü'), ('&#xFC;', 'ü'), ('&#xDF;', 'ß'), ('&#x201E;', '„'), ('&#xB4;', '´'), ('&#x2013;', '-'), ('&#xA0;', ' '),
+				('&Auml;', 'Ä'), ('&Euml;', 'Ë'), ('&Iuml;', 'Ï'), ('&Ouml;', 'Ö'), ('&Uuml;', 'Ü'), ('&auml;', 'ä'), ('&euml;', 'ë'), ('&iuml;', 'ï'), ('&ouml;', 'ö'), ('&uuml;', 'ü'), ('&#376;', 'Ÿ'), ('&yuml;', 'ÿ'),
+				('&agrave;', 'à'), ('&Agrave;', 'À'), ('&aacute;', 'á'), ('&Aacute;', 'Á'), ('&acirc;', 'â'), ('&Acirc;', 'Â'), ('&egrave;', 'è'), ('&Egrave;', 'È'), ('&eacute;', 'é'), ('&Eacute;', 'É'), ('&ecirc;', 'ê'), ('&Ecirc;', 'Ê'),
+				('&igrave;', 'ì'), ('&Igrave;', 'Ì'), ('&iacute;', 'í'), ('&Iacute;', 'Í'), ('&icirc;', 'î'), ('&Icirc;', 'Î'), ('&ograve;', 'ò'), ('&Ograve;', 'Ò'), ('&oacute;', 'ó'), ('&Oacute;', 'Ó'), ('&ocirc;', 'ô'), ('&Ocirc;', 'Ô'),
+				('&ugrave;', 'ù'), ('&Ugrave;', 'Ù'), ('&uacute;', 'ú'), ('&Uacute;', 'Ú'), ('&ucirc;', 'û'), ('&Ucirc;', 'Û'), ('&yacute;', 'ý'), ('&Yacute;', 'Ý'),
+				('&atilde;', 'ã'), ('&Atilde;', 'Ã'), ('&ntilde;', 'ñ'), ('&Ntilde;', 'Ñ'), ('&otilde;', 'õ'), ('&Otilde;', 'Õ'), ('&Scaron;', 'Š'), ('&scaron;', 'š'), ('&ccedil;', 'ç'), ('&Ccedil;', 'Ç'),
+				('&alpha;', 'a'), ('&Alpha;', 'A'), ('&aring;', 'å'), ('&Aring;', 'Å'), ('&aelig;', 'æ'), ('&AElig;', 'Æ'), ('&epsilon;', 'e'), ('&Epsilon;', 'Ε'), ('&eth;', 'ð'), ('&ETH;', 'Ð'), ('&gamma;', 'g'), ('&Gamma;', 'G'),
+				('&oslash;', 'ø'), ('&Oslash;', 'Ø'), ('&theta;', 'θ'), ('&thorn;', 'þ'), ('&THORN;', 'Þ'), ('&bull;', '•'), ('&iexcl;', '¡'), ('&iquest;', '¿'), ('&copy;', '(c)'), ('\t', '    '), ('<br />', ' - '),
+				("&rsquo;", "’"), ("&lsquo;", "‘"), ("&sbquo;", "’"), ('&rdquo;', '”'), ('&ldquo;', '“'), ('&bdquo;', '”'), ('&rsaquo;', '›'), ('lsaquo;', '‹'), ('&raquo;', '»'), ('&laquo;', '«'),
+				('\\xC4', 'Ä'), ('\\xE4', 'ä'), ('\\xD6', 'Ö'), ('\\xF6', 'ö'), ('\\xDC', 'Ü'), ('\\xFC', 'ü'), ('\\xDF', 'ß'), ('\\x201E', '„'), ('\\x28', '('), ('\\x29', ')'), ('\\x2F', '/'), ('\\x2D', '-'), ('\\x20', ' '), ('\\x3A', ':'), ("\\'", "'")):
 				text = text.replace(*n)
 	return text.strip()
 

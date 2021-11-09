@@ -20,7 +20,13 @@
 import re
 from six import iteritems, string_types
 from collections import namedtuple
-from resources.lib.control import py2_decode
+
+import sys
+
+def py2_decode(value):
+    if sys.version_info.major == 2:
+        return value.decode('utf-8')
+    return value
 
 DomMatch = namedtuple('DOMMatch', ['attrs', 'content'])
 re_type = type(re.compile(''))

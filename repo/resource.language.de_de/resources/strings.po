@@ -4,15 +4,15 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-08-17 08:58+0000\n"
+"PO-Revision-Date: 2021-11-01 08:42+0000\n"
 "Last-Translator: Kai Sommerfeld <kai.sommerfeld@gmx.com>\n"
-"Language-Team: German <https://kodi.weblate.cloud/projects/kodi-core/kodi-main/de_de/>\n"
+"Language-Team: German <https://kodi.weblate.cloud/projects/kodi-core/kodi-main-matrix/de_de/>\n"
 "Language: de_de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 
 msgctxt "#0"
 msgid "Programs"
@@ -1176,8 +1176,8 @@ msgstr "Sprache der Benutzeroberfläche"
 
 #. Setting in international settings
 msgctxt "#310"
-msgid "Virtual keyboard layouts"
-msgstr "Virtuelle Tastaturlayouts"
+msgid "Keyboard layouts"
+msgstr "Tastaturbelegungen"
 
 #. Keyboard layout name e.g. "English QWERTY"
 msgctxt "#311"
@@ -1591,10 +1591,6 @@ msgstr "Taupunkt"
 msgctxt "#406"
 msgid "Humidity"
 msgstr "Luftfeuchtigkeit"
-
-msgctxt "#407"
-msgid "Hardware keyboard layouts"
-msgstr "Hardware-Tastaturlayouts"
 
 msgctxt "#409"
 msgid "Defaults"
@@ -3971,7 +3967,7 @@ msgstr "Zurück zur Vorgängerliste, weil aktive Liste geleert wurde"
 
 msgctxt "#2101"
 msgid "Newer version needed. Check the log for more information about this message."
-msgstr "Neuere Version wird benötigt. Für mehr Details Logdatei einsehen."
+msgstr "Neuere Version wird benötigt. Für mehr Details Protokoll einsehen."
 
 #. Notification message indicating an add-on error. "<Add-on name> error".
 msgctxt "#2102"
@@ -3986,16 +3982,7 @@ msgstr "Addon-Fehler"
 #. Used for add-on error kaitoast.
 msgctxt "#2104"
 msgid "Check the log for more information."
-msgstr "Für mehr Informationen Logdatei einsehen."
-
-# empty strings from id 2105 to 2202
-msgctxt "#2203"
-msgid "Use DTS Core"
-msgstr "DTS Core verwenden"
-
-msgctxt "#2204"
-msgid "Select this option if you want to passthrough DTS-HD formats as DTS, otherwise, DTS-HD formats will be played via PCM"
-msgstr "Diese Option auswählen, um DTS-HD Formate als DTS zu behandeln. Andernfalls werden diese Formate als PCM wiedergegeben"
+msgstr "Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#10000"
 msgid "Home"
@@ -4622,17 +4609,6 @@ msgctxt "#12022"
 msgid "Resume from {0:s}"
 msgstr "Bei {0:s} fortsetzen"
 
-# empty strings from id 12023 to 12307
-#. Label of the show password button in the keyboard dialog
-msgctxt "#12308"
-msgid "Show password"
-msgstr "Passwort anzeigen"
-
-#. Label of the hide password button in the keyboard dialog
-msgctxt "#12309"
-msgid "Hide password"
-msgstr "Passwort verstecken"
-
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
@@ -4896,7 +4872,7 @@ msgstr "Vollbild-Spiel"
 
 msgctxt "#12999"
 msgid "Startup"
-msgstr "Startup"
+msgstr "Start"
 
 msgctxt "#13000"
 msgid "System"
@@ -5668,7 +5644,7 @@ msgstr "Untertitel aktivieren"
 
 msgctxt "#13398"
 msgid "Shortcuts"
-msgstr "Lesezeichen"
+msgstr "Verknüpfungen"
 
 msgctxt "#13399"
 msgid "Ignore articles when sorting"
@@ -5738,8 +5714,6 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Render-Methode"
 
-#. Value for setting with label #13415 "Player / Videos / Render method"
-#. Value for setting with label #36098 "System / Display / Use 10 bit for SDR"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Auto-Erkennung"
@@ -6070,10 +6044,6 @@ msgstr "Skip-Verzögerung"
 msgctxt "#13600"
 msgid "Apple Remote"
 msgstr "Apple Remote"
-
-msgctxt "#13601"
-msgid "Apple TV"
-msgstr "Apple TV"
 
 msgctxt "#13602"
 msgid "Allow start of Kodi using the remote"
@@ -6687,7 +6657,7 @@ msgstr "Steuerung"
 
 msgctxt "#14224"
 msgid "Startup"
-msgstr "Startup"
+msgstr "Start"
 
 msgctxt "#14225"
 msgid "Network Control"
@@ -6699,7 +6669,7 @@ msgstr "Quellen verwalten"
 
 msgctxt "#14227"
 msgid "Startup Settings"
-msgstr "Startup-Einstellungen"
+msgstr "Start-Einstellungen"
 
 msgctxt "#14230"
 msgid "Actions"
@@ -7086,7 +7056,7 @@ msgstr "Wiedergabe nicht möglich"
 
 msgctxt "#16027"
 msgid "One or more items failed to play. Check the log for more information about this message."
-msgstr "Allgemeiner Fehler bei der Wiedergabe. Für mehr Informationen Logdatei einsehen."
+msgstr "Allgemeiner Fehler bei der Wiedergabe. Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -7095,7 +7065,7 @@ msgstr "Wert eingeben"
 #. PVR error messages dialog text.
 msgctxt "#16029"
 msgid "Check the log for more information about this message."
-msgstr "Für mehr Informationen Logdatei einsehen."
+msgstr "Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#16030"
 msgid "Party mode aborted."
@@ -7186,7 +7156,7 @@ msgstr "Fehler beim Kopieren"
 
 msgctxt "#16202"
 msgid "Failed to copy at least one file. Check the log for more information about this message."
-msgstr "Mindestens eine Datei konnte nicht kopiert werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Mindestens eine Datei konnte nicht kopiert werden. Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#16203"
 msgid "Move failed"
@@ -7194,7 +7164,7 @@ msgstr "Fehler beim Verschieben"
 
 msgctxt "#16204"
 msgid "Failed to move at least one file. Check the log for more information about this message."
-msgstr "Mindestens eine Datei konnte nicht verschoben werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Mindestens eine Datei konnte nicht verschoben werden. Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#16205"
 msgid "Delete failed"
@@ -7202,7 +7172,7 @@ msgstr "Fehler beim Löschen"
 
 msgctxt "#16206"
 msgid "Failed to delete at least one file. Check the log for more information about this message."
-msgstr "Mindestens eine Datei konnte nicht gelöscht werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Mindestens eine Datei konnte nicht gelöscht werden. Für mehr Informationen Protokoll einsehen."
 
 #. Name of the video filter that uses jagged pixels without smoothing
 msgctxt "#16296"
@@ -7559,12 +7529,12 @@ msgstr "Für diese Sendung existiert bereits ein Timer"
 #. message box text stating that a pvr channel could not be played.
 msgctxt "#19035"
 msgid "{0:s} can't be played. Check the log for more information about this message."
-msgstr "{0:s} kann nicht wiedergegeben werden. Für mehr Informationen Logdatei einsehen."
+msgstr "{0:s} kann nicht wiedergegeben werden. Für mehr Informationen Protokoll einsehen."
 
 #. message box text stating that a recording could not be played.
 msgctxt "#19036"
 msgid "This recording can't be played. Check the log for more information about this message."
-msgstr "Diese Aufnahme kann nicht wiedergegeben werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Diese Aufnahme kann nicht wiedergegeben werden. Für mehr Informationen Protokoll einsehen."
 
 #. pvr settings "show signal quality" label
 msgctxt "#19037"
@@ -7592,11 +7562,11 @@ msgstr "Aufnahme"
 
 msgctxt "#19044"
 msgid "Please check your configuration. Check the log for more information about this message."
-msgstr "Bitte Konfiguration überprüfen. Für mehr Informationen Logdatei einsehen."
+msgstr "Bitte Konfiguration überprüfen. Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#19045"
 msgid "No PVR clients have been started yet. Wait for the PVR clients to start up. Check the log for more information about this message."
-msgstr "Es sind bisher keine PVR-Clients gestartet. Bitte auf Abschluß des Starts der PVR-Clients warten. Für mehr Informationen Logdatei einsehen."
+msgstr "Es sind bisher keine PVR-Clients gestartet. Bitte auf Abschluss des Starts der PVR-Clients warten. Für mehr Informationen Protokoll einsehen."
 
 msgctxt "#19046"
 msgid "New channel"
@@ -7910,17 +7880,17 @@ msgstr "Standard-Bildwiederholrate"
 #. message box text stating that a timer could not be saved
 msgctxt "#19109"
 msgid "Could not save the timer. Check the log for more information about this message."
-msgstr "Timer konnte nicht gespeichert werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Timer konnte nicht gespeichert werden. Für mehr Informationen Protokoll einsehen."
 
 #. message box text stating that a timer could not be deleted
 msgctxt "#19110"
 msgid "Could not delete the timer. Check the log for more information about this message."
-msgstr "Timer konnte nicht gelöscht werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Timer konnte nicht gelöscht werden. Für mehr Informationen Protokoll einsehen."
 
 #. message box text stating that a PVR backend error occurred
 msgctxt "#19111"
 msgid "PVR backend error. Check the log for more information about this message."
-msgstr "PVR-Backend-Fehler. Für mehr Informationen Logdatei einsehen."
+msgstr "PVR-Backend-Fehler. Für mehr Informationen Protokoll einsehen."
 
 #. delete recordings confirmation message box text
 msgctxt "#19112"
@@ -8169,7 +8139,7 @@ msgstr "Aufnahmen"
 #. error box text stating that recording could not be started
 msgctxt "#19164"
 msgid "Could not start recording. Check the log for more information about this message."
-msgstr "Die Aufnahme konnte nicht gestartet werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Die Aufnahme konnte nicht gestartet werden. Für mehr Informationen Protokoll einsehen."
 
 #. Label for "switch to channel" button""
 msgctxt "#19165"
@@ -8199,7 +8169,7 @@ msgstr "Videoinformationen ausblenden"
 #. error box text stating that recording could not be stopped
 msgctxt "#19170"
 msgid "Could not stop recording. Check the log for more information about this message."
-msgstr "Die Aufnahme konnte nicht beendet werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Die Aufnahme konnte nicht beendet werden. Für mehr Informationen Protokoll einsehen."
 
 #. pvr settings "start playback full screen" setting label
 msgctxt "#19171"
@@ -8315,7 +8285,7 @@ msgstr "Kanalsuche wird von keinem der PVR-Backends unterstützt."
 #. error message box text stating that a given pvr channel could not be played
 msgctxt "#19193"
 msgid "The channel scan can't be started. Check the log for more information about this message."
-msgstr "Der Kanalsuchlauf kann nicht gestartet werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Der Kanalsuchlauf kann nicht gestartet werden. Für mehr Informationen Protokoll einsehen."
 
 #. unused?
 msgctxt "#19194"
@@ -8459,7 +8429,7 @@ msgstr "Programm-Guide"
 #. unused?
 msgctxt "#19223"
 msgid "No PVR add-on could be enabled. Check your settings or the log for more information."
-msgstr "Es konnte kein PVR-Addon aktiviert werden. Bitte Einstellungen überprüfen oder für mehr Informationen Logdatei einsehen."
+msgstr "Es konnte kein PVR-Addon aktiviert werden. Bitte Einstellungen überprüfen oder für mehr Informationen Protokoll einsehen."
 
 #. Notification text to announce that a recording was aborted
 msgctxt "#19224"
@@ -8659,7 +8629,7 @@ msgstr "Kindersicherung. PIN eingeben:"
 #. message box text stating that a timer could not be updated
 msgctxt "#19263"
 msgid "Could not update the timer. Check the log for more information about this message."
-msgstr "Timer konnte nicht aktualisiert werden. Für mehr Informationen Logdatei einsehen."
+msgstr "Timer konnte nicht aktualisiert werden. Für mehr Informationen Protokoll einsehen."
 
 #. label for 'incorrect pin' error dialog header
 msgctxt "#19264"
@@ -9781,7 +9751,7 @@ msgstr "RSS während Musikwiedergabe deaktivieren"
 
 msgctxt "#20081"
 msgid "Enable shortcut buttons"
-msgstr "Eigene Lesezeichen aktivieren"
+msgstr "Eigene Verküpfungen aktivieren"
 
 msgctxt "#20082"
 msgid "Show programs in main menu"
@@ -10796,8 +10766,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Dateinamen durch Bibliothekseinträge ersetzen"
 
-#. Value for setting with label #19171 "PVR & Live TV / Playback / Switch to full screen"
-#. Value for setting with label #36098 "System / Display / Use 10 bit for SDR"
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 msgctxt "#20420"
 msgid "Never"
 msgstr "Nie"
@@ -10806,8 +10775,6 @@ msgctxt "#20421"
 msgid "If only one season"
 msgstr "Wenn es nur eine Staffel gibt"
 
-#. Value for setting with label #170 "Player / Videos / Adjust display refresh rate"
-#. Value for setting with label #36098 "System / Display / Use 10 bit for SDR"
 msgctxt "#20422"
 msgid "Always"
 msgstr "Immer"
@@ -10958,7 +10925,7 @@ msgstr "Nicht hierarchisch anzeigen"
 
 msgctxt "#20457"
 msgid "Movie set"
-msgstr "Filmkollektionen"
+msgstr "Filmkollektion"
 
 msgctxt "#20458"
 msgid "Show movie sets"
@@ -11019,10 +10986,6 @@ msgstr "Serien ohne Episoden anzeigen"
 msgctxt "#20472"
 msgid "Show all performers for music videos"
 msgstr "Alle Künstler von Musikvideos anzeigen"
-
-msgctxt "#20473"
-msgid "Premiered"
-msgstr "Erstaufführung"
 
 msgctxt "#21330"
 msgid "Show hidden files and directories"
@@ -12762,12 +12725,12 @@ msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
 msgstr "Aktivieren, um die Siri Remote wie das normale Apple tvOS agieren zu lassen"
 
 msgctxt "#24154"
-msgid "Consider Siri remote in idle state after N seconds"
-msgstr "Siri Remote als inaktiv behandeln nach N Sekunden"
+msgid "Idle remote handling after N seconds"
+msgstr "Fernbedienung nach N Sekunden in Schlaf versetzen"
 
 msgctxt "#24155"
-msgid "Time to wait before considering the Siri remote in idle state"
-msgstr "Die Zeit, die gewartet werden soll, bevor Siri Remote als inaktiv behandelt wird"
+msgid "After remote idles, the first tap/swipe received will wake it"
+msgstr "Wenn die Fernbedienung in den Schlaf versetzt wurde, wacht sie bei Tippen/Wischen wieder auf"
 
 msgctxt "#24156"
 msgid "30 Seconds"
@@ -12786,16 +12749,20 @@ msgid "120 Seconds"
 msgstr "120 Sekunden"
 
 msgctxt "#24160"
-msgid "Ignore first tap/swipe/pan of the Siri remote after a period of inactivity"
-msgstr "Die erste Tipp-/Wisch-/Schwenk-Geste von Siri Remote nach einer gewissen Inaktivitätszeit ignorieren"
+msgid "Enable Siri remote timeout"
+msgstr "Timeout für Siri-Fernsteuerung aktivieren"
 
 msgctxt "#24161"
-msgid "This prevents you from accidental tap/swipe/pan action when you grab the remote in your hand"
-msgstr "Verhindert versehentliches Auslösen von Aktionen für Tipp-/Wisch-/Schwenk-Gesten beim In-die-Hand-Nehmen der Fernbedienung"
+msgid "Enable remote input timeout for tap/swipe"
+msgstr "Timeout für Tippen/Wischen aktivieren"
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
 msgstr "Kodis virtuelle Tastatur verwenden"
+
+msgctxt "#24163"
+msgid "Match Apple tvOS Standard (Siri remote)"
+msgstr "Apple tvOS-Standard benutzen (Siri-Fernbedienung)"
 
 #. Header text for yes/no dialog about enable of broken addon
 msgctxt "#24164"
@@ -12865,12 +12832,6 @@ msgstr "Minimal: {0:s} / Installiert: {1:s} => Aktualisieren auf: {2:s}{3:s}"
 msgctxt "#24184"
 msgid " (optional)"
 msgstr " (optional)"
-
-#. The minimum version, only lower versions are available for install
-#. {3:s} reserved for an empty string or the " (optional)" optional string. see #24184
-msgctxt "#24185"
-msgid "Minimum: {0:s} / Not available{3:s}"
-msgstr "Minimal: {0:s} / Nicht verfügbar{3:s}"
 
 #. Used as error message in add-on browser when add-on repository data could not be downloaded
 msgctxt "#24991"
@@ -12998,11 +12959,10 @@ msgctxt "#29805"
 msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "Diese Blu-ray Disc (oder Datei) ist verschlüsselt und kann nicht wiedergegeben werden."
 
-# empty strings from id 29806 to 29899
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
-msgid "RadioText Plus info"
-msgstr "RadioText Plus Information"
+msgid "Radiotext Plus info"
+msgstr "Radiotext Plus Information"
 
 #. Music band name which make the song (if present)
 msgctxt "#29901"
@@ -13765,18 +13725,6 @@ msgstr "MPEG-4 Audio (FFmpeg, M4A, AAC)"
 msgctxt "#34007"
 msgid "Windows media audio 2 (FFmpeg wmav2)"
 msgstr "Windows Media Audio 2 (FFmpeg, wmav2)"
-
-msgctxt "#34008"
-msgid "When you need to enter some text, Kodi virtual keyboard will show up instead of the built-in tvOS keyboard"
-msgstr "Zum Eingeben von Text wird Kodis virtuelle Tastatur anstelle der tvOS-Tastatur angezeigt"
-
-msgctxt "#34009"
-msgid "Siri remote pan gesture horizontal sensitivity"
-msgstr "Horizontale Empfindlichkeit für Schwenk-Gesten von Siri Remote"
-
-msgctxt "#34010"
-msgid "Siri remote pan gesture vertical sensitivity"
-msgstr "Vertikale Empfindlichkeit für Schwenk-Gesten von Siri Remote"
 
 msgctxt "#34100"
 msgid "Number of channels"
@@ -14857,12 +14805,6 @@ msgctxt "#36050"
 msgid "On start"
 msgstr "Beim Start"
 
-# empty strings from id 36051 to 36097
-#. Label of setting "System / Display / Use 10 bit for SDR"
-msgctxt "#36098"
-msgid "Use 10 bit for SDR"
-msgstr "10 bit für HDR verwenden"
-
 msgctxt "#36099"
 msgid "Dithering"
 msgstr "Dithering"
@@ -15771,7 +15713,7 @@ msgstr "Disk auswerfen, wenn Rip fertiggestellt wurde."
 #. Description of settings category "Interface -> Startup" with label #14224
 msgctxt "#36292"
 msgid "This category contains startup settings."
-msgstr "Kategorie mit Startup-Einstellungen."
+msgstr "Kategorie mit Start-Einstellungen."
 
 #. Description of setting with label #20223 "Artist information folder"
 msgctxt "#36293"
@@ -16441,9 +16383,7 @@ msgctxt "#36431"
 msgid "Shows all events in the event log for the current profile with options to only show specific levels."
 msgstr "Zeigt für das aktuelle Profil alle Einträge im Ereignis-Protokoll an, mit Option, die Anzeige auf bestimmte Stufen einzuschränken."
 
-#. Description for setting #310: "Virtual keyboard layouts"
-#. Setting in Interface -> Regional -> Virtual keyboard layouts
-#. Select the layout of a virtual keyboard
+#. Description for setting #310: "Keyboard layouts"
 msgctxt "#36432"
 msgid "Select virtual keyboard layouts."
 msgstr "Auswahl virtueller Tastaturbelegungen."
@@ -16457,13 +16397,10 @@ msgctxt "#36434"
 msgid "If enabled, switch to the channel with the programme to remind when auto-closing the reminder popup."
 msgstr "Wenn aktiviert, wird zu dem Kanal umgeschaltet, für den ein Erinnerungs-Popup automatisch geschlossen wurde."
 
-# empty string with id 36435
-#. Description for setting #407: "Hardware keyboard layouts"
-#. Setting in System -> Input -> Hardware keyboard layouts
-#. Select the layout of a physically attached keyboard
+#. Description for setting #310: "Keyboard layouts"
 msgctxt "#36436"
-msgid "Select hardware keyboard layout."
-msgstr "Hardware-Tastaturlayout auswählen."
+msgid "Select OS keyboard layout."
+msgstr "Tastaturbelegung des Betriebssystems auswählen."
 
 #. Option for setting "System -> Add-ons -> Update official add-ons from"
 msgctxt "#36437"
@@ -16810,11 +16747,6 @@ msgctxt "#36577"
 msgid "Specify the resolution for the 3D lookup table. Use a lower resolution for quick preview and higher resolution for more accurate picture. Using a high resolution may take seconds to prepare when parameters are changed or a new video is started."
 msgstr "Auflösung für die 3D Lookup Table. Verwenden einer niedrigeren Auflösung für eine schnelle Vorschau und einer höheren Auflösung für ein genaueres Bild. Bei Verwendung einer hohen Auflösung kann es unter Umständen Sekunden dauern, bis die Vorbereitung abgeschlossen ist, wenn Parameter geändert werden oder ein neues Video gestartet wird."
 
-#. Description of setting "System / Display / Use 10 bit for SDR" with label #36098
-msgctxt "#36578"
-msgid "Improves video quality by using 10-bit video surfaces for Standard Dynamic Range (SDR) video.[CR][Auto detect] Enables 10 bit for SDR only if the connected display supports HDR.[CR][Always] Enables 10 bit for SDR even if the connected display doesn't support HDR.[CR][Never] Do not use 10 bit for SDR.[CR]HDR passthrough mode always uses 10-bit regardless of this setting."
-msgstr "Verbessert die Videoqualität für Standard Dynamic Range (SDR) durch Verwendung von 10-bit Video-Oberflächen.[CR][Auto-Erkennung]Aktiviert 10 bit für SDR nur, wenn der angeschlossene Bildschirm HDR unterstützt.[CR][Immer]Aktiviert 10 bit für SDR auch, wenn der angeschlossene Bildschirm kein HDR unterstützt.[CR][Nie]10 bit für SDR wird nicht verwendet.[CR]Der HDR-Passthrough-Modus benutzt 10 bit, unabhängig von dieser Einstellung."
-
 #. primaries labels
 msgctxt "#36579"
 msgid "UHDTV (BT.2020)"
@@ -16969,7 +16901,7 @@ msgstr "Benachrichtigung anzeigen, wenn Addons aktualisiert wurden."
 #. Description of setting with label #24996 "Manage dependencies"
 msgctxt "#36613"
 msgid "Manage modules and support libraries that have been automatically installed as a dependency to other add-ons. Items listed as \"Orphaned\" are no longer required by any add-ons and are safe to uninstall."
-msgstr "Module und Supportbibliotheken, die automatisch als Abhängigkeit anderer Addons installiert wurden, organisieren. Inhalte die als „verwaist“ markiert sind, werden nicht länder von anderen Addons gebraucht und könnnen gefahrlos deinstalliert werden."
+msgstr "Module und Unterstützungsbibliotheken organisieren, die automatisch als Abhängigkeit anderer Addons installiert wurden. Als „verwaist“ markierte Einträge werden nicht länger von anderen Addons gebraucht und könnnen gefahrlos deinstalliert werden."
 
 #. Description of setting with label #24994 "Running"
 msgctxt "#36614"
@@ -17323,25 +17255,6 @@ msgstr "Kapitelvorschaubilder zur Darstellung im Kapitel- / Lesezeichendialog ex
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
-
-msgctxt "#37047"
-msgid "WS-Discovery"
-msgstr "WS-Discovery"
-
-#. Setting #37048 Enable WS-Discovery Service"
-msgctxt "#37048"
-msgid "Enable WS-Discovery Service"
-msgstr "WS-Discovery-Service aktivieren"
-
-#. Description of setting #37048 Enable WS-Discovery Service"
-msgctxt "#37049"
-msgid "Enable service to search for SMB services using the WS-Discovery protocol"
-msgstr "Service zum Suchen von SMB-Services mit dem WS-Discovery-Protokoll aktivieren"
-
-#. Label for component level debug logging setting
-msgctxt "#37050"
-msgid "Verbose logging for the [B]WS-Discovery[/B] component"
-msgstr "Ausführliche Protokollierung der [B]WS-Discovery[/B]-Komponente"
 
 #. Setting #38011 "Show All Items entry"
 msgctxt "#38011"
@@ -18216,37 +18129,162 @@ msgid "Windowing system:"
 msgstr "Windowing-System:"
 
 #~ msgctxt "#310"
-#~ msgid "Keyboard layouts"
-#~ msgstr "Tastaturbelegungen"
+#~ msgid "Virtual keyboard layouts"
+#~ msgstr "Virtuelle Tastaturlayouts"
 
+#~ msgctxt "#407"
+#~ msgid "Hardware keyboard layouts"
+#~ msgstr "Hardware-Tastaturlayouts"
+
+# empty strings from id 2105 to 2202
+#~ msgctxt "#2203"
+#~ msgid "Use DTS Core"
+#~ msgstr "DTS Core verwenden"
+
+#~ msgctxt "#2204"
+#~ msgid "Select this option if you want to passthrough DTS-HD formats as DTS, otherwise, DTS-HD formats will be played via PCM"
+#~ msgstr "Diese Option auswählen, um DTS-HD Formate als DTS zu behandeln. Andernfalls werden diese Formate als PCM wiedergegeben"
+
+# empty strings from id 12023 to 12307
+#~ msgctxt "#12308"
+#~ msgid "Show password"
+#~ msgstr "Passwort anzeigen"
+
+#~ msgctxt "#12309"
+#~ msgid "Hide password"
+#~ msgstr "Passwort verstecken"
+
+#~ msgctxt "#13601"
+#~ msgid "Apple TV"
+#~ msgstr "Apple TV"
+
+#~ msgctxt "#19041"
+#~ msgid "Refresh channel logos"
+#~ msgstr "Kanalsymbole aktualisieren"
+
+#~ msgctxt "#19042"
+#~ msgid "Channel Groups"
+#~ msgstr "Kanalgruppen"
+
+#~ msgctxt "#19186"
+#~ msgid "All selected data will be cleared. Some information cannot be restored from the clients afterwards. Proceed anyway?"
+#~ msgstr "Die ausgewählten Daten werden gelöscht. Einige Informationen können danach nicht von den PVR Clients wiederhergestellt werden. Trotzdem fortfahren?"
+
+#~ msgctxt "#19187"
+#~ msgid "Clearing data."
+#~ msgstr "Daten werden gelöscht."
+
+#~ msgctxt "#19188"
+#~ msgid "All guide data will be cleared. Are you sure?"
+#~ msgstr "Alle Programm-Guide-Daten werden gelöscht. Trotzdem fortfahren?"
+
+#~ msgctxt "#19334"
+#~ msgid "Providers"
+#~ msgstr "Anbieter"
+
+#~ msgctxt "#20473"
+#~ msgid "Premiered"
+#~ msgstr "Erstaufführung"
+
+#~ msgctxt "#21461"
+#~ msgid "Manual"
+#~ msgstr "Manuell"
+
+#~ msgctxt "#24154"
+#~ msgid "Consider Siri remote in idle state after N seconds"
+#~ msgstr "Siri Remote als inaktiv behandeln nach N Sekunden"
+
+#~ msgctxt "#24155"
+#~ msgid "Time to wait before considering the Siri remote in idle state"
+#~ msgstr "Die Zeit, die gewartet werden soll, bevor Siri Remote als inaktiv behandelt wird"
+
+#~ msgctxt "#24160"
+#~ msgid "Ignore first tap/swipe/pan of the Siri remote after a period of inactivity"
+#~ msgstr "Die erste Tipp-/Wisch-/Schwenk-Geste von Siri Remote nach einer gewissen Inaktivitätszeit ignorieren"
+
+#~ msgctxt "#24161"
+#~ msgid "This prevents you from accidental tap/swipe/pan action when you grab the remote in your hand"
+#~ msgstr "Verhindert versehentliches Auslösen von Aktionen für Tipp-/Wisch-/Schwenk-Gesten beim In-die-Hand-Nehmen der Fernbedienung"
+
+#~ msgctxt "#24185"
+#~ msgid "Minimum: {0:s} / Not available{3:s}"
+#~ msgstr "Minimal: {0:s} / Nicht verfügbar{3:s}"
+
+# empty strings from id 29806 to 29899
+#~ msgctxt "#29900"
+#~ msgid "RadioText Plus info"
+#~ msgstr "RadioText Plus Information"
+
+#~ msgctxt "#34008"
+#~ msgid "When you need to enter some text, Kodi virtual keyboard will show up instead of the built-in tvOS keyboard"
+#~ msgstr "Zum Eingeben von Text wird Kodis virtuelle Tastatur anstelle der tvOS-Tastatur angezeigt"
+
+#~ msgctxt "#34009"
+#~ msgid "Siri remote pan gesture horizontal sensitivity"
+#~ msgstr "Horizontale Empfindlichkeit für Schwenk-Gesten von Siri Remote"
+
+#~ msgctxt "#34010"
+#~ msgid "Siri remote pan gesture vertical sensitivity"
+#~ msgstr "Vertikale Empfindlichkeit für Schwenk-Gesten von Siri Remote"
+
+# empty strings from id 36051 to 36097
+#~ msgctxt "#36098"
+#~ msgid "Use 10 bit for SDR"
+#~ msgstr "10 bit für HDR verwenden"
+
+#~ msgctxt "#36192"
+#~ msgid "Location of subtitles on the screen. [Manual] The subtitles position can be customised by using video calibration settings. [Below] / [Above video] When possible the subtitles will be positioned inside the black bars (depends on video encoding). Please note that some forced positions in the subtitles cannot be changed."
+#~ msgstr "Position von Untertiteln auf dem Bildschirm. [Manuell] Die Position kann mit Videokalibrierungs-Einstellungen festgelegt werden. [Oben] / [Unten] Die Position wird so gewählt, dass die Untertitel innerhalb der „schwarzen Balken“ liegen, falls diese vorhanden sind. Bitte beachten, dass manche erzwungenen Untertitelpositionen nicht verändert werden können."
+
+#~ msgctxt "#36209"
+#~ msgid "Clear the databases for PVR data like channels, groups, reminders and guide. Please note that not all data can be restored from the backend afterwards."
+#~ msgstr "Datenbanken für z. B. Kanäle, Gruppen, Reminder und Programm-Guide bereinigen. Bitte beachten, dass danach nicht alle Daten von den Backends wiederhergestellt werden können."
+
+# empty string with id 36435
 #~ msgctxt "#36436"
-#~ msgid "Select OS keyboard layout."
-#~ msgstr "Tastaturbelegung des Betriebssystems auswählen."
+#~ msgid "Select hardware keyboard layout."
+#~ msgstr "Hardware-Tastaturlayout auswählen."
+
+#~ msgctxt "#36578"
+#~ msgid "Improves video quality by using 10-bit video surfaces for Standard Dynamic Range (SDR) video.[CR][Auto detect] Enables 10 bit for SDR only if the connected display supports HDR.[CR][Always] Enables 10 bit for SDR even if the connected display doesn't support HDR.[CR][Never] Do not use 10 bit for SDR.[CR]HDR passthrough mode always uses 10-bit regardless of this setting."
+#~ msgstr "Verbessert die Videoqualität für Standard Dynamic Range (SDR) durch Verwendung von 10-bit Video-Oberflächen.[CR][Auto-Erkennung]Aktiviert 10 bit für SDR nur, wenn der angeschlossene Bildschirm HDR unterstützt.[CR][Immer]Aktiviert 10 bit für SDR auch, wenn der angeschlossene Bildschirm kein HDR unterstützt.[CR][Nie]10 bit für SDR wird nicht verwendet.[CR]Der HDR-Passthrough-Modus benutzt 10 bit, unabhängig von dieser Einstellung."
+
+#~ msgctxt "#37047"
+#~ msgid "WS-Discovery"
+#~ msgstr "WS-Discovery"
+
+#~ msgctxt "#37048"
+#~ msgid "Enable WS-Discovery Service"
+#~ msgstr "WS-Discovery-Service aktivieren"
+
+#~ msgctxt "#37049"
+#~ msgid "Enable service to search for SMB services using the WS-Discovery protocol"
+#~ msgstr "Service zum Suchen von SMB-Services mit dem WS-Discovery-Protokoll aktivieren"
+
+#~ msgctxt "#37050"
+#~ msgid "Verbose logging for the [B]WS-Discovery[/B] component"
+#~ msgstr "Ausführliche Protokollierung der [B]WS-Discovery[/B]-Komponente"
+
+#~ msgctxt "#39154"
+#~ msgid "Override ASS / SSA subtitles styles"
+#~ msgstr "ASS-/SSA-Untertitel-Stile überschreiben"
+
+#~ msgctxt "#39155"
+#~ msgid "The SSA/ASS format can include metadata like font style, colors, size, alignments, positions, etc. you can override the styles with your customizations (please note that side effects may occur in some cases)."
+#~ msgstr "Das SSA-/ASS-Format kann Metadaten, wie Fontstil, Farben, Größe, Ausrichtungen, Positionen u. a., beinhalten. Diese Daten können mit benutzerdefinierten Werten überschrieben werden. Bitte beachten, dass dies unter Umständen zu Seiteneffekten führen kann."
+
+#~ msgctxt "#39156"
+#~ msgid "Positions"
+#~ msgstr "Positionen"
+
+#~ msgctxt "#39157"
+#~ msgid "Styles"
+#~ msgstr "Stile"
+
+#~ msgctxt "#39158"
+#~ msgid "Styles and positions"
+#~ msgstr "Stile und Positionen"
 
 #~ msgctxt "#36284"
 #~ msgid "Read the information belonging to an audio CD, like song title and artist, from the Internet database freedb.org."
 #~ msgstr "Audio-CD-Informationen, wie Titel und Interpret, von der Internetdatenbank freedb.org herunterladen."
-
-#~ msgctxt "#29900"
-#~ msgid "Radiotext Plus info"
-#~ msgstr "Radiotext Plus Information"
-
-#~ msgctxt "#24154"
-#~ msgid "Idle remote handling after N seconds"
-#~ msgstr "Fernbedienung nach N Sekunden in Schlaf versetzen"
-
-#~ msgctxt "#24155"
-#~ msgid "After remote idles, the first tap/swipe received will wake it"
-#~ msgstr "Wenn die Fernbedienung in den Schlaf versetzt wurde, wacht sie bei Tippen/Wischen wieder auf"
-
-#~ msgctxt "#24160"
-#~ msgid "Enable Siri remote timeout"
-#~ msgstr "Timeout für Siri-Fernsteuerung aktivieren"
-
-#~ msgctxt "#24161"
-#~ msgid "Enable remote input timeout for tap/swipe"
-#~ msgstr "Timeout für Tippen/Wischen aktivieren"
-
-#~ msgctxt "#24163"
-#~ msgid "Match Apple tvOS Standard (Siri remote)"
-#~ msgstr "Apple tvOS-Standard benutzen (Siri-Fernbedienung)"
