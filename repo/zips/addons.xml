@@ -1986,19 +1986,19 @@ adulthideout@yandex.com[/COLOR]
     <import addon="script.module.requests" />
     <import addon="script.module.simplejson" />
 	<import addon="script.module.kodi-six" />
-</requires>  
+</requires>
 <extension point="xbmc.python.pluginsource" library="default.py">
 	<provides>video</provides>
-</extension>   
+</extension>
   <extension point="xbmc.addon.metadata">
-  		<summary lang="hr_HR">Ovaj add-on ne sadrzi nikakav sadrzaj unutar add-ona vec samo linkove koji vode do strimova. Za vise informacija [COLOR=cyan]Facebook[/COLOR] group : [COLOR=limegreen]CobraModTVPro[/COLOR].</summary>
-		<summary lang="en">This add-on does not contain any content within the add-on, but only the links that lead to streams. More information on [COLOR cyan]Facebook[/COLOR] Group: [COLOR=limegreen]CobraModTVPro[/COLOR]</summary>
-		<description lang="hr_HR">Addon je namijenjen za Balkan,World Tv,Filmer,Series and Kids Movies[COLOR=cyan]Facebook[/COLOR] group : [COLOR=limegreen]CobraModTVPro[/COLOR]</description>
-        <description lang="en">The addon is intended for Balkan,World Tv,Filmer,Series and Kids Movies.[COLOR=cyan]Facebook[/COLOR] group : [COLOR=limegreen]CobraModTVPro[/COLOR].</description>
+  		<summary lang="hr_HR">Ovaj add-on ne sadrzi nikakav sadrzaj unutar add-ona vec samo linkove koji vode do strimova.</summary>
+		<summary lang="en">This add-on does not contain any content within the add-on, but only the links that lead to streams.</summary>
+		<description lang="hr_HR">Addon je namijenjen za Balkan,World Tv,Filmer,Series and Kids Movies[COLOR=cyan]</description>
+        <description lang="en">The addon is intended for Balkan,World Tv,Filmer,Series and Kids Movies.[COLOR=cyan]</description>
 		<description lang="en">[B]CobraMod Tv Pro[/B][CR] [B]***OpenScrapers Edition***[/B][CR][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
 		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<news lang="hr_HR">Nova verzija addon-a [COLOR gold]CobraMod[/COLOR] [COLOR lime]T[/COLOR][COLOR lime]v[/COLOR][COLOR lime]P[/COLOR][COLOR limero[/COLOR] [COLOR white]Addon[/COLOR]. Verzija: 1.0.2. Dodani novi kanali, linkovi, ispravljeni nedostatci, izmijenjen izgled i funkcionalnost addona. Za vise informacija [COLOR=deepskyblue].</news>
-        <news lang="en_GB">New version of the [COLOR gold]CobraMod[/COLOR] [COLOR lime]T[/COLOR][COLOR lime]v[/COLOR][COLOR lime]P[/COLOR][COLOR lime]pro[/COLOR] [COLOR white]Addon[/COLOR]. Version: 1.0.2. Added new channels, new links, new streams, fixed bugs, changed layout and functionality of addon. More information on [COLOR deepskyblue]Facebook[/COLOR] Group:[COLOR=limegreen]RobinHood[COLOR=lime]TvPro[/COLOR].</news>
+		<news lang="hr_HR">Nova verzija addon-a [COLOR gold]CobraMod[/COLOR] [COLOR lime]T[/COLOR][COLOR lime]v[/COLOR][COLOR lime]P[/COLOR][COLOR limero[/COLOR] [COLOR white]Addon[/COLOR]. Verzija: 1.0.0. Dodani novi kanali, linkovi, ispravljeni nedostatci, izmijenjen izgled i funkcionalnost addona.</news>
+        <news lang="en_GB">New version of the [COLOR gold]CobraMod[/COLOR] [COLOR lime]T[/COLOR][COLOR lime]v[/COLOR][COLOR lime]P[/COLOR][COLOR lime]pro[/COLOR] [COLOR white]Addon[/COLOR]. Version: 1.0.0. Added new channels, new links, new streams, fixed bugs, changed layout and functionality of addon.</news>
     <platform>all</platform>
 	<assets>
        <icon>icon.png</icon>
@@ -3474,7 +3474,7 @@ Xship 2021.07.01
   <extension point="xbmc.addon.metadata">
     <platform>windows-i686</platform>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/kodi-pvr/pvr.robinhoodi686</source>
+    <source>https://github.com/cobramod/repository.cobramod/tree/main/repo/pvr.cobramod-i686</source>
     <forum>https://forum.kodi.tv/forumdisplay.php?fid=234</forum>
     <assets>
       <icon>icon.png</icon>
@@ -3497,7 +3497,7 @@ Xship 2021.07.01
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="pvr.cobramodandroid-armv7" version="1.0.0.6" name="'CobraMod PVR Client" provider-name="Cobra@Anto">
+</addon><addon id="pvr.cobramodandroid-armv7" version="1.0.0.6" name="CobraMod PVR Client" provider-name="Cobra@Anto">
   <requires>
 <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
 <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5" />
@@ -3509,7 +3509,7 @@ Xship 2021.07.01
   <extension point="xbmc.addon.metadata">
     <platform>android-armv7</platform>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/kodi-pvr/pvr.robinhoodarmv7</source>
+    <source>https://github.com/cobramod/repository.cobramod/tree/main/repo/pvr.cobramod-armv7</source>
     <forum>https://forum.kodi.tv/forumdisplay.php?fid=234</forum>
     <assets>
       <icon>icon.png</icon>
@@ -3792,52 +3792,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <fanart>fanart.jpg</fanart>
     </assets> 
   </extension>
-</addon><addon id="repository.robinhood.wizard" name="[B][COLOR limegreen]RobinHood[B][COLOR white] Wizard Repository[/B][/COLOR]" version="1.1.8" provider-name="RobinHood">
-        <requires>
-            <import addon="xbmc.addon" version="12.0.0" />
-        </requires>
-        <extension point="xbmc.addon.repository" name="RobinHood Wizard Repository">
-            <info compressed="false">https://networkcorner.net/robinhood/_repo/addons.xml</info>
-            <checksum>https://networkcorner.net/robinhood/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://networkcorner.net/robinhood/_repo/</datadir>
-            <hashes>false</hashes>
-			
-			<dir>
-			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-		</dir>
-		
-		<dir>
-        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-        </dir>
-				        
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
-            <hashes>false</hashes>
-        </dir>
-	
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-		</dir>
-		
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Install all the latest Builds</summary>
-            <description>Welcome to the New and Improved RobinHood WIZARD for all your Community Builds.</description>
-            <platform>all</platform>
-			<assets>
-			<icon>icon.png</icon>
-            <icon>icon.gif</icon>
-            <fanart>fanart.jpg</fanart>    
-    </assets>
-    </extension>
 </addon><addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.2">
   <extension point="xbmc.addon.repository" name="SlyGuy Repository">
     <dir>

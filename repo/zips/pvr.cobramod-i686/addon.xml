@@ -10,7 +10,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>windows-i686</platform>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/kodi-pvr/pvr.robinhoodi686</source>
+    <source>https://github.com/cobramod/repository.cobramod/tree/main/repo/pvr.cobramod-i686</source>
     <forum>https://forum.kodi.tv/forumdisplay.php?fid=234</forum>
     <assets>
       <icon>icon.png</icon>
