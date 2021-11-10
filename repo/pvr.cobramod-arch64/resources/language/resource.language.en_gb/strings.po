@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Tojelako Client
-# Addon id: pvr.Tojelako
-# Addon Provider: Tojelako
+# Addon Name: Stalker Client
+# Addon id: pvr.stalker
+# Addon Provider: Jamal Edey
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -15,6 +15,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Addon Summary"
+msgid "PVR Client to connect Kodi to Stalker Middleware"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "PVR Client to connect Kodi to Stalker Middleware"
+msgstr ""
+
+msgctxt "Addon Disclaimer"
+msgid "This is unstable software! The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects."
+msgstr ""
 
 #settings labels
 
@@ -177,97 +189,29 @@ msgstr ""
 #empty strings from id 30511 to 30999
 
 msgctxt "#31000"
-msgid "Portal 1[B][COLOR gold] *[/COLOR][/B]"
+msgid "Portal 1"
 msgstr ""
 
 #empty strings from id 31001 to 31999
 
 msgctxt "#32000"
-msgid "Portal 2 [B][COLOR gold] *[/COLOR][/B]"
+msgid "Portal 2"
 msgstr ""
 
 #empty strings from id 32001 to 32999
 
 msgctxt "#33000"
-msgid "Portal 3 [B][COLOR gold] *[/COLOR][/B]"
+msgid "Portal 3"
 msgstr ""
 
 #empty strings from id 33001 to 33999
 
 msgctxt "#34000"
-msgid "Portal 4 [B][COLOR gold] *[/COLOR][/B]"
+msgid "Portal 4"
 msgstr ""
 
 #empty strings from id 34001 to 34999
 
 msgctxt "#35000"
-msgid "Portal 5 [B][COLOR red] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#35001"
-msgid "VG9qZWxha28"
-msgstr "VG9qZWxha28"
-
-msgctxt "#36000"
-msgid "Portal 6 [B][COLOR red] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#37000"
-msgid "Portal 7 [B][COLOR red] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#38000"
-msgid "Portal 8 [B][COLOR red] *[/COLOR][/B] "
-msgstr ""
-
-msgctxt "#39000"
-msgid "Portal 9 [B][COLOR blue] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#40000"
-msgid "Portal 10 [B][COLOR blue] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#41000"
-msgid "Portal 11 [B][COLOR green] *[/COLOR][/B] "
-msgstr ""
-
-msgctxt "#42000"
-msgid "Portal 12 [B][COLOR green] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#43000"
-msgid "Portal 13 [B][COLOR white] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#44000"
-msgid "Portal 14 [B][COLOR white] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#45000"
-msgid "Portal 15 [B][COLOR white] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#46000"
-msgid "Portal 16 [B][COLOR white] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#47000"
-msgid "Portal 17 [B][COLOR black] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#48000"
-msgid "Portal 18 [B][COLOR black] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#49000"
-msgid "Portal 19 [B][COLOR black] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#50000"
-msgid "Portal 20 [B][COLOR black] *[/COLOR][/B]"
-msgstr ""
-
-msgctxt "#51000"
-msgid "My Portal 17"
+msgid "Portal 5"
 msgstr ""
