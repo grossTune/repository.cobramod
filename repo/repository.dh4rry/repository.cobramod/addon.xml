@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.cobramod" name="[COLOR gold]CobraMod Repository[/COLOR]" version="1.0.2" provider-name="CobraMod">
+<addon id="repository.cobramod" name="[COLOR gold]CobraMod Repository[/COLOR]" version="1.0.2" provider-name="Cobra@Anto">
 	<extension point="xbmc.addon.repository" name="Multi Test Repository">
         <info compressed="false">https://cobramod.zapto.org/Kodi/repo/xml/addons.xml</info>
         <checksum>https://cobramod.zapto.org/Kodi/repo/xml/addons.xml.md5</checksum>

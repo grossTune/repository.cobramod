@@ -2,7 +2,7 @@
 <addon id="repository.cobramod"
 		name="[COLOR gold]C[/COLOR]obra [COLOR gold]M[/COLOR]od [COLOR gold]R[/COLOR]epository"
 		version="1.0.4"
-		provider-name="Cobra">
+		provider-name="Cobra@Anto">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>

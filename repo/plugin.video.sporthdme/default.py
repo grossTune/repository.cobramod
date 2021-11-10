@@ -164,7 +164,7 @@ def get_events(url):  # 5
     # addDir('[COLORcyan]Time in GMT+2[/COLOR]', '', 'BUG', ICON, FANART, '')
     for event, streams in events:
         # xbmc.log('@#@EVENTTTTT:%s' % event, xbmc.LOGNOTICE)
-        watch = '[COLORlime]*[/COLOR]' if '>Live<' in event else '[COLORred]*[/COLOR]'
+        watch = '[COLORgold]*[/COLOR]' if '>Live<' in event else '[COLORred]*[/COLOR]'
         try:
             teams = client.parseDOM(event, 'td')
             # xbmc.log('@#@TEAMSSSS:%s' % str(teams), xbmc.LOGNOTICE)
