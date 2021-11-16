@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.cobramod"
 		name="[COLOR gold]C[/COLOR]obra [COLOR gold]M[/COLOR]od [COLOR gold]R[/COLOR]epository"
-		version="1.0.5"
+		version="1.0.6"
 		provider-name="Cobra@Anto">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>

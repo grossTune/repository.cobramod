@@ -1,0 +1,11 @@
+﻿
+[B]Version 2.0.1+matrix.1  (06.11.2021)[/B] by @realvito
+- Pluginname changed with this ReRelease (old=plugin.video.tyl0re.mtv -> new=plugin.video.viacom.mtv)
+- Komplette Neuauflage des MTV-Addons nach Webseitenerneuerung (ReRelease)
+- added: Rubriken = Neue Episoden + Neue Musikvideos
+- added: Diverse 'Musik-Ordner' lassen sich per 'Rechtsklick' als Playliste (shuffle) abspielen
+
+=======================================================================
+
+[B]Version 1.3.0+matrix.1  (06.11.2021)[/B] by realvito
+- last OLDVERSION with Path = plugin.video.tyl0re.mtv (...deprecated)

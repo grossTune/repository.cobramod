@@ -17,12 +17,12 @@ ADDONTITLE = '[COLOR gold][B]CobraMod[/B][/COLOR]Wizard'
 BUILDERNAME = 'CobraMod Wizard'
 EXCLUDES = [ADDON_ID, 'repository.cobramod','plugin.program.cobramod']
 # Text File with build info in it. Please read https://github.com/a4k-openproject/plugin.program.openwizard/wiki/Installing-Builds
-BUILDFILE = 'https://cobramod.net/Kodi/Wizard/builds.txt'
+BUILDFILE = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/Wizard/builds.txt'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK = 0
 # Text File with apk info in it.  Leave as 'http://' to ignore
-APKFILE = 'https://cobramod.net/Kodi/APK/cobramod.apk'
+APKFILE = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/APK/CobraModv19.3.1.apk'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
 YOUTUBETITLE = ''
 YOUTUBEFILE = 'http://'
@@ -98,9 +98,9 @@ AUTOINSTALL = 'Yes'
 # Addon ID for the repository
 REPOID = 'repository.cobramod'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML = 'https://cobramod.net/Kodi/repo/addons.xml'
+REPOADDONXML = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/zips/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL = 'https://cobramod.net/Kodi/repo/'
+REPOZIPURL = 'https://raw.githubusercontent.com//cobramod/repository.cobramod/main/repo/zips/'
 #########################################################
 
 #########################################################
@@ -109,7 +109,7 @@ REPOZIPURL = 'https://cobramod.net/Kodi/repo/'
 # Enable Notification screen Yes or No
 ENABLE = 'Yes'
 # Url to notification file
-NOTIFICATION = 'https://cobramod.net/Kodi/Wizard/notify.txt'
+NOTIFICATION = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/Wizard/notify.txt'
 # Use either 'Text' or 'Image'
 HEADERTYPE = 'Text'
 # Font size of header

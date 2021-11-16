@@ -1,0 +1,345 @@
+﻿# Kodi Media Center language file
+# Addon Name: MTV Germany
+# Addon id: plugin.video.viacom.mtv
+# Addon Provider: realvito
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: 2021-11-06 16:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: realvito\n"
+"Language-Team: ENGLISH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# strings start
+# SETTINGS-CATEGORIES
+
+msgctxt "#30000"
+msgid "General"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Advanced"
+msgstr ""
+
+# empty strings from id 30002 to 30109
+# SETTINGS-BUTTONS
+
+msgctxt "#30110"
+msgid "     Websites-Cache storage  (in hours)"
+msgstr ""
+
+msgctxt "#30111"
+msgid "     Play HLS-Videos with [COLOR yellow]*Inputstream.Adaptive*[/COLOR] (since KODI-17+ possible)"
+msgstr ""
+
+msgctxt "#30112"
+msgid "     Show Title-Info im Playlist-Mode"
+msgstr ""
+
+msgctxt "#30113"
+msgid "     Delay in Seconds"
+msgstr ""
+
+msgctxt "#30114"
+msgid "     Duration in Seconds"
+msgstr ""
+
+msgctxt "#30115"
+msgid "     Show also entries without video [COLOR yellow](No Video)[/COLOR] in the charts"
+msgstr ""
+
+msgctxt "#30116"
+msgid "     Use Thumb as Background-Fanart"
+msgstr ""
+
+msgctxt "#30117"
+msgid "     Show subtitles for the video in own national language [COLOR yellow](if available)[/COLOR]"
+msgstr ""
+
+msgctxt "#30118"
+msgid "     Show Addon-Settings in the overview"
+msgstr ""
+
+msgctxt "#30119"
+msgid "     Detailed Addon-Debug (otherwise only Minimal-Log)"
+msgstr ""
+
+# empty strings from id 30120 to 30229
+# SETTINGS-TITLES
+
+msgctxt "#30230"
+msgid "[B][COLOR ff0099ff]CACHE[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30231"
+msgid "[B][COLOR ff0099ff]PLAY[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30232"
+msgid "[B][COLOR ff0099ff]INFO[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30233"
+msgid "[B][COLOR ff0099ff]LISTS[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30234"
+msgid "[B][COLOR ff0099ff]FANART[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30235"
+msgid "[B][COLOR ff0099ff]SUBTITLE[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30236"
+msgid "[B][COLOR ff0099ff]SETTINGS[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#30237"
+msgid "[B][COLOR ff0099ff]LOG[/COLOR][/B]"
+msgstr ""
+
+# empty strings from id 30238 to 30349
+# SETTINGS-DESCRIPTIONS
+
+#empty strings from id 30350 to 30500
+# WARNING/INFORMATION-MESSAGES-OK
+
+msgctxt "#30501"
+msgid "[COLOR orangered]ATTENTION : ... the required addon *[/COLOR][COLOR yellow]{0:s}[/COLOR][COLOR orangered]* is NOT installed !!![/COLOR]"
+msgstr ""
+
+msgctxt "#30502"
+msgid "[COLOR orangered]ATTENTION : ... DELETE Addon Cache !!![/COLOR][CR]The complete Cache of [COLOR green]* MTV Germany *[/COLOR] was deleted successfully !!!"
+msgstr ""
+
+# empty strings from id 30503 to 30520
+# WARNING/INFORMATION-MESSAGES-NOTIFICATION
+
+msgctxt "#30521"
+msgid "MTV Germany : [COLOR red]!!! {0:s} - ERROR !!![/COLOR]"
+msgstr ""
+
+msgctxt "#30522"
+msgid "[COLOR red]Unfortunately there are NO {0:s} :[/COLOR]"
+msgstr ""
+
+msgctxt "#30523"
+msgid "[COLOR red]An error has occured, please check *LOG* ![/COLOR]"
+msgstr ""
+
+msgctxt "#30524"
+msgid "* [COLOR blue]In the Category: {0:s}[/COLOR] * at MTV"
+msgstr ""
+
+msgctxt "#30525"
+msgid "[COLOR red]Currently NO videos of :[/COLOR]"
+msgstr ""
+
+msgctxt "#30526"
+msgid "* [COLOR blue]{0:s}[/COLOR] * bei MTV Germany"
+msgstr ""
+
+msgctxt "#30527"
+msgid "[COLOR red]The playlist is defective and can NOT be played ![/COLOR]"
+msgstr ""
+
+msgctxt "#30528"
+msgid "[COLOR red]Unfortunately NO suitable Video-Url found ![/COLOR]"
+msgstr ""
+
+# empty strings from id 30529 to 30600
+# PLUGIN-MAIN and SIDEMENU
+
+msgctxt "#30601"
+msgid "[COLOR deepskyblue]•[/COLOR] NEW EPISODES"
+msgstr ""
+
+msgctxt "#30602"
+msgid "[COLOR deepskyblue]•[/COLOR] NEW MUSICVIDEOS"
+msgstr ""
+
+msgctxt "#30603"
+msgid "Shows"
+msgstr ""
+
+msgctxt "#30604"
+msgid "Music"
+msgstr ""
+
+msgctxt "#30605"
+msgid "Charts"
+msgstr ""
+
+msgctxt "#30606"
+msgid "Playlists"
+msgstr ""
+
+msgctxt "#30607"
+msgid "[COLOR lime]* LIVESTREAM *[/COLOR]"
+msgstr ""
+
+msgctxt "#30608"
+msgid "--- Cache delete ---   [COLOR deepskyblue](autom. Updateintervall >> {0:s} Hours <<)[/COLOR]"
+msgstr ""
+
+msgctxt "#30609"
+msgid "MTV Settings"
+msgstr ""
+
+msgctxt "#30610"
+msgid "Inputstream Settings"
+msgstr ""
+
+# empty strings from id 30611 to 30619
+
+msgctxt "#30620"
+msgid "[COLOR lime]  (new)[/COLOR]"
+msgstr ""
+
+msgctxt "#30621"
+msgid "Season {0:s}"
+msgstr ""
+
+msgctxt "#30622"
+msgid "Season --"
+msgstr ""
+
+msgctxt "#30623"
+msgid "Startet at: [COLOR chartreuse]{0:s}[/COLOR][CR][CR]"
+msgstr ""
+
+msgctxt "#30624"
+msgid "{0:s}[COLOR orangered] • [/COLOR]TITLES"
+msgstr ""
+
+msgctxt "#30625"
+msgid "[COLOR lime]Next Page  >>>[/COLOR]"
+msgstr ""
+
+msgctxt "#30626"
+msgid "[COLOR chartreuse]S{0:s}E{1:s}:[/COLOR]  {2:s}"
+msgstr ""
+
+msgctxt "#30627"
+msgid "From Age {0:s}"
+msgstr ""
+
+msgctxt "#30628"
+msgid "without age restriction"
+msgstr ""
+
+msgctxt "#30629"
+msgid "[COLOR green]  ( + {0:s} )[/COLOR]"
+msgstr ""
+
+msgctxt "#30630"
+msgid "[COLOR red]  ( - {0:s} )[/COLOR]"
+msgstr ""
+
+msgctxt "#30631"
+msgid "[COLOR chartreuse]{0:s} •  [/COLOR]{1:s} - {2:s}"
+msgstr ""
+
+msgctxt "#30632"
+msgid "{0:s} •  {1:s} - {2:s}[COLOR orangered]  [No Video][/COLOR]"
+msgstr ""
+
+msgctxt "#30633"
+msgid "[COLOR lime]* MTV LIVE-TV *[/COLOR]"
+msgstr ""
+
+msgctxt "#30634"
+msgid "Now playing:"
+msgstr ""
+
+# empty strings from id 30635 to 30653
+# PLAYLIST FUNCTIONS
+
+msgctxt "#30654"
+msgid "[COLOR yellow]Add to MTV-Playlist[/COLOR]"
+msgstr ""
+
+msgctxt "#30655"
+msgid "[B][COLOR chartreuse]+ PLAY AS PLAYLIST +[/COLOR][/B]"
+msgstr ""
+
+# empty strings from id 30656 to 30700
+# MUSICLIST - FOLDER
+
+msgctxt "#30701"
+msgid "[COLOR chartreuse]* * * All Videos * * *[/COLOR]"
+msgstr ""
+
+msgctxt "#30702"
+msgid "Top Artists"
+msgstr ""
+
+msgctxt "#30703"
+msgid "Hits"
+msgstr ""
+
+msgctxt "#30704"
+msgid "Made in Germany"
+msgstr ""
+
+msgctxt "#30705"
+msgid "Hip Hop"
+msgstr ""
+
+msgctxt "#30706"
+msgid "Upcoming"
+msgstr ""
+
+msgctxt "#30707"
+msgid "Alternative"
+msgstr ""
+
+msgctxt "#30708"
+msgid "Dance"
+msgstr ""
+
+msgctxt "#30709"
+msgid "Pop"
+msgstr ""
+
+# empty strings from id 30710 to 30720
+# CHARTLIST - FOLDER
+
+msgctxt "#30721"
+msgid "DE SINGLE TOP 15"
+msgstr ""
+
+msgctxt "#30722"
+msgid "SINGLE TOP 100"
+msgstr ""
+
+msgctxt "#30723"
+msgid "MIDWEEK SINGLE TOP 100"
+msgstr ""
+
+msgctxt "#30724"
+msgid "STREAMING CHARTS"
+msgstr ""
+
+msgctxt "#30725"
+msgid "SINGLE TRENDING"
+msgstr ""
+
+msgctxt "#30726"
+msgid "DOWNLOAD CHARTS SINGLE"
+msgstr ""
+
+msgctxt "#30727"
+msgid "DANCE CHARTS"
+msgstr ""
+
+msgctxt "#30728"
+msgid "JAHRESCHARTS 2020"
+msgstr ""
