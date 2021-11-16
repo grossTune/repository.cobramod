@@ -1962,7 +1962,43 @@ adulthideout@yandex.com[/COLOR]
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="plugin.video.boxportal" name="BOX.PORTAL" version="19.0.3a+matrix" provider-name="TEAM.STUBE">
+</addon><addon id="plugin.video.boxportal.1" name="BOX.PORTAL.1" version="19.0.3a+matrix" provider-name="TEAM.STUBE">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">BOX.PORTAL</summary>
+    <language>en</language>
+    <description lang="en" />
+     <platform>all</platform>
+	 <assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+  </extension>
+</addon><addon id="plugin.video.boxportal.2" name="BOX.PORTAL.2" version="19.0.3a+matrix" provider-name="TEAM.STUBE">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">BOX.PORTAL</summary>
+    <language>en</language>
+    <description lang="en" />
+     <platform>all</platform>
+	 <assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+  </extension>
+</addon><addon id="plugin.video.boxportal.3" name="BOX.PORTAL.3" version="19.0.3a+matrix" provider-name="TEAM.STUBE">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
 	<import addon="script.module.requests" />
@@ -3157,10 +3193,9 @@ _None_
     <description lang="pl_PL">Oglądaj ulubione programy TwitchTV!</description>
     <description lang="ru_RU">Смотрите любимые игровые трансляции!</description>
   </extension>
-</addon><addon id="plugin.video.tyl0re.mtv" name="MTV Germany" version="1.2.9+matrix.1" provider-name="L0RE, realvito">
+</addon><addon id="plugin.video.viacom.mtv" name="MTV Germany [COLOR FF00EE00](neu)[/COLOR]" version="2.0.1+matrix.1" provider-name="realvito">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
-		<import addon="script.module.beautifulsoup4" version="4.8.2+matrix.1" />
 		<import addon="script.module.requests" version="2.22.0+matrix.1" />
 		<import addon="script.common.plugin.cache" version="2.6.1.1" />
 	</requires>
@@ -3178,16 +3213,19 @@ _None_
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
 		<forum>https://www.kodinerds.net/index.php/Thread/55451-L0REs-Blog/</forum>
-		<website>http://www.mtv.de</website>
+		<website>https://www.mtv.de/</website>
 		<email />
 		<mainsource>https://github.com/Collabsvito/REpo-AiO/</mainsource>
-		<source>https://github.com/Collabsvito/REpo-AiO/tree/master/MATRIX/plugin.video.tyl0re.mtv</source>
+		<source>https://github.com/Collabsvito/REpo-AiO/tree/master/MATRIX/plugin.video.viacom.mtv</source>
 		<assets>
 			<icon>resources/media/icon.png</icon>
 			<fanart>resources/media/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR orangered]Version 1.2.9+matrix.1  (08.06.2021)[/COLOR][/B] by realvito[CR]
-- fixed: System - Plattform wird auf iOS-Systemen nicht erkannt und Ergebnisse werden nicht angezeigt (IOError: [Errno 10] No child processes)
+		<news>[B][COLOR orangered]Version 2.0.1+matrix.1  (06.11.2021)[/COLOR][/B] by realvito[CR]
+- Pluginname changed with this ReRelease (old=plugin.video.tyl0re.mtv -&gt; new=plugin.video.viacom.mtv)
+- Komplette Neuauflage des MTV-Addons nach Webseitenerneuerung (ReRelease)
+- added: Rubriken = Neue Episoden + Neue Musikvideos
+- added: Diverse 'Musik-Ordner' lassen sich per 'Rechtsklick' als Playliste (shuffle) abspielen
 		</news>
 	</extension>
 </addon><addon id="plugin.video.videodevil" version="1.8.15" name="VideoDevil" provider-name="xbmc-adult">
@@ -3565,7 +3603,7 @@ Xship 2021.07.01
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="repository.cobramod" name="[COLOR gold]C[/COLOR]obra [COLOR gold]M[/COLOR]od [COLOR gold]R[/COLOR]epository" version="1.0.5" provider-name="Cobra@Anto">
+</addon><addon id="repository.cobramod" name="[COLOR gold]C[/COLOR]obra [COLOR gold]M[/COLOR]od [COLOR gold]R[/COLOR]epository" version="1.0.6" provider-name="Cobra@Anto">
   <requires>
     <import addon="xbmc.addon" version="12.0.0" />
   </requires>
@@ -4332,7 +4370,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.build" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.1+matrix" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.build.android" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.1+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -4356,7 +4394,103 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.update" name="[COLOR gold]Cobra Mod Build Aktuallisieren[/COLOR]" version="0.0.1" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.build.old" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.1+matrix" provider-name="cobra by TEAM.STUBE">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de_DE">Cobra Mod Installer by STUBEBOX</summary>
+        <description lang="de_DE" />
+        <language />
+        <platform>all</platform>
+        <license>unlicense</license>
+        <forum />
+        <website />
+        <email />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.1+matrix" provider-name="cobra by TEAM.STUBE">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de_DE">Cobra Mod Installer by STUBEBOX</summary>
+        <description lang="de_DE" />
+        <language />
+        <platform>all</platform>
+        <license>unlicense</license>
+        <forum />
+        <website />
+        <email />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="script.get.update.android" name="[COLOR gold]Cobra Mod Build Aktuallisieren[/COLOR]" version="0.0.1" provider-name="cobra by TEAM.STUBE">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de_DE">Update Cobra Mod</summary>
+        <description lang="de_DE" />
+        <language />
+        <platform>all</platform>
+        <license>unlicense</license>
+        <forum />
+        <website />
+        <email />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="script.get.update.old" name="[COLOR gold]Cobra Mod Build Aktuallisieren[/COLOR]" version="0.0.1" provider-name="cobra by TEAM.STUBE">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de_DE">Update Cobra Mod</summary>
+        <description lang="de_DE" />
+        <language />
+        <platform>all</platform>
+        <license>unlicense</license>
+        <forum />
+        <website />
+        <email />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="script.get.update.windows" name="[COLOR gold]Cobra Mod Build Aktuallisieren[/COLOR]" version="0.0.1" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>

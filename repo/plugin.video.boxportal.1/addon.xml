@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.boxportal"
-       name="BOX.PORTAL"
+<addon id="plugin.video.boxportal.1"
+       name="BOX.PORTAL.1"
        version="19.0.3a+matrix"
        provider-name="TEAM.STUBE">
   <requires>
