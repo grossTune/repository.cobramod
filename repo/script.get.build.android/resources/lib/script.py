@@ -76,8 +76,8 @@ def extract(zip_file, output_directory, progress_dialog):
 
 def get_build():
     addon_name = ADDON.getAddonInfo('name')
-    bundleURL = "https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/android/cobra_android.zip"
-    bundleVersion = base64.b64decode("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NvYnJhbW9kL3JlcG9zaXRvcnkuY29icmFtb2QvbWFpbi9yZXBvL2FuZHJvaWQvdmVyc2lvbg==").decode("utf-8")
+    bundleURL = "https://github.com/cobramod/repository.cobramod/blob/main/repo/android/cobra_android.zip"
+    bundleVersion = base64.b64decode("aHR0cHM6Ly9naXRodWIuY29tL2NvYnJhbW9kL3JlcG9zaXRvcnkuY29icmFtb2QvYmxvYi9tYWluL3JlcG8vYW5kcm9pZC92ZXJzaW9u").decode("utf-8")
     if not exists(bundleURL):
         xbmcgui.Dialog().ok('Cobra Mod Build [B][COLORred]OFFLINE[/COLOR][/B]','Aktuell leider nicht verfügbar.Versuche es später nochmal...' )
         os._exit(0)

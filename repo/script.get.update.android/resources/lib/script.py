@@ -83,7 +83,7 @@ def extract(zip_file, output_directory, progress_dialog):
 
 def get_update(version):
     addon_name = ADDON.getAddonInfo('name')
-    bundleURL = "https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/android/cobra_update.zip"
+    bundleURL = "https://github.com/cobramod/repository.cobramod/blob/main/repo/android/cobra_update.zip"
     yesnowindow = xbmcgui.Dialog().yesno('Cobra Mod UPDATE', 'Ein Update ist verfügbar![CR]Möchtest du das Update installieren?', yeslabel='JA', nolabel='SPÄTER')
     dialog = xbmcgui.Dialog()
     succ = False
