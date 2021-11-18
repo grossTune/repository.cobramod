@@ -1,13 +1,13 @@
 1
 |||
 
-[COLOR wite]============================================[/COLOR]
-[COLOR wite]Danke das ihr [/COLOR][COLOR gold]Cobra Wizard[/COLOR][COLOR wite]benutzt[/COLOR].
-[COLOR wite]============================================[/COLOR]
+[COLOR white]============================================[/COLOR]
+[COLOR white]Danke das ihr [/COLOR][COLOR gold]Cobra Wizard[/COLOR][COLOR white]benutzt[/COLOR].
+[COLOR white]============================================[/COLOR]
 [COLOR gold]Cobra Wizard[/COLOR] [COLOR gold]beinhaltet alles was Ihr benötigt zur Installation von Cobra Mod Builds.[/COLOR]
-[COLOR wite]============================================[/COLOR]
-[COLOR wite]Wizard wird euch ermöglichen die [/COLOR] [COLOR gold]Cobra Mod Buils[/COLOR][COLOR wite], zu Installieren oder alles rückgänging zu machen wenn Ihr es wollt.[/COLOR] 
-[COLOR wite]============================================[/COLOR]
-[COLOR wite]Besucht unsere [/COLOR] [COLOR yellow]Web Seite :[/COLOR] [COLOR lime]www.cobramod.net[/COLOR]
-[COLOR wite]============================================[/COLOR]
-[COLOR wite]Euer[/COLOR] [COLOR gold] Team @Cobra[/COLOR]
+[COLOR white]============================================[/COLOR]
+[COLOR white]Wizard wird euch ermöglichen die [/COLOR] [COLOR gold]Cobra Mod Buils[/COLOR][COLOR white], zu Installieren oder alles rückgänging zu machen wenn Ihr es wollt.[/COLOR] 
+[COLOR white]============================================[/COLOR]
+[COLOR white]Besucht unsere [/COLOR] [COLOR yellow]Web Seite :[/COLOR] [COLOR lime]www.cobramod.net[/COLOR]
+[COLOR white]============================================[/COLOR]
+[COLOR white]Euer[/COLOR] [COLOR gold] Team @Cobra[/COLOR]
