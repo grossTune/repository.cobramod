@@ -4418,7 +4418,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.2+matrix" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.3+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
