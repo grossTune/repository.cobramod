@@ -17,7 +17,7 @@ info="url.to.info"
 description="Build fuer Kodi 19.1 Matrix / Windows Platform"
 
 name="Cobra Android"
-version="19.3.1"
+version="19.3.2"
 url="https://github.com/cobramod/repository.cobramod/blob/main/repo/android/cobra_android.zip"
 minor="https://github.com/cobramod/repository.cobramod/blob/main/repo/android/cobra_update.zip"
 gui=""
