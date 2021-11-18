@@ -4370,7 +4370,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.build.android" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.2+matrix" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.build.android" name="[B][COLORgolden]Cobra Mod Installer Android[/COLOR][/B]" version="0.0.3+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -4418,7 +4418,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.3+matrix" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer windows[/COLOR][/B]" version="0.0.4+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -4442,7 +4442,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.update.android" name="[COLOR gold]Cobra Mod Build Aktuallisieren[/COLOR]" version="0.0.2" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.update.android" name="[COLOR gold]Cobra Mod Update Android[/COLOR]" version="0.0.3" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -4490,7 +4490,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.update.windows" name="[COLOR gold]Cobra Mod Build Aktuallisieren[/COLOR]" version="0.0.2" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.update.windows" name="[COLOR gold]Cobra Mod Update Android[/COLOR]" version="0.0.3" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>

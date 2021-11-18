@@ -1,4 +1,4 @@
-1
+2
 |||
 
 [COLOR white]============================================[/COLOR]
@@ -6,7 +6,7 @@
 [COLOR white]============================================[/COLOR]
 [COLOR gold]Cobra Wizard[/COLOR] [COLOR gold]beinhaltet alles was Ihr benötigt zur Installation von Cobra Mod Builds.[/COLOR]
 [COLOR white]============================================[/COLOR]
-[COLOR white]Wizard wird euch ermöglichen die [/COLOR] [COLOR gold]Cobra Mod Buils[/COLOR][COLOR white], zu Installieren oder alles rückgänging zu machen wenn Ihr es wollt.[/COLOR] 
+[COLOR white]Wizard wird euch ermöglichen die [/COLOR] [COLOR gold]Cobra Mod Buils[/COLOR][COLOR white], zu Installieren oder alles rückgänging zu machen wenn Ihr es wollt.[/COLOR]
 [COLOR white]============================================[/COLOR]
 [COLOR white]Besucht unsere [/COLOR] [COLOR yellow]Web Seite :[/COLOR] [COLOR lime]www.cobramod.net[/COLOR]
 [COLOR white]============================================[/COLOR]
