@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.2+matrix" provider-name="cobra by TEAM.STUBE">
+<addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer[/COLOR][/B]" version="0.0.3+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
