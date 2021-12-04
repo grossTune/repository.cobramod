@@ -88,8 +88,8 @@ def clean1(s):  # remove &XXX;
     if not s:
         return ''
     if six.PY3:
-      import html
-      return html.parser.unescape(s)
+        import html
+        return html.parser.unescape(s)
     h = html_parser.HTMLParser()
     return h.unescape(s.decode('utf8')).encode('utf8')
 
@@ -480,11 +480,11 @@ class CCurrentList(object):
                              + str(os.path.join(local_path, filename))
                              + ' opened', INFO)
                 break
-            except:
+            except Exception as e:
                 if enable_debug:
                     xbmc.log('File: '
                              + str(os.path.join(local_path, filename))
-                             + ' not found', INFO)
+                             + ' error: ' + e.__str__(), INFO)
                     if local_path == '':
                         traceback.print_exc(file=sys.stdout)
                 if local_path == '':
@@ -679,7 +679,7 @@ class CCurrentList(object):
                     f = open(os.path.join(cacheDir, 'page.html'), 'w', encoding='utf-8')
                 f.write('<Title>' + curr_url + '</Title>\n\n')
 
-            curr_url = urllib_parse.unquote(curr_url)
+            curr_url = urllib_parse.unquote(curr_url).replace('\\/', '/')
             req = Request(curr_url, None, txheaders)
             try:
                 cj.load(TRANSLATEPATH(cookiePath), ignore_discard=True)
@@ -777,9 +777,11 @@ class CCurrentList(object):
                 if item_rule.skill.find('striptoslash') != -1:
                     curr_match = re.search(r'(.+?/)[^/]+$', current_url_page)
                     if curr_match:
-                        if curr_match.group(1) == 'http://':
+                        if curr_match.group(1) == 'http://' or curr_match.group(1) == 'https://':
                             tmp.infos_dict['url'] = curr_url + '/' + tmp.infos_dict['url']
                         else:
+                            if '/' in tmp.infos_dict['url']:
+                                tmp.infos_dict['url'] = re.search(r'(?:.+/)?(.+)', tmp.infos_dict['url']).group(1)
                             tmp.infos_dict['url'] = curr_match.group(1) + tmp.infos_dict['url']
                 if item_rule.skill.find('space') != -1:
                     try:
@@ -920,9 +922,9 @@ class ContentFetcher(object):
             data = None
         else:
             url = rule.url
-            data = (rule.data % original_url).encode('utf8') if six.PY2 else (rule.data % original_url)
+            data = (rule.data % original_url).encode('utf8')
 
-        req = Request(url, data)
+        req = Request(url.replace('\\/', '/'), data)
         req.add_header('User-Agent', USERAGENT)
         if rule.reference != '':
             req.add_header(
@@ -1215,7 +1217,9 @@ class Main(object):
             tmp_file = xbmc.makeLegalFilename(tmp_file)
         else:
             tmp_file = xbmcvfs.makeLegalFilename(tmp_file)
-        urllib_request.urlretrieve(urllib_parse.unquote(url),
+        url = urllib_parse.unquote(url)
+        url = url.replace(' ', '%20')
+        urllib_request.urlretrieve(url,
                                    tmp_file,
                                    self.video_report_hook)
         if six.PY2:

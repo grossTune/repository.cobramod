@@ -4,13 +4,9 @@
     <include condition="!Player.PauseEnabled">OSDFocusStop</include>
     <include condition="Player.PauseEnabled">OSDFocusPause</include>
     <onunload>ClearProperty(osdshowinfo,home)</onunload>
+    <onload>ClearProperty(dontautoclose,home)</onload>
+    <onunload>ClearProperty(dontautoclose,home)</onunload>
     <controls>
-        <control type="button" id="2288">
-            <visible>true</visible>
-            <onfocus>SetFocus(14)</onfocus>
-            <onfocus condition="Window.IsVisible(videoosd)">Action(Close)</onfocus>
-        </control>
-
         <control type="group">
             <visible>!Skin.HasSetting(osd.usethemeNewOSD) + !Skin.HasSetting(osd.usethemeNewOSDSide)</visible>
             <height>74</height>
@@ -130,7 +126,7 @@
                 <usecontrolcoords>true</usecontrolcoords>
                 <include condition="!VideoPlayer.Content(livetv) + [VideoPlayer.HasMenu | [!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)]]">OSDDVDMenu</include>
                 <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(episodes)">OSDExtraInfoTV</include>
-                <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies)">OSDExtraInfoMOVIES</include>
+                <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies) + !VideoPlayer.Content(livetv)">OSDExtraInfoMOVIES</include>
                 <include condition="!VideoPlayer.Content(livetv)">OSDVideosRight</include>
                 <include condition="VideoPlayer.Content(livetv)">OSDPVRRight</include>
             </control>
@@ -237,7 +233,7 @@
                 <include>OSDVideoControlsFlip</include>
                 <include condition="!VideoPlayer.Content(livetv) + [VideoPlayer.HasMenu | [!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)]]">OSDDVDMenuNewOSDSide</include>
                 <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(episodes)">OSDExtraInfoTVNewOSDSide</include>
-                <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies)">OSDExtraInfoMOVIESNewOSDSide</include>
+                <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies) + !VideoPlayer.Content(livetv)">OSDExtraInfoMOVIESNewOSDSide</include>
                 <include condition="!VideoPlayer.Content(livetv)">OSDVideosRightNewOSDSide</include>
                 <include condition="VideoPlayer.Content(livetv)">OSDPVRRightNewOSDSide</include>
                 <animation effect="fade" start="0" end="100" time="500" delay="500">Visible</animation>
@@ -373,7 +369,7 @@
                 <usecontrolcoords>true</usecontrolcoords>
                 <include condition="!VideoPlayer.Content(livetv) + [VideoPlayer.HasMenu | [!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)]]">OSDDVDMenuNewOSD</include>
                 <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(episodes)">OSDExtraInfoTVNewOSD</include>
-                <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies)">OSDExtraInfoMOVIESNewOSD</include>
+                <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies) + !VideoPlayer.Content(livetv)">OSDExtraInfoMOVIESNewOSD</include>
                 <include condition="!VideoPlayer.Content(livetv)">OSDVideosRightNewOSD</include>
                 <include condition="VideoPlayer.Content(livetv)">OSDPVRRightNewOSD</include>
             </control>

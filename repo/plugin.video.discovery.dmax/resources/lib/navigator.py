@@ -190,11 +190,11 @@ def listEpisodes(Xidd, origSERIE):
 				year = str(vid['airDate'])[:4]
 			if startTIMES and endTIMES: Note_1 = translation(30629).format(str(startTIMES), str(endTIMES))
 			elif startTIMES and endTIMES is None: Note_1 = translation(30630).format(str(startTIMES))
-			if str(py2_enc(vid.get('rating'))) not in ['', 'None', '0', 'nicht definiert']:
-				mpaa = translation(30631).format(str(py2_enc(vid.get('rating'))))
+			if str(vid.get('rating')).isdigit():
+				mpaa = translation(30631).format(str(vid['rating'])) if str(vid.get('rating')) != '0' else translation(30632)
 			if mpaa is None and 'contentRatings' in vid and vid['contentRatings'] and len(vid['contentRatings']) > 0:
-				if str(py2_enc(vid.get('contentRatings', {})[0].get('code', ''))) not in ['', 'None', '0', 'nicht definiert']:
-					mpaa = translation(30631).format(str(py2_enc(vid.get('contentRatings', {})[0].get('code', ''))))
+				if str(vid.get('contentRatings', {})[0].get('code', '')).isdigit():
+					mpaa = translation(30631).format(str(vid.get('contentRatings', {})[0].get('code', ''))) if str(vid.get('contentRatings', {})[0].get('code', '')) != '0' else translation(30632)
 			if vid.get('description', ''):
 				Note_2 = cleaning(vid['description']).replace('\n\n\n', '\n\n')
 			plot = origSERIE+'[CR]'+Note_1+Note_2
@@ -337,6 +337,9 @@ def addLink(name, image, params={}, plot=None, duration=None, seriesname=None, s
 	info['Studio'] = 'DMAX'
 	info['Mpaa'] = mpaa
 	info['Mediatype'] = params.get('cineType')
+	### NEW FOR KODI-21: videoInfoTag = liz.getVideoInfoTag()
+	### NEW FOR KODI-21: videoInfoTag.setInfo(info)
+	### DELETED IN KODI-21: liz.setInfo(type='Video', infoLabels=info)
 	liz.setInfo(type='Video', infoLabels=info)
 	liz.setArt({'icon': icon, 'thumb': image, 'poster': image, 'fanart': defaultFanart})
 	if image and useThumbAsFanart and image != icon and not artpic in image:

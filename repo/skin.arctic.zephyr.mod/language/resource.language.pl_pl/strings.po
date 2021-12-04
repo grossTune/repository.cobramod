@@ -237,10 +237,6 @@ msgctxt "#31054"
 msgid "Recently Watched TV Shows"
 msgstr ""
 
-msgctxt "#31055"
-msgid "In Progress"
-msgstr ""
-
 msgctxt "#31056"
 msgid "Random Tv Shows"
 msgstr ""
@@ -2153,10 +2149,6 @@ msgctxt "#31533"
 msgid "Clean and minimal"
 msgstr ""
 
-msgctxt "#31534"
-msgid "Home menu slide animation"
-msgstr ""
-
 msgctxt "#31535"
 msgid "Hide plot, when widget is not focused"
 msgstr ""
@@ -2323,6 +2315,150 @@ msgstr ""
 
 msgctxt "#31583"
 msgid "Show behind slideshow"
+msgstr ""
+
+msgctxt "#31584"
+msgid "Make focused items glow"
+msgstr ""
+
+msgctxt "#31585"
+msgid "Zoom focused items"
+msgstr ""
+
+msgctxt "#31586"
+msgid "low"
+msgstr ""
+
+msgctxt "#31587"
+msgid "medium"
+msgstr ""
+
+msgctxt "#31588"
+msgid "high"
+msgstr ""
+
+msgctxt "#31589"
+msgid "Enable auto scrolling for titles"
+msgstr ""
+
+msgctxt "#31590"
+msgid "Glow intensity of focused items"
+msgstr ""
+
+msgctxt "#31591"
+msgid "V2"
+msgstr ""
+
+msgctxt "#31592"
+msgid "List type"
+msgstr ""
+
+msgctxt "#31593"
+msgid "Enable auto playing trailers in flix views"
+msgstr ""
+
+msgctxt "#31594"
+msgid "Stop playback on next"
+msgstr ""
+
+msgctxt "#31595"
+msgid "Try to hide black bars"
+msgstr ""
+
+msgctxt "#31596"
+msgid "playing"
+msgstr ""
+
+msgctxt "#31597"
+msgid "paused"
+msgstr ""
+
+msgctxt "#31598"
+msgid "caching"
+msgstr ""
+
+msgctxt "#31599"
+msgid "Auto start delay"
+msgstr ""
+
+msgctxt "#31600"
+msgid "Use old widget movement"
+msgstr ""
+
+msgctxt "#31603"
+msgid "Auto playing trailers"
+msgstr ""
+
+msgctxt "#31604"
+msgid "None"
+msgstr ""
+
+msgctxt "#31605"
+msgid "Medium"
+msgstr ""
+
+msgctxt "#31606"
+msgid "Maximal"
+msgstr ""
+
+msgctxt "#31607"
+msgid "On back, jump to first item in widget list"
+msgstr ""
+
+msgctxt "#31608"
+msgid "After that, focus home menu"
+msgstr ""
+
+msgctxt "#31623"
+msgid "If home menu is focused, jump to widgets on back"
+msgstr ""
+
+msgctxt "#31625"
+msgid "Disable addons fanart"
+msgstr ""
+
+msgctxt "#31626"
+msgid "Only, when widget is focused"
+msgstr ""
+
+msgctxt "#31628"
+msgid "Hide mouse warning"
+msgstr ""
+
+msgctxt "#31629"
+msgid "EDL markers"
+msgstr ""
+
+msgctxt "#31630"
+msgid "Hub widget content type"
+msgstr ""
+
+msgctxt "#31631"
+msgid "Playback action when video info dialog is shown"
+msgstr ""
+
+msgctxt "#31632"
+msgid "Stop playback when item is no longer focused"
+msgstr ""
+
+msgctxt "#31643"
+msgid "LibreELEC Settings"
+msgstr ""
+
+msgctxt "#31650"
+msgid "Is playing"
+msgstr ""
+
+msgctxt "#31651"
+msgid "Icon"
+msgstr ""
+
+msgctxt "#31652"
+msgid "Use embuary helper instead of litebox"
+msgstr ""
+
+msgctxt "#31653"
+msgid "blur"
 msgstr ""
 
 #~ msgctxt "#31149"

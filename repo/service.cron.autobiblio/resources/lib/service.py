@@ -4,7 +4,6 @@ import sys
 import os
 import xbmc
 import xbmcaddon
-import platform
 import json
 import xbmcvfs
 import time
@@ -29,10 +28,19 @@ class KodiMonitor(xbmc.Monitor):
 		self.Base = xbmcvfs.exists(Database)
 		self.traversing = Client(Client.SUPPORTED_ADDONS)
 
+	def current_os(self):
+		COS = 'Unknown'
+		platforms = ['System.Platform.Android', 'System.Platform.Darwin', 'System.Platform.Linux', 'System.Platform.IOS', 'System.Platform.OSX', 'System.Platform.Windows']
+		for elem in platforms:
+			if xbmc.getCondVisibility(elem):
+				COS = elem.split('.')[-1]
+				break
+		return COS
+
 	def start_signal(self):
 		time.sleep(20)
 		special("#############################################################################################")
-		special("########## RUNNING: "+addon_id+" VERSION "+addon_version+" / ON PLATFORM: "+platform.system()+" ##########")
+		special("########## RUNNING: "+addon_id+" VERSION "+addon_version+" / ON PLATFORM: "+self.current_os()+" ##########")
 		special("############## Start the Service in nearly 3 minutes - wait for other Instances to close ####################")
 		special("#############################################################################################")
 		time.sleep(wait_time)
@@ -49,7 +57,8 @@ class KodiMonitor(xbmc.Monitor):
 				cur.execute('SELECT * FROM stocks')
 				for (stunden, url, name, last, source) in cur.fetchall():
 					name = py2_uni(name)
-					name += '  ('+url.split('@@')[1].split('&')[0]+')' if '@@' in url else '  (Serie)'
+					SUFFIX = url.split('@@')[1].split('&')[0] if '@@' in url else ""
+					name += '  ('+SUFFIX+')' if len(SUFFIX) == 4 else '  ('+SUFFIX.replace('es', 'e')+')' if SUFFIX.startswith(('Staffel', 'Series', 'Movies')) else '  (Serie)'
 					debug("(service.load_rebuild) ######## Control-Session for TITLE = {0} || LASTUPDATE: {1} ########".format(name, last))
 					presentTIME = datetime.now()
 					previousTIME = datetime(*(time.strptime(last, '%Y-%m-%d %H:%M:%S')[0:6])) # 2019-06-23 14:10:00

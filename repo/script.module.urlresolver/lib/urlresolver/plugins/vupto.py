@@ -23,7 +23,7 @@ from urlresolver.plugins.lib import helpers
 class VuptoResolver(GenericResolver):
     name = "vup"
     domains = ["vup.to"]
-    pattern = r'(?://|\.)(vup\.to)/(?:embed-)?([0-9a-zA-Z]+)'
+    pattern = r'(?://|\.)(vup\.to)/(?:embed-|emb\.html\?)?([0-9a-zA-Z]+)'
 
     def get_media_url(self, host, media_id):
         return helpers.get_media_url(self.get_url(host, media_id),

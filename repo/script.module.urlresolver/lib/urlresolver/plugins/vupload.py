@@ -23,7 +23,7 @@ from urlresolver.plugins.__generic_resolver__ import GenericResolver
 class VUploadResolver(GenericResolver):
     name = "vupload"
     domains = ["vupload.com"]
-    pattern = r'(?://|\.)(vupload\.com)/(?:e/)?([0-9A-Za-z]+)'
+    pattern = r'(?://|\.)(vupload\.com)/(?:e/|v/)?([0-9A-Za-z]+)'
 
     def get_media_url(self, host, media_id):
         return helpers.get_media_url(self.get_url(host, media_id),

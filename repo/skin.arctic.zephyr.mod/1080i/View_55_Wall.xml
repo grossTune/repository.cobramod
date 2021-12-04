@@ -117,37 +117,41 @@
             </include>
         </control>
     </include>
+    
+    <include name="View_55_Info_Include">
+        <animation effect="fade" start="0" end="100" delay="1300" time="200" reversible="false">Focus</animation>
+        <control type="label">
+            <width>610</width>
+            <height>50</height>
+            <font>SmallBold</font>
+            <textcolor>Light1</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="textbox">
+            <top>70</top>
+            <width>610</width>
+            <height>150</height>
+            <font>Tiny</font>
+            <textcolor>Light2</textcolor>
+            <align>justify</align>
+            <label>$INFO[ListItem.Plot]</label>
+        </control>
+        <control type="label">
+            <top>230</top>
+            <width>610</width>
+            <height>50</height>
+            <font>Tiny</font>
+            <align>right</align>
+            <textcolor>Light1</textcolor>
+            <label>$VAR[View55SubLabel]</label>
+        </control>
+    </include>
 
     <include name="View_55_Info_Left">
         <control type="group">
             <left>35</left>
             <top>20</top>
-            <animation effect="fade" start="0" end="100" delay="1300" time="200" reversible="false">Focus</animation>
-            <control type="label">
-                <width>610</width>
-                <height>50</height>
-                <font>MediumBold</font>
-                <textcolor>Light1</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="textbox">
-                <top>70</top>
-                <width>610</width>
-                <height>150</height>
-                <font>Tiny</font>
-                <textcolor>Light2</textcolor>
-                <align>justify</align>
-                <label>$INFO[ListItem.Plot]</label>
-            </control>
-            <control type="label">
-                <top>230</top>
-                <width>610</width>
-                <height>50</height>
-                <font>Tiny</font>
-                <align>right</align>
-                <textcolor>Light1</textcolor>
-                <label>$VAR[SubLabel55]</label>
-            </control>
+            <include>View_55_Info_Include</include>
         </control>
     </include>
 
@@ -155,32 +159,7 @@
         <control type="group">
             <left>242</left>
             <top>20</top>
-            <animation effect="fade" start="0" end="100" delay="1300" time="200" reversible="false">Focus</animation>
-            <control type="label">
-                <width>610</width>
-                <height>50</height>
-                <font>MediumBold</font>
-                <textcolor>Light1</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="textbox">
-                <top>70</top>
-                <width>610</width>
-                <height>150</height>
-                <font>Tiny</font>
-                <textcolor>Light2</textcolor>
-                <align>justify</align>
-                <label>$INFO[ListItem.Plot]</label>
-            </control>
-            <control type="label">
-                <top>230</top>
-                <width>610</width>
-                <height>50</height>
-                <font>Tiny</font>
-                <align>right</align>
-                <textcolor>Light1</textcolor>
-                <label>$VAR[SubLabel55]</label>
-            </control>
+            <include>View_55_Info_Include</include>
         </control>
     </include>
 
@@ -320,6 +299,7 @@
                         <bottom>40</bottom>
                         <align>left</align>
                         <textcolor>Dark1</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
@@ -329,6 +309,7 @@
                         <bottom>40</bottom>
                         <align>right</align>
                         <textcolor>Dark2</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$INFO[ListItem.Rating]</label>
                     </control>
                     <control type="label">
@@ -338,6 +319,7 @@
                         <bottom>3</bottom>
                         <align>left</align>
                         <textcolor>Dark2</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$VAR[LabelYear]</label>
                     </control>
                     <control type="label">
@@ -347,6 +329,7 @@
                         <bottom>3</bottom>
                         <align>right</align>
                         <textcolor>Dark2</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$VAR[LabelDuration]</label>
                     </control>
                 </itemlayout>
@@ -357,6 +340,11 @@
                             <param name="id" value="555"/>
                             <param name="indicatorbackground" value="true"/>
                             <param name="height" value="245"/>
+                            <param name="glow_height" value="247" />
+                            <param name="glow_top" value="-2"/>
+                            <param name="glow_left" value="5"/>
+                            <param name="glow_right" value="5"/>
+                            <param name="glow_zoom" value="108"/>                            
                         </include>
                     </control>
                     <control type="label">
@@ -366,6 +354,7 @@
                         <bottom>40</bottom>
                         <align>left</align>
                         <textcolor>Dark1</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
@@ -375,6 +364,7 @@
                         <bottom>40</bottom>
                         <align>right</align>
                         <textcolor>Dark2</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$INFO[ListItem.Rating]</label>
                     </control>
                     <control type="label">
@@ -384,6 +374,7 @@
                         <bottom>3</bottom>
                         <align>left</align>
                         <textcolor>Dark2</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$VAR[LabelYear]</label>
                     </control>
                     <control type="label">
@@ -393,6 +384,7 @@
                         <bottom>3</bottom>
                         <align>right</align>
                         <textcolor>Dark2</textcolor>
+                        <selectedcolor>Dark2</selectedcolor>
                         <label>$VAR[LabelDuration]</label>
                     </control>
                 </focusedlayout>

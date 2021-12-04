@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KODI-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
-"POT-Creation-Date: 2020-06-17 17:00+0000\n"
-"PO-Revision-Date: 2021-05-29 16:00+0000\n"
+"POT-Creation-Date: 2020-06-26 17:00+0000\n"
+"PO-Revision-Date: 2021-11-05 12:00+0000\n"
 "Last-Translator: realvito\n"
-"Language-Team: LANGUAGE\n"
+"Language-Team: ENGLISH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -213,6 +213,8 @@ msgctxt "#30609"
 msgid "Inputstream Settings"
 msgstr ""
 
+# empty strings from id 30610 to 30619
+
 msgctxt "#30620"
 msgid "[COLOR chartreuse]{0:s} •  [/COLOR]{1:s}"
 msgstr ""
@@ -260,6 +262,12 @@ msgstr ""
 msgctxt "#30631"
 msgid "From Age {0:s}"
 msgstr ""
+
+msgctxt "#30632"
+msgid "without age restriction"
+msgstr ""
+
+# empty strings from id 30633 to 30650
 
 msgctxt "#30651"
 msgid "[COLOR chartreuse]Add to DMAX-Favourites ...[/COLOR]"

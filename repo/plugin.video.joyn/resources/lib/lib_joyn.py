@@ -15,7 +15,6 @@ from .xbmc_helper import xbmc_helper
 
 if compat.PY2:
 	from urllib import urlencode
-	from HTMLParser import HTMLParser
 	from urlparse import urlparse, parse_qs
 	try:
 		from simplejson import dumps
@@ -23,7 +22,6 @@ if compat.PY2:
 		from json import dumps
 elif compat.PY3:
 	from urllib.parse import urlencode, urlparse, parse_qs
-	from html.parser import HTMLParser
 	from json import dumps
 
 
@@ -703,7 +701,7 @@ class lib_joyn(Singleton):
 		if 'TEXTS' in CONST['GRAPHQL']['METADATA'][query_type].keys():
 			for text_key, text_mapping_key in CONST['GRAPHQL']['METADATA'][query_type]['TEXTS'].items():
 				if text_key in data.keys() and data[text_key] is not None:
-					metadata['infoLabels'].update({text_mapping_key: HTMLParser().unescape(data[text_key])})
+					metadata['infoLabels'].update({text_mapping_key: compat._html_unescape(data[text_key])})
 				else:
 					metadata['infoLabels'].update({text_mapping_key: ''})
 
@@ -793,7 +791,7 @@ class lib_joyn(Singleton):
 				})
 			if 'series' in data.keys():
 				if 'title' in data['series'].keys():
-					metadata['infoLabels'].update({'tvshowtitle': HTMLParser().unescape(data['series']['title'])})
+					metadata['infoLabels'].update({'tvshowtitle': compat._html_unescape(data['series']['title'])})
 				series_meta = lib_joyn.get_metadata(data['series'], 'TVSHOW')
 				if 'clearlogo' in series_meta['art'].keys():
 					metadata['art'].update({'clearlogo': series_meta['art']['clearlogo']})
@@ -801,7 +799,7 @@ class lib_joyn(Singleton):
 			elif 'compilation' in data.keys():
 				compilation_meta = lib_joyn.get_metadata(data['compilation'], 'TVSHOW')
 				if 'title' in data['compilation'].keys():
-					metadata['infoLabels'].update({'tvshowtitle': HTMLParser().unescape(data['compilation']['title'])})
+					metadata['infoLabels'].update({'tvshowtitle': compat._html_unescape(data['compilation']['title'])})
 				if 'clearlogo' in compilation_meta['art'].keys():
 					metadata['art'].update({'clearlogo': compilation_meta['art']['clearlogo']})
 

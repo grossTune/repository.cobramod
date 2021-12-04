@@ -44,7 +44,6 @@
             <control type="scrollbar" id="1675">
                 <include content="scrollbar_hor">
                     <param name="scrollid" value="1675"/>
-                    <param name="showscroll" value="false"/>
                     <param name="jumpbar" value="false"/>
                 </include>
             </control>
@@ -52,8 +51,7 @@
                 <visible>!Container(9100).OnNext + !Container(9100).OnPrevious</visible>
                 <left>1850</left>
                 <top>530</top>
-                <width>16</width>
-                <height>16</height>
+                <include>arrowdimensions</include>
                 <texture colordiffuse="Dark1" flipx="false">common/arrow-small-right.png</texture>
                 <include>Animation.DelayFadeIn2</include>
             </control>
@@ -61,8 +59,7 @@
                 <visible>!Container(9100).OnNext + !Container(9100).OnPrevious</visible>
                 <left>55</left>
                 <top>530</top>
-                <width>16</width>
-                <height>16</height>
+                <include>arrowdimensions</include>
                 <texture colordiffuse="Dark1" flipx="true">common/arrow-small-right.png</texture>
                 <include>Animation.DelayFadeIn2</include>
             </control>
@@ -1743,7 +1740,7 @@
                     <texture>common/white.png</texture>
                 </control>
             </control>
-            <include>Def9000ArrowsWeather</include>
+            <include content="Def9000Arrows"><param name="arrow_bottom" value="620" /></include>
             <include content="Def_Gradient_Settings_Image">
                 <param name="controlid" value="9000"/>
                 <param name="left" value="8"/>

@@ -31,6 +31,7 @@
     <onload condition="String.IsEqual(Container.Viewmode, $LOCALIZE[31369])">SetFocus(3119)</onload>
     <onload condition="String.IsEqual(Container.Viewmode, $LOCALIZE[31099])">SetFocus(3120)</onload>
     <onload condition="String.IsEqual(Container.Viewmode, $LOCALIZE[31530])">SetFocus(3158)</onload>
+    <onload condition="String.IsEqual(Container.Viewmode, $LOCALIZE[535] $LOCALIZE[31591])">SetFocus(31381)</onload>
     <onload condition="String.IsEmpty(System.CurrentControlID)">SetFocus(3138)</onload>
     <allowoverlay>yes</allowoverlay>
     <zorder>100</zorder>
@@ -73,23 +74,18 @@
                 </control>
             </control>
             <control type="group">
-                <height>390</height>
-                <left>595</left>
+                <left>805</left>
                 <top>200</top>
                 <control type="image">
                     <description>arrow image</description>
-                    <left>200</left>
-                    <top>-30</top>
-                    <width>16</width>
-                    <height>16</height>
+                    <top>-32</top>
+                    <include>arrowdimensions</include>
                     <texture colordiffuse="White70" flipy="true">common/arrow-small.png</texture>
                 </control>
                 <control type="image">
                     <description>arrow image</description>
-                    <left>200</left>
-                    <top>672</top>
-                    <width>16</width>
-                    <height>16</height>
+                    <top>673</top>
+                    <include>arrowdimensions</include>
                     <texture colordiffuse="White70" flipy="false">common/arrow-small.png</texture>
                 </control>
             </control>
@@ -310,6 +306,15 @@
                     <align>left</align>
                     <include condition="Skin.HasSetting(enable.forcedviews)">unlock_views</include>
                     <onclick>Container.SetViewMode(50)</onclick>
+                    <onclick>Close</onclick>
+                </control>
+                <control type="button" id="31381">
+                    <include>DefContextButtonGradient</include>
+                    <label>$LOCALIZE[535] $LOCALIZE[31591]</label>
+                    <align>left</align>
+                    <include condition="Skin.HasSetting(enable.forcedviews)">unlock_views</include>
+                    <onclick>Container.SetViewMode(527)</onclick>
+                    <enable>!Container.Content(episodes) + !Container.Content(actors)</enable>
                     <onclick>Close</onclick>
                 </control>
                 <control type="button" id="3139">

@@ -1,6 +1,7 @@
 """
 Plugin for URLResolver
 Copyright (C) 2020 gujal
+#an Check 30.07.2020
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,6 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 from urlresolver.plugins.__generic_resolver__ import GenericResolver
 from urlresolver.plugins.lib import helpers
+
 
 
 class OoglyResolver(GenericResolver):

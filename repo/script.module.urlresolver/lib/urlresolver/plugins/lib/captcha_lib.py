@@ -23,7 +23,6 @@ import xbmcgui
 import os
 from urlresolver.plugins.lib import recaptcha_v2
 from urlresolver.plugins.lib import helpers
-import base64
 
 net = common.Net()
 IMG_FILE = 'captcha_img.gif'

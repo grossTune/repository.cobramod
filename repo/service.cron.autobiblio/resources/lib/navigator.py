@@ -35,13 +35,14 @@ def mainMenu():
 			cur.execute('SELECT * FROM stocks')
 			for (stunden, url, name, last, source) in cur.fetchall():
 				name, shortENTRY = py2_enc(name), py2_enc(name)
-				name += translation(30601).format(url.split('@@')[1].split('&')[0]) if '@@' in url else translation(30602)
-				shortENTRY += '  ('+url.split('@@')[1].split('&')[0]+')' if '@@' in url else '  (Serie)'
+				SUFFIX = url.split('@@')[1].split('&')[0] if '@@' in url else ""
+				name += translation(30601).format(SUFFIX) if len(SUFFIX) == 4 else translation(30602).format(SUFFIX.replace('es', 'e')) if SUFFIX.startswith(('Staffel', 'Series', 'Movies')) else translation(30603)
+				shortENTRY += '  ('+SUFFIX.replace('es', 'e')+')' if '@@' in url else '  (Serie)'
 				debug("(navigator.mainMenu) ##### Stunden= {0} || URL= {1} || shortENTRY= {2} || lastUPDATE= {3} || Source= {4} #####".format(str(stunden), url, shortENTRY, last, source))
 				if source != 'standard' and os.path.isdir(source) and forceTrash:
-					addDir(translation(30603).format(name), icon, {'mode': 'delete_table', 'url': url, 'shortENTRY': shortENTRY, 'source': source})
-				elif source == 'standard' or not forceTrash:
 					addDir(translation(30604).format(name), icon, {'mode': 'delete_table', 'url': url, 'shortENTRY': shortENTRY, 'source': source})
+				elif source == 'standard' or not forceTrash:
+					addDir(translation(30605).format(name), icon, {'mode': 'delete_table', 'url': url, 'shortENTRY': shortENTRY, 'source': source})
 		except:
 			if enableWARNINGS:
 				dialog.notification(translation(30521).format('Menü anzeigen'), translation(30522), icon, 10000)
@@ -90,9 +91,11 @@ def insert_table(name, stunden, url, source):
 def delete_table(shortENTRY, url, source):
 	source = TRANS_PATH(os.path.join(source, '')) if source.startswith('special://') else source
 	source = py2_uni(source)
-	first_BASE = os.sep.join(source.split(os.sep)[:-1]) if '@@' in url and source != 'standard' else False
+	SUFFIX = url.split('@@')[1].split('&')[0] if '@@' in url else False
+	first_BASE = os.sep.join(source.split(os.sep)[:-1]) if SUFFIX and source != 'standard' else False
 	try:
 		conn = sqlite3.connect(Database, isolation_level=None)
+		conn.text_factory = str
 		cur = conn.cursor()
 		cur.execute('DELETE FROM stocks WHERE url = ?', (url,))
 		cur.execute('VACUUM')

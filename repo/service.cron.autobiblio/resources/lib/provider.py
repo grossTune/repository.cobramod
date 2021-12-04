@@ -5,22 +5,22 @@ class Client(object):
 	SUPPORTED_ADDONS = {
 		'specifications': [
 		{
-			"name": "DMAX Mediathek",
-			"route": "plugin.video.discovery.dmax",
-			"branch": "dmax_library",
-			"number": 1
+			'name': 'DMAX Mediathek',
+			'route': 'plugin.video.discovery.dmax',
+			'branch': 'dmax_library',
+			'number': 1
 		},
 		{
-			"name": "TVNOW - V.3",
-			"route": "plugin.video.rtlgroup.de",
-			"branch": "tvnow_library",
-			"number": 2
+			'name': 'RTLPLUS - V.3',
+			'route': 'plugin.video.rtlgroup.de',
+			'branch': 'tvnow_library',
+			'number': 2
 		},
 		{
-			"name": "TVNOW - DE",
-			"route": "plugin.video.rtlnow",
-			"branch": "tvnow_library",
-			"number": 3
+			'name': 'TVNOW - DE',
+			'route': 'plugin.video.rtlnow',
+			'branch': 'tvnow_library',
+			'number': 3
 		}]
 	}
 

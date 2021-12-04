@@ -31,6 +31,7 @@ show_settings = addon.openSettings
 sleep = xbmc.sleep
 _log = xbmc.log
 py_ver = sys.version
+py_info = sys.version_info
 
 
 def get_path():
@@ -228,6 +229,12 @@ def get_current_view():
         for view in views.split(','):
             if xbmc.getInfoLabel('Control.GetLabel(%s)' % view):
                 return view
+
+
+def yesnoDialog(message, heading=get_name(), nolabel='', yeslabel=''):
+    if kodi_version() >= 19.0:
+        return xbmcgui.Dialog().yesno(heading, message, nolabel, yeslabel)
+    return xbmcgui.Dialog().yesno(heading, message, '', '', nolabel, yeslabel)
 
 
 class WorkingDialog(object):

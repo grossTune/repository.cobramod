@@ -91,7 +91,7 @@
         <disclaimer lang="ru_RU">Источник изображения : OpenEmu (openemu.org)</disclaimer>
         <disclaimer lang="zh_TW">圖片來源：OpenEmu (openemu.org)</disclaimer>
     </extension>
-</addon><addon id="inputstream.adaptive" version="2.6.23" name="InputStream Adaptive" provider-name="peak3d">
+</addon><addon id="inputstream.adaptive" version="19.0.0" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
 <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
 <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5" />
@@ -99,10 +99,16 @@
 <import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4" />
 <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1" />
 <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2" /></requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_android="libinputstream.adaptive.so" />
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_windows="inputstream.adaptive.dll" />
   <extension point="xbmc.addon.metadata">
-    <platform>android-armv7</platform>
+    <platform>windows-x86_64</platform>
     <news>
+v19.0.0 (2021-09-14)
+- Change test builds to released 'Kodi 19 Matrix'
+- Increase version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
 v2.6.23 (2021-08-06)
 - Translations from weblate - de_de, ja_jp, ko_kr
  - [Android] use multiple drm sessions (solves stuttering)
@@ -294,18 +300,28 @@ v2.3.15 (2019-02-11)
 v2.3.14 (2019-02-10)
 - Add WebM container parser
     </news>
+    <summary lang="ca_ES">Client InputStream per a transmissions adaptatives</summary>
+    <summary lang="da_DK">InputStream-klient til adaptive streams</summary>
     <summary lang="de_DE">InputStream-Client für adaptive Streams</summary>
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
+    <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
+    <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
     <summary lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</summary>
     <summary lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</summary>
+    <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
+    <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
+    <description lang="da_DK">InputStream-klient til adaptive streams</description>
     <description lang="de_DE">InputStream-Client für adaptive Streams</description>
     <description lang="en_GB">InputStream client for adaptive streams</description>
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
+    <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
+    <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
     <description lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</description>
     <description lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</description>
+    <description lang="ru_RU">InputStream клиент для адаптивных трансляций</description>
   </extension>
-</addon><addon id="inputstream.ffmpegdirect" version="1.21.8" name="Inputstream FFmpeg Direct" provider-name="Ross Nicholson">
+</addon><addon id="inputstream.ffmpegdirect" version="19.0.0" name="Inputstream FFmpeg Direct" provider-name="Ross Nicholson">
   <requires>
 <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
 <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5" />
@@ -313,10 +329,10 @@ v2.3.14 (2019-02-10)
 <import addon="kodi.binary.global.network" minversion="1.0.0" version="1.0.4" />
 <import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4" />
 <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1" /></requires>
-  <extension point="kodi.inputstream" name="ffmpegdirect" extension="" tags="true" listitemprops="program_number|stream_mode|open_mode|manifest_type|default_url|is_realtime_stream|playback_as_live|programme_start_time|programme_end_time|catchup_url_format_string|catchup_url_near_live_format_string|catchup_buffer_start_time|catchup_buffer_end_time|catchup_buffer_offset|catchup_terminates|catchup_granularity|timezone_shift|default_programme_duration|programme_catchup_id" library_android="libinputstream.ffmpegdirect.so" />
+  <extension point="kodi.inputstream" name="ffmpegdirect" extension="" tags="true" listitemprops="program_number|stream_mode|open_mode|manifest_type|default_url|is_realtime_stream|playback_as_live|programme_start_time|programme_end_time|catchup_url_format_string|catchup_url_near_live_format_string|catchup_buffer_start_time|catchup_buffer_end_time|catchup_buffer_offset|catchup_terminates|catchup_granularity|timezone_shift|default_programme_duration|programme_catchup_id" library_windows="inputstream.ffmpegdirect.dll" />
   <extension point="xbmc.service" library="resources/lib/runner.py" />
   <extension point="xbmc.addon.metadata">
-    <platform>android-aarch64</platform>
+    <platform>windows-x86_64</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/inputstream.ffmpegdirect</source>
     <assets>
@@ -324,6 +340,12 @@ v2.3.14 (2019-02-10)
       <fanart>fanart.jpg</fanart>
     </assets>
     <news>
+v19.0.0
+- Changed test builds to released 'Kodi 19 Matrix'
+- Increased version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
 v1.21.8
 Translations updates from Weblate
 	- am_et, bs_ba, cy_gb, es_ar, eu_es, fa_ir, ml_in, mn_mn, mt_mt, my_mm, ro_md, si_lk, ta_in, tg_tj, uk_ua, uz_uz
@@ -591,33 +613,43 @@ v1.0.0
 
 Full changelog here: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/inputstream.ffmpegdirect/changelog.txt
     </news>
-    <summary lang="de_DE">InputStream Client für FFmpeg-Streams (libavformat)</summary>
+    <summary lang="ca_ES">Client InputStream per a fluxos FFmpeg (libavformat)</summary>
+    <summary lang="da_DK">InputStream-klient til FFmpeg-streams (libavformat)</summary>
+    <summary lang="de_DE">InputStream-Client für FFmpeg-Streams (libavformat)</summary>
     <summary lang="en_GB">InputStream Client for FFmpeg streams (libavformat)</summary>
-    <description lang="de_DE">InputStream-Client für Streams, die entweder mit dem libav-Format von FFmpeg oder mit cURL von Kodi geöffnet werden können. Gängige Stream-Formate wie TS, HLS und DASH (ohne DRM) werden ebenso unterstützt wie viele andere.[CR][CR]Das Addon unterstützt auch Archiv-/Aufholdienste, bei denen Wiedergabefenster vorhanden sind (normalerweise in Tagen), und kann über diesen Zeitraum hinweg eine Zeitverschiebung bewirken.[CR][CR]Dokumentation finden Sie unter: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
+    <summary lang="ko_KR">FFmpeg 스트림용 InputStream 클라이언트(libavformat)</summary>
+    <summary lang="pl_PL">Klient InputStream dla strumieni FFmpeg (libavformat)</summary>
+    <summary lang="ru_RU">InputStream клиент для FFmpeg потоков (libavformat)</summary>
+    <summary lang="zh_CN">FFmpeg 流的 InputStream 客户端（libavformat）</summary>
+    <description lang="ca_ES">Client InputStream per a fluxos que es poden obrir mitjançant el libavformat de FFmpeg o el cURL de Kodi. S’admeten formats de flux comuns, com ara TS simple, HLS i DASH (sense DRM), així com molts altres.[CR][CR]El complement també és compatible amb els serveis Archive/Catchup , on hi ha una finestra de reproducció (normalment en dies) i pot canviar de temps en aquest interval.[CR][CR]Per a la documentació, visiteu: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
+    <description lang="da_DK">InputStream-klient til streams, der kan åbnes af enten FFmpeg's libavformat eller Kodi's cURL. Almindelige streamformater som f.eks. almindelig TS, HLS og DASH (uden DRM) understøttes såvel som mange andre.[CR][CR]Add-on'et har også understøttelse af Arkiv-/Catchup-tjenester, hvor der er et afspilningsvindue (normalt i dage) og kan tidsforskyde på tværs af dette spænd.[CR][CR]For dokumentation besøg: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
+    <description lang="de_DE">InputStream-Client für Streams, die entweder mit dem libav-Format von FFmpeg oder mit cURL von Kodi geöffnet werden können. Gängige Stream-Formate wie TS, HLS und DASH (ohne DRM) werden ebenso unterstützt wie viele andere.[CR][CR]Das Addon unterstützt auch Archiv-/Aufholdienste, bei denen Wiedergabefenster vorhanden sind (normalerweise in Tagen), und kann über diesen Zeitraum hinweg eine Zeitverschiebung bewirken.[CR][CR]Dokumentation unter: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
     <description lang="en_GB">InputStream Client for streams that can be opened by either FFmpeg's libavformat or Kodi's cURL. Common stream formats such as plain TS, HLS and DASH (without DRM) are supported as well as many others.[CR][CR]The addon also has support for Archive/Catchup services where there is a replay windows (usually in days) and can timeshift across that span.[CR][CR]For documenation visit: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
+    <description lang="ko_KR">FFmpeg의 libavformat 또는 Kodi의 cURL로 열 수 있는 스트림용 InputStream 클라이언트. 일반 TS, HLS 및 DASH(DRM 제외)와 같은 일반적인 스트림 형식은 물론 다른 많은 형식도 지원됩니다.[CR][CR]이 애드온은 재생 창(보통 며칠)이 있는 아카이브/따라잡기 서비스도 지원합니다. 해당 범위에서 타임시프트할 수 있습니다.[CR][CR]문서를 보려면 https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md를 방문하세요</description>
+    <description lang="pl_PL">Klient InputStream dla strumieni, które można otworzyć za pomocą libavformat FFmpeg lub cURL Kodi. Obsługiwane są popularne formaty strumieniowe, takie jak zwykły TS, HLS i DASH (bez DRM), a także wiele innych.[CR][CR]Dodatek obsługuje również usługę archiwizacji, która zapewnia okno powtórek (zazwyczaj w dniach) i może wykonywać przesunięcie czasowe przez ten zakres.[CR][CR]W celu uzyskania dokumentacji odwiedź: https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
+    <description lang="zh_CN">InputStream 客户端，用于可通过 FFmpeg 的 libavformat 或 Kodi 的 cURL 打开的流。支持普通 TS、HLS 和 DASH（无DRM）等常见流格式以及其他许多格式。[CR][CR]该插件还支持有重播窗口（通常以天为单位）的归档/捕获服务，并可以在该时间跨度内进行时光平移。[CR][CR]相关文档请访问：https://github.com/xbmc/inputstream.ffmpegdirect/blob/Matrix/README.md</description>
   </extension>
-</addon><addon id="inputstream.rtmp" version="3.4.0" name="RTMP Input" provider-name="spiff">
+</addon><addon id="inputstream.rtmp" version="19.0.0" name="RTMP Input" provider-name="spiff">
   <requires>
 <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
 <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5" />
 <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1" /></requires>
-  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_android="libinputstream.rtmp.so" />
+  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_windows="inputstream.rtmp.dll" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Client für RTMP-Streams</summary>
-    <summary lang="en_GB">Client for RTMP streams</summary>
-    <description lang="de_DE">Das Real Time Messaging Protocol (RTMP) ist ein proprietäres Netzwerkprotokoll, das von Adobe Inc. entwickelt wurde, um Audio-, Video- und andere Daten über das Internet von einem Medienserver zu einem Flash Player zu übertragen.
-
-Dieses Addon implementiert die RTMP-Streaming-Unterstützung für Kodi und installierte Add-Ons.</description>
-    <description lang="en_GB">The Real Time Messaging Protocol (RTMP) is a proprietary network protocol developed by Adobe Inc. to transmit audio, video and other data over the Internet from a media server to a flash player.
-
-This addon implements RTMP streaming support for Kodi and installed add-ons.</description>
-    <platform>android-aarch64</platform>
+    <platform>windows-x86_64</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/inputstream.rtmp</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>v3.4.0
+    <news>v19.0.0
+- Changed test builds to released 'Kodi 19 Matrix'
+- Prepared for new language translation by Weblate
+- Increased version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
+v3.4.0
 - Update: inputstream API 3.0.1
   - Fix wrong flags bit shift
 
@@ -653,8 +685,12 @@ v3.0.4
 v3.0.3
 - Matrix API change to v2.2.0 - Allows upto 256 streams
     </news>
+    <summary lang="de_DE">Client für RTMP-Streams</summary>
+    <summary lang="en_GB">Client for RTMP streams</summary>
+    <description lang="de_DE">Das Real Time Messaging Protocol (RTMP) ist ein proprietäres Netzwerkprotokoll, das von Adobe Inc. entwickelt wurde, um Audio-, Video- und andere Daten über das Internet von einem Medienserver zu einem Flash Player zu übertragen.[CR][CR]Dieses Addon implementiert die RTMP-Streaming-Unterstützung für Kodi und installierte Add-Ons.</description>
+    <description lang="en_GB">The Real Time Messaging Protocol (RTMP) is a proprietary network protocol developed by Adobe Inc. to transmit audio, video and other data over the Internet from a media server to a flash player.[CR][CR]This addon implements RTMP streaming support for Kodi and installed add-ons.</description>
   </extension>
-</addon><addon id="metadata.album.universal" name="Universal Album Scraper" version="3.1.5" provider-name="Olympia, Team Kodi">
+</addon><addon id="metadata.album.universal" name="Universal Album Scraper" version="3.1.6" provider-name="Olympia, Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
     <import addon="metadata.common.allmusic.com" version="3.1.0" />
@@ -672,12 +708,11 @@ v3.0.3
     </assets>
     <summary lang="af_ZA">Universele Skraper vir Albums</summary>
     <summary lang="ast_ES">Scraper universal pa álbumes</summary>
-    <summary lang="be_BY">Universal Scraper for Albums</summary>
-    <summary lang="bg_BG">Универсален източник за информация за албуми</summary>
+    <summary lang="bg_BG">Универсален източник на информация за албуми</summary>
     <summary lang="ca_ES">Arreplegador universal per àlbums</summary>
     <summary lang="cs_CZ">Univerzální zdroj získávání dat pro alba</summary>
     <summary lang="cy_GB">Crafwr Albymau Cyffredinol</summary>
-    <summary lang="da_DK">Universel Scraper til Albummer</summary>
+    <summary lang="da_DK">Universel scraper til albummer</summary>
     <summary lang="de_DE">Universeller Scraper für Alben</summary>
     <summary lang="el_GR">Universal Scraper Άλμπουμ</summary>
     <summary lang="en_GB">Universal Scraper for Albums</summary>
@@ -698,7 +733,7 @@ v3.0.3
     <summary lang="is_IS">Universal Scraper fyrir Hljómplötur</summary>
     <summary lang="it_IT">Ricercatore Universale per Albums</summary>
     <summary lang="ja_JP">汎用アルバムスクレーパー</summary>
-    <summary lang="ko_KR">Universal Scraper for Albums</summary>
+    <summary lang="ko_KR">앨범용 범용 스크레이퍼</summary>
     <summary lang="lt_LT">Universalus albumų skreperis</summary>
     <summary lang="lv_LV">Albumu universālais skrāpis</summary>
     <summary lang="mk_MK">Универзален превземач за Албуми</summary>
@@ -708,13 +743,13 @@ v3.0.3
     <summary lang="pl_PL">Uniwersalny ekstraktor informacji o albumach muzycznych</summary>
     <summary lang="pt_BR">Scraper Universal para Álbuns</summary>
     <summary lang="pt_PT">Colector universal para álbuns</summary>
-    <summary lang="ro_RO"> Scraper universal pentru albume</summary>
+    <summary lang="ro_RO">Scraper universal pentru albume</summary>
     <summary lang="ru_RU">Универсальный скрапер для альбомов</summary>
     <summary lang="sk_SK">Univerzálny zdroj získavania dát pre albumy</summary>
     <summary lang="sl_SI">Univerzalni ponudnik informacij o albumih</summary>
     <summary lang="sv_SE">Universiell albumskrapa</summary>
     <summary lang="ta_IN">ஆல்பங்களின் ஒட்டு மொத்தமான சுரண்டி</summary>
-    <summary lang="tr_TR">Albümler için Evrensel Scraper</summary>
+    <summary lang="tr_TR">Albümler için Evrensel Bilgi Sağlayıcı</summary>
     <summary lang="uk_UA">Універсальний здирач для альбомів</summary>
     <summary lang="vi_VN">Trình lấy dữ liệu album từ nhiều nguồn</summary>
     <summary lang="zh_CN">通用音乐专辑信息刮削器</summary>
@@ -723,9 +758,6 @@ v3.0.3
 
 Die aanvaklike soektog word altyd op MusicBrainz gedoen. Ingeval skakels van allmusic en/of amazon.de nie bygevoeg is op die MusicBrainz werf, kan velde vanaf allmusic.com en/of amazon.de nie gaan haal word nie (egter baie maklik om daardie ontbrekende skakels by te voeg).</description>
     <description lang="ast_ES">Esti scraper recueye información de les siguientes webs: MusicBrainz, last.fm, allmusic.com y amazon.de, mentanto obtién les imáxenes de fanart.tv, last.fm y allmusic.com. Permite especificar de qué web se quier obtener la información pa cada campu. ⏎ ⏎ La gueta inicial faise siempre en MusicBrainz. En casu de que los enllaces a allmusic y/o amazon.de nun tean amestaos na web de MusicBrainz, nun van poder obtenese los campos d'información d' estos dos sitios (magar que ye mui fácil amestar esos enllaces que falten)</description>
-    <description lang="be_BY">This scraper collects information from the following supported sites: MusicBrainz, last.fm, allmusic.com and amazon.de, while grabs artwork from: fanart.tv, last.fm and allmusic.com. It can be set field by field that from which site you want that specific information.
-
-The initial search is always done on MusicBrainz. In case allmusic and/or amazon.de links are not added on the MusicBrainz site, fields from allmusic.com and/or amazon.de cannot be fetched (very easy to add those missing links though).</description>
     <description lang="bg_BG">Сваля информация от следните сайтове: MusicBrainz, last.fm, allmusic.com и amazon.de. Изобрания извлича от: fanart.tv, last.fm и allmusic.com. Можете да определите от кой сайт каква информация да се сваля.
 
 Първоначалното търсене винаги се прави в MusicBrainz. Когато не са налични препратки към allmusic и/или amazon.de на сайта на MusicBrainz извличането на информация от allmusic.com и/или amazon.de става невъзможно (добавянето им е много лесно).</description>
@@ -735,13 +767,13 @@ La cerca inicial es realitza sempre a MusicBrainz. En el cas que els enllaços d
     <description lang="cs_CZ">Tento zdroj získává data z následujících podporovaných stránek: MusicBrainz, last.fm, allmusic.com and amazon.de, while grabs artwork from: fanart.tv, last.fm a allmusic.com. Je možno podrobně nastavit, které informace si přejete získat ze kterých stránek.
 
 Prvotní vyhledání je vžy provedeno na MusicBrainz. V případě, že odkaz pro allmusic a nebo amazon.de není přidaný na stránku MusicBrainz, není možné údaje z allmusic.com a amazon.de stáhnout (avšak je velmi snadné tyto chybějící odkazy přidat).</description>
-    <description lang="cy_GB">Mae'r crafwr yn casglu gwybodaeth o'r gwefannau canlynol:  MusicBrainz, last.fm, allmusic.com ac amazon.de, tra'n cipio gwaith celf o: fanart.tv, last.fm and allmusic.com. Mae modd ei osod fesul maes i ddewis pa wefan i gasglu gwybodaeth benodol.
+    <description lang="cy_GB">Mae'r crafwr yn casglu gwybodaeth o'r gwefannau canlynol: MusicBrainz, last.fm, allmusic.com ac amazon.de, tra'n cipio gwaith celf o: fanart.tv, last.fm and allmusic.com. Mae modd ei osod fesul maes i ddewis pa wefan i gasglu gwybodaeth benodol.
 
 Bydd y chwilio cychwynnol yn cael ei wneud ar MusicBrainz. Rhag ofn nad yw dolen allmusic wedi ei osod ar wefan MusicBrainz nid oes modd estyn meysydd o allmusic.com (mae'n hawdd gosod y dolenni coll hynny)</description>
     <description lang="da_DK">Denne scraper samler information fra følgende sider: MusicBrainz, last.fm, allmusic.com og amazon.de og henter illustrationer fra: fanart.tv, last.fm og allmusic.com. Det kan vælges felt for felt, hvilke sider du ønsker, at få den pågældende information fra.
 
-Den første søgning er altid på MusicBrainz. Hvis ikke allmusic og/eller amazon.de linkene er tilføjet på MusicBrainz side, kan felter fra allmusic.com og/eller amazon.de ikke hentes (men det er helt enkelt at tilføje de manglende links).</description>
-    <description lang="de_DE">Dieser Scaper sammelt Informationen von den folgenden, unterstützten Seiten: MusicBrainz, Last.fm, Allmusic.com und Amazon.de. Es werden dabei Grafiken von den folgenden Seiten geladen: Fanart.tv, Last.fm und Allmusic.com. Von welcher Seite die Informationen geladen werden, kann einzeln konfiguriert werden.⏎ 
+Den første søgning er altid på MusicBrainz. Hvis ikke allmusic og/eller amazon.de linksene er tilføjet på MusicBrainz side, kan felter fra allmusic.com og/eller amazon.de ikke hentes (men det er helt enkelt at tilføje de manglende links).</description>
+    <description lang="de_DE">Dieser Scraper sammelt Informationen von den folgenden unterstützten Websites: MusicBrainz, Last.fm, Allmusic.com und Amazon.de. Es werden dabei Grafiken von den folgenden Seiten geladen: Fanart.tv, Last.fm und Allmusic.com. Von welcher Seite die Informationen geladen werden, kann einzeln konfiguriert werden.⏎ 
 ⏎
 Die initialie Suche wird immer über MusicBrainz durchgeführt. Sollten keine Allmusic- und/oder Amazon.de-Links auf der MusicBrainz-Seite gesetzt worden sein, können Felder von Allmusic.com und/oder Amazon.de nicht geladen werden (fehlende Links können jedoch sehr einfach hinzugefügt werden).</description>
     <description lang="el_GR">Αυτό το scraper συλλέγει πληροφορίες από τις ακόλουθες υποστηριζόμενες ιστοσελίδες: MusicBrainz, last.fm, allmusic.com και amazon.de, ενώ λαμβάνει εικόνες από τα: fanart.tv, last.fm και allmusic.com. Μπορεί να οριστεί πεδίο ανά πεδίο αναλόγως των πληροφοριών που επιθυμείτε από την εκάστοτε ιστοσελίδα.
@@ -758,7 +790,9 @@ The initial search is always done on MusicBrainz. In case allmusic and/or amazon
 The initial search is always done on MusicBrainz. In case allmusic and/or amazon.de links are not added on the MusicBrainz site, fields from allmusic.com and/or amazon.de cannot be fetched (very easy to add those missing links though).</description>
     <description lang="es_AR">Este scraper recolecta información de las siguientes webs: MusicBrainz, last.fm, allmusic.com y amazon.de, mientras obtiene las imágenes de fanart.tv, last.fm y allmusic.com. Permite especificar de qué web se quiere obtener la información para cada campo. ⏎ ⏎ La búsqueda inicial se realiza siempre en MusicBrainz. En caso de que los enlaces a allmusic y/o amazon.de no estén añadidos en la web de MusicBrainz, no se podrán obtener los campos de información de estos dos sitios (aunque es muy fácil añadir esos enlaces que faltan).</description>
     <description lang="es_ES">Este scraper recolecta información de las siguientes webs: MusicBrainz, last.fm, allmusic.com y amazon.de, mientras obtiene las imágenes de fanart.tv, last.fm y allmusic.com. Permite especificar de qué web se quiere obtener la información para cada campo. ⏎ ⏎ La búsqueda inicial se realiza siempre en MusicBrainz. En caso de que los enlaces a allmusic y/o amazon.de no estén añadidos en la web de MusicBrainz, no se podrán obtener los campos de información de estos dos sitios (aunque es muy fácil añadir esos enlaces que faltan).</description>
-    <description lang="es_MX">Este scraper obtiene información de los siguientes sitios soportados: MusicBrainz, last.fm, allmusic.com y amazon.de, mientras obtiene artwork de: fanart.tv, last.fm y allmusic.com. Puede ser configurado campo por campo de que sitio quieres esa información específica.⏎ ⏎ La búsqueda inicial siempre es hecha en MusicBrainz. En el caso en que los enlaces de allmusic y/o amazon.de no son agregados en el sitio de  MusicBrainz, campos de allmusic.com y/o amazon.de no pueden ser obtenidos. (De cualquier manera es muy fácil agregar esos enlaces no encontrados).</description>
+    <description lang="es_MX">Este scraper obtiene información de los siguientes sitios soportados: MusicBrainz, last.fm, allmusic.com y amazon.de, mientras obtiene artwork de: fanart.tv, last.fm y allmusic.com. Puede ser configurado campo por campo de que sitio quieres esa información específica.
+
+La búsqueda inicial siempre es hecha en MusicBrainz. En el caso en que los enlaces de allmusic y/o amazon.de no son agregados en el sitio de MusicBrainz, campos de allmusic.com y/o amazon.de no pueden ser obtenidos. (De cualquier manera es muy fácil agregar esos enlaces no encontrados).</description>
     <description lang="et_EE">See kraabits kogub infot järgmistelt lehtedelt: MusicBrainz, last.fm, allmusic.com ja amazon.de, pilte: fanart.tv, last.fm ja allmusic.com. Saad välja kaupa määrata, milliselt lehelt mis infot soovid.
 
 Esmane otsing tehakse alati saidilt MusicBrainz. Kui MusicBrainz lehele pole allmusic ja/või amazon.de linke lisatud, siis neilt lehtedelt sisu hankida ei saa (puuduvaid linke saad ise lihtsalt lisada).</description>
@@ -809,14 +843,16 @@ In het geval dat links naar allmusic en/of amazon.de niet zijn toegevoegd op de 
 
 Początkowe wyszukiwanie jest zawsze wykonywane na MusicBrainz. Gdy linki do allmusic i/lub amazon.de nie są dodane na stronie MusicBrainz, nie można pobrać tych pól z allmusic.com i/lub amazon.de (pomimo to brakujące linki można bardzo łatwo dodać).</description>
     <description lang="pt_BR">Este scraper coleta informações nos seguintes sites:
-MusicBrainz, last.fm, allmusic.com e amazon.de, enquanto pega os artwork de: fanart.tv, last.fm and allmusic.com. O Mesmo pode ser configurara campo a campo em que site você quer obter informações específicas. A procura inicial é sempre feita no MusicBrainz. No caso allmusic e/ou amazon.de não terem sido adicionados no site MusicBrainz, campos de allmusic.com e/ou amazona.de não serão buscados (embora seja muito fácil adicionar os links faltantes). </description>
+MusicBrainz, last.fm, allmusic.com e amazon.de, enquanto pega os artwork de: fanart.tv, last.fm and allmusic.com. O Mesmo pode ser configurara campo a campo em que site você quer obter informações específicas. A procura inicial é sempre feita no MusicBrainz. No caso allmusic e/ou amazon.de não terem sido adicionados no site MusicBrainz, campos de allmusic.com e/ou amazona.de não serão buscados (embora seja muito fácil adicionar os links faltantes).</description>
     <description lang="pt_PT">Este colector recolhe informações dos seguintes sítios:
-MusicBrainz, last.fm, allmusic.com e amazon.de, enquanto obtém artwork de: fanart.tv, last.fm e allmusic.com. Pode definir em cada campo o sítio do qual quer obter as informações. A pesquisa inicial é sempre feita no MusicBrainz. Caso os endereços allmusic e/ou amazon.de não tenham sido adicionados no sítio MusicBrainz, os campos do allmusic.com e/ou amazon.de não serão obtidos (no entanto, é muito fácil adicionar os links em falta). </description>
+MusicBrainz, last.fm, allmusic.com e amazon.de, enquanto obtém artwork de: fanart.tv, last.fm e allmusic.com. Pode definir em cada campo o sítio do qual quer obter as informações. A pesquisa inicial é sempre feita no MusicBrainz. Caso os endereços allmusic e/ou amazon.de não tenham sido adicionados no sítio MusicBrainz, os campos do allmusic.com e/ou amazon.de não serão obtidos (no entanto, é muito fácil adicionar os links em falta).</description>
     <description lang="ro_RO">Acest scraper colectează informații de la următoarele site-uri suportate: MusicBrainz, last.fm, allmusic.com și amazon.de. Elementele de grafica sunt accesate din: fanart.tv, last.fm și allmusic.com. Acesta poate fi setat câmp cu câmp pentru ca informatiile colectate sa fie cele dorite.⏎ 
 ⏎ 
 Căutarea inițială se face întotdeauna pe MusicBrainz. În cazul în care Allmusic și/sau link-ul amazon.de nu sunt adăugate pe MusicBrainz, câmpurile din allmusic.com și/sau amazon.de nu pot fi colectate (este foarte ușor însă de adăugat aceste legături lipsă).</description>
     <description lang="ru_RU">Данный скрапер собирает информацию со следующих сайтов:
-MusicBrainz, last.fm, allmusic.com и amazon.de, при этом получая обложки из: fanart.tv, last.fm и allmusic.com. Каждое поле можно настроить так, чтобы оно получало желаемую информацию с определенного вами сайта.⏎ ⏎ Начальный поиск всегда проводится на  MusicBrainz. Для allmusic и/или amazon.de ссылки на сайт MusicBrainz отсутствуют, поля с allmusic.com и/или amazon.de не могут быть заполнены (добавить пропущенные ссылки очень просто).</description>
+MusicBrainz, last.fm, allmusic.com и amazon.de, при этом получая обложки из: fanart.tv, last.fm и allmusic.com. Каждое поле можно настроить так, чтобы оно получало желаемую информацию с определенного вами сайта.
+
+Начальный поиск всегда проводится на MusicBrainz. Для allmusic и/или amazon.de ссылки на сайт MusicBrainz отсутствуют, поля с allmusic.com и/или amazon.de не могут быть заполнены (добавить пропущенные ссылки очень просто).</description>
     <description lang="sk_SK">Tento zdroj získavania dát zbiera informácie z nasledujúcich podporovaných stránok: MusicBrainz, last.fm, allmusic.com a amazon.de, zatiaľ čo umeleckú grafiku získava zo stránok: fanart.tv, last.fm a allmusic.com. Je možné podrobne nastaviť, z ktorej stránky chcete získať konkrétne informácie.
 
 Počiatočné hľadanie je vždy na stránke MusicBrainz. V prípade, že odkaz pre allmusic a/alebo amazon.de nie je pridaný na stránku MusicBrainz, nie je možné získať údaje zo stránky allmusic.com a/alebo amazon.de (je ale veľmi jednoduché tieto chýbajúce odkazy pridať).</description>
@@ -825,13 +861,15 @@ Počiatočné hľadanie je vždy na stránke MusicBrainz. V prípade, že odkaz 
 Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezave do allmusic.com in/ali amazon.de, informacij od tam ne morete prenesti (a to težavo hitro lahko odpravite).</description>
     <description lang="sv_SE">Denna skrapa samlar information från följande sajter: MusicBrainz, last.fm, allmusic.com och amazon.de, och konstverk från: fanart.tv, last.fm och allmusic.com. Det kan anges fält för fält vilken sajt du vill få den specifika informationen.⏎ ⏎ Den initiala sökningen är alltid utförd på MusicBrainz sajt, fälten från allmusic.com och/eller amazon.de länkarna läggs inte till på MusicBrainz sajten, fälten från allmusic.com och/eller amazon.de kan inte hämtas (väldigt enkelt att lägga till dom saknade länkarna dock).</description>
     <description lang="ta_IN">இந்த சுரண்டியானது MusicBrainz, last.fm, allmusic.com மற்றும் amazon.de ஆகிய இணையதளத்தில் இருந்து தகவல்களை சேகரிக்கும். திரை குறும்படங்களை fanart.tv, last.fm மற்றும் allmusic.com ஆகிய இணையதளத்தில் இருந்து தகவல்களை சேகரிக்கும். ⏎ ⏎ முதன்மை தேடல் எப்போதும் MusicBrainz தான் நடக்கும். allmusic மற்றும் amazon.de சேர்க்கபடாவிட்டால் அவற்றில் இருந்து தகவல்கள் செமிக்கபடமாட்டது (தவறிய இணைப்புகளை சேர்ப்பது மிகவும் எளிது).</description>
-    <description lang="tr_TR">Bu scraper bilgileri toplamak için şu siteleri desteklemektedir:  MusicBrainz, last.fm, allmusic.com ve amazon.de, çizimleri için ise: fanart.tv, last.fm ve allmusic.com desteklenmektedir. Her bilginin özellikle nereden alınacağını tek tek ayarlayabilirsiniz.
+    <description lang="tr_TR">Bu bilgi sağlayıcı, bilgileri toplamak için şu siteleri desteklemektedir: MusicBrainz, last.fm, allmusic.com ve amazon.de, çizimleri için ise: fanart.tv, last.fm ve allmusic.com desteklenmektedir. Her bilginin özellikle nereden alınacağını tek tek ayarlayabilirsiniz.
 
 İlk olarak arama daima MusicBrainz'de yapılır. MusicBrainz'e allmusic ve/veya amazon.de linkleri eklenmemiş olması durumunda allmusic.com'dan ve/veya amazon.de'den ilgili alanlar alınamaz (gerçi bu eksik linkleri eklemek çok kolaydır).</description>
     <description lang="uk_UA">Здирач збирає інформацію з наступних сторінок: MusicBrainz, last.fm, allmusic.com та amazon.de, тоді як отримує обкладинки з: fanart.tv, last.fm та allmusic.com.
 
 Початковий пошук завжди робиться на MusicBrainz. Якщо посилання з allmusic і/або amazon.de не додаються на сторінку MusicBrainz, тоді поля з allmusic.com і/або amazon.de неможливо отримати (однак дуже легко додати ці пропущені посилання).</description>
-    <description lang="vi_VN">Trình này thu thập thông tin từ những site được hỗ trợ như: MusicBrainz, last.fm, allmusic.com, amazon.de, và lấy ảnh bìa từ các nguồn: fanart.tv, last.fm và allmusic.com. Bạn có thể tùy chỉnh chọn từng thứ riêng biệt để lấy từ site bạn muốn.\n \n Lần tìm kiếm đầu tiên luôn luôn được sử dụng từ MusicBrainz. Trong trường hợp các link allmusic và/hoặc amazon.de không có trên MusicBrainz, các trường từ allmusic.com và/hoặc amazon.de sẽ không thể lấy về được (tuy nhiên rất dễ để tự thêm vào các link này bằng tay).</description>
+    <description lang="vi_VN">Trình này thu thập thông tin từ những site được hỗ trợ như: MusicBrainz, last.fm, allmusic.com, amazon.de, và lấy ảnh bìa từ các nguồn: fanart.tv, last.fm và allmusic.com. Bạn có thể tùy chỉnh chọn từng thứ riêng biệt để lấy từ site bạn muốn.
+
+Lần tìm kiếm đầu tiên luôn luôn được sử dụng từ MusicBrainz. Trong trường hợp các link allmusic và/hoặc amazon.de không có trên MusicBrainz, các trường từ allmusic.com và/hoặc amazon.de sẽ không thể lấy về được (tuy nhiên rất dễ để tự thêm vào các link này bằng tay).</description>
     <description lang="zh_CN">本刮削器支持从以下网站获取信息：MusicBrainz、last.fm、allmusic.com 和 amazon.de，并从以下网站获取艺术图片：fanart.tv、last.fm 和 allmusic.com。你可以指定每一项内容的来源网站。
 
 初始结果总是先从 MusicBrainz 获取。如果 MusicBrainz 网站没有到 allmusic 和/或 amazon.de 的外部链接，则无法获取 allmusic.com 的/或 amazon.de 的信息（当然你能很容易地加入缺失的链接）。</description>
@@ -839,7 +877,7 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
 
 初始搜尋結果總是先從MusicBrainz取得。如果MusicBrainz網站沒有加入到allmusic和/或amazon.de的外部連結，則無法取得allmusic.com的/或amazon.de的信息(當然您能很輕易地加入遺失的連結)。</description>
   </extension>
-</addon><addon id="metadata.artists.universal" name="Universal Artist Scraper" version="4.3.4" provider-name="Olympia, Team Kodi">
+</addon><addon id="metadata.artists.universal" name="Universal Artist Scraper" version="4.3.5" provider-name="Olympia, Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
     <import addon="metadata.common.allmusic.com" version="3.1.0" />
@@ -857,12 +895,11 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
     </assets>
     <summary lang="af_ZA">Universal Skraper vir Kunstenaars</summary>
     <summary lang="ar_SA">ماسحة الفنان العالمية</summary>
-    <summary lang="be_BY">Universal Scraper for Artists</summary>
     <summary lang="bg_BG">Универсален източник за информация за артисти</summary>
     <summary lang="ca_ES">Arreplegador universal per artistes</summary>
     <summary lang="cs_CZ">Univerzální zdroj získávání dat pro umělce</summary>
     <summary lang="cy_GB">Crafwr Cyffredinol ar gyfer Artistiaid</summary>
-    <summary lang="da_DK">Universel Scraper til Kunstnere</summary>
+    <summary lang="da_DK">Universel scraper til kunstnere</summary>
     <summary lang="de_DE">Universeller Scraper für Interpreten</summary>
     <summary lang="el_GR">Universal Scraper Καλλιτεχνών</summary>
     <summary lang="en_GB">Universal Scraper for Artists</summary>
@@ -883,10 +920,9 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
     <summary lang="is_IS">Almenn skafa fyrir Listamenn</summary>
     <summary lang="it_IT">Scraper universale degli artisti</summary>
     <summary lang="ja_JP">汎用アーティストスクレーパー</summary>
-    <summary lang="ko_KR">Universal Scraper for Artists</summary>
+    <summary lang="ko_KR">아티스트를 위한 범용 스크레이퍼</summary>
     <summary lang="lt_LT">Universalus Artistų Scrapers</summary>
     <summary lang="lv_LV">Mākslinieku universālais skrāpis</summary>
-    <summary lang="mk_MK">Universal Scraper for Artists</summary>
     <summary lang="ms_MY">Pengikis Universal untuk Artis</summary>
     <summary lang="my_MM">အနုပညာရှင်များအတွက် Universal Scraper</summary>
     <summary lang="nb_NO">Universalskraper for artister</summary>
@@ -900,10 +936,10 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
     <summary lang="sl_SI">Univerzalen ponudnik informacij o izvajalcih</summary>
     <summary lang="sv_SE">Universiell artistskrapa</summary>
     <summary lang="ta_IN">கலைஞர்களின் ஒட்டு மொத்தமான சுரண்டி</summary>
-    <summary lang="tr_TR">Sanatçılar için Evrensel Scraper</summary>
+    <summary lang="tr_TR">Sanatçılar için Evrensel Bilgi Sağlayıcı</summary>
     <summary lang="uk_UA">Універсальний здирач для виконавців</summary>
     <summary lang="vi_VN">Trình lấy dữ liệu Nghệ sĩ từ nhiều nguồn</summary>
-    <summary lang="zh_CN">通用艺术家信息刮削器</summary>
+    <summary lang="zh_CN">通用歌手信息刮削器</summary>
     <summary lang="zh_TW">通用演出者訊息搜括器</summary>
     <description lang="af_ZA">Hierdie skraper versamel informasie van die volgende ondersteunde werwe: TheAudioDb.com, MusicBrainz, last.fm, en allmusic.com, terwyl kunswerke gryp van: fanart.tv, htbackdrops.com, last.fm en allmusic.com. Dit kan veld vir veld gestel word vanaf watter werf jy die spesifike informasie wil hê.
 
@@ -911,9 +947,6 @@ Die aanvanklike soektog word altyd op MusicBrainz gedoen. Ingeval die allmusic s
     <description lang="ar_SA">هذه الماسحة تجمع المعلومات من المواقع المدعومة التالية: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com, في حين تأخذ عناوين الأعمال الفنية من: fanart.tv, htbackdrops.com, last.fm and allmusic.com. يمكن أن ترتب حقل تلو حقل حسب الموقع الذي تريد منه تلك المعلومة المحددة.
 
 البحث الابتدائي يتم دائما على ميوزك برينز. في حال أن رابط كل الموسيقى غير مضاف على حقول موقع ميوزك برينز من allmusic.com لا يمكن الحصول عليها(على الرغم من سهولة إضافة هذه الروابط المفقودة).</description>
-    <description lang="be_BY">This scraper collects information from the following supported sites: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com, while grabs artwork from: fanart.tv, htbackdrops.com, last.fm and allmusic.com. It can be set field by field that from which site you want that specific information.
-
-The initial search is always done on MusicBrainz. In case allmusic link is not added on the MusicBrainz site fields from allmusic.com cannot be fetched (very easy to add those missing links though).</description>
     <description lang="bg_BG">Сваля информация от следните сайтове: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com. Изобрания извлича от: fanart.tv, htbackdrops.com, last.fm and allmusic.com. Можете да определите от кой сайт каква информация да се сваля.
 
 Първоначалното търсене винаги се прави в MusicBrainz. Когато не е налична препратка към allmusic.com на сайта на MusicBrainz извличането на информация от allmusic.com става невъзможно (добавянето на препратка е много лесно).</description>
@@ -921,13 +954,13 @@ The initial search is always done on MusicBrainz. In case allmusic link is not a
     <description lang="cs_CZ">Tento zdroj dat získává informace z následujících podporovaných stránek: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com, while grabs artwork from: fanart.tv, htbackdrops.com, last.fm a allmusic.com. Lze nastavit jakou informaci stahovat z jakých stránek.
 
 Základní hledání je vždy provedeno na MusicBrainz. V případě, že schází odkaz allmusic na stránce MusicBrains, nelze stáhnout informace z allmusic.com (avšak je velmi snadné chybějící odkazy přidat).</description>
-    <description lang="cy_GB">Mae'r crafwr yn casglu gwybodaeth o'r gwefannau canlynol:  TheAudioDb.com, MusicBrainz, last.fm, a allmusic.com, tra'n cipio gwaith celf o: fanart.tv, htbackdrops.com, last.fm a allmusic.com. Mae modd ei osod fesul maes i ddewis pa wefan i gasglu gwybodaeth benodol.
+    <description lang="cy_GB">Mae'r crafwr yn casglu gwybodaeth o'r gwefannau canlynol: TheAudioDb.com, MusicBrainz, last.fm, a allmusic.com, tra'n cipio gwaith celf o: fanart.tv, htbackdrops.com, last.fm a allmusic.com. Mae modd ei osod fesul maes i ddewis pa wefan i gasglu gwybodaeth benodol.
 
 Bydd y chwilio cychwynnol yn cael ei wneud ar MusicBrainz. Rhag ofn nad yw dolen allmusic wedi ei osod ar wefan MusicBrainz nid oes modd estyn meysydd o allmusic.com (mae'n hawdd gosod y dolenni coll hynny).</description>
     <description lang="da_DK">Denne scraper samler information fra følgende sider: TheAudioDb.com, MusicBrainz, last.fm, og allmusic.com, og henter illustrationer fra: fanart.tv, htbackdrops.com, last.fm og allmusic.com. Det kan vælges felt for felt, fra hvilke sider du ønsker, at få de pågældende informationer fra.
 
 Den første søgning er altid på MusicBrainz. Hvis ikke allmusic linket er tilføjet på MusicBrainz side, kan felter fra allmusic.com ikke hentes (men det er helt enkelt at tilføje de manglende links).</description>
-    <description lang="de_DE">Dieser Scaper sammelt Informationen von den folgenden, unterstützten Seiten: MusicBrainz, Last.fm, Allmusic.com und Amazon.de. Es werden dabei Grafiken von den folgenden Seiten geladen: Fanart.tv, Last.fm und Allmusic.com. Von welcher Seite die Informationen geladen werden, kann einzeln konfiguriert werden.⏎ 
+    <description lang="de_DE">Dieser Scraper sammelt Informationen von den folgenden unterstützten Websites: MusicBrainz, Last.fm, Allmusic.com und Amazon.de. Es werden dabei Grafiken von den folgenden Seiten geladen: Fanart.tv, Last.fm und Allmusic.com. Von welcher Seite die Informationen geladen werden, kann einzeln konfiguriert werden.⏎ 
 ⏎
 Die initialie Suche wird immer über MusicBrainz durchgeführt. Sollten keine Allmusic- und/oder Amazon.de-Links auf der MusicBrainz-Seite gesetzt worden sein, können Felder von Allmusic.com und/oder Amazon.de nicht geladen werden (fehlende Links können jedoch sehr einfach hinzugefügt werden).</description>
     <description lang="el_GR">Αυτό το scraper συλλέγει πληροφορίες από τις ακόλουθες υποστηριζόμενες ιστοσελίδες: TheAudioDb.com, MusicBrainz, last.fm και allmusic.com, ενώ λαμβάνει εικόνες από τα: fanart.tv, htbackdrops.com, last.fm και allmusic.com. Μπορεί να οριστεί πεδίο ανά πεδίο αναλόγως των πληροφοριών που επιθυμείτε από την εκάστοτε ιστοσελίδα.
@@ -941,10 +974,12 @@ The initial search is always done on MusicBrainz. In case allmusic link is not a
 The initial search is always done on MusicBrainz. In case allmusic link is not added on the MusicBrainz site fields from allmusic.com cannot be fetched (very easy to add those missing links though).</description>
     <description lang="es_AR">Este scraper recopila información de las siguientes webs: TheAudioDb.com, MusicBrainz, last.fm y allmusic.com, mientras que obtiene las imágenes de fanart.tv, htbackdrops.com, last.fm y allmusic.com. Permite especificar de qué web se quiere obtener la información específica. ⏎ ⏎ La búsqueda inicial se realiza siempre en MusicBrainz. En caso de que los enlaces a allmusic no estén añadidos en la web de MusicBrainz, no se podrán obtener los campos de información de este sitio (aunque es muy fácil añadir esos enlaces que faltan).</description>
     <description lang="es_ES">Este scraper recopila información de las siguientes webs: TheAudioDb.com, MusicBrainz, last.fm y allmusic.com, mientras obtiene las imágenes de fanart.tv, htbackdrops.com, last.fm y allmusic.com. Permite especificar de qué web se quiere obtener la información específica. ⏎ ⏎ La búsqueda inicial se realiza siempre en MusicBrainz. En caso de que los enlaces a allmusic no estén añadidos en la web de MusicBrainz, no se podrán obtener los campos de información de este sitio (aunque es muy fácil añadir esos enlaces que faltan).</description>
-    <description lang="es_MX">Este scraper obtiene información de los siguientes sitios soportados: TheAudioDb.com, MusicBrainz, last.fm y allmusic.com, mientras obtiene artwork de: fanart.tv, htbackdrops.com, last.fm y allmusic.com. Puede ser configurado campo por campo de que sitio quieres esa información específica.⏎ ⏎ La búsqueda inicial siempre es hecha en MusicBrainz. En el caso en que los enlaces de allmusic no son agregados en el sitio de  MusicBrainz, campos de allmusic.com no pueden ser obtenidos. (De cualquier manera es muy fácil agregar esos enlaces no encontrados).</description>
+    <description lang="es_MX">Este scraper obtiene información de los siguientes sitios soportados: TheAudioDb.com, MusicBrainz, last.fm y allmusic.com, mientras obtiene artwork de: fanart.tv, htbackdrops.com, last.fm y allmusic.com. Puede ser configurado campo por campo de que sitio quieres esa información específica.
+
+La búsqueda inicial siempre es hecha en MusicBrainz. En el caso en que los enlaces de allmusic no son agregados en el sitio de MusicBrainz, campos de allmusic.com no pueden ser obtenidos. (De cualquier manera es muy fácil agregar esos enlaces no encontrados).</description>
     <description lang="et_EE">See kraabits kogub infot järgmistelt lehtedelt: TheAudioDb.com, MusicBrainz, last.fm ja allmusic.com, pilte: fanart.tv, htbackdrops.com, last.fm ja allmusic.com. Saad välja kaupa määrata, milliselt lehelt mis infot soovid.
 
-Esmane otsing tehakse alati saidilt MusicBrainz. Kui MusicBrainz lehele pole allmusic  linki lisatud, siis allmusic.com lehelt sisu hankida ei saa (puuduvaid linke saad ise lihtsalt lisada).</description>
+Esmane otsing tehakse alati saidilt MusicBrainz. Kui MusicBrainz lehele pole allmusic linki lisatud, siis allmusic.com lehelt sisu hankida ei saa (puuduvaid linke saad ise lihtsalt lisada).</description>
     <description lang="fi_FI">Tämä tiedonhakija käyttää tietolähteinään seuraavia sivustoja: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com. Kuvat ja grafiikat haetaan seuraavilta sivustoilta: fanart.tv, htbackdrops.com, last.fm and allmusic.com. Voit määrittää tarkasti, miltä sivustoilta mitäkin tietoa haetaan.
 
 Ensimmäinen haku tehdään aina lähteestä MusicBrainz. Mikäli allmusic-linkkiä ei ole lisätty MusicBrainz-sivustolle allmusic.com-osoitteessa, haku ei onnistu (mutta puuttuvien linkkien lisääminen on helppoa).</description>
@@ -959,10 +994,12 @@ TheAudioDb.com, MusicBrainz, last.fm e allmusic.com, mentres que, obtén as imax
 
 A busca inicial é feita sempre no MusicBrainz, no caso de que a ligazón a allmusic non se teña engadido nos campos do sítio MusicBrainz dende allmusic.com, non se poderán obter (aínda que, é moi doado engadir as ligazóns que faltan).</description>
     <description lang="he_IL">סקרייפר זה אוסף מידע מהתארים הנתמכים הבאים: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com, בעוד שמשיכת גרפיקה נעשית דרך: fanart.tv, htbackdrops.com, last.fm and allmusic.com. יש אפשרות להגדיר את זאת שדה אחר שדה מאיזה אתר ברצונך למשוך את המידע הספציפי.⏎ ⏎ החיפוש הפנימי נעשה תמיד דרך MusicBrainz. במקרה שקישור allmusic לא התווסף באתר MusicBrainz, השדות מאת allmusic.com אינן יכולות להימשך (למרות שזה מאוד קל להוסיף את הקישורים הריקים).</description>
-    <description lang="hr_HR">Ovaj sakupljač prikuplja informacije sa sljedećih podržanih stranica: TheAudioDb.com, MusicBrainz, last.fm i allmusic.com, dok preuzima omote filmova sa: fanart.tv, last.fm i allmusic.com. Može poredati popis stranica iz kojih želite sakupiti informacije jednu iza druge.\n
-\n
+    <description lang="hr_HR">Ovaj sakupljač prikuplja informacije sa sljedećih podržanih stranica: TheAudioDb.com, MusicBrainz, last.fm i allmusic.com, dok preuzima omote filmova sa: fanart.tv, last.fm i allmusic.com. Može poredati popis stranica iz kojih želite sakupiti informacije jednu iza druge.
+
 Pretraga uvijek započinje na MusicBrainzu. U slučaju da allmusic poveznica nije dodana na MusicBrainz stranicu, polja sa allmusic.com ne mogu se nabaviti (ali je vrlo jednostavno moguće dodati te nedostajuće poveznice).</description>
-    <description lang="hu_HU">Ez a leolvasó a következő weboldalakról gyűjti be az adatokat:  TheAudioDb.com, MusicBrainz, last.fm és allmusic.com, míg képeket a következő oldalakról gyűjt: fanart.tv, htbackdrops.com, last.fm és allmusic.com. Egyenként beállítható, hogy az adott mezőt melyik weboldalról töltse fel⏎ ⏎ A kiinduló keresés mindig a MusicBrainz. Amennyiben az allmusic utalás nincs hozzáadva MusicBrainz oldalhoz, a mezők nem tölthetők le az allmusic.com oldalról (a hiányzó utalások hozzáadása azonban nagyon egyszerű).</description>
+    <description lang="hu_HU">Ez a leolvasó a következő weboldalakról gyűjti be az adatokat: TheAudioDb.com, MusicBrainz, last.fm és allmusic.com, míg képeket a következő oldalakról gyűjt: fanart.tv, htbackdrops.com, last.fm és allmusic.com. Egyenként beállítható, hogy az adott mezőt melyik weboldalról töltse fel
+
+A kiinduló keresés mindig a MusicBrainz. Amennyiben az allmusic utalás nincs hozzáadva MusicBrainz oldalhoz, a mezők nem tölthetők le az allmusic.com oldalról (a hiányzó utalások hozzáadása azonban nagyon egyszerű).</description>
     <description lang="id_ID">Pengais ini mengambil informasi dari berbagai situs yang mendukung: TheAudioDb.com, MusicBrainz, last.fm dan allmusic.com, sembari mengambil artwork dari: fanart.tv, htbackdrops.com. last.fm dan allmusic.com. Ini dapat diatur perbagian dari situ mana informasi tertentu akan diambil.
 
 Pencarian awal akan dilakukan di MusicBrainz. Apabila tautan dari allmusic belum ditambahkan di situs MusicBrainz, bagian dari allmusic.com tidak dapat ditarik (Namun sangatlah mudah menambahkan tautan tersebut).</description>
@@ -979,9 +1016,6 @@ La ricerca iniziale è sempre fatta su MusicBrainz. Nel caso che il link allmusi
 
 초기 검색은 항상 MusicBrainz에서 수행합니다. allmusic 링크가 MusicBrainz 사이트의 필드에 추가되어 있지 않은 경우 정보를 가져올 수 없습니다(누락된 링크는 쉽게 추가할 수 있습니다).</description>
     <description lang="lt_LT">Šis Scrapers renka informaciją iš šių palaikomų svetainių: TheAudioDb.com, MusicBrainz, last.fm, ir allmusic.com, ir atsiunčia meno kūrinius iš: fanart.tv, htbackdrops.com, last.fm ir allmusic.com. Jis gali būti nustatyti lauko srityje, kurioje svetainėje norite, kad konkrečiu atveju pradinė informacijos pradinis paieška visada bus atlikta remiantis MusicBrainz. Allmusic nuoroda įdėta į MusicBrainz vietoje laukų allmusic.com negali būti (nors tas trūkstamas grandis labai lengva įtraukti).</description>
-    <description lang="mk_MK">This scraper collects information from the following supported sites: TheAudioDb.com, MusicBrainz, last.fm, and allmusic.com, while grabs artwork from: fanart.tv, htbackdrops.com, last.fm and allmusic.com. It can be set field by field that from which site you want that specific information.
-
-The initial search is always done on MusicBrainz. In case allmusic link is not added on the MusicBrainz site fields from allmusic.com cannot be fetched (very easy to add those missing links though).</description>
     <description lang="ms_MY">Pengikis ini mendapatkan maklumat dari laman tersokong berikut: TheAudioDb.com, MusicBrainz, last.fm dan allmusic.com, manakala ia dapatkan kerja seni dari: fanart.tv, htbckdrops.com, last.fm dan allmusic.com. Ia boleh tetapkan medan mengikut medan supaya anda boleh dapatkan maklumat khusus dari laman tertentu.⏎
 ⏎
 Gelintar awalan sentiasa bermula dengan MusicBrainz. Pautan allmusic tidak ditambah ke laman MusicBrainz, medan dari allmusic.com sukar didapati.</description>
@@ -996,7 +1030,7 @@ De initiële zoekopdracht wordt altijd uitgevoerd op MusicBrainz. Wanneer de all
 
 Początkowe wyszukiwanie jest zawsze wykonywane w serwisie MusicBrainz. Gdy wyszukiwanie nie jest wskazane na stronę MusicBrainz, następuje przeszukiwanie serwisu allmusic.com (brakujące linki można łatwo dodać później).</description>
     <description lang="pt_BR">Este scraper coleta informações nos seguintes sites:
-MusicBrainz, last.fm, allmusic.com e amazon.de, enquanto pega os artwork de: fanart.tv, last.fm and allmusic.com. O Mesmo pode ser configurara campo a campo em que site você quer obter informações específicas. A procura inicial é sempre feita no MusicBrainz. No caso allmusic e/ou amazon.de não terem sido adicionados no site MusicBrainz, campos de allmusic.com e/ou amazona.de não serão buscados (embora seja muito fácil adicionar os links faltantes). </description>
+MusicBrainz, last.fm, allmusic.com e amazon.de, enquanto pega os artwork de: fanart.tv, last.fm and allmusic.com. O Mesmo pode ser configurara campo a campo em que site você quer obter informações específicas. A procura inicial é sempre feita no MusicBrainz. No caso allmusic e/ou amazon.de não terem sido adicionados no site MusicBrainz, campos de allmusic.com e/ou amazona.de não serão buscados (embora seja muito fácil adicionar os links faltantes).</description>
     <description lang="pt_PT">Este colector recolhe informações dos seguintes sítios:
 TheAudioDb.com, MusicBrainz, last.fm e allmusic.com, enquanto obtém artwork de: fanart.tv, htbackdrops.com, last.fm e allmusic.com. Pode definir em cada campo o sítio de onde quer obter as informações. 
 
@@ -1014,7 +1048,9 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
     <description lang="uk_UA">Здирач збирає інформацію з наступних сторінок: TheAudioDb.com, MusicBrainz, last.fm та allmusic.com, тоді як отримує обкладинки з: fanart.tv, htbackdrops.com, last.fm та allmusic.com. Для кожного поля можно вказати з якої сторінки ви бажаєте його заповнити.
 
 Початковий пошук завжди робиться на MusicBrainz. Якщо посилання з allmusic не додаються на сторінку MusicBrainz, тоді поля з allmusic.com неможливо отримати (однак дуже легко додати ці пропущені посилання).</description>
-    <description lang="vi_VN">Trình này thu thập thông tin từ những site được hỗ trợ như: TheAudioDb.com, MusicBrainz, last.fm, allmusic.com, và lấy ảnh bìa từ các nguồn: fanart.tv, htbackdrops.com, last.fm và allmusic.com. Bạn có thể tùy chỉnh chọn từng thứ riêng biệt để lấy từ site bạn muốn.\n \n Lần tìm kiếm đầu tiên luôn luôn được sử dụng từ MusicBrainz. Trong trường hợp các link allmusic không có trên MusicBrainz, các trường từ allmusic.com sẽ không thể lấy về được (tuy nhiên rất dễ để tự thêm vào các link này bằng tay).</description>
+    <description lang="vi_VN">Trình này thu thập thông tin từ những site được hỗ trợ như: TheAudioDb.com, MusicBrainz, last.fm, allmusic.com, và lấy ảnh bìa từ các nguồn: fanart.tv, htbackdrops.com, last.fm và allmusic.com. Bạn có thể tùy chỉnh chọn từng thứ riêng biệt để lấy từ site bạn muốn.
+
+Lần tìm kiếm đầu tiên luôn luôn được sử dụng từ MusicBrainz. Trong trường hợp các link allmusic không có trên MusicBrainz, các trường từ allmusic.com sẽ không thể lấy về được (tuy nhiên rất dễ để tự thêm vào các link này bằng tay).</description>
     <description lang="zh_CN">本刮削器支持从以下网站获取信息：TheAudioDb.com、MusicBrainz、last.fm 和 allmusic.com，并从以下网站获取艺术图片：fanart.tv、htbackdrops.com、last.fm 和 allmusic.com。你可以指定每一项内容的来源网站。
 
 初始结果总是先从 MusicBrainz 获取，如果 MusicBrainz 网站未加入到 allmusic 的外部链接，则无法获取 allmusic.com 的信息（当然你能很容易地加入缺失的链接）。</description>
@@ -1102,6 +1138,25 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
     <description lang="se">Ladda ner miniatyrer och fanart från www.themoviedb.org</description>
     <description lang="zh">从www.themoviedb.org下载海报和同人画</description>
   </extension>
+</addon><addon id="metadata.generic.albums" name="Generic Album Scraper" version="1.0.13" provider-name="Team Kodi">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="xbmc.metadata" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.metadata.scraper.albums" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Generic music scraper for albums</summary>
+		<description lang="en_GB">Searches for album information and artwork across multiple websites.</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=351570</forum>
+		<source>https://gitlab.com/ronie/metadata.generic.albums/</source>
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+		<news>- add wikipedia support</news>
+	</extension>
 </addon><addon id="metadata.movie.adultdvdempire.com" name="AdultDVDEmpire" version="2.1" provider-name="xbmc-adult">
   <requires>
     <import addon="xbmc.metadata" version="1.0" />
@@ -1179,6 +1234,124 @@ Začeno iskanje je vedno na MusicBrainz. V primeru, da na MusicBrainz ni povezav
     <summary lang="en">HotMovies Scraper</summary>
     <description lang="en">Download XXX movie information from hotmovies.com</description>
     <platform>all</platform>
+  </extension>
+</addon><addon id="metadata.themoviedb.org" name="The Movie Database" version="5.2.6" provider-name="Team Kodi">
+  <requires>
+    <import addon="xbmc.metadata" version="2.1.0" />
+    <import addon="metadata.common.imdb.com" version="2.9.2" />
+    <import addon="metadata.common.themoviedb.org" version="3.2.6" />
+    <import addon="plugin.video.youtube" version="4.4.10" optional="true" />
+  </requires>
+  <extension point="xbmc.metadata.scraper.movies" language="en" library="tmdb.xml" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="af_ZA">TMDB Fliek Skraper</summary>
+    <summary lang="be_BY">TMDB Movie Scraper</summary>
+    <summary lang="bg_BG">Сваля инф. за филми от TMDB</summary>
+    <summary lang="ca_ES">Arreplegador de pel·lícules TMDB</summary>
+    <summary lang="cs_CZ">Stahovač informací k filmům z TMDB</summary>
+    <summary lang="cy_GB">Crafwr Ffilmiau TMDB</summary>
+    <summary lang="da_DK">TMDB Scraper til Film</summary>
+    <summary lang="de_DE">TMDB Filmscraper</summary>
+    <summary lang="el_GR">Scraper Ταινιών του TMDb</summary>
+    <summary lang="en_GB">TMDB Movie Scraper</summary>
+    <summary lang="en_NZ">TMDB Movie Scraper</summary>
+    <summary lang="en_US">TMDB Movie Scraper</summary>
+    <summary lang="es_ES">Scraper de películas de TheMovieDB</summary>
+    <summary lang="es_AR">Scraper de Películas de TheMovieDB</summary>
+    <summary lang="es_MX">Scraper de Películas TMDb</summary>
+    <summary lang="et_EE">TMDB Filmi kaabits</summary>
+    <summary lang="fi_FI">TMDB elokuvatietojen lataaja</summary>
+    <summary lang="fr_FR">Collecteur de Films TMDB</summary>
+    <summary lang="fr_CA">Extracteur de films TMDB</summary>
+    <summary lang="gl_ES">Scraper de Filme de TMDB</summary>
+    <summary lang="he_IL">TMDB סקרייפר סרטים</summary>
+    <summary lang="hr_HR">TMDB filmski sakupljač informacija</summary>
+    <summary lang="hu_HU">TMDB filmadat leolvasó</summary>
+    <summary lang="id_ID">Pengais Film TMDB</summary>
+    <summary lang="is_IS">TMDB Skafa fyrir Kvikmyndir</summary>
+    <summary lang="it_IT">Ricercatore per TMDB Movie</summary>
+    <summary lang="ja_JP">TMDB映画のスクレーパー</summary>
+    <summary lang="ko_KR">TMDB 영화 정보수집기</summary>
+    <summary lang="lt_LT">TMDB filmų skreperis</summary>
+    <summary lang="mk_MK">TMDB инфо за филмови</summary>
+    <summary lang="ml_IN">മൂവി ഡി ബി, വിവരശേഖരം</summary>
+    <summary lang="ms_MY">Pengikis Cakera TMDB</summary>
+    <summary lang="my_MM">TMDB Movie Scraper</summary>
+    <summary lang="nl_NL">TMDb-filmscraper</summary>
+    <summary lang="nb_NO">TMDB-skraper</summary>
+    <summary lang="pl_PL">Ekstraktor filmowy TMDB</summary>
+    <summary lang="pt_PT">Colector de filmes TMDb</summary>
+    <summary lang="pt_BR">Scraper de Filmes TMDb</summary>
+    <summary lang="ro_RO">Scraper de filme TMDb</summary>
+    <summary lang="ru_RU">Инфоресурс на базе TMDB</summary>
+    <summary lang="se">Skrapa för TMDb</summary>
+    <summary lang="sk_SK">TheMovieDB filmový sťahovač</summary>
+    <summary lang="sl_SI">Ponudnik informacij o filmih TMDB</summary>
+    <summary lang="sv_SE">TMDB Filmskrapa</summary>
+    <summary lang="ta_IN">LastFM நிகழ்படம் சுரண்டி</summary>
+    <summary lang="th_TH">ตัวรับข้อมูลภาพยนต์ TMDB</summary>
+    <summary lang="tr_TR">TMDB Film Scraper</summary>
+    <summary lang="uk_UA">TMDB — джерело інформації про фільми</summary>
+    <summary lang="vi_VN">Trình lấy dữ liệu Phim từ TMDB</summary>
+    <summary lang="zh_CN">TMDB 电影刮削器</summary>
+    <summary lang="zh_TW">TMDB 電影搜括器</summary>
+    <description lang="af_ZA">themoviedb.org is 'n verniet en oop fliek databasis. Dit is totaal gebruiker gedryf deur mense soos jy. TMDB word huidiglik deur miljoene mense elke maand gebruik, en met hulle kragtige API word dit ook deur baie gewilde media sentrums soos Kodi gebruik om Fliek Metadata, Plakkate en Ondersteunerkuns te onttrek om die gebruiker se ondervinding te verryk.</description>
+    <description lang="be_BY">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="bg_BG">themoviedb.org е безплатна и отворена филмова база данни. Задвижва се изцяло от потребителите си, от хора като вас. Милиони хора по света всеки месец ползват TMDb. Благодарение на многофункционално API може да се ползва от най-различни и популярни медийни центрове като Kodi, които извличат метаданни, постери и фанарт за филми с цел за красивото оформяне на интерфейса.</description>
+    <description lang="ca_ES">themoviedb.org és una base de dades oberta i lliure. Es manté completament per usuaris, per gent com tu. TMDb s'utilitza actualment per milions de persones cada mes i amb la seva potent API també és utilitzada per molts centre media populas com l'Kodi per obtenir les meta-dades de pel·lícules, pósters i fanart per enriquir l'experiència d'usuari.</description>
+    <description lang="cs_CZ">themoviedb.org je bezplatná a otevřená databáze filmů a seriálů. Je celá řízena uživateli, tedy lidmi jako vy. TMDb je aktuálně používána každý měsíc milióny lidí a se svým výborným API je také používána mnoha oblíbenými multimediálními centry, jako je Kodi, k získávání metadat, plakátů a fanartů filmů a seriálů pro obohacení uživatelského zážitku.</description>
+    <description lang="cy_GB">Mae themoviedb.org yn gronfa ddata ffilmiau rhydd ac agored. Mae'n cael ei yrru gan ddefnyddwyr fel chi. Mae TMDb yn cael ei ddefnyddio gan filiynau o bobl bob mis a gyda'i API pwerus, mae'n cael ei ddefnyddio gan lawer o'r canolfannau cyfrwng fel Kodi i estyn metadata ffilmiau, posteri a chelf er mwyn cyfoethogi profiad defnyddwyr.</description>
+    <description lang="da_DK">themoviedb.org er en fri og åben filmdatabase. Den er helt og aldeles brugerdrevet af folk som dig. TMDb bruges i dag af millioner af mennesker hver måned, og med deres kraftfulde API er den også brugt af mange populære mediecentre såsom Kodi til at hente metadata, plakater og fankunst til film, for at berige brugerens oplevelse.</description>
+    <description lang="de_DE">TheMovieDB.org ist eine freie und offene Filmdatenbank. Sie wird von Benutzern wie dir angetrieben. TheMovieDB wird zur Zeit von millionen Nutzern jeden Monat genutzt und dank ihrer mächtigen API ist sie auch von vielen Media-Center, wie z.B. Kodi, implementiert, um Film-Metadaten, -Poster und -Fanarts zu beziehen, die das Benutzererlebnis verbessern.</description>
+    <description lang="el_GR">Το themoviedb.org είναι μία δωρεάν και ανοικτή βάση δεδομένων ταινιών. Διαχειρίζεται πλήρως από ανθρώπους σαν και εσάς. Το TMDb χρησιμοποιείται από εκατομμύρια ανθρώπους κάθε μήνα, και με το πανίσχυρο API τους, χρησιμοποιείται και από πολλά δημοφιλή κέντρα πολυμέσων όπως το Kodi για να λαμβάνουν μετα-δεδομένα Ταινιών, Αφίσες και Fanart για εμπλουτισμό της εμπειρίας του χρήστη.</description>
+    <description lang="en_GB">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="en_NZ">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="en_US">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="es_ES">themovieDB.org es una base de datos de películas gratuita y abierta. Es una página web que se basa en contenido subido por los usuarios. TMDb es usada diariamente por mucha gente gracias a su API, que es usada por más programas aparte de Kodi para descargar información de películas así como Posters o Fanart (Fondos de escritorio basados en películas usados en distintos skins) para enriquecer la experiencia de usar Kodi.</description>
+    <description lang="es_AR">themovieDB.org es una base de datos de películas gratuita y abierta. Está  formada con contenido subido por usuarios como vos. TMDb es actualmente utilizada por millones de personas cada mes y, gracias a su poderosa API, es usada por muchos programas populares como Kodi para descargar Información de Películas, Posters y Fanart para enriquecer la experiencia de usar Kodi.</description>
+    <description lang="es_MX">themoviedb.org es una base de datos de películas gratis y abierta. Es completamente manejada por usuarios y personas como tu. Actualmente TMDb es usada por millones de personas cada mes, y dado a su poderosa API, es usada también por varios media centers populares como Kodi para obtener Metada de Películas, Posters y Fanarts, enriqueciendo de esta manera la experiencia del usuario.</description>
+    <description lang="et_EE">themoviedb.org on tasuta ja vaba juurdepääsuga filmide andmebaas.See on täielikult koostatud sinu sarnaste inimeste poolt. TMDb on hetkel igapäevaselt kasutuses miljonite inimeste poolt ja seda kasutavad paljud populaarsed meediakeskused, nagu ka Kodi, filmiandmete, fännikunsti ja posterite leidmiseks.</description>
+    <description lang="fi_FI">themoviedb.org on vapaa ja avoin elokuvatietokanta. Se on täysin käyttäjien ylläpitämä. TMDb:a käyttää miljoonat ihmiset joka kuukausi, sitä käytetään käyttäjäkokemuksen rikastuttamiseen monissa muissakin suosituissa Kodi:n kaltaisissa ohjelmissa lataamalla elokuvien tietoja, julisteita ja fanitaidetta.</description>
+    <description lang="fr_FR">themoviedb.org est une base de données gratuite et libre d'accès de films. Elle est totalement gérée par les utilisateurs. TMDb est actuellement utilisée par des millions de personnes chaque mois et, grâce à ses puissantes fonctions et routines, elle est également utilisée par de nombreux Media Centers populaires comme Kodi aux fins de récupération des Métadonnées, Posters et Fanarts des films en vue d'améliorer l'expérience de l'utilisateur.</description>
+    <description lang="fr_CA">themoviedb.org est une base de données libre et ouverte. Elle est complètement gérée par des gens comme vous. TMDb est actuellement utilisée par des millions de personnes chaque mois et avec son API puissante, elle est également utilisée par de nombreux centres multimédias populaires comme Kodi pour récupérer les métadonnées des films, les affiches et le fanart afin d'enrichir l'expérience de l'utilisateur.</description>
+    <description lang="gl_ES">themoviedb.org é una base de datos sobre filmes libre e aberta, impulsada por xente coma ti. Na actualidade TMDb é usada por millóns de persoas todos os meses, e grazas ó seu potente API, usado por algúns dos centros multimedia máis populares como Kodi para obter a información dos filmes, Posters e Fanart e así mellorar a experiencia do usuario.</description>
+    <description lang="he_IL">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="hr_HR">themoviedb.org je besplatna i otvorena baza filmskih podataka. TMDb trenutno koriste milijuni ljudi svaki mjesec uz pomoću njegovog snažnog API-ja, isto tako se koristi u mnogim popularnim medijskim centrima poput Kodi-a, kako bi mogli sakupljati informacije o filmovima, filmske postere, omote filmova i na kraju obogatili korisničko iskustvo.</description>
+    <description lang="hu_HU">A themoviedb.org egy ingyenes és nyílt filmadatbázis. Teljes egészében olyan felhasználók töltik fel, mint például Te. A TMDb-t havonta emberek milliói használják és a hatékony API-n keresztül számos népszerű média center is, mint például az Kodi a filmadatok, poszterek, fanartképek letöltésére.</description>
+    <description lang="id_ID">themoviedb.org adalah database film yang gratis dan terbuka. Ini benar-benar digerakkan oleh orang-orang seperti Anda. TMDb saat ini digunakan oleh jutaan orang setiap bulannya dan dengan APInya yang digdaya, juga digunakan oleh beberapa pusat media seperti Kodi untuk mengambil Metadata Film, Poster dan Fanart untuk menperkaya pengalaman penggunanya.</description>
+    <description lang="is_IS">themoviedb.org er frír og opinn gagnagrunnur. Hann er algjörlega rekinn af fólki eins og þér. TMBd er notaður af milljónum manna í hverjum mánuði og með öflugum forritaskilum þeirra (API), er hann líka notaður af mörgum vinsælum heimabíókerfum eins og Kodi til að ná í Ítarupplýsingar yfir Kvikmyndir, Veggspjöld og Fanart til að lífga upplifun notandans.</description>
+    <description lang="it_IT">themoviedb.org è un database libero e aperto. E' gestito da utenti e persone come te. Viene usato correntemente da millioni di persone ogni mese e con le sue potenti API, è anche utilizzato da molti popolari media centers come Kodi per ottenere Metadati, Posters e Fanart di film per arricchire la loro esperienza utente.</description>
+    <description lang="ja_JP">themoviedb.org は自由でオープンな映画データベースです。その運営は、完全にユーザ主導で行われています。TMDb は現在毎月何百万人もの人に利用されているほか、Kodi のようなメディアセンターも、TMDb のパワフルな API を介して映画メタデータ、ポスター、ファンアートを取得し、使い勝手を向上させるなどして使っています。</description>
+    <description lang="ko_KR">themoviedb.org 는 전적으로 여러분 같은 이용자가 주도하는 무료 공개 영화 데이터베이스입니다. TMDb 는 현재 매월 수백만의 사람들이 강력한 API와 함께 사용하고 있을 뿐만 아니라 Kodi 같은 많은 미디어 센터가 영화 정보, 포스터, 팬아트를 가져와 풍성한 사용자 경험을 제공하는데 이용되고 있습니다.</description>
+    <description lang="lt_LT">themoviedb.org yra nemokama ir atvira filmų duomenų bazė. Ji palaikoma tokių pat vartotojų kaip ir jūs. TMDb šiuo metu naudojama milijonų žmonių kiekvieną mėnesį ir turi galingą API, o taip pat naudojama daugelio populiarių media centrų, tokių kaip Kodi, kad gautų filmų metaduomenis, plakatus ir Fanart, siekiant praturtinti vartotojo patirtį.</description>
+    <description lang="mk_MK">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="ml_IN">മൂവി ഡി ബി, എല്ലാവർക്കും കൈവക്കാവുന്ന ഒരു സൗജന്യ വിവരശേഖരമാണ്. ഇതുമൂലം ലോകം മുഴുവനും സിനിമാ പോസ്റ്ററുകൾ എല്ലവരും കാണുന്നു</description>
+    <description lang="ms_MY">themoviedb.org adalah pangkalan data cakera terbuka. Ia sepenuhnya dipacu oleh individu seperti anda. TMDb buat masa ini diguna oleh berjuta-juta individu setiap bulan dan dengan API hebat mereka, ia juga digunakan oleh banyak pusat media popular seperti Kodi untuk mendapatkan Data Meta, Poster, Seni Peminat Cereka untuk memperkayakan pengalaman pengguna.</description>
+    <description lang="nl_NL">Themoviedb.org is een vrije en open filmdatabank. Gebruikers zoals jij vormen de motor van deze site. Op dit moment gebruiken elke maand miljoenen mensen TMDb. De krachtige API van de site laat mediacenters zoals Kodi toe om metadata, posters en fanart op te halen en zo de gebruikerservaring te verrijken.</description>
+    <description lang="nb_NO">themoviedb.org er en fir og åpen filmdatabase. Den drives helt og fullt av mennesker som deg. TMDB brukes av millioner av mennesker hver måned og med sitt gode API, brukes den også av mange popluære mediasenterløsninger som Kodi for å hente metadata for filmer, plakater og fanart for å gi en bedre brukeropplevelse.</description>
+    <description lang="pl_PL">themoviedb.org jest wolną i otwartą filmową bazą danych, zarządzaną przez osoby takie jak Ty. Obecnie odwiedzają ją miliony osób miesięcznie, a dzięki dostępności interfejsu programistycznego jest używana przez wiele centrów multimedialnych takich jak Kodi, jako źródło informacji o filmach, plakatów i tapet.</description>
+    <description lang="pt_PT">O themoviedb.org é uma base de dados de filmes livre e aberta. É actualizado inteiramente por pessoas como você e usado por milhões todos os meses. Com o poderoso motor de busca disponível, também se tornou no favorito para muitos programas de centro de média, como o popular Kodi, para obter informação, posters e fanart que enriquecem a experiência do utilizador.</description>
+    <description lang="pt_BR">O themoviedb.org é um banco de dados aberto e gratuito. É completamente operado por pessoas como você. O TMDb é atualmente usado por milhares de pessoas a cada mês e com sua poderosa API, é usado por muitas centrais de mídia populares como o Kodi para buscar metadados, cartazes e fanart de filmes para enriquecer a experiência do usuário.</description>
+    <description lang="ro_RO">themoviedb.org este o bază de date de filme gratuită și deschisă. Este actualizată de oameni ca și tine. TMDb este curent folosită de milioane de oameni în fiecare lună și datorită API-ului puternic, este de asemena folosită de multe centre media populare ca Kodi pentru a obține informații despre filme, afișe și imagini produse de fani (Fanart) care îmbogățesc experiența utilizatorului.</description>
+    <description lang="ru_RU">themoviedb.org — это бесплатная и открытая база данных фильмов. Она полностью поддерживается обычными людьми. В данный момент сайт TMDb используют миллионы людей каждый месяц, и благодаря мощному API его могут использовать различные популярные медиацентры, такие как Kodi, чтобы получать метаданные, постеры и фанарт для фильмов с целью красивого оформления интерфейса.</description>
+    <description lang="se">themoviedb.org är en fri och öppen filmdatabas. Det drivs helt av människor som dig. TMDb används av miljontals människor varje månad och med deras kraftfulla API, är det också använt av många populära mediacenter som Kodi för att hämta filmmetadata, omslag och fanart för att förgylla användarens upplevelse.</description>
+    <description lang="sk_SK">themoviedb.org je voľná a otvorená databáza filmov. Je výlučne vedená užívateľmi ako si ty. TMDb je každý mesiac používaná miliónmi ľudí, a vďaka svojmu výkonnému API je veľmi populárna medzi 'media centrami' ako Kodi pre sťahovanie filmových metadát, plagátov a fanartov pre obohatenie  zážitkov.</description>
+    <description lang="sl_SI">themoviedb.org je brezplačna in prosta baza filmov. Je v celoti ustvarjena s strani uporabnikov kot ste vi. TMDB uporablja miljone ljudi in z njihovo močno API, jo lahko uporabljate tudi v multimedijskih centrih kot Kodi, s tem prenesete informacije o filmih, plakate in ozadja ter s tem popestrite uporabniško izkušnjo.</description>
+    <description lang="sv_SE">themoviedb.org är en gratis och öppen filmdatabas. Den drivs helt av människor som du. TMDb används för närvarande av miljoner människor varje månad och med deras kraftfulla API används den även av många populära mediacenter som t.ex. Kodi för att hämta metadata om filmer, affischer och fanart för att berika användarens upplevelse.</description>
+    <description lang="ta_IN">themoviedb.org ஒரு இலவச மற்றும் திறந்த திரைப்பட தரவுத்தளம் ஆகும். இந்த தரவுத்தளம்  முற்றிலும் பயனர் மக்களால் இயக்கப்படுகிறது. TMDb அவர்களது சக்திவாய்ந்த API இனால் தற்போது பல இலட்சக்கணக்கான மக்களால் ஒவ்வொரு மாதமும் பயன்படுத்தப்படுகிறது, இது Kodi போன்ற பல பிரபல ஊடக மையங்களில் பயனர் அனுபவத்தை மேம்படுத்த பயன்படுத்தப்படுகிறது.</description>
+    <description lang="th_TH">themoviedb.org เป็นฐานข้อมูลภาพยนตร์ที่ฟรีและเปิดกว้าง. มันถูกขับเคลื่อนจากผู้ใช้ โดยคนเช่นคุณ. TMDb ปัจจุบันมีการใช้โดยคนนับล้านในแต่ละเดือน และมีประสิทธิภาพด้วย API ของพวกเขา , มันยังถูกใช้โดยหลายศูนย์สื่อที่นิยมเช่น Kodi เพื่อดึง อธิบายข้อมูลภาพยนตร์, โปสเตอร์และ แฟนอาร์ต เพื่อเพิ่มประสบการณ์ของผู้ใช้</description>
+    <description lang="tr_TR">themoviedb.org ücretsiz ve herkese açık bir film veri tabanıdır. Tamamen kullanıcılar tarafından oluşturulmakta ve yönetilmektedir. TMDb her ay milyonlarca kullanıcı tarafından kullanılmakta ve güçlü API'si sayesinde Kodi gibi bir çok popüler medya merkezi tarafından Film Veritabanı, Poster ve Fanart bilgilerini kullanarak kullanıcı deneyimini zenginleştirmektedir.</description>
+    <description lang="uk_UA">themoviedb.org - це безкоштовна і відкрита база даних фільмів. Вона повністю підтримується звичайними людьми. В даний момент сайт TMDb використовують мільйони людей кожен місяць, і завдяки потужному API, його можуть використовувати різні популярні медіацентри, такі як Kodi, щоб отримувати метадані, постери і фанарт для фільмів з метою оформлення інтерфейсу.</description>
+    <description lang="vi_VN">themoviedb.org là cơ sở dữ liệu về phim ảnh mở và miễn phí. Nó hoàn toàn được kiểm soát bởi những người như bạn. TMDb hiện tại đang được sử dụng bởi hàng triệu người dùng hàng tháng và với sự hỗ trợ của bộ API mạnh mẽ nó cũng được sử dụng bởi những thiết bị giải trí cá nhân như Kodi cho việc lấy dữ liệu về Phim ảnh, Poster và Fanart để làm tăng trải nghiệm của người sử dụng</description>
+    <description lang="zh_CN">themoviedb.org 是一个开放和自由的电影数据库。它完全由象你一样的用户来掌控。TMDb 每月为上百万用户提供服务，并通过强大的 API 界面为许多流行的媒体中心系统如 Kodi 提供电影资料、封面海报和同人画以丰富用户的体验。</description>
+    <description lang="zh_TW">themoviedb.org是一個免費和開放的電影資料庫。它是完全由與您一樣的廣大使用者來更新資訊。 TMDb目前擁有數以百萬計的使用人次並且有著強大的API，許多受歡迎的媒體中心平台像Kodi藉由TMDb獲取電影的數據資料庫，海報和影片資訊，以豐富使用者體驗。</description>
+    <platform>all</platform>
+    <license>GPL v2.0</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=339672</forum>
+    <website>https://www.themoviedb.org</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon><addon id="metadata.themoviedb.org.python" name="The Movie Database Python" version="1.5.1+matrix.1" provider-name="Team Kodi">
   <requires>
@@ -1397,16 +1570,15 @@ v1.4.0 (2021-07-10)
         <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.8" provider-name="Team Kodi">
+</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.9" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="xbmc.metadata" version="2.1.0" />
   </requires>
   <extension point="xbmc.metadata.scraper.tvshows" library="main.py" cachepersistence="00:15" />
   <extension point="xbmc.addon.metadata">
-    <news>1.4.8
-udpated IMDB parsing to be more tolerant of HTML changes at IMDB
-updated language files
+    <news>1.4.9
+fix to fallback to English trailer if no trailer found in selected language
 	</news>
     <platform>all</platform>
     <license>GPL-3.0-or-later</license>
@@ -1440,7 +1612,7 @@ updated language files
     <description lang="sv_SE">The Movie Database (TMDb) är en communitybyggd film- och TV-databas. All data har lagts till av våra fantastiska medlemmar ända sen 2008. TMDbs starka internationella fokus och bredd är i stort sett oöverträffad och något vi är väldigt stolta över. Communityn är hjärtat i det hela och det är det som skiljer oss från mängden.</description>
     <description lang="zh_CN">TMDb 是一个由网络社区创建的影视数据库。每一条数据都是由我们令人惊叹的社区添加的，可以追溯到2008年。TMDb 强大的国际关注度和数据广度在很大程度上是无与伦比的，我们对此感到无比自豪。简单地说，我们生活在社区中，呼吸着社区的气息，这正是我们与众不同的原因。</description>
   </extension>
-</addon><addon id="metadata.universal" name="Universal Movie Scraper" version="5.5.5" provider-name="Olympia, Team Kodi">
+</addon><addon id="metadata.universal" name="Universal Movie Scraper" version="5.5.6" provider-name="Olympia, Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
     <import addon="metadata.common.fanart.tv" version="3.1.0" />
@@ -1463,14 +1635,15 @@ updated language files
     <summary lang="ca_ES">Buscador Universal de Pel·licules</summary>
     <summary lang="cs_CZ">Univerzální zdroj dat k filmům</summary>
     <summary lang="cy_GB">Crafwr Ffilmiau Cyffredinol</summary>
-    <summary lang="da_DK">Universal Film-scraper</summary>
-    <summary lang="de_DE">Universeller Film Scraper</summary>
+    <summary lang="da_DK">Universal film-scraper</summary>
+    <summary lang="de_DE">Universeller Film-Scraper</summary>
     <summary lang="el_GR">Universal Scraper Ταινιών</summary>
     <summary lang="en_GB">Universal Movie Scraper</summary>
     <summary lang="en_NZ">Universal Movie Scraper</summary>
     <summary lang="en_US">Universal Movie Scraper</summary>
     <summary lang="es_AR">Buscador Universal de Películas</summary>
     <summary lang="es_ES">Buscador Universal de Películas</summary>
+    <summary lang="es_MX">Scraper Universal de Películas</summary>
     <summary lang="et_EE">Universaalne filmide kraabits</summary>
     <summary lang="fr_CA">Extracteur universel pour les films</summary>
     <summary lang="fr_FR">Collecteur de films universel</summary>
@@ -1499,7 +1672,7 @@ updated language files
     <summary lang="sv_SE">Universell filmskrapa</summary>
     <summary lang="ta_IN">ஒட்டு மொத்தமான நிகழ்படம் சுரண்டி</summary>
     <summary lang="th_TH">Universal Movie Scraper</summary>
-    <summary lang="tr_TR">Evrensel Film Scraperi</summary>
+    <summary lang="tr_TR">Evrensel Film Bilgi Sağlayıcısı</summary>
     <summary lang="uk_UA">Універсальний шукач інформації про фільми</summary>
     <summary lang="vi_VN">Trình lấy dữ liệu phim ảnh Universal Scraper</summary>
     <summary lang="zh_CN">通用电影刮削器</summary>
@@ -1512,14 +1685,15 @@ updated language files
     <description lang="ca_ES">Rascador universal és actualment el rascador més personalitzable mitjançant la recopilació d'informació dels següents llocs suportats: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Aquest rascador és actualment el vaixell insígnia de l'equip-Kodi raspadors. La recerca inicial es pot fer en TMDB o IMDb (segons la configuració), però després que es pot configurar camp a camp que des del lloc que voleu que la informació específica.</description>
     <description lang="cs_CZ">Univerzální zdroj dat, který získává informace z následujících podporovaných stránek: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Vždy provádí základní hledání na TMDb či IMDb (podle nastavení), ale pro následující hledání může být upraveno pro každou hodnotu, ze které stránky chcete specifickou informaci získat.</description>
     <description lang="cy_GB">Universal Scraper yw'r crafwr mwyaf cyfaddas ar hyn o bryd drwy gasglu gwybodaeth o'r gwefannau canlynol: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Y crafwr hwn yw'r prif crafwr Team-Kodi. Mae modd gwneud y chwilio cyntaf un ai ar TMDb neu IMDb (yn ôl y gosodiadau) ac ar ôl hynny gall ei osod yn ôl maes o ba wefan i gasglu'r wybodaeth benodol.</description>
-    <description lang="da_DK">Denne scraper indsamler information fra følgende understøttede sider: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Første søgning sker altid i TMDb, men efterfølgende kan der felt for felt vælges, hvilken side den specifikke infomation ønskes fra.</description>
-    <description lang="de_DE">Universal Scraper ist aktuell der Scraper mit den meisten Anpassungsoptionen, da er Metadaten von den folgenden Seiten laden kann: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Dieser Scraper ist damit aktuell der mächtigste Scraper der Team-Kodi Scraper. Die initiale Suche kann entweder in TMDb oder IMDb ausgefürt werden (entsprechend der Einstellungen), anschließend kann aber für jedes Feld individuell ausgewählt werden, woher die Informationen bezogen werden sollen.</description>
+    <description lang="da_DK">Universal Scraper er i øjeblikket den mest brugertilpassede scraper ved at indsamle oplysninger fra følgende understøttede websider: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Denne scraper er i øjeblikket flagskibet for Team Kodi-scraperne. Den indledende søgning kan udføres enten på TMDb eller IMDb (i henhold til indstillingerne), men derefter kan den angives felt for felt, fra hvilket websted du vil have de specifikke oplysninger.</description>
+    <description lang="de_DE">Universal Scraper ist aktuell der Scraper mit den meisten Anpassungsoptionen, da er Metadaten von den folgenden Websites laden kann: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Dieser Scraper ist damit aktuell der mächtigste Scraper der Team-Kodi-Scraper. Die initiale Suche kann entweder in TMDb oder IMDb ausgefürt werden (entsprechend der Einstellungen), anschließend kann aber für jedes Feld individuell ausgewählt werden, woher die Informationen bezogen werden sollen.</description>
     <description lang="el_GR">Αυτό το scraper συλλέγει πληροφορίες από τις ακόλουθες ιστοσελίδες: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Η αρχική αναζήτηση γίνεται πάντα στο TMDb, αλλά έπειτα μπορεί να ρυθμιστεί πεδίο ανά πεδίο από ποια σελίδα να λαμβάνονται πληροφορίες.</description>
     <description lang="en_GB">Universal Scraper is currently the most customizable scraper by collecting information from the following supported sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. This scraper is currently the flagship of the Team-Kodi scrapers. The initial search can be done either on TMDb or IMDb (according to the settings), but following that it can be set field by field that from which site you want that specific information.</description>
     <description lang="en_NZ">Universal Scraper is currently the most customisable scraper by collecting information from the following supported sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. This scraper is currently the flagship of the Team-Kodi scrapers. The initial search can be done either on TMDb or IMDb (according to the settings), but following that it can be set field by field that from which site you want that specific information.</description>
     <description lang="en_US">Universal Scraper is currently the most customizable scraper by collecting information from the following supported sites: IMDb, TMDb, OFDb.de. This scraper is currently the flagship of the Team-Kodi scrapers. The initial search can be done either on TMDb or IMDb (according to the settings), but following that it can be set field by field that from which site you want that specific information.</description>
     <description lang="es_AR">Este buscador obtiene información de los siguientes sitios: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Realiza la búsqueda inicial en TMDb, pero a partir de allí se puede especificar desde que sitio se desea obtener cada campo.</description>
     <description lang="es_ES">Este buscador obtiene información de los siguientes sitios: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. La primera búsqueda siempre se realiza en TMDb, pero se puede elegir, campo por campo, de qué sitio se tiene que obtener la información.</description>
+    <description lang="es_MX">Unversal Scraper es actualmente el scraper más personalizable al recolectar información de los siguientes sitios soportados: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Este scraper es actualmente el preferido de la familia de scrapers de Team-Kodi. La búsqueda inicial puede realizarse ya sea en TMDb o IMDb (ajustable en la configuración), pero posteriormente puede establecerse campo por campo de qué sitio en específico se quiere obtener la información.</description>
     <description lang="fr_CA">L'extracteur universel est présentement l'extracteur le plus personnalisable en collectant des informations depuis les sites suivants pris en charge : IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Cet extracteur est présentement le vaisseau amiral des extracteurs de l'équipe Kodi. La recherche initiale peut être faite soit sur TMDb ou IMDb (d'après les paramètres), mais il est ensuite possible de configurer champ par champ sur quel site aller chercher chaque information spécifique.</description>
     <description lang="fr_FR">Ce scraper collecte les informations depuis les sites supportés suivants : IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. La recherche initiale est toujours effectuée depuis TMDb, mais vous pouvez indiquer les sites sources des champs un par un pour avoir une information plus spécifique.</description>
     <description lang="gl_ES">O Scraper Universal é na actualidade o máis personalizábel en canto a obtención de información dos seguintes sitio: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Este scraper é actualmente o barco insignia dos scrapers do equipo de Kodi. A busca inicial pódese realizar ben sexa en TMDb ou IMDb (dependendo da configuración), pero despois de especificar campo a campo dende que sitio desexa esa información específica.</description>
@@ -1534,18 +1708,18 @@ updated language files
     <description lang="lv_LV">Universālais skrāpis pašlaik ir vispielāgojamākais skrāpis, kas atbalsta informācijas savākšanu no šādām vietnēm: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Šis skrāpis pašreiz ir Team-Kodi skrāpju flagmanis. Sākotnējā meklēšana var notikt vai nu TMDb vai arī IMDb (atbilstoši iestatījumiem), bet visu pārējo informāciju var iestatīt lauciņu pa lauciņam, no kuras lapas iegūst specifisko informāciju.</description>
     <description lang="mk_MK">This scraper collecting information from the following supported sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. It always does the initial search on TMDb, but following that it can be set field by field that from which site you want that specific information.</description>
     <description lang="ms_MY">Pengikis Universal buat masa ini merupakan pengikis paling boleh disuai dengan mengutip maklumat dari laman tersokong berikut: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Pengikis ini buat masa ini merupakan pengikis lalai Pasukan-Kodi. Gelintar awalan boleh dibuat sama ada pada TMDb atau IMDb (berdasarkan pada tetapan), tetapi yang berikut boleh ditetapkan mengikut medan yang mana anda boleh tentukan maklumat secara khusus.</description>
-    <description lang="nb_NO">Denne scraper samler inn informasjon fra følgende støttede steder:  IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. På nåværende tidspunkt er denne scraperen flaggskipet blant Team-Kodi scrapere. Første søk skjer alltid i TMDb eller IMDb (avhengig av innstillinger). I etterfølgende søk kan det derimot velges felt for felt hvilken side den spesifikke informasjonen ønskes fra.</description>
-    <description lang="nl_NL">Deze scraper verzamelt informatie van de volgende ondersteunde sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Het start altijd de eerste zoektocht op TMDb, maar vervolgens kan veld voor veld informatie gekozen worden van de site waar jij de specifieke informatie van wilt.</description>
+    <description lang="nb_NO">Denne scraper samler inn informasjon fra følgende støttede steder: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. På nåværende tidspunkt er denne scraperen flaggskipet blant Team-Kodi scrapere. Første søk skjer alltid i TMDb eller IMDb (avhengig av innstillinger). I etterfølgende søk kan det derimot velges felt for felt hvilken side den spesifikke informasjonen ønskes fra.</description>
+    <description lang="nl_NL">Deze scraper verzamelt informatie van de volgende ondersteunde sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Het start altijd de eerste zoektocht op TMDb, maar kan vervolgens veld voor veld informatie kiezen van de site waar jij specifieke informatie van wilt.</description>
     <description lang="pl_PL">Universal Scraper jest aktualnie esktraktorem o największych możliwościach personalizacji, zbierając informacje z następujących serwisów: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. W pierwszej kolejności przeszukuje serwisy TMDb lub IMDb (w zależności od ustawień), a następnie może być ustawiony by poszczególne pola były wypełniane informacjami z innych serwisów.</description>
-    <description lang="pt_BR">Este scraper coleta informações dos seguintes sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. A busca inicial sempre se dá no TMDb, mas segue aquilo que estiver setado campo a campo  dos sites que você deseja informação específica.</description>
+    <description lang="pt_BR">Este scraper coleta informações dos seguintes sites: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. A busca inicial sempre se dá no TMDb, mas segue aquilo que estiver setado campo a campo dos sites que você deseja informação específica.</description>
     <description lang="pt_PT">O Universal Scraper é, actualmente, o colector mais personalizável, que obtém informação a partir dos seguinte sites suportados: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Atualmente, este é o topo de gama dos colectores da Team-Kodi. A procura inicial pode ser efectuada no TMDb ou no IMDb (de acordo com as definições), mas após isso, esta pode ser definida campo a campo a partir do site pretendido com a informação especifica.</description>
     <description lang="ro_RO">Acest catalog este completat cu informații de la următoarele siteuri: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Căutarea inițială se face întotdeauna pe TMDb, dar după aceasta fiecare câmp poate fi setat să ia informația de pe un site specific.</description>
     <description lang="ru_RU">Этот модуль собирает информацию со следующих поддерживаемых сайтов: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Он всегда делает начальный поиск по TMDb, хотя может быть установлена последовательность того, с какого сайта Вы хотите получить конкретную информацию.</description>
-    <description lang="sk_SK">Tento sťahovač zbiera informácie z týchto stránok: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Počiatočné vyhľadávanie vždy robí pomocou TMDb, ale následne môžete pole po poli nastaviť z ktorej stránky má zbierať špecifické informácie. </description>
+    <description lang="sk_SK">Tento sťahovač zbiera informácie z týchto stránok: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. Počiatočné vyhľadávanie vždy robí pomocou TMDb, ale následne môžete pole po poli nastaviť z ktorej stránky má zbierať špecifické informácie.</description>
     <description lang="sl_SI">Univerzalni ponudnik je trenutno najbolj prilagodljiv ponudnik informacij o filmih s strani: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Osnovno iskanje se lahko opravi na TMDb ali IMDb (glede na nastavitev), vendar lahko nastavite od kod se bo prenesla posamezna informacija.</description>
     <description lang="sv_SE">Denna skrapa samlar information från följande siter: IMDb, RMDb, Rotten Tomatoes, Trakt.tv, OFDb.de. Sökning görs alltid först på TMDb, men den kan konfigureras att hämta efterföljande information - fält för fält - från valfri site.</description>
     <description lang="ta_IN">உலகளாவிய சுரண்டி தற்போது பின்வரும் ஆதரவு தளங்களில் இருந்து தகவல்களை சேகரித்து உள்ளது: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. ஆரம்ப தேடலானது, TMDb அல்லது IMDb (அமைப்புகளை பொறுத்து) செய்யலாம், அதன் பின்னர் உங்களுக்கு தேவையான குறிப்பிட்ட தகவல்களை அமைப்பு செய்து கொள்ள முடியும்.</description>
-    <description lang="th_TH">การดึงข้อมูลภาพยนตร์ได้รับการสนับสนุนจากเว็บไซต์  IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. โดยจะดึงข้อมูลจากเว็บ TMDB เป็นอันดับแรก แต่คุณสามารถตั้งค่าการรับข้อมูลจากเว็บไซต์ที่คุณต้องการได้</description>
+    <description lang="th_TH">การดึงข้อมูลภาพยนตร์ได้รับการสนับสนุนจากเว็บไซต์ IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv. โดยจะดึงข้อมูลจากเว็บ TMDB เป็นอันดับแรก แต่คุณสามารถตั้งค่าการรับข้อมูลจากเว็บไซต์ที่คุณต้องการได้</description>
     <description lang="vi_VN">Trình Universal Scraper là trình thu thập thông tin được với khả năng tuỳ biến tốt nhất, hỗ trợ thu thập thông tin từ các site: IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv, port.hu. Trình này hiện là công cụ thu thập chuẩn nổi bật nhất của Team-Kodi. Việc tìm kiếm ban đầu có thể thực hiện ở cả 2 site TMDb hay IMDb (tuỳ thiết lập của bạn), kế tiếp sẽ do người dùng tuỳ chỉnh các thông tin cụ thể được lựa chọn từ từng site</description>
     <description lang="zh_CN">通用刮削器是当前定制功能最强的刮削器，它支持从以下站点获取信息：IMDb、TMDb、Rotten Tomatoes、Trakt.tv、OFDb.de、port.hu。此刮削器目前是 Kodi 开发团队的旗舰级刮削器。初始结果总是先从 TMDb 或 IMDb（根据设置）获取，然后可以针对不同项目分别设置从不同站点获取信息。</description>
     <description lang="zh_TW">Universal Scraper是現今可客製化程度最高的搜括器，並從以下的支援網站取得資訊：IMDb, themoviedb.org, Rotten Tomatoes, OFDb.de, fanart.tv。這​​是目前Kodi團隊的旗艦搜括器。它總以 TMDb或IMDB (根據設定值) 當作初始搜尋的網站，但可以單獨在每一個獨立的選項設定你要得網站並取得指定的相關資訊。</description>
@@ -1581,10 +1755,10 @@ https://www.facebook.com/groups/hskde/</description>
 		<screenshot />
 	</assets>
 	</extension>
-</addon><addon id="plugin.audio.radio_de" name="Radio" provider-name="Tristan Fischer, enen92" version="3.0.6+matrix.1">
+</addon><addon id="plugin.audio.radio_de" name="Radio" provider-name="Tristan Fischer, enen92" version="3.0.8+matrix.1">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.xbmcswift2" version="19.0.4" />
+        <import addon="script.module.xbmcswift2" version="19.0.6" />
     </requires>
     <extension library="addon.py" point="xbmc.python.pluginsource">
         <provides>audio</provides>
@@ -1595,76 +1769,74 @@ https://www.facebook.com/groups/hskde/</description>
         <source>https://github.com/XBMC-Addons/plugin.audio.radio_de</source>
         <forum>https://forum.kodi.tv/showthread.php?tid=119362</forum>
         <license>GPL-2.0-only</license>
-        <news>v3.0.6+matrix.1 (4/5/2021)
-            [new] Also set the station name property on the final resolved item
+        <news>v3.0.8+matrix.1 (24/11/2021)
+            [new] Sync translations
+            [fix] Initialize empty context menu items
         </news>
-        <summary lang="be_BY">Access &gt;30000 radio broadcasts</summary>
+        <assets>
+            <icon>resources/art/icon.png</icon>
+            <fanart>resources/art/fanart.jpg</fanart>
+            <screenshot>resources/art/screenshot-1.png</screenshot>
+            <screenshot>resources/art/screenshot-2.png</screenshot>
+            <screenshot>resources/art/screenshot-3.png</screenshot>
+            <screenshot>resources/art/screenshot-4.png</screenshot>
+        </assets>
         <summary lang="ca_ES">accedeix a mes de 30000 emissores de radio</summary>
         <summary lang="da_DK">Få adgang til &gt;30000 radioudsendelser</summary>
-        <summary lang="de_DE">Zugriff auf &gt;30000 Radiosender</summary>
+        <summary lang="de_DE">Zugang zu mehr als 30000 Radiosendern</summary>
         <summary lang="el_GR">Πρόσβαση σε πάνω από 30000 εκπομπές</summary>
         <summary lang="en_GB">Access &gt;30000 radio broadcasts</summary>
         <summary lang="en_NZ">Access &gt;30000 radio broadcasts</summary>
         <summary lang="en_US">Access &gt;30000 radio broadcasts</summary>
         <summary lang="es_ES">Escuche más de 30000 emisoras de radio</summary>
-        <summary lang="fr_FR">Ecoutez plus de 30000 stations de radio</summary>
         <summary lang="fr_CA">Accéder à &gt; 30000 radiodiffusions</summary>
+        <summary lang="fr_FR">Ecoutez plus de 30000 stations de radio</summary>
         <summary lang="gl_ES">Escoite máis de 30000 emisoras de radio</summary>
         <summary lang="he_IL">גישה ליותר מ־30000 שידורי רדיו</summary>
         <summary lang="hr_HR">Pristup &gt;30000 radio emitiranja</summary>
         <summary lang="hu_HU">Hozzáférés 30000-nél is több rádióadáshoz</summary>
         <summary lang="id_ID">Akses &gt;30000 siaran radio</summary>
         <summary lang="it_IT">Accedi a più di 30000 trasmissioni radio</summary>
+        <summary lang="ko_KR">&gt;30000 라디오 방송국 연결</summary>
         <summary lang="lt_LT">Prieiga&gt; 30000 radijo transliacijų</summary>
         <summary lang="nl_NL">Toegang tot &gt;30000 radio uitzendingen</summary>
         <summary lang="pl_PL">Dostęp do ponad 30000 stacji radiowych</summary>
-        <summary lang="pt_PT">Aceda a mais de 30000 transmissões de rádio</summary>
         <summary lang="pt_BR">Acesse&gt;30000 broadcasts rádios</summary>
+        <summary lang="pt_PT">Aceda a mais de 30000 transmissões de rádio</summary>
+        <summary lang="ru_RU">Доступ к &gt;30000 радиостанциям</summary>
         <summary lang="sk_SK">Pristupujte k vyše 30000 vysielaniam</summary>
-        <summary lang="sv_SE">Access &gt;30000 radiosändningar</summary>
+        <summary lang="sv_SE">Få tillgång till &gt;30000 radiosändningar</summary>
         <summary lang="ta_IN">30000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுகவும்</summary>
         <summary lang="zh_CN">访问大于7000个电台广播</summary>
-        <description lang="be_BY">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
-        <description lang="ca_ES">Plugin de música per escoltar més de 30000 emissores de ràdio internacionals des rad.io, radio.de i radio.fr. [CR] Característiques: [CR]- Traduccions a l'anglès, alemany, francès i espanyol. [CR]- Cercador de emissores per ubicació, gènere, tema, país, ciutat o idioma. [CR]- Cercador d'emissores. [CR]- 115 gèneres, 59 temes, 94 països, 1010 ciutats, 63 idiomes.</description>
-        <description lang="da_DK">Musikplugin som giver adgang til over 30000 internationale radioudsendelser fra rad.io, radio.de og radio.fr[CR]Nuværende funktioner[CR]- Oversat til engelsk, tysk og fransk[CR]- Gennemse stationer efter lokalitet, genre, emne, land, by og sprog[CR]- Søg efter stationer[CR]- 115 genrer, 59 emner, 94 lande, 1010 byer og 63 sprog</description>
-        <description lang="de_DE">Das Radio im Internet mit über 30000 Radiosendern, Internetradio Stationen, gratis Streams und Podcasts live von rad.io, radio.de und radio.fr.[CR]Features[CR]- Auf deutsch, englisch und französisch übersetzt[CR]- Sortiert nach: in der Nähe, Genre, Thema, Land und Sprache[CR]- nach Sendern suchen[CR]- 115 Genre, 59 Themen, 94 Länder, 1010 Städte, 63 Sprachen</description>
+        <description lang="ca_ES">Plugin de música per escoltar més de 30000 emissores de ràdio internacionals des rad.io, radio.de i radio.fr[CR]Característiques actuals:[CR]- Traduccions a l'anglès, alemany i francès[CR]- Cercador d'emissores per ubicació, gènere, tema, país, ciutat o idioma[CR]- Cercador d'emissores[CR]- 115 gèneres, 59 temes, 94 països, 1010 ciutats, 63 idiomes</description>
+        <description lang="da_DK">Musikplugin som giver adgang til over 30000 internationale radioudsendelser fra rad.io, radio.de, radio.fr, radio.pt og radio.es[CR]Nuværende funktioner[CR]- Oversat til engelsk, tysk og fransk[CR]- Gennemse stationer efter lokalitet, genre, emne, land, by og sprog[CR]- Søg efter stationer[CR]- 115 genrer, 59 emner, 94 lande, 1010 byer og 63 sprog</description>
+        <description lang="de_DE">Das Radio im Internet mit über 30000 Radiosendern, Internetradiostationen, gratis Streams und Podcasts live von rad.io, radio.de und radio.fr.[CR]Features[CR]- Auf deutsch, englisch und französisch übersetzt[CR]- Sortiert nach: in der Nähe, Genre, Thema, Land und Sprache[CR]- nach Sendern suchen[CR]- 115 Genre, 59 Themen, 94 Länder, 1010 Städte, 63 Sprachen</description>
         <description lang="el_GR">Μουσικό plugin για πρόσβαση σε περισσότερους από 30000 διεθνείς ραδιοφωνικές εκπομπές από τα rad.io, radio.de και radio.fr[CR]Υποστηρίζονται[CR]- Μεταφράσεις σε Αγγλικά, Γερμανικά και Γαλλικά[CR]- Περιήγηση σταθμών ανά τοποθεσία, είδος, θέμα, χώρα, πόλη και γλώσσα[CR]- Αναζήτηση σταθμών[CR]- 115 είδη, 59 θέματα, 94 χώρες, 1010 πόλεις, 63 γλώσσες</description>
         <description lang="en_GB">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de, radio.fr, radio.pt and radio.es[CR]Currently features[CR]- English, german, french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
         <description lang="en_NZ">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de, radio.fr, radio.pt and radio.es[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
         <description lang="en_US">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
         <description lang="es_ES">Complemento de música para escuchar más de 30000 emisoras de radio de todo el mundo desde rad.io, radio.de, radio.fr, radio.pt y radio.es.[CR]Funciones:[CR]- Traducciones al inglés, alemán, francés, portugués y español.[CR]- Buscador de emisoras por ubicación, género, tema, país, ciudad o idioma.[CR]- Buscador de emisoras por nombre.[CR]- 73 géneros, 103 temas, 174 países y multitud de ciudades e idiomas.</description>
-        <description lang="fr_FR">Plugin musical pour écouter plus de 30000 stations de radio internationales de rad.io, radio.de et radio.fr[CR]Fonctionnalités[CR]- Traduit en Anglais, Allemand et Français[CR]- Parcourir les stations par genre, thème, pays, ville et langue[CR]- Recherche de stations[CR]- 115 genres, 59 thèmes, 94 pays, 1010 villes, 63 langues</description>
         <description lang="fr_CA">Plugiciel de musique pour accéder à plus de 30000 radiodiffusions internationales de rad.io, radio.de et radio.fr[CR]Offre présentement [CR]- Traductions en anglais, allemand et français[CR]- Parcourir des stations par lieux, genres, sujets, pays, villes et langues[CR]- Rechercher des stations[CR]- 115 genres, 59 sujets, 94 pays, 1 010 villes, 63 langues.</description>
+        <description lang="fr_FR">Plugin musical pour écouter plus de 30000 stations de radio internationales de rad.io, radio.de et radio.fr[CR]Fonctionnalités[CR]- Traduit en Anglais, Allemand et Français[CR]- Parcourir les stations par genre, thème, pays, ville et langue[CR]- Recherche de stations[CR]- 115 genres, 59 thèmes, 94 pays, 1010 villes, 63 langues</description>
         <description lang="gl_ES">Engadido de música para escoitar máis de 30000 emisoras de radio internacionais de rad.io, radio.de e radio.fr.[CR]Características:[CR]- Traducións ao inglés, alemán, francés e castelán.[CR]- Busca de emisoras por localización, xénero, tema, país, cidade ou idioma.[CR]- Busca de emisoras.[CR]- 115 xéneros, 59 temas, 94 países, 1010 cidades, 63 idiomas.</description>
         <description lang="he_IL">הרחבת מוזיקה המספקת גישה ליותר מ־30000 שידורי רדיו בינלאומים מ־rad.io, radio.de ו־radio.fr[CR]מאפיינים נוכחיים[CR]- שפות אנגלית, גרמנית וצרפתית[CR]- עיון לפי מיקום, סגנון, נושא, מדינה, עיר ושפה[CR]- חיפוש תחנות[CR]- 115 סגנונות, 59 נושאים, 94 מדינות 1010 ערים, 63 שפות</description>
         <description lang="hr_HR">Glazbeni dodatak za pristup 30000 međunarodnih radio stanica na rad.io, radio.de i radio.fr[CR]Trenutne značajke[CR]- engleski, njemački i francuski prijevodi[CR]- Pregledavajte stanice prema lokaciji, žanru, temi, zemlji, gradu i jeziku[CR]- Pretraživanje stanica[CR]- 115 žanrova, 59 tema, 94 zemalja, 1010 gradova, 63 jezika</description>
         <description lang="hu_HU">Beépülő modul több, mint 30000 nemzetközi rádióadás eléréséhez a rad.io, radio.de és radio.fr oldalakról[CR]Jelenlegi tulajdonságok[CR]- Angol, német, francia és magyar nyelv[CR]- Állomások böngészése hely, műfaj, téma, ország, város és nyelv szerint[CR]- Állomások keresése[CR]- 115 műfaj, 59 téma, 94 ország, 1010 város, 63 nyelv</description>
         <description lang="id_ID">Plugin musik untuk mengakses lebih dari 30000 siaran radio internasional dari rad.io, radio.de dan radio.fr[CR]Fitur saat ini[CR]- Terjemahan Inggris, Jerman dan Perancis[CR]- Jelajah stasiun berdasarkan lokasi, tema, topik, negara, kota dan bahasa[CR]- Cari stasiun[CR]- 115 tema, 59 topik, 94 negara, 1010 kota, 63 bahasa</description>
         <description lang="it_IT">Plugin per accedere a oltre 30000 trasmissioni internazionali radiofoniche da rad.io, radio.de e radio.fr[CR]Caratteristiche[CR]- Supporta inglese, tedesco e francese[CR]- Sfoglia le stazioni per località, genere, argomento, paese, citta e lingua[CR]- Ricerca delle stazioni[CR]- 115 generi, 59 argomenti, 94 paesi, 1010 città e 63 lingue</description>
+        <description lang="ko_KR">rad.io, radio.de, radio.fr, radio.pt 및 radio.es에서 30000개 이상의 국제 라디오 방송에 액세스할 수 있는 음악 플러그인[CR]현재 기능[CR]- 영어, 독일어, 프랑스어 번역[CR]- 방송국 검색 위치, 장르, 주제, 국가, 도시 및 언어별[CR]- 방송국 검색[CR]- 115개 장르, 59개 주제, 94개 국가, 1010개 도시, 63개 언어</description>
         <description lang="lt_LT">Muzikos įskiepio prieiga prie daugiau nei 30000 tarptautinių radijo transliacijų iš rad.io, radio.de ir radio.fr [CR] Šiuo metu programoja išversta į [Cr] - anglų, vokiečių ir prancūzų kalbas [CR] - Naršyti stotis pagal: vietovę, žanrą, temą, šalį, miestą ir/ar kalbą [CR] - Ieškoti radio stočių pagal:[Cr] - 115 žanrai, 59 temos, 94 šalys, 1010 miestų, 63 kalbos</description>
         <description lang="nl_NL">muziek plug-in om toegang te krijgen tot over 30000 internationale radiouitzendingen van rad.io, radio.de en radio.fr[CR]Huidige functies[CR]- engels, duits en frans vertaalt[CR]- Zoek naar stations vanuit locatie, genre, onderwerp, land, plaats en taal[CR]- zoek voor stations[CR]- 115 genres. 59 onderwerpen, 94 landen. 1010 plaatsen, 63 talen</description>
         <description lang="pl_PL">Wtyczka muzyczna dająca dostęp do ponad 30000 międzynarodowych stacji radiowych z[CR]rad.io, radio.de, daio.fr[CR]Obecnie w językach[CR]- Angielski, Niemiecki i Francuski[CR]- Szukaj stacji według lokacji, gatunku, tematu, kraju, miasta czy języka[CR]- 115 gatunków, 59 tematów, 94 kraje, 1010 miasta, 63 języki</description>
+        <description lang="pt_BR">Plugin de música para acessar mais de 30000 emissoras de rádio internacionais de rad.io, radio.de, radio.fr, radio.pt e radio.es [CR] Principais características [CR] - Inglês, Alemão e Francês traduzido [CR] - Procure estações por localização, gênero, tópico, país , cidade e linguagem [CR] - Procure estações [CR] - 115 gêneros, 59 temas, 94 países, 1010 cidades, 63 idiomas</description>
         <description lang="pt_PT">Plugin de música para aceder a mais de 30000 transmissões de rádio internacionais de rad.io, radio.de, radio.fr, radio.pt e radio.es[CR]Actualmente, disponibiliza:[CR]- Traduções em vários idiomas[CR]- Navegar estações por localização, género, tópico, país, cidade e idioma[CR]- Procurar por estações[CR]- 115 géneros, 59 tópicos, 94 países, 1010 cidades, 63 idiomas</description>
-        <description lang="pt_BR">Plugin de música para acessar mais de 30000 emissoras de rádio internacionais de rad.io, radio.de, radio.fr, radio.pt e radio.es [CR] Principais características [CR] - Inglês, Alemão e Francês traduzido [CR] - Procure estações por localização, gênero, tópico, país , cidade e  linguagem [CR] - Procure estações [CR] - 115 gêneros, 59 temas, 94 países, 1010 cidades, 63 idiomas</description>
-        <description lang="sk_SK">Hudobný doplnok na prístup k vyše 30000 medzinárodným rádio vysielaniam z rad.io, radio.de a radio.fr
-Momentálne podporuje:
-- anglické, nemecké a francúzske preklady
-- prehliadanie staníc podľa umiestnenia, žánru, témy, krajiny, mesta a jazyka
-- vyhľadávanie staníc
-- 115 žánrov, 59 tém, 94 krajín, 1010 miest, 63 jazykov</description>
-        <description lang="sv_SE">Musiktillägg som ger åtkomst till över 30000 internationella radiosändningar från rad.io, radio.de och radio.fr[CR]Nuvarande funktioner[CR]- Engelsk, tysk, svensk och fransk översättning[]- Bläddra efter stationer baserat på genre, ämne, land, stad och språk[CR]- Sök efter stationer[CR]-115 genres, 59 ämnen, 94 länder, 1010 städer, 63 språk</description>
+        <description lang="ru_RU">Музыкальный плагин для доступа к более чем 30000 международным радиостанциям с rad.io, radio.de, radio.fr, radio.pt и radio.es[CR]Текущие возможности[CR]- Английский, немецкий, французский переводы[CR]- Просмотр станций по расположению, жанру, теме, стране, городу и языку[CR]- Поиск станций[CR]- 115 жанров, 59 тем, 94 страны, 1010 городов, 63 языка</description>
+        <description lang="sk_SK">Hudobný doplnok na prístup k vyše 30000 medzinárodným rádio vysielaniam z rad.io, radio.de a radio.fr&amp;#10;Momentálne podporuje:&amp;#10;- anglické, nemecké a francúzske preklady&amp;#10;- prehliadanie staníc podľa umiestnenia, žánru, témy, krajiny, mesta a jazyka&amp;#10;- vyhľadávanie staníc&amp;#10;- 115 žánrov, 59 tém, 94 krajín, 1010 miest, 63 jazykov</description>
+        <description lang="sv_SE">Musiktillägg som ger åtkomst till över 30000 internationella radiosändningar från rad.io, radio.de och radio.fr[CR]Nuvarande funktioner[CR]- Engelsk, tysk, och fransk översättning[]- Bläddra efter stationer baserat på genre, ämne, land, stad och språk[CR]- Sök efter stationer[CR]-115 genres, 59 ämnen, 94 länder, 1010 städer, 63 språk</description>
         <description lang="ta_IN">இசை துணை பயன் rad.io, radio.de மற்றும் radio.fr இருந்து 30000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுக உதவி செய்யும்[CR]தற்போதைய அம்சங்கள்[CR]- ஆங்கிலம், ஜெர்மன் மற்றும் பிரெஞ்சு மொழியாக்கம்[CR]- இருப்பிடம், வகை, தலைப்பு, நாடு, நகரம் மற்றும் மொழி கொண்டு நிலையங்களை உலாவ முடியும்[CR]- நிலையங்களை தேடுதல்[CR]- 115 வகைகள், 59 தலைப்புகள், 94 நாடுகள், 1010 நகரங்கள், 63 மொழிகள்</description>
         <description lang="zh_CN">访问rad.io、radio.de和radio.fr上超过7000个国际电台广播的音频插件[CR]现有功能[CR]- 英语、德语和法语支持[CR]- 按地点、类别、主题、国家、城市和语言浏览站点[CR]- 搜索站点[CR]- 115个类别、59个主题、94个国家、1010城市、63种语言</description>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/art/screenshot-1.png</screenshot>
-            <screenshot>resources/art/screenshot-2.png</screenshot>
-            <screenshot>resources/art/screenshot-3.png</screenshot>
-            <screenshot>resources/art/screenshot-4.png</screenshot>
-        </assets>
     </extension>
-</addon><addon id="plugin.audio.soundcloud" name="SoundCloud" version="4.0.0" provider-name="jaylinski">
+</addon><addon id="plugin.audio.soundcloud" name="SoundCloud" version="4.0.1" provider-name="jaylinski">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.22.0" />
@@ -1683,7 +1855,10 @@ Momentálne podporuje:
         <forum>https://forum.kodi.tv/showthread.php?tid=206635</forum>
         <website>https://soundcloud.com</website>
         <source>https://github.com/jaylinski/kodi-addon-soundcloud</source>
-        <news>4.0.0 (2020-12-12)
+        <news>4.0.1 (2021-11-02)
+Fixed error in "Discover"-folder
+
+4.0.0 (2020-12-12)
 Added support for Kodi v19 (Matrix)
         </news>
         <assets>
@@ -1962,6 +2137,24 @@ adulthideout@yandex.com[/COLOR]
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
+</addon><addon id="plugin.video.boxportal" name="BOX.PORTAL" version="19.0.3a+matrix" provider-name="TEAM.STUBE">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">BOX.PORTAL</summary>
+    <language>en</language>
+    <description lang="en" />
+     <platform>all</platform>
+	 <assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+  </extension>
 </addon><addon id="plugin.video.boxportal.1" name="BOX.PORTAL.1" version="19.0.3a+matrix" provider-name="TEAM.STUBE">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -2174,11 +2367,11 @@ Quando vuoi. Dove vuoi.
             <screenshot>resources/screenshot004.jpg</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.video.discovery.dmax" name="DMAX Mediathek" version="3.1.2+matrix.1" provider-name="realvito">
+</addon><addon id="plugin.video.discovery.dmax" name="DMAX Mediathek" version="3.1.3+matrix.1" provider-name="realvito">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" version="2.22.0+matrix.1" />
-		<import addon="inputstream.adaptive" version="2.4.2" />
+		<import addon="inputstream.adaptive" version="2.4.5" />
 		<import addon="service.cron.autobiblio" version="2.0.9+matrix.1" optional="true" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
@@ -2203,9 +2396,8 @@ Quando vuoi. Dove vuoi.
 			<icon>resources/media/icon.png</icon>
 			<fanart>resources/media/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR orangered]Version 3.1.2+matrix.1  (06.06.2021)[/COLOR][/B][CR]
-- optimized: Ausgabe des APi-Json-Formats jetzt direkt über das 'requests Modul'
-- added: Meldung beim Abspielen für Videos eingebaut für die Ausgabe vom 'Code 404' (Video nicht vorhanden)
+		<news>[B][COLOR orangered]Version 3.1.3+matrix.1  (05.11.2021)[/COLOR][/B][CR]
+- optimized: FSK-Anzeige ab 0 Jahren = ohne Altersbeschränkung
 		</news>
 	</extension>
 </addon><addon id="plugin.video.dokustreams.de" name="Dokustreams.de" version="1.2.0+matrix" provider-name="itouch5000">
@@ -2303,7 +2495,7 @@ Quando vuoi. Dove vuoi.
 - optimized: Code komplett eingeschrumpft, unnötige Passagen und Exceptions entfernt
 		</news>
 	</extension>
-</addon><addon id="plugin.video.imdb.trailers" name="IMDb Trailers" version="2.1.13+matrix.1" provider-name="gujal">
+</addon><addon id="plugin.video.imdb.trailers" name="IMDb Trailers" version="2.1.14+matrix.1" provider-name="gujal">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" version="2.4.3" />
@@ -2337,10 +2529,10 @@ Quando vuoi. Dove vuoi.
     <forum>https://forum.kodi.tv/showthread.php?tid=352127</forum>
     <website>https://www.imdb.com/trailers/</website>
     <email>gujal at protonmail dot com</email>
-    <news>v2.1.13 (20210815)
-      [fix] html parser breaking on Kodi20
-      [fix] handle exceptions such as empty plot or no art
-      [new] Use common plugin cache to improve caching
+    <news>v2.1.14 (20211015)
+      [fix] code breaking on Kodi18
+      [fix] Search dialog popup after playing a searched trailer
+      [fix play by imdb_id
     </news>
     <assets>
       <icon>icon.png</icon>
@@ -2350,7 +2542,7 @@ Quando vuoi. Dove vuoi.
       <screenshot>resources/images/screenshot-03.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="plugin.video.joyn" name="Joyn" version="2.3.8+matrix.1" provider-name="knaerzche, Maven">
+</addon><addon id="plugin.video.joyn" name="Joyn" version="2.3.9+matrix.1" provider-name="knaerzche, Maven">
 	<requires>
 		<import addon="inputstream.adaptive" version="2.5.0" />
 		<import addon="script.module.inputstreamhelper" version="0.4.4" />
@@ -2374,7 +2566,6 @@ Quando vuoi. Dove vuoi.
 		<license>GPL-2.0-only</license>
 		<forum>https://www.kodinerds.net/index.php/Thread/66679-Pre-Release-Joyn-VOD-Live/?postID=537817</forum>
 		<website>https://www.joyn.de/</website>
-		<email>knaerzche at gmail dot com</email>
 		<source>https://github.com/Maven85/plugin.video.joyn</source>
 		<assets>
 			<icon>resources/media/icon.png</icon>
@@ -2385,6 +2576,8 @@ Quando vuoi. Dove vuoi.
 			<screenshot>resources/media/screenshot03.jpg</screenshot>
 		</assets>
 		<news>
+v2.3.9
+fixed HTML unescaping
 v2.3.8
 fixed login
 v2.3.7
@@ -3039,7 +3232,7 @@ _None_
     </assets>
   </extension>
   
-</addon><addon id="plugin.video.themoviedb.helper" version="4.3.0" name="TheMovieDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="4.4.0" name="TheMovieDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.0" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -3119,7 +3312,7 @@ _None_
       <fanart>assets/fanart.jpg</fanart>
     </assets>
   </extension>
-</addon><addon id="plugin.video.tvnow.de" name="TvNow" version="0.5.25+matrix.0" provider-name="Pati">
+</addon><addon id="plugin.video.tvnow.de" name="TvNow" version="0.5.30+matrix.0" provider-name="Pati">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" version="2.9.1" />
@@ -3193,6 +3386,43 @@ _None_
     <description lang="pl_PL">Oglądaj ulubione programy TwitchTV!</description>
     <description lang="ru_RU">Смотрите любимые игровые трансляции!</description>
   </extension>
+</addon><addon id="plugin.video.tyl0re.mtv" name="MTV Germany (old-broken)" version="1.3.0+matrix.1" provider-name="L0RE, realvito">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.beautifulsoup4" version="4.8.2+matrix.1" />
+		<import addon="script.module.requests" version="2.22.0+matrix.1" />
+		<import addon="script.common.plugin.cache" version="2.6.1.1" />
+		<import addon="plugin.video.viacom.mtv" version="2.0.1+matrix.1" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">MTV Musik</summary>
+		<summary lang="en_GB">MTV Music</summary>
+		<description lang="de_DE">[COLOR red]- Dieses Addon bekommt einen neuen Pfad im KODI-Verzeichnis ![CR]- Der neue Pfad lautet: 'plugin.video.viacom.mtv'.[CR][CR]- Bitte das neue Addon mit der Version-No. 2.0.1+matrix.1 AKTIVIEREN.[CR]- Danach dieses Addon mit der Version-No. 1.3.0+matrix.1 DEINSTALLIEREN.[/COLOR]</description>
+		<description lang="en_GB">[COLOR red]- This Addon gets a new path in the KODI directory ![CR]- The new Path named: 'plugin.video.viacom.mtv'.[CR][CR]- Please ACTIVATE the new Addon with the Version-No. 2.0.1+matrix.1.[CR]- After that UNINSTALL this Addon with the Version-No. 1.3.0+matrix.1.[/COLOR]</description>
+		<disclaimer lang="de_DE">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Anbietern des Inhalts.</disclaimer>
+		<disclaimer lang="en_GB">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+		<language />
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+		<forum>https://www.kodinerds.net/index.php/Thread/55451-L0REs-Blog/</forum>
+		<website>http://www.mtv.de</website>
+		<email />
+		<mainsource>https://github.com/Collabsvito/REpo-AiO/</mainsource>
+		<source>https://github.com/Collabsvito/REpo-AiO/tree/master/MATRIX/plugin.video.tyl0re.mtv</source>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+			<fanart>resources/media/fanart.jpg</fanart>
+		</assets>
+		<broken>
+- Dieses Addon bekommt einen neuen Pfad im KODI-Verzeichnis ![CR]- Der neue Pfad lautet: 'plugin.video.viacom.mtv'.[CR][CR]- Bitte das neue Addon mit der Version-No. 2.0.1+matrix.1 AKTIVIEREN.[CR]- Danach dieses Addon mit der Version-No. 1.3.0+matrix.1 DEINSTALLIEREN.
+		</broken>
+		<news>[B][COLOR orangered]Version 1.3.0+matrix.1 (06.11.2021)[/COLOR][/B] by realvito[CR]
+- Dieses Addon bekommt einen neuen Pfad im KODI-Verzeichnis ![CR]- Der neue Pfad lautet: 'plugin.video.viacom.mtv'.[CR][CR]- Bitte das neue Addon mit der Version-No. 2.0.1+matrix.1 AKTIVIEREN.[CR]- Danach dieses Addon mit der Version-No. 1.3.0+matrix.1 DEINSTALLIEREN.
+		</news>
+	</extension>
 </addon><addon id="plugin.video.viacom.mtv" name="MTV Germany [COLOR FF00EE00](neu)[/COLOR]" version="2.0.1+matrix.1" provider-name="realvito">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
@@ -3228,7 +3458,7 @@ _None_
 - added: Diverse 'Musik-Ordner' lassen sich per 'Rechtsklick' als Playliste (shuffle) abspielen
 		</news>
 	</extension>
-</addon><addon id="plugin.video.videodevil" version="1.8.15" name="VideoDevil" provider-name="xbmc-adult">
+</addon><addon id="plugin.video.videodevil" version="1.8.20" name="VideoDevil" provider-name="xbmc-adult">
   <requires>
     
     
@@ -3345,13 +3575,15 @@ Xship 2021.07.01
 - streamworld
         </news>
     </extension>
-</addon><addon id="plugin.video.xstream" name="xStream" version="3.5.24" provider-name="xStream-Team">
+</addon><addon id="plugin.video.xstream" name="xStream" version="3.5.27~nightly2" provider-name="xStream-Team">
  <requires>
     <import addon="script.module.requests" />
-    <import addon="script.module.urlresolver" />
+    <import addon="script.module.urlresolver" version="2021.10.01" />
     <import addon="script.module.six" version="1.11.0" />
-    <import addon="repository.xstream" optional="true" />
+    
     <import addon="script.module.inputstreamhelper" version="0.3.3" optional="true" />
+    
+    <import addon="script.module.pydevd" optional="true" />
  </requires>
  <extension point="xbmc.python.pluginsource" library="default.py">
    <provides>video</provides>
@@ -3464,7 +3696,7 @@ Xship 2021.07.01
     <disclaimer lang="vi_VN">Plugin này không được xác nhận bởi Google</disclaimer>
     <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
   </extension>
-</addon><addon id="plugin.video.ytchannels" name="YouTube Channels" version="0.3.5+matrix.1" provider-name="natko1412,mintsoft,yeahme49">
+</addon><addon id="plugin.video.ytchannels" name="YouTube Channels" version="0.3.6+matrix.1" provider-name="natko1412,mintsoft,yeahme49">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.six" version="1.11.0" />
@@ -3701,6 +3933,45 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 <forum>https://github.com/dobbelina/repository.dobbelina/issues</forum>
         <platform>all</platform>
     </extension>
+</addon><addon id="repository.exodusredux" name="Exodus Redux Repo" version="0.0.9" provider-name="I-A-C">
+    <extension point="xbmc.addon.repository" name="Exodus Redux Repo">
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/I-A-C/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/I-A-C/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/I-A-C/zips/master/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/123Venom/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/123Venom/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/123Venom/zips/master/</datadir>
+    </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Exodus Redux is a educational add-on. We do not host any of the contents streamed.</summary>
+        <description lang="en" />
+        <platform>all</platform>
+    </extension>
+</addon><addon id="repository.jsergio" name="jsergio repo" version="1.0.4" provider-name="jsergio">
+	<extension point="xbmc.addon.repository" name="jsergio repo">
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Repo for jsergio Add-ons</summary>
+		<description>Repo for jsergio Add-ons</description>
+		<platform>all</platform>
+	</extension>
 </addon><addon id="repository.kodinerds" name="Kodinerds Addon Repo" version="7.0.1.1" provider-name="Kodinerds">
     <requires>
         <import addon="xbmc.addon" version="12.0.0" />
@@ -3810,6 +4081,20 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 		<disclaimer />
 		<platform>all</platform>
 	</extension>
+</addon><addon id="repository.openscrapers" name="OpenScrapers Repository" version="1.0" provider-name="A4K">
+	<extension point="xbmc.addon.repository" name="OpenScrapers Repository">
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+        </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>OpenScrapers Repository</summary>
+		<description>The official repo for OpenScrapers!.</description>
+		<disclaimer />
+		<platform>all</platform>
+	</extension>
 </addon><addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
   <extension point="xbmc.addon.repository" name="ResolveURL Repository">
     <dir>
@@ -3830,6 +4115,52 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <fanart>fanart.jpg</fanart>
     </assets> 
   </extension>
+</addon><addon id="repository.robinhood.wizard" name="[B][COLOR limegreen]RobinHood[B][COLOR white] Wizard Repository[/B][/COLOR]" version="1.1.8" provider-name="RobinHood">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0" />
+        </requires>
+        <extension point="xbmc.addon.repository" name="RobinHood Wizard Repository">
+            <info compressed="false">https://networkcorner.net/robinhood/_repo/addons.xml</info>
+            <checksum>https://networkcorner.net/robinhood/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://networkcorner.net/robinhood/_repo/</datadir>
+            <hashes>false</hashes>
+			
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+		</dir>
+		
+		<dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+        </dir>
+				        
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+            <hashes>false</hashes>
+        </dir>
+	
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Install all the latest Builds</summary>
+            <description>Welcome to the New and Improved RobinHood WIZARD for all your Community Builds.</description>
+            <platform>all</platform>
+			<assets>
+			<icon>icon.png</icon>
+            <icon>icon.gif</icon>
+            <fanart>fanart.jpg</fanart>    
+    </assets>
+    </extension>
 </addon><addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.2">
   <extension point="xbmc.addon.repository" name="SlyGuy Repository">
     <dir>
@@ -3976,16 +4307,11 @@ Addons Included
 		<disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="repository.xstream" name="xStream Repository" version="1.1.5" provider-name="xStream-Team">
+</addon><addon id="repository.xstream" name="xStream Repository" version="1.1.6" provider-name="xStream-Team">
     <extension point="xbmc.addon.repository" name="xStream Repository">
         <info compressed="false">https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml</info>
         <checksum>https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.github.com/streamxstream/xStreamRepo/master/</datadir>
-        <dir>
-            <info compressed="false">https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml</info>
-            <checksum>https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.github.com/streamxstream/xStreamRepo/master/</datadir>
-        </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="de">xStream Repository</summary>
@@ -4019,7 +4345,7 @@ Addons Included
 		<platform>all</platform>
 		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
 	</extension>
-</addon><addon id="resource.images.retrospect" version="1.0.12" name="Retrospect channel logos and artwork" provider-name="Bas Rieter">
+</addon><addon id="resource.images.retrospect" version="1.0.13" name="Retrospect channel logos and artwork" provider-name="Bas Rieter">
 
     <extension point="kodi.resource.images" compile="false" type="logosandartwork" />
 
@@ -4034,9 +4360,7 @@ Addons Included
         <description lang="en_GB">Artwork and logos for the channels in Retrospect.</description>
         <source>https://github.com/basrieter/basrieter.github.io/tree/master/resource.images.retrospect</source>
         <license>CC-BY-NC-SA-4.0</license>
-        <news>* Moved: RTV Oost textures to RPO channel.
-* Changed: Moved RTV Rijnmond textures to RPO channel.
-* Changed: Texture paths are not independent of the channel.</news>
+        <news>* Added: New textures for Omroep Gelderland.</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -4442,7 +4766,7 @@ v.3.3.2
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.get.update.android" name="[COLOR gold]Cobra Mod Update Android[/COLOR]" version="0.0.3" provider-name="cobra by TEAM.STUBE">
+</addon><addon id="script.get.update.android" name="[COLOR gold]Cobra Mod Update Android[/COLOR]" version="19.3.0" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -4610,7 +4934,7 @@ v.3.3.2
 		</assets>
 		<news>- code refactor</news>
 	</extension>
-</addon><addon id="script.kodi.android.update" name="Kodi Android Installer" version="1.3.2" provider-name="Team Kodi">
+</addon><addon id="script.kodi.android.update" name="Kodi Android Installer" version="1.3.4" provider-name="Team Kodi">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.six" version="1.0.0" />
@@ -4621,14 +4945,11 @@ v.3.3.2
     <extension point="xbmc.python.script" library="default.py" />
     <extension point="xbmc.service" library="service.py" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Download and Install Kodi packages.</summary>
-        <description lang="en_GB">Download and Install Kodi android packages; select from  Nightlies, Releases, Snapshots and Test-builds.</description>
         <license>GPL-3.0-or-later</license>
         <platform>android</platform>
         <website>http://kodi.tv</website>
         <source>https://github.com/Lunatixz/KODI_Addons/tree/master/script.kodi.android.update</source>
         <forum>https://forum.kodi.tv/showthread.php?tid=322783</forum>
-        <news>v1.3.0[CR]-Matrix[CR]v1.1.8[CR]-PY3[CR]v1.1.1[CR]-Temp Fix[CR]v1.1.0[CR]-Crash Fix[CR]v1.0.9[CR]-Improved UI[CR]v1.0.5[CR]-Moved to Jarvis[CR]-Android Platform Detection[CR]-Streamlined Navigation[CR]v1.0.4[CR]-Android Version Detection[CR]- Improved Error Handling[CR]v1.0.3[CR]-Improved functionality[CR]v1.0.1[CR]-Added After Install Cleanup.</news>
         <assets>
             <icon>resources/images/icon.png</icon>
             <fanart>resources/images/fanart.jpg</fanart>
@@ -4637,6 +4958,11 @@ v.3.3.2
             <screenshot>resources/images/screenshot03.png</screenshot>
             <screenshot>resources/images/screenshot04.png</screenshot>
         </assets>
+        <summary lang="en_GB">Download and Install Kodi packages.</summary>
+        <summary lang="ko_KR">Kodi 패키지를 다운로드하고 설치합니다.</summary>
+        <summary lang="ru_RU">Скачиваете и устанавливайте пакеты Kodi.</summary>
+        <description lang="en_GB">Download and Install Kodi android packages; select from  Nightlies, Releases, Snapshots and Test-builds.</description>
+        <description lang="ko_KR">Kodi 안드로이드 패키지를 다운로드하고 설치하십시오. 매일판, 릴리스, 스냅샷 및 테스트 빌드에서 선택합니다.</description>
     </extension>
 </addon><addon id="script.litebox" name="litebox Script" version="1.0.0" provider-name="BADMS, Angelinas, drinfernoo">
 	<requires>
@@ -5070,6 +5396,32 @@ v0.5.0 (2020-06-25)
 [COLOR yellow]--[/COLOR][I] Fixed entry point import issue.[/I]
 		</news>
 	</extension>
+</addon><addon id="script.module.oathscrapers" name="OathScrapers Module" version="1.00.05" provider-name="TheOath">
+    <requires>
+        
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+        <provides>executable</provides>
+    </extension>
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="en">OathScrapers Module</summary>
+            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart />
+    </assets>
+    <news />
+    </extension>
 </addon><addon id="script.module.pyaes" name="PyAES" version="1.6.1+matrix.1" provider-name="ricmoo">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -5086,7 +5438,23 @@ v0.5.0 (2020-06-25)
             <icon>resources/icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="script.module.pyqrcode" version="1.2.1+matrix.3" name="pyQRcode" provider-name="Michael Nooner">
+</addon><addon id="script.module.pydes" name="pyDes" version="2.0.4+matrix.1" provider-name="Todd Whiteman">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">This is a pure python implementation of the DES encryption algorithm.</summary>
+    <description lang="en">This is a pure python implementation of the DES encryption algorithm. It's pure python to avoid portability issues, since most DES implementations are programmed in C (for performance reasons).</description>
+    <website>http://twhiteman.netfirms.com/des.html</website> 
+    <license>Public Domain</license> 
+    <platform>all</platform> 
+    <source>http://sourceforge.net/projects/pydes/</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="script.module.pyqrcode" version="1.2.1+matrix.4" name="pyQRcode" provider-name="Michael Nooner">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -5118,6 +5486,24 @@ v0.5.0 (2020-06-25)
             <icon>resources/icon.png</icon>
         </assets>
     </extension>
+</addon><addon id="script.module.pysocks" name="PySocks" version="1.7.0+matrix.1" provider-name="anorov">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A SOCKS proxy client and wrapper for Python</summary>
+    <description lang="en_GB">PySocks lets you send traffic through SOCKS and HTTP proxy servers. It is a modern fork of SocksiPy with bug fixes and extra features.</description>
+    <platform>all</platform>
+    <language />
+    <license>BSD</license>
+    <forum />
+    <website>https://github.com/Anorov/PySocks</website>
+    <source>https://github.com/Anorov/PySocks</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
 </addon><addon id="script.module.python.twitch" name="python-twitch for Kodi" version="2.0.19+matrix.1" provider-name="anxdpanic, A Talented Community">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -5229,7 +5615,7 @@ v0.5.0 (2020-06-25)
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.resolveurl" name="ResolveURL" version="5.1.49" provider-name="gujal">
+</addon><addon id="script.module.resolveurl" name="ResolveURL" version="5.1.52" provider-name="gujal">
     <requires>
         
         <import addon="script.module.six" />
@@ -5257,7 +5643,7 @@ v0.5.0 (2020-06-25)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.module.resolveurl.xxx" version="2.1.16" name="Adult Resolver SMR Extension" provider-name="gujal">
+</addon><addon id="script.module.resolveurl.xxx" version="2.1.17" name="Adult Resolver SMR Extension" provider-name="gujal">
 	<requires>
 		
         <import addon="script.module.resolveurl" version="5.1.0" />
@@ -5414,30 +5800,27 @@ v0.5.0 (2020-06-25)
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.urlresolver" name="URLResolver" version="6.1.04" provider-name="tvaddons">
+</addon><addon id="script.module.urlresolver" name="URLResolver" version="2021.11.24~nightly" provider-name="Resolver Team">
     <requires>
-        
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
+		<import addon="script.module.certifi" />
         <import addon="plugin.video.youtube" optional="true" />
         <import addon="script.module.python.twitch" optional="true" />
         <import addon="plugin.googledrive" optional="true" />
+        
+        <import addon="script.module.pydevd" optional="true" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py" />
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
-        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
-        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
-        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
-        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
-        <forum>https://www.tvaddons.co/forums</forum>
-        <website>https://www.tvaddons.co</website>
+        <summary lang="de">URLResolver wird für die Stream Wiedergabe benötigt</summary>
+        <description lang="de">Empfängt viele Video URL's, die in XBMC/Kodi abspielbar sind</description>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon><addon id="script.module.webencodings" name="webencodings" version="0.5.1+matrix.2" provider-name="gsneller">
   <requires>
@@ -5471,7 +5854,7 @@ v0.5.0 (2020-06-25)
     <platform>all</platform>
     <license>LGPL-2.1-only</license>
   </extension>
-</addon><addon id="script.module.xbmcswift2" name="xbmcswift2" provider-name="Jonathan Beluch (jbel), enen92" version="19.0.5">
+</addon><addon id="script.module.xbmcswift2" name="xbmcswift2" provider-name="Jonathan Beluch (jbel), enen92" version="19.0.7">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -5482,7 +5865,7 @@ v0.5.0 (2020-06-25)
     <license>GPL-3.0</license>
     <summary lang="en_GB">xbmcswift2 is a small framework to ease development of KODI addons.</summary>
     <description lang="en_GB">xbmcswift2 is a small framework to ease development of KODI addons.</description>
-    <news>Fix error in loop</news>
+    <news>Fixes for python 3.10 - move collections.MutableMapping to collections.abc.MutableMapping</news>
     <assets>
       <icon>icon.png</icon>
     </assets>
@@ -5566,45 +5949,68 @@ v0.5.0 (2020-06-25)
 		</assets>
 		<news>Python 3 compatibility[CR]Add Album discart for Artists[CR]Add set details support for Home Window</news>
 	</extension>
-</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.1.5" provider-name="BigNoid, marcelveldt, SiLVO">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
-		<import addon="script.module.unidecode" version="0.4.14" />
-		<import addon="script.module.simpleeval" version="0.9.10" />
-	</requires>
-	<extension point="xbmc.python.library" library="default.py" />
-	<extension point="xbmc.addon.metadata">
-		<description lang="de_DE">Add-on für Skins für einfache Bearbeitung und Auflistung von benutzerdefinierten Verknüpfungen (erfordert Skin-Unterstützung)</description>
-		<description lang="el_GR">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
-		<description lang="en_GB">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
-		<description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
-		<description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
-		<description lang="es_ES">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
-		<description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
-		<description lang="gl_ES">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
-		<description lang="hu_HU">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
-		<description lang="is_IS">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
-		<description lang="it_IT">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
-		<description lang="lt_LT">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo  sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
-		<description lang="nl_NL">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
-		<description lang="nb_NO">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
-		<description lang="pl_PL">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
-		<description lang="pt_PT">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
-		<description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
-		<description lang="ru_RU">Дополнение для обложек, предоставляющее простой способ управления и список пользовательских ярлыков (требуется поддержка обложкой)</description>
-		<description lang="sk_SK">Doplnok poskytujúci jednoduchý manažment zoznamu užívateľských odkazov (vyžaduje podporu v doplnku pre vzhľad)</description>
-		<description lang="sv_SE">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
-		<description lang="zh_TW">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
-		<platform>all</platform>
-		<license>GPL-2.0-only</license>
-		<forum>https://forum.kodi.tv/showthread.php?tid=178294</forum>
-		<source>https://github.com/mikesilvo164/script.skinshortcuts</source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-		<news>Kodi v19 Matrix + Python 3 compatibility</news>
-	</extension>
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" version="2.0.0" provider-name="BigNoid, marcelveldt, SiLVO">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.unidecode" version="1.1.1+matrix.2" />
+        <import addon="script.module.simpleeval" version="0.9.10" />
+    </requires>
+    <extension point="xbmc.python.library" library="resources/lib/entry_point.py" />
+    <extension point="xbmc.addon.metadata">
+        <news>
+- restructured (no change to API)
+- added copyright and spdx license headers
+- housekeeping
+    - cleaned up whitespace
+    - unused variables
+    - unused imports
+    - renamed shadowed builtins
+    - applied PEP8
+    - linted with pylint, isort
+    - updated/removed po file comments and metadata
+- moved shared/common constants to their own module
+- refactored json rpc requests and moved to a common module
+- refactored logging and moved to a common module
+- refactored hash generation and moved to a common module
+- refactored file handling and moved to a common module
+- removed any unnecessary string encoding/decoding
+- removed duplicate code
+- assorted minor fixes
+- updated settings.xml to Kodi's new settings format
+- added to Weblate for translations
+- added ::ENABLE:: to enable an add-on, used like ::INSTALL::
+        </news>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=178294</forum>
+        <source>https://github.com/mikesilvo164/script.skinshortcuts</source>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+        </assets>
+        <description lang="de_DE">Addon für Skins zum einfachen Bearbeiten und Auflisten von benutzerdefinierten Verknüpfungen (erfordert Skin-Unterstützung)</description>
+        <description lang="el_GR">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
+        <description lang="en_GB">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+        <description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+        <description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+        <description lang="es_ES">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
+        <description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+        <description lang="gl_ES">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
+        <description lang="hu_HU">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
+        <description lang="is_IS">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
+        <description lang="it_IT">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
+        <description lang="ko_KR">사용자 단축키의 간단한 관리 및 목록을 제공하는 스킨용 애드온(스킨 지원 필요)</description>
+        <description lang="lt_LT">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
+        <description lang="nb_NO">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
+        <description lang="nl_NL">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
+        <description lang="pl_PL">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
+        <description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
+        <description lang="pt_PT">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
+        <description lang="ru_RU">Дополнение для обложек, предоставляющее простой способ управления пользовательскими ярлыками (требуется поддержка обложкой)</description>
+        <description lang="sk_SK">Doplnok poskytujúci jednoduchý manažment zoznamu užívateľských odkazov (vyžaduje podporu v doplnku pre vzhľad)</description>
+        <description lang="sv_SE">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
+        <description lang="zh_TW">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+    </extension>
 </addon><addon id="script.speedtester" name="Speed Tester" version="1.1.2+matrix.1" provider-name="Dr0idGuy, dagwieers">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -5761,7 +6167,7 @@ v1.0.1 (2019-08-06)
 		<description>Artwork for XXXODUS is maintained separately to make distribution of the the addon itself easier/faster.</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.xxxodus.scrapers" name="XXXODUS Scrapers" version="5.00.003" provider-name="Original Echo Coder // Maintained NOW by @Nemzzy668">
+</addon><addon id="script.xxxodus.scrapers" name="XXXODUS Scrapers" version="5.00.004" provider-name="Original Echo Coder // Maintained NOW by @Nemzzy668">
 	<requires>
 		
 		<import addon="script.module.requests" />
@@ -5773,7 +6179,7 @@ v1.0.1 (2019-08-06)
 		<platform>all</platform>
 		<summary lang="en">Scrapers for use in XXXODUS</summary>
 	</extension>
-</addon><addon id="service.cron.autobiblio" name="Crontab für andere Addons" version="2.0.9+matrix.1" provider-name="realvito">
+</addon><addon id="service.cron.autobiblio" name="Crontab für andere Addons" version="2.1.1+matrix.1" provider-name="realvito">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
@@ -5795,13 +6201,12 @@ v1.0.1 (2019-08-06)
 		<website />
 		<email />
 		<mainsource>https://github.com/Collabsvito/REpo-AiO/</mainsource>
-		<source>https://repo.kodinerds.net/addons/matrix/zip/service.cron.autobiblio</source>
+		<source>https://github.com/Collabsvito/REpo-AiO/tree/master/MATRIX/service.cron.autobiblio</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 		</assets>
-		<news>[B][COLOR orangered]Version 2.0.9+matrix.1  (11.04.2021)[/COLOR][/B] by realvito[CR]
-- fixed: Datetime-Errors
-- optimized: Keine Ausführung wenn die Bibliothek-Funktion im zugehörigen Addon wieder deaktiviert wurde (bzw. zugehöriges Addon deaktiviert ist)
+		<news>[B][COLOR orangered]Version 2.1.1+matrix.1  (26.11.2021)[/COLOR][/B][CR]
+- added: Anpassungen zur Aufteilung des Speicherordners in Movies/Series
 		</news>
 	</extension>
 </addon><addon id="service.library.data.provider" name="Library Data Provider" provider-name="BigNoid, SiLVO" version="0.4.1">
@@ -6050,7 +6455,7 @@ v1.1.0 (2020-01-17)
     <disclaimer lang="zh_CN">可放心使用此脚本，更多信息访问 kodi.tv</disclaimer>
     <disclaimer lang="zh_TW">歡迎使用本腳本，相關資訊請參閱kodi.tv</disclaimer>
   </extension>
-</addon><addon id="skin.arctic.zephyr.mod" version="1.1.57" name="Arctic: Zephyr - Reloaded" provider-name="jurialmunkey, beatmasterrs">
+</addon><addon id="skin.arctic.zephyr.mod" version="1.1.62" name="Arctic: Zephyr - Reloaded" provider-name="jurialmunkey, beatmasterrs">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
@@ -6084,7 +6489,7 @@ v1.1.0 (2020-01-17)
             <screenshot>resources/screenshot-09.jpg</screenshot>
             <screenshot>resources/screenshot-10.jpg</screenshot>
         </assets>
-        <news>1.1.57[CR]- Fixed issues[CR]- Minor improvements (!thx Nanomani)[CR][CR]1.1.56[CR]- Improvements to music osd[CR]- Improved overall usability/user experience[CR]- Updated translations[CR]- Improvements to colorpicker window, video osd and animations[CR]- Addon icon updated[CR]- Added option to flix views to disable netflix fanart window[CR]- Litebox script is now used for effects like blur, twotone or pixelate[CR]- Improved addon description and summary[CR]- Issues fixed, code cleanup[CR][CR]1.1.55[CR]- Addon infos changed[CR]- First start options set[CR][CR]1.1.54[CR]- Improvements to nowplaying info[CR]- First start options set[CR]- Music visualisation improved[CR]- Rearranged power menu items[CR]- Code improvements, cleanup[CR]- Texture update[CR][CR]1.1.53[CR]- French language update (!thx Nanomani)[CR]- Core/LibreElec settings rework (!thx Nanomani)[CR]- Improved animations[CR]- Background issues fixed[CR]- Improved nowplaying/musicvisualisation/musicosd[CR]- Improved skin settings[CR]- German language update[CR]- Code improvements, cleanup[CR][CR]1.1.52[CR]- Fixed a lot of issues[CR]- Improved performance[CR]- Language strings corrections[CR]- Improved DialogInfo animations[CR]- Added option to enable lock of skin theme/color/font[CR]- Texture update[CR]- Code cleanup[CR][CR]1.1.51[CR]- Rework on skin settings (!thx Nanomani)[CR]- Added support for colorbox script[CR]- Fixed a lot of issues[CR]- Minor adjustments[CR]- Code improvements[CR]- Added coreelec/libreelec icons (!thx Nanomani)[CR]- Fixed clearlogo position (!thx Fabricio Augusto)[CR]- Added wip option to lock skin theme/color[CR]- Added m4a icons[CR][CR]1.1.50[CR]- Fixed issues with language strings (!thx Nanomani)[CR]- Fixed issue with background[CR]- Added option to hide scrollbar for more views (!thx Fabricio Augusto)[CR]- Added option for underline items in vertical multi widgets home menu (!thx Nanomani)[CR][CR]1.1.49[CR]- Texture update[CR]- Improved netflix preview window[CR][CR]1.1.48[CR]- Fixed issue with background[CR]- Minor adjustments[CR]- Code optimization[CR][CR]1.1.47[CR]-Improved widget animations for netflix and clean/minimal layouts[CR]- Fixed an issue with weather background[CR]- Added playdisc shortcut to home menu[CR]- Added audiostreams info to furniture icons[CR]- Code optimization[CR][CR]1.1.46[CR]- Added new home menu layout[CR]- Fixed issue with background[CR]- Fixed issue with language strings (!thx Nanomani)[CR]- French language update (!thx Nanomani)[CR][CR]1.1.45[CR]- Fixed issue with background (!thx Skyla)[CR][CR]1.1.44[CR]- Added brightness setting for background/blur[CR]- Improved some skin settings[CR]- Added fading time setting for background[CR]- Added option to use thumbnail instead fanart in upnext addon[CR]- Added new viewtypes for widgets[CR]- Fixed issues[CR]- Added view 526 for seasons[CR]- German, italian language update (!thx semool, nanomani)[CR][CR]1.1.43[CR]- Added new viewtype aspect for home menu widgets[CR]- Fixed a lot of issues, e.g. musicvideos flags, strings, ...[CR]- Code improvements[CR]- Minor adjustments[CR][CR]1.1.42[CR]- Added new default mpaa flags[CR]- Improvements to DialogAddonInfo[CR]- Italian language updated (!thx Zurg)[CR]- Added option to enable IMDB position[CR]- Added view 524 for seasons[CR]- Improved views content type (!thx Nanomani)[CR]- Fixed minor issue with background[CR]- Added option to hide background of PVR channel icon[CR]- Improved colorpicker dialog[CR]- French language update (!thx Nanomani)[CR]- Added support for artwork downloader in DialogVideoInfo[CR][CR]1.1.41[CR]- Consistency update[CR]- Performance improvements[CR]- Added netflix clearlogo to netflix homemenu viewtypes[CR]- Italian language update (!thx Zurg)[CR]- German language update (!thx semool)[CR]- Fixed a lot of issues[CR]- Improvements to some views[CR]- Code cleanup[CR]- French language update (!thx Nanomani)[CR]- Added option to set fallback image for music visualisation (!thx for request: hordesprime)[CR]- Improvements to DialogPlayerProcessInfo[CR]- Improvements to Video OSD[CR]- Fixed issues with PVR OSD icons[CR][CR]1.1.40[CR]- Added pvr vertical widgets[CR]- Added tagline option for DialogVideoInfo, improvements (!thx Nanomani)[CR]- Added radio channel widgets[CR]- Cleanup the code[CR]- Added option to enable smaller icons in view 510[CR]- Changed list type option to select list type for each widget[CR]- Updated french language[CR]- Updated italian language strings (!thx Zurg)[CR][CR]1.1.39[CR]- Code improvements[CR]- Minor adjustments[CR][CR]1.1.38[CR]- Improved Skinshortcuts menu[CR]- French language updated[CR]- German language updated (!thx semool)[CR]- Fixed issues in PVR section[CR]- Cleanup the code[CR][CR]1.1.37[CR]- Added widgets content[CR]- Issues fixed[CR]- French language updated[CR]- Autoscroll widgets improvements[CR][CR]1.1.36[CR]- Fixed issue with more-item[CR][CR]1.1.35[CR]- Skin settings and viewtype options improvements[CR]- Minor adjustments[CR]- Fixed navigation issues[CR]- New screenshots added[CR]- French language updated[CR][CR]1.1.34[CR]- French language updated (!thx Nanomani)[CR]- Added support for script.arctic.zephyr.mod.autocolors (!thx semool)[CR]- Added music view 523[CR]- Texture improvements[CR][CR]1.1.33[CR]- Bugfix release[CR][CR]1.1.32[CR]- Code improvements, cleanup[CR]- Added new watched flag indicators[CR]- Language strings updates (!thx semool, Dis90)[CR]- Added by director info to dialogvideoinfo[CR]- Minor adjustments[CR][CR]1.1.31[CR]- Improvements of music OSD[CR]- Added option to disable homemenu items in skinshortcuts[CR]- Fixed issues[CR]- Added new views 521/522[CR]- Hungarian language updated (!thx frodo19)[CR][CR]1.1.30[CR]- Removed unneeded textures[CR]- Code cleanup[CR]- Improved custom blur settings[CR]- Added option for autoscroll widget titles[CR]- Fixed issues[CR]- Minor adjustments[CR][CR]1.1.29[CR]- Improved widget diffuse textures[CR]- Removed unneeded textures[CR]- Added option to disable startup window[CR]- Fixed issues[CR]- Added tvshow provider icons to extended infos[CR]- Code cleanup[CR][CR]1.1.28[CR]- Fixed issues with multi backgrounds and background playlists[CR][CR]1.1.27[CR]- Background code improvements[CR]- Added trakt - add to watchlist button[CR]- Code improvements[CR]- fixed issues (!thx)[CR]- minor adjustements[CR][CR]1.1.26[CR]- Fixed a lot of issues[CR]- Added now playing setting[CR]- Code improvements[CR]- Views adjusted for better consistency[CR][CR]1.1.25[CR]- Fixed weather issue[CR][CR]1.1.24[CR]- Added indicator setting[CR]- Fixed playback issue (!thx)[CR]- Code improvements, cleanup[CR]- Added tmdbhelper fallback labels[CR]- Added setting to diable next aired info[CR][CR]1.1.23[CR]- Code improvements, cleanup[CR]- Fixed a lot of issues[CR]- Added option for widgets fade animation [CR]- Added discart for osd [CR]- Added new HDR, DolbyVision and web-dl flags[CR]- Added option to set spotlight widget path[CR]- Added autoscroll for classic widgets[CR]- Enabled extended infos for episodes[CR][CR]1.1.22[CR]- Improvements on plot overlays[CR]- Code and texture improvements, cleanup[CR]- Language strings updated by several contributors, thx![CR][CR]1.1.21[CR]- Code improvements, cleanup[CR]- ColorPicker dialog improvements[CR]- DialogSelect using poster instead icon, if available[CR]- Scrollbar improvements[CR]- Texture improvements[CR]- Option to select media flags added[CR]- Added homemenu viewtype selector[CR]- Minor adjustments of now playing[CR]- Fixed a lot of issues[CR]- Ultra HD Blu Ray icon added[CR]- Language strings updated by several contributors, thx![CR]- Addon is renamed to Arctic: Zephyr - Reloaded[CR]- Added option to hide all indicators[CR]- Added widget 6[CR]- Added custom powermenu[CR][CR]1.1.20[CR]- Added netflix homemenu layout[CR]- Added custom widgets[CR][CR]1.1.19[CR]- Fixed issues, code cleanup[CR]- Improvements on animations[CR]- Added custom coreelec settings[CR][CR]1.1.18[CR]- Code improvements[CR]- Fixed issues[CR][CR]1.1.17[CR]- Improvements on dialoginfo overlay[CR]- Fixed issue with sets info[CR]- Added support for script.skin.info.service[CR][CR]1.1.16[CR]- Widgets cleanup, improvements on supported addons section[CR][CR]1.1.15[CR]- Fixed a lot of issues, cleaned up the code[CR]- Cinema experience support of embuary.helper addon added[CR]- Widgets added[CR]- Now playing info added[CR]- Dialog settings added[CR]- Fixed rating flags[CR]- Improvements on osd/homemenu/views[CR][CR]1.1.14[CR]- Fixed issues[CR][CR]1.1.13[CR]- Texture improvements[CR]- Fixed a lot of issues[CR]- Rework on filemanager[CR]- Added tempo function[CR]- Added new kodi 19 infolabels[CR]- Added german telecast offers support[CR]- Code improvements[CR][CR]1.1.12[CR]- Cleanup the code[CR]- Only icons version added to vertical multi widget homemenu[CR]- Added header label for hubs[CR]- Improvements on color-settings, blur settings[CR]- Switched to tmdbhelper for next aired info[CR]- More changes for matrix compatibility[CR][CR]1.1.1[CR]- First matrix version</news>
+        <news>1.1.62[CR]- Fixed issues with clearlogo and pvr osd[CR]- Added option for is playing indicator[CR]- Added option to use embuary helper for blur[CR]- Improved view 520[CR]- Minor adjustments[CR][CR]1.1.61[CR]- Improved container types[CR]- Improved widget information for episodes[CR]- Added indicators to featured home menu layout[CR]- Added additional music flags[CR]- Code improvements, cleanup[CR][CR]1.1.60[CR]- Improved overall experience[CR]- Fixed issues[CR]- Added EDL markers[CR]- Improved code, cleanup[CR]- Added option to ignore embedded fanart by addons (!thx Nanomani)[CR][CR]1.1.59[CR]- Added auto playing trailers[CR]- Improved home menu widgets movement[CR]- Added jumpbar to views 510, 521, 522, 523, 527[CR]- Fixed issues[CR][CR]1.1.58[CR]- Added glow/zoom option for focused items[CR]- Added new view 527[CR]- Improvements to home header (!thx Nanomani)[CR]- Fixed issues[CR][CR]1.1.57[CR]- Fixed issues[CR]- Minor improvements (!thx Nanomani)[CR][CR]1.1.56[CR]- Improvements to music osd[CR]- Improved overall usability/user experience[CR]- Updated translations[CR]- Improvements to colorpicker window, video osd and animations[CR]- Addon icon updated[CR]- Added option to flix views to disable netflix fanart window[CR]- Litebox script is now used for effects like blur, twotone or pixelate[CR]- Improved addon description and summary[CR]- Issues fixed, code cleanup[CR][CR]1.1.55[CR]- Addon infos changed[CR]- First start options set[CR][CR]1.1.54[CR]- Improvements to nowplaying info[CR]- First start options set[CR]- Music visualisation improved[CR]- Rearranged power menu items[CR]- Code improvements, cleanup[CR]- Texture update[CR][CR]1.1.53[CR]- French language update (!thx Nanomani)[CR]- Core/LibreElec settings rework (!thx Nanomani)[CR]- Improved animations[CR]- Background issues fixed[CR]- Improved nowplaying/musicvisualisation/musicosd[CR]- Improved skin settings[CR]- German language update[CR]- Code improvements, cleanup[CR][CR]1.1.52[CR]- Fixed a lot of issues[CR]- Improved performance[CR]- Language strings corrections[CR]- Improved DialogInfo animations[CR]- Added option to enable lock of skin theme/color/font[CR]- Texture update[CR]- Code cleanup[CR][CR]1.1.51[CR]- Rework on skin settings (!thx Nanomani)[CR]- Added support for colorbox script[CR]- Fixed a lot of issues[CR]- Minor adjustments[CR]- Code improvements[CR]- Added coreelec/libreelec icons (!thx Nanomani)[CR]- Fixed clearlogo position (!thx Fabricio Augusto)[CR]- Added wip option to lock skin theme/color[CR]- Added m4a icons[CR][CR]1.1.50[CR]- Fixed issues with language strings (!thx Nanomani)[CR]- Fixed issue with background[CR]- Added option to hide scrollbar for more views (!thx Fabricio Augusto)[CR]- Added option for underline items in vertical multi widgets home menu (!thx Nanomani)[CR][CR]1.1.49[CR]- Texture update[CR]- Improved netflix preview window[CR][CR]1.1.48[CR]- Fixed issue with background[CR]- Minor adjustments[CR]- Code optimization[CR][CR]1.1.47[CR]-Improved widget animations for netflix and clean/minimal layouts[CR]- Fixed an issue with weather background[CR]- Added playdisc shortcut to home menu[CR]- Added audiostreams info to furniture icons[CR]- Code optimization[CR][CR]1.1.46[CR]- Added new home menu layout[CR]- Fixed issue with background[CR]- Fixed issue with language strings (!thx Nanomani)[CR]- French language update (!thx Nanomani)[CR][CR]1.1.45[CR]- Fixed issue with background (!thx Skyla)[CR][CR]1.1.44[CR]- Added brightness setting for background/blur[CR]- Improved some skin settings[CR]- Added fading time setting for background[CR]- Added option to use thumbnail instead fanart in upnext addon[CR]- Added new viewtypes for widgets[CR]- Fixed issues[CR]- Added view 526 for seasons[CR]- German, italian language update (!thx semool, nanomani)[CR][CR]1.1.43[CR]- Added new viewtype aspect for home menu widgets[CR]- Fixed a lot of issues, e.g. musicvideos flags, strings, ...[CR]- Code improvements[CR]- Minor adjustments[CR][CR]1.1.42[CR]- Added new default mpaa flags[CR]- Improvements to DialogAddonInfo[CR]- Italian language updated (!thx Zurg)[CR]- Added option to enable IMDB position[CR]- Added view 524 for seasons[CR]- Improved views content type (!thx Nanomani)[CR]- Fixed minor issue with background[CR]- Added option to hide background of PVR channel icon[CR]- Improved colorpicker dialog[CR]- French language update (!thx Nanomani)[CR]- Added support for artwork downloader in DialogVideoInfo[CR][CR]1.1.41[CR]- Consistency update[CR]- Performance improvements[CR]- Added netflix clearlogo to netflix homemenu viewtypes[CR]- Italian language update (!thx Zurg)[CR]- German language update (!thx semool)[CR]- Fixed a lot of issues[CR]- Improvements to some views[CR]- Code cleanup[CR]- French language update (!thx Nanomani)[CR]- Added option to set fallback image for music visualisation (!thx for request: hordesprime)[CR]- Improvements to DialogPlayerProcessInfo[CR]- Improvements to Video OSD[CR]- Fixed issues with PVR OSD icons[CR][CR]1.1.40[CR]- Added pvr vertical widgets[CR]- Added tagline option for DialogVideoInfo, improvements (!thx Nanomani)[CR]- Added radio channel widgets[CR]- Cleanup the code[CR]- Added option to enable smaller icons in view 510[CR]- Changed list type option to select list type for each widget[CR]- Updated french language[CR]- Updated italian language strings (!thx Zurg)[CR][CR]1.1.39[CR]- Code improvements[CR]- Minor adjustments[CR][CR]1.1.38[CR]- Improved Skinshortcuts menu[CR]- French language updated[CR]- German language updated (!thx semool)[CR]- Fixed issues in PVR section[CR]- Cleanup the code[CR][CR]1.1.37[CR]- Added widgets content[CR]- Issues fixed[CR]- French language updated[CR]- Autoscroll widgets improvements[CR][CR]1.1.36[CR]- Fixed issue with more-item[CR][CR]1.1.35[CR]- Skin settings and viewtype options improvements[CR]- Minor adjustments[CR]- Fixed navigation issues[CR]- New screenshots added[CR]- French language updated[CR][CR]1.1.34[CR]- French language updated (!thx Nanomani)[CR]- Added support for script.arctic.zephyr.mod.autocolors (!thx semool)[CR]- Added music view 523[CR]- Texture improvements[CR][CR]1.1.33[CR]- Bugfix release[CR][CR]1.1.32[CR]- Code improvements, cleanup[CR]- Added new watched flag indicators[CR]- Language strings updates (!thx semool, Dis90)[CR]- Added by director info to dialogvideoinfo[CR]- Minor adjustments[CR][CR]1.1.31[CR]- Improvements of music OSD[CR]- Added option to disable homemenu items in skinshortcuts[CR]- Fixed issues[CR]- Added new views 521/522[CR]- Hungarian language updated (!thx frodo19)[CR][CR]1.1.30[CR]- Removed unneeded textures[CR]- Code cleanup[CR]- Improved custom blur settings[CR]- Added option for autoscroll widget titles[CR]- Fixed issues[CR]- Minor adjustments[CR][CR]1.1.29[CR]- Improved widget diffuse textures[CR]- Removed unneeded textures[CR]- Added option to disable startup window[CR]- Fixed issues[CR]- Added tvshow provider icons to extended infos[CR]- Code cleanup[CR][CR]1.1.28[CR]- Fixed issues with multi backgrounds and background playlists[CR][CR]1.1.27[CR]- Background code improvements[CR]- Added trakt - add to watchlist button[CR]- Code improvements[CR]- fixed issues (!thx)[CR]- minor adjustements[CR][CR]1.1.26[CR]- Fixed a lot of issues[CR]- Added now playing setting[CR]- Code improvements[CR]- Views adjusted for better consistency[CR][CR]1.1.25[CR]- Fixed weather issue[CR][CR]1.1.24[CR]- Added indicator setting[CR]- Fixed playback issue (!thx)[CR]- Code improvements, cleanup[CR]- Added tmdbhelper fallback labels[CR]- Added setting to diable next aired info[CR][CR]1.1.23[CR]- Code improvements, cleanup[CR]- Fixed a lot of issues[CR]- Added option for widgets fade animation [CR]- Added discart for osd [CR]- Added new HDR, DolbyVision and web-dl flags[CR]- Added option to set spotlight widget path[CR]- Added autoscroll for classic widgets[CR]- Enabled extended infos for episodes[CR][CR]1.1.22[CR]- Improvements on plot overlays[CR]- Code and texture improvements, cleanup[CR]- Language strings updated by several contributors, thx![CR][CR]1.1.21[CR]- Code improvements, cleanup[CR]- ColorPicker dialog improvements[CR]- DialogSelect using poster instead icon, if available[CR]- Scrollbar improvements[CR]- Texture improvements[CR]- Option to select media flags added[CR]- Added homemenu viewtype selector[CR]- Minor adjustments of now playing[CR]- Fixed a lot of issues[CR]- Ultra HD Blu Ray icon added[CR]- Language strings updated by several contributors, thx![CR]- Addon is renamed to Arctic: Zephyr - Reloaded[CR]- Added option to hide all indicators[CR]- Added widget 6[CR]- Added custom powermenu[CR][CR]1.1.20[CR]- Added netflix homemenu layout[CR]- Added custom widgets[CR][CR]1.1.19[CR]- Fixed issues, code cleanup[CR]- Improvements on animations[CR]- Added custom coreelec settings[CR][CR]1.1.18[CR]- Code improvements[CR]- Fixed issues[CR][CR]1.1.17[CR]- Improvements on dialoginfo overlay[CR]- Fixed issue with sets info[CR]- Added support for script.skin.info.service[CR][CR]1.1.16[CR]- Widgets cleanup, improvements on supported addons section[CR][CR]1.1.15[CR]- Fixed a lot of issues, cleaned up the code[CR]- Cinema experience support of embuary.helper addon added[CR]- Widgets added[CR]- Now playing info added[CR]- Dialog settings added[CR]- Fixed rating flags[CR]- Improvements on osd/homemenu/views[CR][CR]1.1.14[CR]- Fixed issues[CR][CR]1.1.13[CR]- Texture improvements[CR]- Fixed a lot of issues[CR]- Rework on filemanager[CR]- Added tempo function[CR]- Added new kodi 19 infolabels[CR]- Added german telecast offers support[CR]- Code improvements[CR][CR]1.1.12[CR]- Cleanup the code[CR]- Only icons version added to vertical multi widget homemenu[CR]- Added header label for hubs[CR]- Improvements on color-settings, blur settings[CR]- Switched to tmdbhelper for next aired info[CR]- More changes for matrix compatibility[CR][CR]1.1.1[CR]- First matrix version</news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht. Basiert auf dem original Arctic: Zephyr Skin von jurialmunkey.</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light. Based on the original Arctic: Zephyr skin by jurialmunkey.</summary>
         <summary lang="en_AU">Clean, minimal, elegant, simple, light. Based on the original Arctic: Zephyr skin by jurialmunkey.</summary>
@@ -6124,4 +6529,17 @@ v1.1.0 (2020-01-17)
 		</assets>
 		<news>- fix yahoo weather</news>
 	</extension>
+</addon><addon id="webinterface.chorus" version="0.3.10" name="Chorus" provider-name="jez500">
+  <requires>
+    <import addon="xbmc.json" version="6.0.0" />
+  </requires>
+  <extension point="xbmc.webinterface" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">A modern Web UI for your XBMC</summary>
+    <description lang="en">A modern Web UI for your XBMC. Browse your Music, Movies or TV Shows from the comfort of your own web browser.  You can play media via XBMC or stream it in your browser. Works best with Chrome but plays well with most modern browsers. For more, see github.com/jez500/chorus</description>
+    <platform>all</platform>
+    <language>en</language>
+    <source>https://github.com/jez500/chorus</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=183451</forum>
+  </extension>
 </addon></addons>

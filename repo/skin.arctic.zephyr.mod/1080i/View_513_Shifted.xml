@@ -8,7 +8,7 @@
             <include>Animation.Common</include>
             <visible>Control.IsVisible(513)</visible>
             <include>ViewSlideForJumpBar</include>
-            <control type="list" id="513">
+            <control type="panel" id="513">
                 <top>200</top>
                 <right>SidePad</right>
                 <left>70</left>
@@ -24,7 +24,7 @@
                 <orientation>vertical</orientation>
                 <viewtype label="31099">list</viewtype>
                 <include>ScrolltimeViewsList</include>
-                <itemlayout height="230" width="752">
+                <itemlayout height="230">
                     <control type="group">
                         <height>225</height>
                         <width>390</width>
@@ -69,7 +69,7 @@
                         <autoscroll>false</autoscroll>
                     </control>
                 </itemlayout>
-                <focusedlayout height="230" width="752">
+                <focusedlayout height="230">
                     <control type="group">
                         <height>225</height>
                         <width>390</width>
@@ -77,6 +77,10 @@
                             <param name="id" value="513"/>
                             <param name="indicatorbackground" value="true"/>
                             <param name="height" value="225"/>
+                            <param name="glow_top" value="0"/>
+                            <param name="glow_height" value="225"/>
+                            <param name="glow_left" value="4" />
+                            <param name="glow_right" value="5" />
                         </include>
                     </control>
                     <control type="label">
@@ -136,8 +140,7 @@
                 <include>Animation.DelayFadeIn</include>
                 <top>185</top>
                 <left>258</left>
-                <width>16</width>
-                <height>16</height>
+                <include>arrowdimensions</include>
                 <texture colordiffuse="Dark1" flipy="true">common/arrow-small.png</texture>
             </control>
             <control type="image">
@@ -145,8 +148,7 @@
                 <include>Animation.DelayFadeIn</include>
                 <top>883</top>
                 <left>258</left>
-                <width>16</width>
-                <height>16</height>
+                <include>arrowdimensions</include>
                 <texture colordiffuse="Dark1" flipy="false">common/arrow-small.png</texture>
             </control>
         </control>

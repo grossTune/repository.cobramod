@@ -30,7 +30,7 @@ class VshareEuResolver(UrlResolver):
     pattern = r'(?://|\.)(vshare\.eu)/(?:embed-|)?([0-9a-zA-Z/]+)'
 
     def __init__(self):
-        self.headers = {'User-Agent': common.SMU_USER_AGENT}
+        self.headers = {'User-Agent': common.SMR_USER_AGENT}
 
     def get_media_url(self, host, media_id):
         result = self.__check_auth(media_id)

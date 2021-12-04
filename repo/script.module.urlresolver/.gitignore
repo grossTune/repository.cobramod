@@ -11,6 +11,7 @@ doc/resources
 .pydevproject
 .settings
 .idea
+.git
 *~
 nano.save
 .vscode

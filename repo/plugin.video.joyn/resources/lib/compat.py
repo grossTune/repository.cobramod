@@ -6,6 +6,11 @@ from platform import uname
 PY2 = version_info[0] == 2
 PY3 = version_info[0] == 3
 
+if PY2:
+	from HTMLParser import HTMLParser
+elif PY3:
+	import html
+
 
 def _encode(s, encoding='utf-8'):
 
@@ -55,3 +60,7 @@ def _uname_list():
 def _format(format_str, *format_args):
 
 	return _unicode(format_str).format(*tuple(map(_unicode, format_args)))
+
+
+def _html_unescape(_str):
+	return html.unescape(_str) if PY3 else HTMLParser().unescape(_str)

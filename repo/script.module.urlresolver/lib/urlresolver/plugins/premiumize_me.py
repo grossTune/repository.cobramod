@@ -26,7 +26,7 @@ from urlresolver.resolver import UrlResolver, ResolverError
 logger = common.log_utils.Logger.get_logger(__name__)
 logger.disable()
 
-CLIENT_ID = '854653386'
+CLIENT_ID = '522962560'
 USER_AGENT = 'URLResolver for Kodi/%s' % common.addon_version
 FORMATS = common.VIDEO_FORMATS
 
@@ -324,7 +324,7 @@ class PremiumizeMeResolver(UrlResolver):
         js_result = json.loads(self.net.http_POST(token_path, form_data=data, headers=self.headers).content)
         line1 = 'Go to URL: %s' % js_result.get('verification_uri')
         line2 = 'When prompted enter: %s' % js_result.get('user_code')
-        with common.kodi.CountdownDialog('URL Resolver Premiumize Authorization', line1, line2, countdown=120,
+        with common.kodi.CountdownDialog('Resolve URL Premiumize Authorization', line1, line2, countdown=120,
                                          interval=js_result.get('interval', 5)) as cd:
             result = cd.start(self.__get_token, [js_result.get('device_code')])
 

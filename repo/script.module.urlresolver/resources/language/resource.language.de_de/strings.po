@@ -278,11 +278,11 @@ msgstr "Beende fertige Torrents vom Konto"
 
 msgctxt "#33066"
 msgid "minutes"
-msgstr "Protokoll"
+msgstr "Minuten"
 
 msgctxt "#33067"
 msgid "hours"
-msgstr "Std"
+msgstr "Stunden"
 
 msgctxt "#33068"
 msgid "Uptobox Authorisation Reset"

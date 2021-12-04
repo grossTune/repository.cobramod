@@ -1,4 +1,11 @@
 ﻿
+[B]Version 2.1.1+matrix.1  (26.11.2021)[/B]
+- added: Anpassungen zur Aufteilung des Speicherordners in Movies/Series
+
+[B]Version 2.1.0+matrix.1  (05.11.2021)[/B]
+- added: Anpassungen und Übernahme der neuen 'Staffel-Anzeige' im 'plugin.video.rtlgroup.de'
+- optimized: OS-Erkennung beim Start des Service
+
 [B]Version 2.0.9+matrix.1  11.04.2021)[/B] by realvito
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - Autor bisher @L0RE

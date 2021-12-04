@@ -1,6 +1,7 @@
 """
     OVERALL CREDIT TO:
         t0mm0, Eldorado, VOINAGE, BSTRDMKR, tknorris, smokdpi, TheHighway
+        #an Check 30.07.2020
 
     Plugin for URLResolver
     Copyright (C) 2011 t0mm0

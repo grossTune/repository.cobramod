@@ -1,5 +1,5 @@
 """
-Plugin for UrlResolver
+Plugin for URLResolver
 Copyright (C) 2020 gujal
 
 This program is free software: you can redistribute it and/or modify

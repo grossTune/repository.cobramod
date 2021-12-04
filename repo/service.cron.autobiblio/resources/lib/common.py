@@ -6,7 +6,6 @@ import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
-import platform
 import json
 import xbmcvfs
 import shutil

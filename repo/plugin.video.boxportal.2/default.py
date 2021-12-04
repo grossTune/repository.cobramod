@@ -36,7 +36,7 @@ def addonInstalled(script_name):
 
 #############Defined Strings#############
 
-addon_id = 'plugin.video.boxportal.1'
+addon_id = 'plugin.video.boxportal.2'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 icon = xbmc.translatePath(os.path.join('special://home/addons/'
                           + addon_id, 'icon.png'))
@@ -46,16 +46,16 @@ fanart = xbmc.translatePath(os.path.join('special://home/addons/'
 ################Pic###############
 
 livetv = \
-    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal/resources/pic/icon.png'
+    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal.2/resources/pic/icon.png'
                        ))
 filme = \
-    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal/resources/pic/icon.png'
+    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal.2/resources/pic/icon.png'
                        ))
 serie = \
-    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal/resources/pic/icon.png'
+    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal.2/resources/pic/icon.png'
                        ))
 suche = \
-    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal/resources/pic/icon.png'
+    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal.2/resources/pic/icon.png'
                        ))
 
 
@@ -87,10 +87,10 @@ Series_url = \
 
 
 Guide = \
-    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal/resources/catchup'
+    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal.2/resources/catchup'
                        , 'guide.xml'))
 GuideLoc = \
-    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal/resources/catchup'
+    xbmc.translatePath(os.path.join('special://home/addons/plugin.video.boxportal.2/resources/catchup'
                        , 'g'))
 
 advanced_settings = xbmc.translatePath('special://home/addons/'
@@ -754,7 +754,7 @@ def addonsettings(url, description):
             xbmcgui.Dialog().ok('IPIV is Easy',
                                 'PVR & iVue Integration Complete')
     elif url == 'ST':
-        xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.boxportal/resources/modules/speedtest.py")'
+        xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.boxportal.2/resources/modules/speedtest.py")'
                             )
     elif url == 'META':
         if 'ON' in description:
@@ -947,7 +947,7 @@ def accountinfo():
 
 def correctPVR():
 
-    addon = xbmcaddon.Addon('plugin.video.boxportaltPVRtv')
+    addon = xbmcaddon.Addon('plugin.video.boxportal.2tPVRtv')
     username_text = addon.getSetting(id='Username')
     password_text = addon.getSetting(id='Password')
     jsonSetPVR = \

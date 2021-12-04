@@ -9,7 +9,7 @@
             <visible>Control.IsVisible(526)</visible>
             <include>ViewSlideForJumpBar</include>
             <control type="group">
-                <control type="list" id="526">
+                <control type="panel" id="526">
                     <visible>Container.Content(seasons)</visible>
                     <top>206</top>
                     <include content="def_left" condition="!Skin.HasSetting(view.526.switch.plot.poster)">
@@ -99,6 +99,9 @@
                             <param name="small" value="true"/>
                             <param name="height" value="300"/>
                             <param name="reflections" value="false"/>
+                            <param name="glow_left" value="3" />
+                            <param name="glow_right" value="4" />
+                            <param name="glow_height" value="295" />
                         </include>
                     </focusedlayout>
                     <content target="videos" sortby="episode" sortorder="ascending">$INFO[Container(526).ListItem.FolderPath]</content>

@@ -1,3 +1,36 @@
+[B]Version 1.8.20[/B]
+
+- Updated pornhub
+- Updated ahme
+- Updated plusone8
+
+[B]Version 1.8.19[/B]
+
+- Updated: videodevil.py to fix error messages
+- Updated: eporner for Android
+- Updated: gfvideos for Android
+- Updated: pornhd for Android
+- Updated: pornoxo for Android
+- Updated: redtube for Android
+- Updated: youporn for Android
+
+[B]Version 1.8.18[/B]
+
+- Updated: gfvideos
+
+[B]Version 1.8.17[/B]
+
+- Updated: xhamster
+- Updated: kamaba
+- Updated: redtube
+- Updated: sexu playback
+- Updated: thumbzilla
+- Updated: youporn
+
+[B]Version 1.8.16[/B]
+
+- Updated: categories in gfvideos
+
 [B]Version 1.8.15[/B]
 
 - Updated: next button in motherless

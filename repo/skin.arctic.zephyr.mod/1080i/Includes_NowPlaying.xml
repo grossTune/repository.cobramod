@@ -3,7 +3,7 @@
 <includes>
     <include name="ExtendedNowPlaying">
         <control type="group">
-            <visible>Skin.HasSetting(extended.nowplaying) + Player.HasMedia + !ControlGroup(301).HasFocus()</visible>
+            <visible>$EXP[ExtendedNowPlayingIsVisible]</visible>
             <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
             <animation effect="fade" start="0" delay="450" end="100" time="350">Visible</animation>
             <height>770</height>
@@ -17,7 +17,8 @@
                 <param name="bottom" value="230" />
             </include>
             <width>1320</width>
-            <left>526</left>
+            <include content="def_left" condition="$EXP[HomeIsVerticalMultiWidgets]"><param name="left" value="526" /></include>
+            <left>SidePad</left>
 
             <!-- Basics -->
             <include>NowPlaying_TopBottomInfo</include>
@@ -253,8 +254,11 @@
                 </control>
             </control>
             <control type="grouplist">
-                <include content="def_width" condition="Skin.HasSetting(homemenu.netflix)">
+                <include content="def_width" condition="Skin.HasSetting(homemenu.netflix) + !Skin.HasSetting(home.netflix.autoplay.trailer)">
                     <param name="width" value="800" />
+                </include>
+                <include content="def_width" condition="Skin.HasSetting(homemenu.netflix) + Skin.HasSetting(home.netflix.autoplay.trailer)">
+                    <param name="width" value="700" />
                 </include>
                 <include content="def_width" condition="!Skin.HasSetting(homemenu.netflix)">
                     <param name="width" value="100%" />
@@ -263,8 +267,11 @@
                 <include content="def_top" condition="Skin.HasSetting(homemenu.netflix)">
                     <param name="top" value="20" />
                 </include>
+                <include content="def_top" condition="!Skin.HasSetting(homemenu.netflix) + Skin.HasSetting(home.widgets.show.reflections)">
+                    <param name="top" value="413" />
+                </include>
                 <include content="def_top" condition="!Skin.HasSetting(homemenu.netflix)">
-                    <param name="top" value="397" />
+                    <param name="top" value="407" />
                 </include>
                 <itemgap>15</itemgap>
                 <include content="MultiWidgetsHeaderLabel">
@@ -281,7 +288,7 @@
                     <visible>Player.HasVideo</visible>
                     <itemgap>15</itemgap>
                     <usecontrolcoords>true</usecontrolcoords>
-                    <include condition="Skin.HasSetting(homemenu.netflix)">IntentButton</include>
+                    <include condition="Skin.HasSetting(homemenu.netflix) + !Skin.HasSetting(home.netflix.clearlogo) | Skin.HasSetting(homemenu.clean.flix)">IntentButton</include>
                     <control type="textbox">
                         <include condition="Skin.HasSetting(homemenu.netflix)">MultiWidgetsPlotLabelDefinitionNetflix</include>
                         <include condition="!Skin.HasSetting(homemenu.netflix)">MultiWidgetsPlotLabelDefinition</include>
@@ -290,7 +297,7 @@
                     </control>
                     <control type="label">
                         <include>MultiWidgetsSubLabelDefinition</include>
-                        <label>$INFO[VideoPlayer.Year,,  •  ]$INFO[Player.Duration(mins),, $LOCALIZE[31102]]</label>
+                        <label>$INFO[VideoPlayer.Year,,  •  ]$INFO[Player.Duration(mins),, $LOCALIZE[31102]]$INFO[VideoPlayer.Rating,  •  ,]</label>
                         <visible>!String.IsEmpty(Player.Duration)</visible>
                     </control>
                 </control>
@@ -299,7 +306,7 @@
                     <orientation>vertical</orientation>
                     <visible>Player.HasAudio</visible>
                     <itemgap>15</itemgap>
-                    <include condition="Skin.HasSetting(homemenu.netflix)">IntentButton</include>
+                    <include condition="Skin.HasSetting(homemenu.netflix) + !Skin.HasSetting(home.netflix.clearlogo) | Skin.HasSetting(homemenu.clean.flix)">IntentButton</include>
                     <control type="textbox">
                         <include condition="Skin.HasSetting(homemenu.netflix)">MultiWidgetsPlotLabelDefinitionNetflix</include>
                         <include condition="!Skin.HasSetting(homemenu.netflix)">MultiWidgetsPlotLabelDefinition</include>
@@ -400,19 +407,19 @@
         <!-- VideoWindow -->
         <control type="group">
             <visible>Player.HasVideo</visible>
-            <height>307</height>
+            <height>305</height>
             <width>500</width>
             <include content="def_top" condition="Skin.HasSetting(homemenu.netflix)">
-                <param name="top" value="454" />
+                <param name="top" value="455" />
             </include>
             <include content="def_top" condition="!Skin.HasSetting(homemenu.netflix)">
-                <param name="top" value="69" />
+                <param name="top" value="70" />
             </include>
             <control type="image">
                 <texture colordiffuse="Fallback" border="4" background="true">common/diffuse_box.png</texture>
             </control>
             <control type="videowindow">
-                <height>307</height>
+                <height>305</height>
                 <width>500</width>
                 <animation type="Hidden" reversible="false">
                     <effect type="fade" start="100" end="0" time="150" />

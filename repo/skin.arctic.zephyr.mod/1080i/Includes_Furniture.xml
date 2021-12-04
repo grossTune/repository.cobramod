@@ -67,14 +67,15 @@
     </include>
 
     <include name="scrollbar_hor">
-        <param name="showscroll" default="true" />
         <param name="jumpbar" default="true"/>
         <param name="onup" default="50"/>
         <param name="bottom" default="200"/>
+        <param name="left" default="SidePad"/>
+        <param name="width" default="1760"/>
         <definition>
         <onback>50</onback>
-        <left>SidePad</left>
-        <width>1760</width>
+        <left>$PARAM[left]</left>
+        <width>$PARAM[width]</width>
         <bottom>$PARAM[bottom]</bottom>
         <orientation>horizontal</orientation>
         <height>8</height>
@@ -83,7 +84,7 @@
         <texturesliderbackground border="4" colordiffuse="Dark4">scrollbar/scrollv.png</texturesliderbackground>
         <texturesliderbar border="4" colordiffuse="Dark3">scrollbar/scrollv.png</texturesliderbar>
         <texturesliderbarfocus border="4" colordiffuse="Dark2">scrollbar/scrollv.png</texturesliderbarfocus>
-        <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus($PARAM[scrollid]) + [!Container.Scrolling | [$PARAM[showscroll] + [Control.IsVisible(510) | Control.IsVisible(520) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(523) | Control.IsVisible(524)]]]">Conditional</animation>
+        <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus($PARAM[scrollid]) + !Container.Scrolling">Conditional</animation>
         </definition>
     </include>
 
@@ -110,6 +111,8 @@
         <control type="group">
             <animation effect="slide" start="0,0" end="-120,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(290000).HasFocus()">Conditional</animation>
             <animation effect="slide" start="0,0" end="32,0" time="400" reversible="true" tween="quadratic" easing="out" condition="ControlGroup(290000).HasFocus()">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,15" time="0" condition="Control.Isvisible(521) | Control.Isvisible(522) | Control.Isvisible(523)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,10" time="0" condition="Control.Isvisible(510)">Conditional</animation>
             <left>1931</left>
             <top>215</top>
             <control type="image">
@@ -209,7 +212,8 @@
                             <animation effect="fade" start="100" end="33" time="0" condition="true">Conditional</animation>
                         </control>
                     </focusedlayout>
-                    <include>NewJumpbar</include>
+                    <include condition="Skin.HasSetting(use.old.jumpbar)">OldJumpbar</include>
+                    <include condition="!Skin.HasSetting(use.old.jumpbar)">NewJumpbar</include>
                 </control>
             </control>
         </control>
@@ -691,8 +695,8 @@
                     <centertop>50%</centertop>
                     <height>64</height>
                     <left>10</left>
-                    <texture colordiffuse="Dark1">flags/3D.png</texture>
-                    <visible>ListItem.IsStereoscopic</visible>
+                    <texture colordiffuse="Dark1">flags/3d.png</texture>
+                    <visible>ListItem.IsStereoscopic | String.Contains(ListItem.Filenameandpath,.3D)</visible>
                 </control>
                 <control type="image">
                     <width>84</width>
@@ -701,8 +705,7 @@
                     <left>10</left>
                     <texture colordiffuse="Dark1">flags/$VAR[ImageBluray].png</texture>
                     <aspectratio aligny="center" align="center">keep</aspectratio>
-                    <visible>Skin.HasSetting(furniture.flagicons)</visible>
-                    <visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
+                    <visible>Skin.HasSetting(furniture.flagicons) + !String.Contains(ListItem.Filenameandpath,.3D) + [String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
                 </control>
                 <control type="image" description="WEB-DL">
                     <width>84</width>
@@ -1127,8 +1130,8 @@
                     <centertop>50%</centertop>
                     <height>64</height>
                     <left>10</left>
-                    <texture>flags/color/other/3D.png</texture>
-                    <visible>ListItem.IsStereoscopic</visible>
+                    <texture>flags/color/other/3d.png</texture>
+                    <visible>ListItem.IsStereoscopic | String.Contains(ListItem.Filenameandpath,.3D)</visible>
                 </control>
                 <control type="image">
                     <width>84</width>
@@ -1137,8 +1140,7 @@
                     <left>10</left>
                     <texture>flags/color/other/$VAR[ImageBluray].png</texture>
                     <aspectratio aligny="center" align="center">keep</aspectratio>
-                    <visible>Skin.HasSetting(furniture.flagicons)</visible>
-                    <visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
+                    <visible>Skin.HasSetting(furniture.flagicons) + !String.Contains(ListItem.Filenameandpath,.3D) + [String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
                 </control>
                 <control type="image" description="WEB-DL">
                     <width>84</width>
@@ -1560,8 +1562,8 @@
                 <centertop>50%</centertop>
                 <height>64</height>
                 <left>10</left>
-                <texture colordiffuse="Dark1">flags/3D.png</texture>
-                <visible>ListItem.IsStereoscopic</visible>
+                <texture colordiffuse="Dark1">flags/3d.png</texture>
+                <visible>ListItem.IsStereoscopic | String.Contains(ListItem.Filenameandpath,.3D)</visible>
             </control>
             <control type="image" description="Bluray">
                 <width>84</width>
@@ -1570,8 +1572,7 @@
                 <left>10</left>
                 <texture colordiffuse="Dark1">flags/$VAR[ImageBluray].png</texture>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray)</visible>
-                <visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray) + !String.Contains(ListItem.Filenameandpath,.3D) + [String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
             </control>
             <control type="image" description="WEB-DL">
                 <width>84</width>
@@ -1588,8 +1589,7 @@
                 <left>10</left>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
                 <texture colordiffuse="Dark1">flags/hddvd.png</texture>
-                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray)</visible>
-                <visible>String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray) + String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image" description="DVD">
                 <width>84</width>
@@ -1598,8 +1598,7 @@
                 <left>10</left>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
                 <texture colordiffuse="Dark1">flags/dvd.png</texture>
-                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray)</visible>
-                <visible>String.Contains(ListItem.FilenameAndPath,dvd) + !String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray) + String.Contains(ListItem.FilenameAndPath,dvd) + !String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image" description="IMDB Top 250">
                 <width>84</width>
@@ -2006,8 +2005,8 @@
                 <centertop>50%</centertop>
                 <height>64</height>
                 <left>10</left>
-                <texture>flags/color/other/3D.png</texture>
-                <visible>ListItem.IsStereoscopic</visible>
+                <texture>flags/color/other/3d.png</texture>
+                <visible>ListItem.IsStereoscopic | String.Contains(ListItem.Filenameandpath,.3D)</visible>
             </control>
             <control type="image" description="Bluray">
                 <width>84</width>
@@ -2016,8 +2015,7 @@
                 <left>10</left>
                 <texture>flags/color/other/$VAR[ImageBluray].png</texture>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray)</visible>
-                <visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !Skin.HasSetting(furniture.flags.bluray) + !String.Contains(ListItem.Filenameandpath,.3D) + [String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,blu-ray)]</visible>
             </control>
             <control type="image" description="WEB-DL">
                 <width>84</width>
@@ -2398,8 +2396,8 @@
                 <width>64</width>
                 <height>64</height>
                 <left>10</left>
-                <texture colordiffuse="Dark1">flags/3D.png</texture>
-                <visible>Container(9500).ListItem.IsStereoscopic</visible>
+                <texture colordiffuse="Dark1">flags/3d.png</texture>
+                <visible>Container(9500).ListItem.IsStereoscopic | String.Contains(Container(9500).ListItem.Filenameandpath,.3D)</visible>
             </control>
             <control type="image">
                 <width>84</width>
@@ -2408,8 +2406,7 @@
                 <left>10</left>
                 <texture colordiffuse="Dark1">flags/$VAR[ImageBluray].png</texture>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons)</visible>
-                <visible>[String.Contains(Container(9500).ListItem.FilenameAndPath,bluray) | String.Contains(Container(9500).ListItem.FilenameAndPath,bdrip) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd25) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd50) | String.Contains(Container(9500).ListItem.FilenameAndPath,blu-ray)]</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.Contains(ListItem.Filenameandpath,.3D) + [String.Contains(Container(9500).ListItem.FilenameAndPath,bluray) | String.Contains(Container(9500).ListItem.FilenameAndPath,bdrip) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd25) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd50) | String.Contains(Container(9500).ListItem.FilenameAndPath,blu-ray)]</visible>
             </control>
             <control type="image" description="WEB-DL">
                 <width>84</width>
@@ -2754,8 +2751,8 @@
                 <width>48</width>
                 <height>64</height>
                 <left>10</left>
-                <texture>flags/color/other/3D.png</texture>
-                <visible>Container(9500).ListItem.IsStereoscopic</visible>
+                <texture>flags/color/other/3d.png</texture>
+                <visible>Container(9500).ListItem.IsStereoscopic | String.Contains(Container(9500).ListItem.Filenameandpath,.3D)</visible>
             </control>
             <control type="image">
                 <width>84</width>
@@ -2763,9 +2760,8 @@
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture>flags/color/other/$VAR[ImageBluray9500].png</texture>
-                <visible>Skin.HasSetting(furniture.flagicons)</visible>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <visible>[String.Contains(Container(9500).ListItem.FilenameAndPath,bluray) | String.Contains(Container(9500).ListItem.FilenameAndPath,bdrip) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd25) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd50) | String.Contains(Container(9500).ListItem.FilenameAndPath,blu-ray)]</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.Contains(ListItem.Filenameandpath,.3D) + [String.Contains(Container(9500).ListItem.FilenameAndPath,bluray) | String.Contains(Container(9500).ListItem.FilenameAndPath,bdrip) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd25) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd50) | String.Contains(Container(9500).ListItem.FilenameAndPath,blu-ray)]</visible>
             </control>
             <control type="image" description="WEB-DL">
                 <width>84</width>
@@ -2781,8 +2777,7 @@
                 <height>64</height>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
                 <texture>flags/color/other/dvd.png</texture>
-                <visible>Skin.HasSetting(furniture.flagicons)</visible>
-                <visible>String.Contains(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + String.Contains(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image">
                 <width>64</width>
@@ -2790,8 +2785,7 @@
                 <height>64</height>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
                 <texture>flags/color/other/dvd.png</texture>
-                <visible>Skin.HasSetting(furniture.flagicons)</visible>
-                <visible>String.Contains(Container(9500).ListItem.FilenameAndPath,dvd) + !String.Contains(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + String.Contains(Container(9500).ListItem.FilenameAndPath,dvd) + !String.Contains(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image">
                 <width>84</width>
@@ -2948,6 +2942,7 @@
         <value condition="Window.IsVisible(DialogButtonMenu.xml)">special://skin/extras/icons/power.png</value>
         <value condition="Window.IsVisible(script-globalsearch.xml)">special://skin/extras/icons/search.png</value>
         <value condition="Window.IsVisible(service-CoreELEC-Settings-mainWindow.xml)">special://skin/extras/icons/coreelec.png</value>
+        <value condition="Window.IsVisible(service-LibreELEC-Settings-mainWindow.xml)">special://skin/extras/icons/libreelec.png</value>
         <value condition="Window.IsVisible(DialogFavourites.xml)">special://skin/extras/icons/favourites.png</value>
         <value condition="Window.IsVisible(EventLog.xml)">special://skin/extras/icons/antenna.png</value>
         <value condition="Window.IsVisible(1104) | Window.IsVisible(1105)">special://skin/extras/icons/director.png</value>
@@ -2978,7 +2973,7 @@
         <value condition="Container.Content(addons)">special://skin/extras/icons/addons.png</value>
         <value condition="String.Contains(Container.FolderPath,videodb://musicvideos/,Left)">special://skin/extras/icons/musicvideo.png</value>
         <value condition="Window.IsVisible(script-skin_helper_service-ColorPicker.xml)">special://skin/extras/icons/wand.png</value>
-        <value condition="Window.IsVisible(Custom_1297_Blur.xml)">special://skin/extras/icons/wand.png</value>
+        <value condition="Window.IsVisible(Custom_Blur.xml)">special://skin/extras/icons/wand.png</value>
         <value condition="Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml)">special://skin/extras/icons/livetv.png</value>
         <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)">special://skin/extras/icons/songs.png</value>
         <value condition="Window.IsVisible(MyPics.xml)">special://skin/extras/icons/pictures.png</value>
@@ -3010,10 +3005,11 @@
 
     <variable name="MainHeaderLabel">
         <value condition="Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
-        <value condition="Window.IsVisible(Custom_1297_Blur.xml)">$LOCALIZE[31580]</value>
+        <value condition="Window.IsVisible(Custom_Blur.xml)">$LOCALIZE[31580]</value>
         <value condition="Window.IsVisible(script-skin_helper_service-ColorPicker.xml)">$LOCALIZE[31238] $VAR[ColorPickerHeaderLabel,$LOCALIZE[31520] ,]</value>
         <value condition="Window.IsVisible(script-globalsearch.xml)">$LOCALIZE[31324] $INFO[Window.Property(GlobalSearch.SearchString),","]</value>
         <value condition="Window.IsVisible(service-CoreELEC-Settings-mainWindow.xml)">$LOCALIZE[31472]</value>
+        <value condition="Window.IsVisible(service-LibreELEC-Settings-mainWindow.xml)">$LOCALIZE[31643]</value>        
         <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml)">$LOCALIZE[20011]</value>
         <value condition="Window.IsVisible(DialogButtonMenu.xml)">$LOCALIZE[33060]</value>
         <value condition="Window.IsVisible(DialogFavourites.xml)">$LOCALIZE[1036]</value>
@@ -3044,7 +3040,7 @@
         <value condition="Window.IsVisible(MyPics.xml)">$LOCALIZE[1]</value>
         <value condition="Window.IsVisible(MyPrograms.xml)">$LOCALIZE[0]</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
-        <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
+        <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[13350]</value>
         <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
         <value condition="Window.IsVisible(1104) + String.IsEqual(Window(1104).Property(content),1)">$LOCALIZE[31211]</value>
         <value condition="Window.IsVisible(1104) + String.IsEqual(Window(1104).Property(content),2)">$LOCALIZE[31210]</value>
@@ -3067,9 +3063,17 @@
         <value condition="!String.IsEmpty(Container.NumItems) + Window.IsVisible(AddonBrowser.xml) + Integer.IsGreater(System.AddonUpdateCount,0)">[COLOR=$VAR[ColorHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]  •  [COLOR=$VAR[ColorHighlight]]$INFO[System.AddonUpdateCount,,[/COLOR] $LOCALIZE[24043]]$INFO[Control.GetLabel(3),  •  ,]</value>
         <value condition="!String.IsEmpty(Container.NumItems) + !Window.IsVisible(home)">[COLOR=$VAR[ColorHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]$INFO[Control.GetLabel(3),  •  ,]</value>
         <value condition="!String.IsEmpty(Container(9500).NumItems) + !Window.IsVisible(home)">[COLOR=$VAR[ColorHighlight]]$INFO[Container(9500).NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),tvshows)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(episodes.UnWatched)][/COLOR] $LOCALIZE[31215]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),tvshows)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(TVshows.Count)][/COLOR] $LOCALIZE[36903]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(episodes.UnWatched)][/COLOR] $LOCALIZE[31215]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),movies)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(Movies.UnWatched)][/COLOR] $LOCALIZE[31215]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + String.Contains(Container(300).ListItem.Property(path),Videos) + String.Contains(Container(300).ListItem.Property(path),playlists) + String.Contains(Container(300).ListItem.Property(path),.xsp) + Integer.IsGreater(Window(Home).Property(Playlist_Count), 0) + String.Contains(Container(300).ListItem.Property(widgetType),musicvideos)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(Playlist_count)][/COLOR] $LOCALIZE[20389]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(Playlist_Unwatched)][/COLOR] $LOCALIZE[31215]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + String.Contains(Container(300).ListItem.Property(path),Videos) + String.Contains(Container(300).ListItem.Property(path),playlists) + String.Contains(Container(300).ListItem.Property(path),.xsp) + Integer.IsGreater(Window(Home).Property(Playlist_Count), 0)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(Playlist_count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(Playlist_Unwatched)][/COLOR] $LOCALIZE[31215]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + String.Contains(Container(300).ListItem.Property(path),Videos) + String.Contains(Container(300).ListItem.Property(path),playlists) + String.Contains(Container(300).ListItem.Property(path),.xsp) + Integer.IsGreater(Window(Home).Property(Playlist_TVShowCount), 0)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Playlist_TVShowCount)][/COLOR] $LOCALIZE[36903]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Playlist_Episodes)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(Playlist_UnwatchedEpisodes)][/COLOR] $LOCALIZE[31215]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + String.Contains(Container(300).ListItem.Property(path),Videos) + String.Contains(Container(300).ListItem.Property(path),playlists) + !String.Contains(Container(300).ListItem.Property(path),.xsp)">[COLOR=$VAR[ColorHighlight]]$INFO[Container(9986).NumItems][/COLOR] $LOCALIZE[20012]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),settings)">[COLOR=$VAR[ColorHighlight]]$INFO[System.CPUUsage][/COLOR] $LOCALIZE[31487]  •  [COLOR=$VAR[ColorHighlight]]$INFO[System.memory(used.percent)][/COLOR] $LOCALIZE[31398]  •  [COLOR=$VAR[ColorHighlight]]$INFO[System.TotalSpace][/COLOR] $LOCALIZE[13277]  •  [COLOR=$VAR[ColorHighlight]]$INFO[System.UsedSpacePercent][/COLOR] $LOCALIZE[13277]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),videos)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(TVshows.Count)][/COLOR] $LOCALIZE[36903]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(MusicVideos.Count)][/COLOR] $LOCALIZE[20389]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),music) | [String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + String.Contains(Container(300).ListItem.Property(path),music) + !String.Contains(Container(300).ListItem.Property(path),musicvideo) + !String.Contains(Container(300).ListItem.Property(path),plugin://)]">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Music.ArtistsCount)][/COLOR] $LOCALIZE[133]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Music.AlbumsCount)][/COLOR] $LOCALIZE[132]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + String.Contains(Container(300).ListItem.Property(path),Favourites) + System.AddonIsEnabled(script.favourites)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(favourite.count)][/COLOR] $LOCALIZE[1036]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),musicvideos) | [String.StartsWith(Container(300).ListItem.Property(path),ActivateWindow) + [String.Contains(Container(300).ListItem.Property(path),library://video/musicvideos/) | String.Contains(Container(300).ListItem.Property(path),library://music/musicvideos/)]]">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(MusicVideos.Count)][/COLOR] $LOCALIZE[20389]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(Home).Property(MusicVideos.UnWatched)][/COLOR] $LOCALIZE[31215]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),livetv) + String.IsEmpty(Pvr.BackendChannels)">$INFO[Pvr.BackendName]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),livetv) + !String.IsEmpty(Pvr.BackendChannels)">$INFO[Pvr.BackendName]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(defaultID),weather)">[COLOR=$VAR[ColorHighlight]]$INFO[Weather.Temperature,,[/COLOR]  ]$INFO[Window(Weather).Property(Location)]</value>
@@ -3098,8 +3102,8 @@
             <animation effect="slide" start="0" end="0,60" time="0" condition="$EXP[HomeIsModernMultiWidgets] + Window.IsVisible(Home.xml)">Conditional</animation>
             <centertop>120</centertop>
             <centerleft>50%</centerleft>
-            <width>400</width>
-            <height>100</height>
+            <height>102</height>
+            <width>500</width>
             <fadetime>ClearArtFadetime</fadetime>
             <aspectratio align="center">keep</aspectratio>
             <texture background="true">$VAR[ClearLogoTopVar]</texture>
@@ -3166,6 +3170,8 @@
                 </control>
             </control>
             <control type="group">
+                <include condition="Skin.HasSetting(home.showheader)">Header_PlaylistsCountItem</include>
+                <include condition="Skin.HasSetting(home.showheader)">Header_PlayListStats</include>
                 <control type="label">
                     <centertop>24</centertop>
                     <include condition="Skin.HasSetting(furniture.logo) + !Window.IsVisible(home) + !Window.IsVisible(settings) + !Window.IsVisible(skinsettings) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(tvchannels) + !Window.IsVisible(tvrecordings) + !Window.IsVisible(tvguide) + !Window.IsVisible(tvsearch) + !Window.IsVisible(tvtimers)">HeaderLabelWidthLogo</include>
@@ -3444,6 +3450,7 @@
     <include name="Furniture_NowPlaying">
         <control type="grouplist">
             <include>Animation.FurnitureVisible</include>
+            <visible>String.IsEmpty(Window(home).Property(TrailerFade))</visible>
             <visible>!Skin.HasSetting(furniture.nowplaying)</visible>
             <visible>!Window.IsVisible(DialogVolumeBar.xml) | Player.Muted</visible>
             <visible>!Window.IsVisible(DialogNotification.xml)</visible>
@@ -3568,7 +3575,7 @@
             <itemgap>3</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
             <include>AlbumCount</include>
-            <include content="Def_Flags_Furniture_Small">
+            <include content="Def_Flags_Furniture_Small" condition="!Skin.HasSetting(furniture.hide.musicrating)">
                 <param name="Star" value="FlagstarSong" />
                 <param name="visible" value="!Skin.HasSetting(furniture.numericrating)" />
                 <param name="color" value="Dark1" />
@@ -3584,7 +3591,7 @@
                 <font>Flag</font>
                 <textcolor>Dark1</textcolor>
                 <visible>!String.IsEmpty(ListItem.UserRating)</visible>
-                <visible>Skin.HasSetting(furniture.numericrating)</visible>
+                <visible>Skin.HasSetting(furniture.numericrating) + !Skin.HasSetting(furniture.hide.musicrating)</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -3597,13 +3604,46 @@
                 <textcolor>Dark1</textcolor>
                 <visible>!Skin.HasSetting(furniture.flagicons)</visible>
             </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BitRate,  •  ,kbps]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate) + !Skin.HasSetting(furniture.hide.bitrate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.Samplerate,  •  ,kHz]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate) + Skin.HasSetting(furniture.show.samplerate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BPM,  •  ,bpm]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM) + Skin.HasSetting(furniture.show.bpm)</visible>
+            </control>
             <control type="image">
                 <width min="20" max="100">auto</width>
                 <height>54</height>
                 <centertop>50%</centertop>
                 <texture colordiffuse="Dark1" fallback="flags/fallback.png">$INFO[ListItem.FileExtension,flags3/audio/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.FileExtension)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.FileExtension) + !Skin.HasSetting(furniture.hide.fileextension)</visible>
             </control>
             <control type="image">
                 <width>48</width>
@@ -3613,13 +3653,79 @@
                 <aspectratio align="left">scale</aspectratio>
                 <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.AudioCodec)</visible>
             </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate) + !Skin.HasSetting(furniture.hide.bitrate)</visible>
+                <control type="label">                
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BitRate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/bit.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate) + Skin.HasSetting(furniture.show.samplerate)</visible>
+                <control type="label">
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.Samplerate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/khz.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM) + Skin.HasSetting(furniture.show.bpm)</visible>
+                <control type="label">                
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BPM]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture>flags/other/bpm.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
             <control type="image">
                 <width>48</width>
                 <height>64</height>
                 <centertop>50%</centertop>
                 <texture colordiffuse="Dark1">flags/time.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>!String.IsEmpty(ListItem.Duration)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration) + [Control.IsVisible(500) | Control.IsVisible(503) | Control.IsVisible(51)]</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -3630,6 +3736,7 @@
                 <label>$INFO[ListItem.Duration(mins:ss),, $LOCALIZE[31102]  ]</label>
                 <font>Flag</font>
                 <textcolor>Dark2</textcolor>
+                <visible>!String.IsEmpty(ListItem.Duration) + [Control.IsVisible(500) | Control.IsVisible(503) | Control.IsVisible(51)]</visible>
             </control>
             <control type="label">
                 <visible>Skin.HasSetting(thumbnails.moreinfos) + !String.IsEqual(ListItem.DBType,album)</visible>
@@ -3678,7 +3785,7 @@
             <itemgap>3</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
             <include>AlbumCount</include>
-            <include content="Def_Flags_Furniture_Small">
+            <include content="Def_Flags_Furniture_Small" condition="!Skin.HasSetting(furniture.hide.musicrating)">
                 <param name="Star" value="FlagstarSong" />
                 <param name="visible" value="!Skin.HasSetting(furniture.numericrating)" />
             </include>
@@ -3693,7 +3800,7 @@
                 <font>Flag</font>
                 <textcolor>Dark1</textcolor>
                 <visible>!String.IsEmpty(ListItem.UserRating)</visible>
-                <visible>Skin.HasSetting(furniture.numericrating)</visible>
+                <visible>Skin.HasSetting(furniture.numericrating) + !Skin.HasSetting(furniture.hide.musicrating)</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -3706,13 +3813,46 @@
                 <textcolor>Dark1</textcolor>
                 <visible>!Skin.HasSetting(furniture.flagicons)</visible>
             </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BitRate,  •  ,kbps]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate) + !Skin.HasSetting(furniture.hide.bitrate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.Samplerate,  •  ,kHz]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate) + Skin.HasSetting(furniture.show.samplerate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BPM,  •  ,bpm]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM) + Skin.HasSetting(furniture.show.bpm)</visible>
+            </control>
             <control type="image">
                 <width min="20" max="100">auto</width>
                 <height>54</height>
                 <centertop>50%</centertop>
                 <texture fallback="flags/fallback.png">$INFO[ListItem.FileExtension,flags/color/audio/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.FileExtension)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.FileExtension) + !Skin.HasSetting(furniture.hide.fileextension)</visible>
             </control>
             <control type="image">
                 <width>48</width>
@@ -3722,13 +3862,79 @@
                 <aspectratio align="left">scale</aspectratio>
                 <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.AudioCodec)</visible>
             </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate) + !Skin.HasSetting(furniture.hide.bitrate)</visible>
+                <control type="label">
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BitRate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/bit.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate) + Skin.HasSetting(furniture.show.samplerate)</visible>
+                <control type="label">
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.Samplerate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/khz.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM) + Skin.HasSetting(furniture.show.bpm)</visible>
+                <control type="label">                
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BPM]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture>flags/other/bpm.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
             <control type="image">
                 <width>48</width>
                 <height>64</height>
                 <centertop>50%</centertop>
                 <texture colordiffuse="Dark1">flags/time.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>!String.IsEmpty(ListItem.Duration) + !Control.IsVisible(523)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration) + [Control.IsVisible(500) | Control.IsVisible(503) | Control.IsVisible(51)]</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -3739,7 +3945,7 @@
                 <label>$INFO[ListItem.Duration(mins:ss),, $LOCALIZE[31102]  ]</label>
                 <font>Flag</font>
                 <textcolor>Dark1</textcolor>
-                <visible>!String.IsEmpty(ListItem.Duration) + !Control.IsVisible(523)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration) + [Control.IsVisible(500) | Control.IsVisible(503) | Control.IsVisible(51)]</visible>
             </control>
             <control type="label">
                 <visible>Skin.HasSetting(thumbnails.moreinfos) + !String.IsEqual(ListItem.DBType,album)</visible>
@@ -3810,6 +4016,39 @@
                 <textcolor>Dark1</textcolor>
                 <visible>!Skin.HasSetting(furniture.flagicons)</visible>
             </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BitRate,  •  ,kbps]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.Samplerate,  •  ,kHz]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BPM,  •  ,bpm]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM)</visible>
+            </control>
             <control type="image">
                 <width min="20" max="100">auto</width>
                 <height>54</height>
@@ -3825,6 +4064,72 @@
                 <texture colordiffuse="Dark1">flags/audio.png</texture>
                 <aspectratio align="left">scale</aspectratio>
                 <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.AudioCodec)</visible>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate)</visible>
+                <control type="label">                
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BitRate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/bit.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate)</visible>
+                <control type="label">
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.Samplerate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>                   
+                    <texture colordiffuse="Dark1">flags/other/khz.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM)</visible>
+                <control type="label">                
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BPM]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture>flags/other/bpm.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
             </control>
             <control type="label">
                 <visible>Skin.HasSetting(thumbnails.moreinfos) + !Container.Content(albums)</visible>
@@ -3882,6 +4187,39 @@
                 <textcolor>Dark1</textcolor>
                 <visible>!Skin.HasSetting(furniture.flagicons)</visible>
             </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BitRate,  •  ,kbps]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.Samplerate,  •  ,kHz]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate)</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.BPM,  •  ,bpm]</label>
+                <font>Flag</font>
+                <textcolor>Dark1</textcolor>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM)</visible>
+            </control>
             <control type="image">
                 <width min="20" max="100">auto</width>
                 <height>54</height>
@@ -3897,6 +4235,72 @@
                 <texture colordiffuse="Dark1">flags/audio.png</texture>
                 <aspectratio align="left">scale</aspectratio>
                 <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.AudioCodec)</visible>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BitRate)</visible>
+                <control type="label">
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BitRate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/bit.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.Samplerate)</visible>
+                <control type="label">
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.Samplerate]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="Dark1">flags/other/khz.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <control type="grouplist">
+                <width min="20" max="100">auto</width>
+                <height>64</height>
+                <orientation>vertical</orientation>
+                <centertop>57%</centertop>
+                <itemgap>-17</itemgap>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.BPM)</visible>
+                <control type="label">                
+                    <height>28</height>
+                    <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$INFO[ListItem.BPM]</label>
+                    <font>Small20</font>
+                    <textcolor>Dark1</textcolor>
+                </control>
+                <control type="image">
+                    <height>44</height> 
+                    <aspectratio>keep</aspectratio>
+                    <texture>flags/other/bpm.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
             </control>
             <control type="label">
                 <visible>Skin.HasSetting(thumbnails.moreinfos) + !Container.Content(albums)</visible>

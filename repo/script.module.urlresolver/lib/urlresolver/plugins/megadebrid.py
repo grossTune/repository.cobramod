@@ -39,7 +39,7 @@ class MegaDebridResolver(UrlResolver):
         self.net = common.Net()
         scheme = 'https' if self.get_setting('use_https') == 'true' else 'http'
         self.base_url = '%s://www.mega-debrid.eu/api.php' % (scheme)
-        self.headers = {'User-Agent': common.SMU_USER_AGENT}
+        self.headers = {'User-Agent': common.SMR_USER_AGENT}
 
     # UrlResolver methods
     def get_media_url(self, host, media_id):

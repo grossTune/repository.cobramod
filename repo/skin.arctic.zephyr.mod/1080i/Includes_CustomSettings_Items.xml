@@ -51,6 +51,42 @@
             <onclick>Close</onclick>
             <include condition="String.IsEqual(Skin.String(BackgroundBrightness),40)">Item_Selected</include>
         </item>
+        <item>
+            <label>$NUMBER[45]%</label>
+            <onclick>Skin.SetString(BackgroundBrightness,45)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightness),45)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[50]%</label>
+            <onclick>Skin.SetString(BackgroundBrightness,50)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightness),50)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[55]%</label>
+            <onclick>Skin.SetString(BackgroundBrightness,55)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightness),55)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[60]%</label>
+            <onclick>Skin.SetString(BackgroundBrightness,60)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightness),60)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[65]%</label>
+            <onclick>Skin.SetString(BackgroundBrightness,65)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightness),65)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[70]%</label>
+            <onclick>Skin.SetString(BackgroundBrightness,70)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightness),70)">Item_Selected</include>
+        </item>
     </include>
 
     <include name="CustomSettings_Items.BackgroundBrightnessBlur">
@@ -133,6 +169,18 @@
             <onclick>Close</onclick>
             <include condition="String.IsEqual(Skin.String(BackgroundBrightnessBlur),60)">Item_Selected</include>
         </item>
+        <item>
+            <label>$NUMBER[65]%</label>
+            <onclick>Skin.SetString(BackgroundBrightnessBlur,65)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightnessBlur),65)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[70]%</label>
+            <onclick>Skin.SetString(BackgroundBrightnessBlur,70)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(BackgroundBrightnessBlur),70)">Item_Selected</include>
+        </item>
     </include>
 
     <include name="CustomSettings_Items.FadeNetflixPreview">
@@ -174,6 +222,52 @@
             <include condition="String.IsEqual(Skin.String(FadeNetflixPreview),100)">Item_Selected</include>
         </item>
     </include>
+    
+    <include name="CustomSettings_Items.NetflixTrailerDelay">
+        <item>
+            <label>$NUMBER[3]</label>
+            <property name="SettingsName">$LOCALIZE[303]</property>
+            <onclick>Skin.SetString(NetflixTrailerDelay,3)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),3)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[5] - $LOCALIZE[571]</label>
+            <onclick>Skin.SetString(NetflixTrailerDelay,5)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),5) | String.IsEmpty(Skin.String(NetflixTrailerDelay))">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[7]</label>
+            <onclick>Skin.SetString(NetflixTrailerDelay,7)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),7)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[9]</label>
+            <onclick>Skin.SetString(NetflixTrailerDelay,9)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),9)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[11]</label>
+            <onclick>Skin.SetString(NetflixTrailerDelay,11)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),11)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[13]</label>
+            <onclick>Skin.SetString(NetflixTrailerDelay,13)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),13)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[15]</label>
+            <onclick>Skin.SetString(NetflixTrailerDelay,15)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(NetflixTrailerDelay),15)">Item_Selected</include>
+        </item>
+    </include>
 
     <include name="CustomSettings_Items.DefWidgetLimit">
         <item>
@@ -194,6 +288,18 @@
             <onclick>Skin.SetString(WidgetLimit,50)</onclick>
             <onclick>Close</onclick>
             <include condition="String.IsEqual(Skin.String(WidgetLimit),50)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[100]</label>
+            <onclick>Skin.SetString(WidgetLimit,100)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(WidgetLimit),100)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[200]</label>
+            <onclick>Skin.SetString(WidgetLimit,200)</onclick>
+            <onclick>Close</onclick>
+            <include condition="String.IsEqual(Skin.String(WidgetLimit),200)">Item_Selected</include>
         </item>
         <item>
             <label>$LOCALIZE[37030]</label>
@@ -541,6 +647,60 @@
             <include>UpdateLitebox</include>
             <onclick>Close</onclick>
             <include condition="String.IsEqual(Skin.String(colorbox_blursize),30)">Item_Selected</include>
+        </item>
+    </include>
+    
+    <include name="CustomSettings_Items.BlurRadiusEmbuaryHelper">
+        <item>
+            <label>$NUMBER[1]</label>
+            <property name="SettingsName">$LOCALIZE[31538]</property>
+            <include content="DefUpdateBlur"><param name="number" value="1" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),1)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[2]</label>
+            <include content="DefUpdateBlur"><param name="number" value="2" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),2)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[3]</label>
+            <include content="DefUpdateBlur"><param name="number" value="3" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),3)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[4]</label>
+            <include content="DefUpdateBlur"><param name="number" value="4" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),4)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[5]</label>
+            <include content="DefUpdateBlur"><param name="number" value="5" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),5)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[6]</label>
+            <include content="DefUpdateBlur"><param name="number" value="6" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),6)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[7]</label>
+            <include content="DefUpdateBlur"><param name="number" value="7" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),7)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[8]</label>
+            <include content="DefUpdateBlur"><param name="number" value="8" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),8)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[9]</label>
+            <include content="DefUpdateBlur"><param name="number" value="9" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),9)">Item_Selected</include>
+        </item>
+        <item>
+            <label>$NUMBER[10]</label>
+            <include content="DefUpdateBlur"><param name="number" value="10" /></include>
+            <include condition="String.IsEqual(Skin.String(BlurRadius),10)">Item_Selected</include>
         </item>
     </include>
     

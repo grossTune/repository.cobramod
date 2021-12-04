@@ -45,7 +45,7 @@ class MailRuResolver(UrlResolver):
                 source = helpers.pick_source(sources)
                 source = source.encode('utf-8') if helpers.PY2 else source
                 if source.startswith("//"):
-                    source = 'http:%s' % source
+                    source = 'https:%s' % source
                 return source + helpers.append_headers({'Cookie': response.get_headers(as_dict=True).get('Set-Cookie', '')})
             except:
                 raise ResolverError('No playable video found.')

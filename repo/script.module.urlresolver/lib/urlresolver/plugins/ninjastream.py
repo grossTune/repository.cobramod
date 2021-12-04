@@ -1,6 +1,6 @@
 """
 Plugin for UrlResolver
-Copyright (C) 2020 gujal
+Copyright (C) 2021 gujal
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,10 +18,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import re
 import json
-import codecs
 from six.moves import urllib_parse
 from urlresolver.plugins.lib import helpers
-from urlresolver.plugins.lib.jscrypto import jscrypto
 from urlresolver import common
 from urlresolver.resolver import UrlResolver, ResolverError
 

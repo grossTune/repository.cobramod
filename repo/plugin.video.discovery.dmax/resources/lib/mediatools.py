@@ -129,11 +129,11 @@ def LIBRARY_Worker(BroadCast_Idd, BroadCast_Name):
 				endTIMES = LOCALend.strftime('%d{0}%m{0}%y {1} %H{2}%M').format('.', '•', ':')
 			if startTIMES and endTIMES: Note_1 = translation(30629).format(str(startTIMES), str(endTIMES))
 			elif startTIMES and endTIMES is None: Note_1 = translation(30630).format(str(startTIMES))
-			if str(py2_enc(vid.get('rating'))) not in ['', 'None', '0', 'nicht definiert']:
-				EP_fsk = translation(30631).format(str(py2_enc(vid.get('rating'))))
+			if str(vid.get('rating')).isdigit():
+				EP_fsk = translation(30631).format(str(vid['rating'])) if str(vid.get('rating')) != '0' else translation(30632)
 			if EP_fsk == "" and 'contentRatings' in vid and vid['contentRatings'] and len(vid['contentRatings']) > 0:
-				if str(py2_enc(vid.get('contentRatings', {})[0].get('code', ''))) not in ['', 'None', '0', 'nicht definiert']:
-					EP_fsk = translation(30631).format(str(py2_enc(vid.get('contentRatings', {})[0].get('code', ''))))
+				if str(vid.get('contentRatings', {})[0].get('code', '')).isdigit():
+					EP_fsk = translation(30631).format(str(vid.get('contentRatings', {})[0].get('code', ''))) if str(vid.get('contentRatings', {})[0].get('code', '')) != '0' else translation(30632)
 			if vid.get('description', ''):
 				Note_2 = cleaning(vid['description']).replace('\n', '[CR]')
 			EP_plot = BroadCast_Name+'[CR]'+Note_1+Note_2

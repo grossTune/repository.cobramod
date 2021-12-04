@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.joyn" name="Joyn" version="2.3.8+matrix.1" provider-name="knaerzche, Maven">
+<addon id="plugin.video.joyn" name="Joyn" version="2.3.9+matrix.1" provider-name="knaerzche, Maven">
 	<requires>
 		<import addon="inputstream.adaptive" version="2.5.0"/>
 		<import addon="script.module.inputstreamhelper" version="0.4.4"/>
@@ -23,7 +23,6 @@
 		<license>GPL-2.0-only</license>
 		<forum>https://www.kodinerds.net/index.php/Thread/66679-Pre-Release-Joyn-VOD-Live/?postID=537817</forum>
 		<website>https://www.joyn.de/</website>
-		<email>knaerzche at gmail dot com</email>
 		<source>https://github.com/Maven85/plugin.video.joyn</source>
 		<assets>
 			<icon>resources/media/icon.png</icon>
@@ -34,6 +33,8 @@
 			<screenshot>resources/media/screenshot03.jpg</screenshot>
 		</assets>
 		<news>
+v2.3.9
+fixed HTML unescaping
 v2.3.8
 fixed login
 v2.3.7

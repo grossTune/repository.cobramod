@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-07-29 19:41+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2021-10-16 19:30+0000\n"
+"Last-Translator: Dmitry Petrov <dimakrm361@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-information-providers/metadata-universal/ru_ru/>\n"
 "Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 
 msgctxt "Addon Summary"
 msgid "Universal Movie Scraper"
@@ -106,7 +106,7 @@ msgstr "Источники жанров"
 
 msgctxt "#30027"
 msgid "Preferred Title Language"
-msgstr ""
+msgstr "Предпочитаемый язык заголовка"
 
 msgctxt "#30028"
 msgid "Trailer Sources"
@@ -130,7 +130,7 @@ msgstr "Получать сертификацию из"
 
 msgctxt "#30033"
 msgid "Preferred Certification Country"
-msgstr ""
+msgstr "Страна сертификации"
 
 msgctxt "#30034"
 msgid "Preferred Poster Language"
@@ -154,11 +154,11 @@ msgstr "Включить трейлеры с trakt.tv"
 
 msgctxt "#30040"
 msgid "Genre Language"
-msgstr ""
+msgstr "Язык жанров"
 
 msgctxt "#30041"
 msgid "Preferred Trailer Language"
-msgstr ""
+msgstr "Предпочитаемый язык трейлера"
 
 msgctxt "#30042"
 msgid "Get Tagline From"
@@ -166,7 +166,7 @@ msgstr "Получать слоган из"
 
 msgctxt "#30043"
 msgid "Preferred Tagline Language"
-msgstr ""
+msgstr "Предпочитаемый язык слогана"
 
 msgctxt "#30044"
 msgid "Get IMDb TOP250 Ranking"
@@ -178,7 +178,7 @@ msgstr "Получать аннотации с"
 
 msgctxt "#30046"
 msgid "Preferred Set (Collection) Name Language"
-msgstr ""
+msgstr "Желаемый язык имени набора (коллекции)"
 
 msgctxt "#30047"
 msgid "Poster Sources"
@@ -195,35 +195,35 @@ msgstr "Рейтинг"
 # empty strings from id 30101 to 30109
 msgctxt "#30110"
 msgid "Rating Generated Using"
-msgstr ""
+msgstr "Рейтинг создан с помощью"
 
 msgctxt "#30111"
 msgid "Also get ratings from IMDb"
-msgstr ""
+msgstr "Также получать оценки из IMDb"
 
 msgctxt "#30112"
 msgid "Also get ratings from Rotten Tomatoes"
-msgstr ""
+msgstr "Также получать оценки из Rotten Tomatoes"
 
 msgctxt "#30113"
 msgid "Also get ratings from MetaCritic"
-msgstr ""
+msgstr "Также получать оценки из MetaCritic"
 
 msgctxt "#30114"
 msgid "Also get ratings from themoviedb.org"
-msgstr ""
+msgstr "Также получать оценки из themoviedb.org"
 
 msgctxt "#30115"
 msgid "Use the Score Aggregated from"
-msgstr ""
+msgstr "Используется средняя оценка из"
 
 msgctxt "#30116"
 msgid "OMDB Api Key"
-msgstr ""
+msgstr "Ключ OMDB API"
 
 msgctxt "#30117"
 msgid "Please Register Api Key on omdbapi.com and Add it Above"
-msgstr ""
+msgstr "Пожалуйста получите ключ в omdbapi.com и добавьте его ниже"
 
 msgctxt "#30118"
 msgid "Also get non-default Rotten Tomatoes ratings"
@@ -259,11 +259,11 @@ msgstr "Использовать систему поиска"
 
 msgctxt "#30304"
 msgid "Secondary Search Language (In Addition to en-us)"
-msgstr ""
+msgstr "Дополнительный язык поиска (в дополнение к en-us)"
 
 msgctxt "#30305"
 msgid "Include All Movie Categories"
-msgstr ""
+msgstr "Искать во всех категориях фильмов"
 
 msgctxt "#30306"
 msgid "Warning:"
@@ -275,7 +275,7 @@ msgstr "Точность поиска значительно снизится, �
 
 msgctxt "#30308"
 msgid "Preferred Search Language"
-msgstr ""
+msgstr "Предпочитаемый язык поиска"
 
 msgctxt "#30400"
 msgid "Plot"
@@ -303,7 +303,7 @@ msgstr "Включить обложки с fanart.tv"
 
 msgctxt "#30504"
 msgid "Enable posters from IMDb"
-msgstr ""
+msgstr "Включить постеры с IMDB"
 
 msgctxt "#30700"
 msgid "Artwork"
