@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.cobramod"
+		name="[COLOR gold]C[/COLOR]obra [COLOR gold]M[/COLOR]od [COLOR gold]R[/COLOR]epository"
+		version="1.0.6"
+		provider-name="Cobra@Anto">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository">
+		<!-- Do not forget to bump add-on version when changing paths to force a repo refresh -->
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com//cobramod/repository.cobramod/main/repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repository CobraMod</summary>
+        <description>Addons for CobraMod Builds</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
