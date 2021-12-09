@@ -22,7 +22,7 @@ BUILDFILE = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main
 # 0 being every startup of kodi
 UPDATECHECK = 0
 # Text File with apk info in it.  Leave as 'http://' to ignore
-APKFILE = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/APK/CobraModv19.3.1.apk'
+APKFILE = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/APK/CobraMod.apk'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
 YOUTUBETITLE = ''
 YOUTUBEFILE = 'http://'
