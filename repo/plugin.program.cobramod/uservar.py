@@ -60,7 +60,7 @@ SPACER = '='
 
 # You can edit these however you want, just make sure that you have a %s in each of the
 # THEME's so it grabs the text from the menu item
-COLOR1 = 'gold'
+COLOR1 = 'red'
 COLOR2 = 'wite'
 # Primary menu items   / {0} is the menu item and is required
 THEME1 = u'[COLOR {color1}][I]([COLOR {color1}][B]CobraMod[/B][/COLOR][COLOR {color2}]Wizard[COLOR {color1}])[/I][/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
@@ -100,7 +100,7 @@ REPOID = 'repository.cobramod'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
 REPOADDONXML = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/zips/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL = 'https://raw.githubusercontent.com//cobramod/repository.cobramod/main/repo/zips/'
+REPOZIPURL = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/main/repo/zips/'
 #########################################################
 
 #########################################################
