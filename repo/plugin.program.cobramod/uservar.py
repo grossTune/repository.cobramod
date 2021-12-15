@@ -60,7 +60,7 @@ SPACER = '='
 
 # You can edit these however you want, just make sure that you have a %s in each of the
 # THEME's so it grabs the text from the menu item
-COLOR1 = 'red'
+COLOR1 = 'gold'
 COLOR2 = 'wite'
 # Primary menu items   / {0} is the menu item and is required
 THEME1 = u'[COLOR {color1}][I]([COLOR {color1}][B]CobraMod[/B][/COLOR][COLOR {color2}]Wizard[COLOR {color1}])[/I][/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
@@ -114,7 +114,7 @@ NOTIFICATION = 'https://raw.githubusercontent.com/cobramod/repository.cobramod/m
 HEADERTYPE = 'Text'
 # Font size of header
 FONTHEADER = 'Font14'
-HEADERMESSAGE = '[COLOR gold][B]CobraMod[/B][/COLOR]Wizard'
+HEADERMESSAGE = '[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od[COLOR gold]W[/COLOR]izard'
 # url to image if using Image 424x180
 HEADERIMAGE = 'http://'
 # Font for Notification Window

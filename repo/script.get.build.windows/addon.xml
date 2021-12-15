@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.get.build.windows" name="[B][COLORgolden]Cobra Mod Installer windows[/COLOR][/B]" version="0.0.4+matrix" provider-name="cobra by TEAM.STUBE">
+<addon id="script.get.build.windows" name="[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od[COLOR gold]I[/COLOR]nstaller [COLOR gold]W[/COLOR]indows" version="19.3.1+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -10,7 +10,7 @@
         <summary lang="de_DE">Cobra Mod Installer by STUBEBOX</summary>
         <description lang="de_DE"></description>
         <language></language>
-        <platform>all</platform>
+        <platform>windows-x86_64</platform>
         <license>unlicense</license>
         <forum></forum>
         <website></website>

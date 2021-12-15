@@ -16,7 +16,7 @@ import time
 ADDON = xbmcaddon.Addon()
 kodilogging.config()
 try:
-    version = int(str(urllib.request.urlopen(base64.b64decode("aHR0cHM6Ly9naXRodWIuY29tL2NvYnJhbW9kL3JlcG9zaXRvcnkuY29icmFtb2QvYmxvYi9tYWluL3JlcG8vd2luZG93cy92ZXJzaW9u").decode("utf-8")).read().decode("utf-8") ))
+    version = int(str(urllib.request.urlopen(base64.b64decode("aHR0cHM6Ly9yZXBvc3R1YmVib3guZ2VhdGl2ZS5kZS9Lb2RpL0J1aWxkL3ZlcnNpb24=").decode("utf-8")).read().decode("utf-8") ))
 except:
     sys.exit()
 

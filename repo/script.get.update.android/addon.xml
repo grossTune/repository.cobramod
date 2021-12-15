@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.get.update.android" name="[COLOR gold]Cobra Mod Update Android[/COLOR]" version="19.3.0" provider-name="cobra by TEAM.STUBE">
+<addon id="script.get.update.android" name="[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od [COLOR gold]U[/COLOR]pdate [COLOR gold]A[/COLOR]ndroid" version="19.3.1+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -10,7 +10,7 @@
         <summary lang="de_DE">Update Cobra Mod</summary>
         <description lang="de_DE"></description>
         <language></language>
-        <platform>all</platform>
+        <platform>android-armv7</platform>
         <license>unlicense</license>
         <forum></forum>
         <website></website>
