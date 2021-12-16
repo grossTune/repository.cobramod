@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol></defaultcontrol>
+	<onload>RunScript(script.artistslideshow)</onload>
+	<controls>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<texture>special://skin/extras/backgrounds/SKINDEFAULT.jpg</texture>
+		</control>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+		</control>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+			<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+		</control>
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>600</fadetime>
+			<loop>yes</loop>
+			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
+		</control>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<visible>!String.IsEmpty(Visualisation.Name)</visible>
+		</control>
+		<control type="group">
+		<visible>[Skin.HasSetting(AlwaysShowMusicInfo) | Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
+			<control type="image">
+				<left>0</left>
+				<top>865</top>
+				<width>100%</width>
+				<height>250</height>
+				<texture>backgrounds/gradient_floor.png</texture>
+				<visible>!Player.ShowInfo</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>865</top>
+				<width>100%</width>
+				<height>250</height>
+				<texture>backgrounds/gradient_floor.png</texture>
+				<visible>!Player.ShowInfo</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>100%</width>
+				<height>100%</height>
+				<texture>backgrounds/gradient_floor.png</texture>
+				<visible>!Skin.HasSetting(MusicOSDHideInfo)</visible>
+				<visible>Player.ShowInfo</visible>
+			</control>
+			<control type="image" id="1">
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
+				<visible>!Skin.HasSetting(Shadow)</visible>
+				<left>5</left>
+				<top>938</top>
+				<width>1920</width>
+				<height>64</height>
+				<texture colordiffuse="black">menu_bar_views.png</texture>
+			</control>
+			<control type="image" id="1">
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
+				<left>0</left>
+				<top>935</top>
+				<width>1920</width>
+				<height>64</height>
+				<texture colordiffuse="$INFO[Skin.String(color.500)]">menu_bar_views.png</texture>
+			</control>
+			<control type="group">
+				<left>20</left>
+				<width>1880</width>
+				<control type="group">
+					<top>-79</top>
+					<control type="label">
+						<visible>!Skin.HasSetting(Shadow)</visible>
+						<left>3</left>
+						<top>903</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album]</label>
+						<scroll>true</scroll>
+						<visible>String.IsEmpty(Player.Art(logo))</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>900</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album]</label>
+						<scroll>true</scroll>
+						<visible>String.IsEmpty(Player.Art(logo))</visible>
+					</control>
+					<control type="label">
+						<visible>!Skin.HasSetting(Shadow)</visible>
+						<left>3</left>
+						<top>953</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Player.Title]</label>
+						<scroll>true</scroll>
+						<visible>String.IsEmpty(Player.Art(logo))</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>950</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Player.Title]</label>
+						<scroll>true</scroll>
+						<visible>String.IsEmpty(Player.Art(logo))</visible>
+					</control>
+					<control type="label">
+						<visible>!Skin.HasSetting(Shadow)</visible>
+						<left>3</left>
+						<top>903</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album]</label>
+						<scroll>true</scroll>
+						<visible>Skin.HasSetting(MusicOSDHideInfo)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>900</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album]</label>
+						<scroll>true</scroll>
+						<visible>Skin.HasSetting(MusicOSDHideInfo)</visible>
+					</control>
+					<control type="label">
+						<visible>!Skin.HasSetting(Shadow)</visible>
+						<left>3</left>
+						<top>953</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Player.Title]</label>
+						<scroll>true</scroll>
+						<visible>Skin.HasSetting(MusicOSDHideInfo)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>950</top>
+						<width>700</width>
+						<height>60</height>
+						<font>menu.title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Player.Title]</label>
+						<scroll>true</scroll>
+						<visible>Skin.HasSetting(MusicOSDHideInfo)</visible>
+					</control>
+					<control type="group">
+					<visible>!Skin.HasSetting(MusicOSDHideInfo)</visible>
+					<visible>Player.ShowInfo</visible>
+						<control type="textbox">
+							<visible>!Skin.HasSetting(Shadow)</visible>
+							<left>793</left>
+							<top>723</top>
+							<width>750</width>
+							<height>283</height>
+							<font>label</font>
+							<align>justify</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>$INFO[MusicPlayer.Property(Album_Description)]</label>
+							<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
+							<visible>!String.IsEmpty(MusicPlayer.Property(Album_Description))</visible>
+						</control>
+						<control type="textbox">
+							<left>790</left>
+							<top>720</top>
+							<width>750</width>
+							<height>283</height>
+							<font>label</font>
+							<align>justify</align>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>$INFO[MusicPlayer.Property(Album_Description)]</label>
+							<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
+							<visible>!String.IsEmpty(MusicPlayer.Property(Album_Description))</visible>
+						</control>
+						<control type="image">
+							<left>280r</left>
+							<top>825</top>
+							<width>170</width>
+							<height>170</height>
+							<texture>backgrounds/cdart.png</texture>
+							<animation effect="rotate" end="-360" center="auto" time="12000" loop="true" reversible="false" condition="true">Conditional</animation>
+							<visible>!String.IsEmpty(Player.Art(thumb))</visible>
+						</control>
+						<control type="image">
+							<left>280r</left>
+							<top>825</top>
+							<width>170</width>
+							<height>170</height>
+							<texture>$INFO[Player.Art(discart)]</texture>
+							<animation effect="rotate" end="-360" center="auto" time="12000" loop="true" reversible="false" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<left>195r</left>
+							<top>735</top>
+							<width>195</width>
+							<height>262</height>
+							<texture>$INFO[Player.Art(thumb)]</texture>
+							<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						</control>
+						<control type="group">
+							<left>413r</left>
+							<top>1025</top>
+							<control type="image">
+								<visible>!Skin.HasSetting(Shadow)</visible>
+								<left>236</left>
+								<top>3</top>
+								<width>86</width>
+								<height>33</height>
+								<texture colordiffuse="black">$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<left>233</left>
+								<top>0</top>
+								<width>86</width>
+								<height>33</height>
+								<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<visible>!Skin.HasSetting(Shadow)</visible>
+								<left>330</left>
+								<top>3</top>
+								<width>86</width>
+								<height>33</height>
+								<texture colordiffuse="black">$INFO[VideoPlayer.AudioChannels,flags/audio/,.png]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<left>327</left>
+								<top>0</top>
+								<width>86</width>
+								<height>33</height>
+								<texture>$INFO[VideoPlayer.AudioChannels,flags/audio/,.png]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+						</control>
+					</control>
+				</control>
+				<control type="progress">
+					<left>790</left>
+					<top>935</top>
+					<width>1090</width>
+					<height>5</height>
+					<info>Player.ProgressCache</info>
+					<midtexture colordiffuse="button.nf">backgrounds/white.png</midtexture>
+				</control>
+				<control type="progress">
+					<left>790</left>
+					<top>935</top>
+					<width>1090</width>
+					<height>5</height>
+					<info>Player.Progress</info>
+					<texturebg colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturebg>
+				</control>
+				<control type="group">
+					<visible>!Player.ShowInfo</visible>
+					<control type="label">
+						<left>790</left>
+						<top>925</top>
+						<width>700</width>
+						<height>60</height>
+						<font>breadcrumb.secondary</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$LOCALIZE[31964]: $INFO[MusicPlayer.Time(hh:mm:ss)]</label>
+						<visible>!String.IsEmpty(MusicPlayer.Time)</visible>
+					</control>
+					<control type="label">
+						<left>700r</left>
+						<top>925</top>
+						<width>700</width>
+						<height>60</height>
+						<font>breadcrumb.secondary</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$LOCALIZE[31049]: $INFO[MusicPlayer.FinishTime] Uhr</label>
+						<visible>!String.IsEmpty(MusicPlayer.FinishTime)</visible>
+					</control>
+					<control type="label">
+						<left>700r</left>
+						<top>995</top>
+						<width>700</width>
+						<height>60</height>
+						<font>breadcrumb.secondary</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$LOCALIZE[31965]: $INFO[MusicPlayer.Duration]</label>
+						<visible>!String.IsEmpty(MusicPlayer.Duration)</visible>
+					</control>
+					<control type="label">
+						<left>790</left>
+						<top>995</top>
+						<width>700</width>
+						<height>60</height>
+						<font>breadcrumb.secondary</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$LOCALIZE[19031]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

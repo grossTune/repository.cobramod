@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol>5</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <left>287</left>
+        <top>198</top>
+    </coordinates>
+    <include>Animation.Dialog</include>
+    <controls>
+       <control type="label">
+							<left>30</left>
+							<width>950</width>
+							<height>55</height>
+							<font>font15</font>
+							<label>by Adrian</label>
+							<textcolor>FF787878</textcolor>
+						</control>
+        <control type="group">
+            <width>960</width>
+            <height>680</height>
+            <include>Animation_DialogPopupVisible</include>
+            <include content="DialogBackgroundCommons">
+                <param name="DialogBackgroundWidth" value="1380" />
+                <param name="DialogBackgroundHeight" value="684" />
+                <param name="DialogHeaderLabel" value="" />
+                <param name="DialogHeaderId" value="20" />
+            </include>
+            <control type="grouplist" id="3">
+                <description>Categories Area</description>
+                <left>29</left>
+                <top>50</top>
+                <width>400</width>
+                <height>550</height>
+                <itemgap>0</itemgap>
+                <orientation>vertical</orientation>
+                <onleft>9000</onleft>
+                <onright>5</onright>
+                <onup>3</onup>
+                <ondown>3</ondown>
+            </control>
+            <control type="button" id="10">
+                <description>Default Category Button</description>
+                <height>60</height>
+                <width>310</width>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>20</textoffsetx>
+                <textcolor>$VAR[ColorTextVar]</textcolor>
+            </control>
+            <control type="image">
+                <left>410</left>
+                <top>80</top>
+                <width>900</width>
+                <height>590</height>
+                <texture border="40">buttons/dialogbutton-nofo.png</texture>
+            </control>
+            <control type="grouplist" id="5">
+                <description>control area</description>
+                <left>429</left>
+                <top>30</top>
+                <width>917</width>
+                <height>550</height>
+                <onleft>3</onleft>
+                <onright>9000</onright>
+                <onup>5</onup>
+                <ondown>5</ondown>
+            </control>
+            <control type="button" id="7">
+                <description>Default Button</description>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="8">
+                <description>Default RadioButton</description>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="spincontrolex" id="9">
+                <description>Default SpinControlex</description>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="image" id="11">
+                <description>separator image</description>
+                <height>3</height>
+                <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+            </control>
+            <control type="edit" id="12">
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="sliderex" id="13">
+                <description>Default Slider</description>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="label" id="14">
+                <description>Default Label</description>
+                <include>DefaultSettingLabel</include>
+	            <height>50</height>
+	            <aligny>top</aligny>
+	            <font>font15_title</font>
+            </control>
+            <control type="grouplist" id="9000">
+                <right>10</right>
+                <top>600</top>
+                <align>right</align>
+                <orientation>horizontal</orientation>
+                <width>1355</width>
+                <height>300</height>
+                <itemgap>10</itemgap>
+                <onleft>5</onleft>
+                <onright>3</onright>
+                <control type="button" id="28">
+                    <description>OK Button</description>
+                    <width>430</width>
+                    <label>Its Ok</label>
+                    <align>center</align>
+                    <font>font15_title</font>
+                    <texturenofocus colordiffuse="33787878" border="5">listselect_fo.png</texturenofocus>
+                </control>
+                <control type="button" id="29">
+                    <description>Cancel Button</description>
+                    <width>430</width>
+                    <label>409</label>
+                    <align>center</align>
+                    <font>font15_title</font>
+                    <texturenofocus colordiffuse="33787878" border="5">listselect_fo.png</texturenofocus>
+                </control>
+                <control type="button" id="30">
+                    <description>Default Button</description>
+                    <width>430</width>
+                    <label>409</label>
+                    <align>center</align>
+                    <font>font15_title</font>
+                    <texturenofocus colordiffuse="33787878" border="5">listselect_fo.png</texturenofocus>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>
+

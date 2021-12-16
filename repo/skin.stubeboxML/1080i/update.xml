@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">300</defaultcontrol>
+    <controls>
+        <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="slide" start="-960,0" end="0,0" time="300" />
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="slide" start="0,0" end="960,0" time="300" />
+                <effect type="fade" start="100" end="0" time="300" />
+            </animation>
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <height>100%</height>
+            <control type="image">
+                <left>0</left>
+                <top>0</top>
+                <right>0</right>
+                <bottom>0</bottom>
+                <width>100%</width>
+                <height>100%</height>
+                <texture>black.png</texture>
+            </control>
+
+            <!-- Screen 1 -->
+            <control type="group">
+                <visible>String.IsEqual(Window.Property(Mode),update)</visible>
+                <animation type="Visible" reversible="false">
+                    <effect type="slide" start="-960,0" end="0,0" time="300" />
+                    <effect type="fade" start="0" end="100" time="300" />
+                </animation>
+                <animation type="Hidden" reversible="false">
+                    <effect type="slide" start="0,0" end="960,0" time="300" />
+                    <effect type="fade" start="100" end="0" time="300" />
+                </animation>
+                <control type="radiobutton" id="400">
+                    <visible>String.IsEqual(Window.Property(BackIcon),back)</visible>
+                    <radioposx>50</radioposx><radioposy>35</radioposy><radiowidth>30</radiowidth><radioheight>30</radioheight>
+                    <left>1790</left><width>130</width><height>100</height><label></label>
+                    <onup>300</onup><ondown>300</ondown><onleft>300</onleft><onright>300</onright>
+                    <textureradioonfocus>back.png</textureradioonfocus><textureradioonnofocus colordiffuse="grey">back.png</textureradioonnofocus>
+                    <textureradioofffocus>back.png</textureradioofffocus><textureradiooffnofocus colordiffuse="grey">back.png</textureradiooffnofocus>
+                </control>
+                <control type="radiobutton" id="400">
+                    <visible>String.IsEqual(Window.Property(BackIcon),power)</visible>
+                    <radioposx>50</radioposx><radioposy>35</radioposy><radiowidth>30</radiowidth><radioheight>30</radioheight>
+                    <left>1790</left><width>130</width><height>100</height><label></label>
+                    <onup>300</onup><ondown>300</ondown><onleft>300</onleft><onright>300</onright>
+                    <textureradioonfocus>power.png</textureradioonfocus><textureradioonnofocus colordiffuse="grey">power.png</textureradioonnofocus>
+                    <textureradioofffocus>power.png</textureradioofffocus><textureradiooffnofocus colordiffuse="grey">power.png</textureradiooffnofocus>
+                </control>
+                <!-- Caption and label -->
+                <control type="group">
+                    <control type="label">
+                        <top>330</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <font>font_MainMenu</font>
+                        <label>$INFO[Window.Property(Caption)]</label>
+                        <align>center</align>
+                    </control>
+                    <control type="label">
+                        <top>410</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <label>$INFO[Window.Property(Line1)]</label>
+                        <align>center</align>
+                        <visible>!String.IsEmpty(Window.Property(Line1))</visible>
+                    </control>
+                    <control type="label">
+                        <top>460</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <label>$INFO[Window.Property(Line2)]</label>
+                        <align>center</align>
+                        <visible>!String.IsEmpty(Window.Property(Line2))</visible>
+                    </control>
+                    <control type="label">
+                        <top>510</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <label>$INFO[Window.Property(Line3)]</label>
+                        <align>center</align>
+                        <visible>!String.IsEmpty(Window.Property(Line3))</visible>
+                    </control>
+                    <control type="label">
+                        <top>560</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <label>$INFO[Window.Property(Line4)]</label>
+                        <align>center</align>
+                        <visible>!String.IsEmpty(Window.Property(Line4))</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <control type="button" id="300">
+                        <top>610</top>
+                        <left>660</left>
+                        <width>600</width>
+                        <height>125</height>
+                        <align>center</align>
+                        <label>$INFO[Window.Property(Button1)]</label>
+                        <onup>400</onup>
+                        <ondown>301</ondown>
+                        <onleft>301</onleft>
+                        <onright>301</onright>
+                        <visible>!String.IsEmpty(Window.Property(Button1))</visible>
+                    </control>
+                    <control type="button" id="301">
+                        <top>710</top>
+                        <left>660</left>
+                        <width>600</width>
+                        <height>125</height>
+                        <align>center</align>
+                        <label>$INFO[Window.Property(Button2)]</label>
+                        <onup>300</onup>
+                        <ondown>400</ondown>
+                        <onleft>300</onleft>
+                        <onright>300</onright>
+                        <visible>!String.IsEmpty(Window.Property(Button2))</visible>
+                    </control>
+                </control>
+            </control>
+
+            <!-- Screen 2 (Progress) -->
+            <control type="group">
+                <visible>String.IsEqual(Window.Property(Mode),progress)</visible>
+                <animation type="Visible" reversible="false">
+                    <effect type="slide" start="-960,0" end="0,0" time="300" />
+                    <effect type="fade" start="0" end="100" time="300" />
+                </animation>
+                <animation type="Hidden" reversible="false">
+                    <effect type="slide" start="0,0" end="960,0" time="300" />
+                    <effect type="fade" start="100" end="0" time="300" />
+                </animation>
+                <control type="radiobutton" id="300">
+                    <visible>String.IsEqual(Window.Property(BackIcon),back)</visible>
+                    <radioposx>50</radioposx><radioposy>35</radioposy><radiowidth>30</radiowidth><radioheight>30</radioheight>
+                    <left>1790</left><width>130</width><height>100</height><label></label>
+                    <onup>300</onup><ondown>300</ondown><onleft>300</onleft><onright>300</onright>
+                    <textureradioonfocus>back.png</textureradioonfocus><textureradioonnofocus colordiffuse="grey">back.png</textureradioonnofocus>
+                    <textureradioofffocus>back.png</textureradioofffocus><textureradiooffnofocus colordiffuse="grey">back.png</textureradiooffnofocus>
+                </control>
+                <control type="radiobutton" id="300">
+                    <visible>String.IsEqual(Window.Property(BackIcon),power)</visible>
+                    <radioposx>50</radioposx><radioposy>35</radioposy><radiowidth>30</radiowidth><radioheight>30</radioheight>
+                    <left>1790</left><width>130</width><height>100</height><label></label>
+                    <onup>300</onup><ondown>300</ondown><onleft>300</onleft><onright>300</onright>
+                    <textureradioonfocus>power.png</textureradioonfocus><textureradioonnofocus colordiffuse="grey">power.png</textureradioonnofocus>
+                    <textureradioofffocus>power.png</textureradioofffocus><textureradiooffnofocus colordiffuse="grey">power.png</textureradiooffnofocus>
+                </control>
+                <!-- Caption and label -->
+                <control type="group">
+                    <control type="label">
+                        <top>430</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <font>font_MainMenu</font>
+                        <label>Update verfügbar.</label>
+                        <align>center</align>
+                    </control>
+                    <control type="label">
+                        <top>510</top>
+                        <left>260</left>
+                        <width>1400</width>
+                        <height>100</height>
+                        <label>Bitte warte wärend das Update heruntergeladen wird.</label>
+                        <align>center</align>
+                    </control>
+                </control>
+                <control type="label">
+                    <top>1000</top>
+                    <left>20</left>
+                    <width>1880</width>
+                    <height>20</height>
+                    <label>$INFO[Window.Property(ProgressLabel)]</label>
+                </control>
+                <control type="progress" id="401">
+                    <top>1040</top>
+                    <left>20</left>
+                    <width>1880</width>
+                    <height>20</height>
+                    <texturebg border="3" colordiffuse="60FFFFFF">white.png</texturebg>
+                    <midtexture colordiffuse="FFAF2820">white.png</midtexture>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="HomeVertical">
+		<control type="group">
+			<top>120</top>
+			<include>MainMenuVertical</include>
+			<control type="button">
+				<width>10</width>
+				<height>960</height>
+				<texturefocus />
+				<onfocus>SetFocus(9010)</onfocus>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+		</control>
+		<!--<control type="group" id="9003">
+			<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath)) | String.IsEqual(Container(9000).ListItem.Property(widget),weather) | String.IsEqual(Container(9000).ListItem.Property(widget),settings)</visible>
+			<control type="group">
+				<include>skinshortcuts-template-widget-vertical</include>
+			</control>
+		</control>-->
+		<include condition="system.getbool(lookandfeel.enablerssfeeds)">rssfeed</include>
+	</include>
+	<include name="HomeHorizontal">
+		<control type="group">
+			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml)] + !$EXP[isInfoDialog]</visible>
+			<!--<animation effect="slide" tween="cubic" time="400" start="0,130" end="0,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="200" start="0,0" end="0,130" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="cubic" time="400" start="0,130" end="0,0" reversible="false">Visible</animation>
+			<animation effect="slide" tween="cubic" time="200" start="0,0" end="0,130" reversible="false">Hidden</animation>
+			<animation effect="slide" start="0,0" end="0,-15" time="0" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>-->
+			<include>MainMenuHorizontal</include>
+		</control>
+				<control type="label">
+					<left>100 </left>
+					<top>-415</top>
+					<width>821</width>
+					<height>30</height>
+					<font>font15</font>
+			<label>$INFO[VideoPlayer.Title]</label>
+				</control>
+				<control type="label">
+					<left>100 </left>
+					<top>-415</top>
+					<width>821</width>
+					<height>30</height>
+					<font>font15</font>
+			<label>[B]$INFO[VideoPlayer.ChannelName : VideoPlayer.Title][/B]</label>
+				</control>
+				<control type="label">
+					<left>53</left>
+					<top>100</top>
+					<width>721</width>
+					<height>100</height>
+					<font>font15</font>
+			<label>$INFO[System.Date] • $INFO[System.Time]</label>
+			</control>
+		<control type="group">
+			<top>1070</top>
+			<control type="button">
+				<width>1920</width>
+				<height>10</height>
+				<texturefocus />
+				<onfocus>SetFocus(9010)</onfocus>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Player.HasVideo + !Window.IsActive(script-globalsearch.xml)</visible>
+			<include>VisibleFadeAnimation</include>
+			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowClose</animation>
+			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0" condition="!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0" condition="!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowClose</animation>
+			<animation effect="slide" end="0,610" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+			<animation effect="slide" end="425,-30" time="320" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+			<animation effect="slide" end="-410,0" time="320" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.Contains(Container(9000).ListItem.Property(widgetStyle),Extended) + ControlGroup(90010).HasFocus">Conditional</animation>
+			<animation effect="slide" end="-410,0" time="320" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.Contains(Container(9000).ListItem.Property(widgetStyle.2),Extended) + ControlGroup(90020).HasFocus">Conditional</animation>
+			<animation effect="fade" start="100" end="0" condition="[!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ControlGroup(90020).HasFocus] | [!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ControlGroup(90010).HasFocus + !String.IsEqual(Container(9000).ListItem.Property(widgetStyle),List) + [!String.IsEmpty(Container(9000).ListItem.Property(widgetPanelInfo))]]">Conditional</animation>
+			<control type="image">
+				<width>1920</width>
+				<height>600</height>
+				<texture>gradient_floor.png</texture>
+				<visible>Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
+			</control>
+		</control>
+		<include condition="system.getbool(lookandfeel.enablerssfeeds)">rssfeed</include>
+	</include>
+	<include name="rssfeed">
+		<control type="group">
+			<animation effect="slide" end="2500,0" time="240">WindowClose</animation>
+			<animation effect="slide" start="1920,0" end="0,0" delay="300" time="240" condition="!window.previous(startup)">WindowOpen</animation>
+			<animation effect="slide" start="1920" end="0" time="240">VisibleChange</animation>
+			<animation effect="slide" start="1920,0" end="0,0" delay="800" time="480" condition="window.previous(startup)">WindowOpen</animation>
+			<top>1035</top>
+			<control type="group">
+				<control type="label">
+					<left>1885</left>
+					<width>40</width>
+					<height>40</height>
+					<label>y</label>
+					<font>IconTiny</font>
+					<textcolor>$VAR[ColorHighlightVar]</textcolor>
+				</control>
+				<control type="rss">
+					<description>RSS feed</description>
+					<left>15</left>
+					<height>30</height>
+					<width>1853</width>
+					<font>font12</font>
+					<urlset>1</urlset>
+					<textcolor>$VAR[ColorHighlightVar]</textcolor>
+					<titlecolor>$VAR[ColorHighlightVar]</titlecolor>
+					<headlinecolor>$VAR[ColorTextVar]</headlinecolor>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

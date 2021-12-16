@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">100</defaultcontrol>
+	<controls>
+		<control type="slider">
+			<description>Seek Slider</description>
+			<left>810</left>
+			<top>930</top>
+			<width>1090</width>
+			<height>20</height>
+			<action>seek</action>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+		</control>
+		<control type="image" id="1">
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
+			<visible>!Skin.HasSetting(Shadow)</visible>
+			<left>3</left>
+			<top>938</top>
+			<width>1920</width>
+			<height>64</height>
+			<texture colordiffuse="black">menu_bar_views.png</texture>
+		</control>
+		<control type="image" id="1">
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
+			<left>0</left>
+			<top>935</top>
+			<width>1920</width>
+			<height>64</height>
+			<texture colordiffuse="$INFO[Skin.String(color.500)]">menu_bar_views.png</texture>
+		</control>
+		<control type="group">
+			<left>20</left>
+			<width>1880</width>
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
+			<control type="group">
+				<visible>!Skin.HasSetting(Shadow)</visible>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<control type="image" id="1">
+					<left>-7</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture flipx="true" colordiffuse="black">osd/next.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>87</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture flipx="true" colordiffuse="black">osd/forward.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>182</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/pause.png</texture>
+					<visible>!Player.Paused</visible>
+				</control>
+				<control type="image" id="1">
+					<left>182</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/play.png</texture>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="image" id="1">
+					<left>277</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/stop.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>372</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/forward.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>467</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/next.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>562</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/info.png</texture>
+					<visible>!Skin.HasSetting(VideoOSDHideInfo)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(Shadow)</visible>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="image" id="1">
+					<left>-7</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/play.png</texture>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="image" id="1">
+					<left>-7</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/pause.png</texture>
+					<visible>!Player.Paused</visible>
+				</control>
+				<control type="image" id="1">
+					<left>87</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/stop.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>182</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/channels.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>277</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/guide.png</texture>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="image" id="1">
+					<left>372</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/info.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>467</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/video.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>562</left>
+					<top>953</top>
+					<width>110</width>
+					<height>110</height>
+					<texture colordiffuse="black">osd/audio.png</texture>
+				</control>
+				
+			</control>
+			
+			
+			<control type="grouplist" id="100">
+				<left>-10</left>
+				<top>950</top>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onleft>207</onleft>
+				<onright>207</onright>
+				<orientation>horizontal</orientation>
+				<itemgap>-15</itemgap>
+				<defaultcontrol always="true">202</defaultcontrol>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<control type="button" id="200">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus flipx="true" colordiffuse="$INFO[Skin.String(color.500)]">osd/next.png</texturefocus>
+					<texturenofocus flipx="true">osd/next.png</texturenofocus>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="201">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus flipx="true" colordiffuse="$INFO[Skin.String(color.500)]">osd/forward.png</texturefocus>
+					<texturenofocus flipx="true">osd/forward.png</texturenofocus>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="togglebutton" id="202">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<altlabel></altlabel>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/pause.png</texturefocus>
+					<texturenofocus>osd/pause.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/play.png</alttexturefocus>
+					<alttexturenofocus>osd/play.png</alttexturenofocus>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="203">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/stop.png</texturefocus>
+					<texturenofocus>osd/stop.png</texturenofocus>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="204">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/forward.png</texturefocus>
+					<texturenofocus>osd/forward.png</texturenofocus>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="205">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/next.png</texturefocus>
+					<texturenofocus>osd/next.png</texturenofocus>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<control type="button" id="206">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/info.png</texturefocus>
+					<texturenofocus>osd/info.png</texturenofocus>
+					<onclick>Info</onclick>
+					<visible>!Skin.HasSetting(VideoOSDHideInfo)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
+				</control>
+			</control>
+			<control type="grouplist" id="101">
+				<left>650</left>
+				<top>950</top>
+				<width>110</width>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onleft>205</onleft>
+				<onright>200</onright>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<control type="button" id="207">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/video.png</texturefocus>
+					<texturenofocus>osd/video.png</texturenofocus>
+					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+				</control>
+				<control type="button" id="208">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/audio.png</texturefocus>
+					<texturenofocus>osd/audio.png</texturenofocus>
+					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+				</control>
+				<control type="button" id="209">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/bookmarks.png</texturefocus>
+					<texturenofocus>osd/bookmarks.png</texturenofocus>
+					<onclick>ActivateWindow(VideoBookmarks)</onclick>
+				</control>
+				<control type="button" id="210">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/subtitle.png</texturefocus>
+					<texturenofocus>osd/subtitle.png</texturenofocus>
+					<onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
+				</control>
+			</control>
+			<control type="grouplist" id="100">
+				<left>-10</left>
+				<top>950</top>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onleft>308</onleft>
+				<onright>302</onright>
+				<orientation>horizontal</orientation>
+				<itemgap>-15</itemgap>
+				<defaultcontrol always="true">303</defaultcontrol>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="togglebutton" id="302">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<altlabel></altlabel>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/pause.png</texturefocus>
+					<texturenofocus>osd/pause.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/play.png</alttexturefocus>
+					<alttexturenofocus>osd/play.png</alttexturenofocus>
+					<onclick>PlayerControl(Play)</onclick>
+					<enable>Player.PauseEnabled</enable>
+				</control>
+				<control type="button" id="303">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/stop.png</texturefocus>
+					<texturenofocus>osd/stop.png</texturenofocus>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="304">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/channels.png</texturefocus>
+					<texturenofocus>osd/channels.png</texturenofocus>
+					<onclick>ActivateWindow(PVROSDChannels)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+				</control>
+				<control type="button" id="305">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/guide.png</texturefocus>
+					<texturenofocus>osd/guide.png</texturenofocus>
+					<onclick>ActivateWindow(PVRChannelGuide)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+				</control>
+				<control type="button" id="306">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/info.png</texturefocus>
+					<texturenofocus>osd/info.png</texturenofocus>
+					<onclick>Info</onclick>
+					<visible>!Skin.HasSetting(OSDHideInfo)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
+				</control>
+				<control type="button" id="307">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/video.png</texturefocus>
+					<texturenofocus>osd/video.png</texturenofocus>
+					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+				</control>
+				<control type="button" id="308">
+					<width>110</width>
+					<height>110</height>
+					<label></label>
+					<font></font>
+					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">osd/audio.png</texturefocus>
+					<texturenofocus>osd/audio.png</texturenofocus>
+					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

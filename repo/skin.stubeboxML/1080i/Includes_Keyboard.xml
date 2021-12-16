@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="DefaultDialogButton">
+        <param name="width">300</param>
+        <param name="height">100</param>
+        <param name="wrapmultiline">false</param>
+        <param name="font">font25_title</param>
+        <param name="onclick"></param>
+        <param name="visible">true</param>
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <label>$PARAM[label]</label>
+                <font>$PARAM[font]</font>
+                <textoffsetx>20</textoffsetx>
+                <onclick>$PARAM[onclick]</onclick>
+                <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
+                <align>center</align>
+                <texturefocus border="40" colordiffuse="FFAF2820">buttons/dialogbutton-fo.png</texturefocus>
+                <texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+                <visible>$PARAM[visible]</visible>
+            </control>
+        </definition>
+    </include>
+    <include name="KeyboardButton">
+        <width>120</width>
+        <height>120</height>
+        <textoffsety>27</textoffsety>
+        <texturefocus colordiffuse="FFAF2820">buttons/roundbutton-fo.png</texturefocus>
+        <texturenofocus />
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font45</font>
+    </include>
+</includes>

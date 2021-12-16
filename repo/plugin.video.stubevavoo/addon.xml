@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.stubevavoo"
+version="19.0.2a+matrix"
+name="VAVOO.Live.TV"
+provider-name="TEAM.STUBE">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.requests.stubebox" version="2.22.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="database.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en"></summary>
+  <description lang="en_GB"></description>
+  <assets>
+    <icon>lib/websocket/sv.png</icon>
+    <fanart>lib/websocket/svf.jpg</fanart>
+  </assets>
+</extension>
+</addon>
