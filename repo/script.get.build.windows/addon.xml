@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.get.build.windows" name="[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od [COLOR gold]I[/COLOR]nstaller [COLOR gold]W[/COLOR]indows" version="19.3.1+matrix" provider-name="cobra by TEAM.STUBE">
+<addon id="script.get.build.windows" name="[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od [COLOR gold]I[/COLOR]nstaller [COLOR gold]W[/COLOR]indows" version="19.3.2+matrix" provider-name="cobra by TEAM.STUBE">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
