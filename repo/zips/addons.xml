@@ -1947,7 +1947,7 @@ You can clone the project and host it in your own server.
             <screenshot>resources/screenshot-03.jpg</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.program.cobramod" name="[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od[COLOR gold]W[/COLOR]izard" version="2.0.9" provider-name="Cobra@Anto">
+</addon><addon id="plugin.program.cobramod" name="[COLOR gold]C[/COLOR]obra[COLOR gold]M[/COLOR]od [COLOR gold]W[/COLOR]izard" version="2.0.10" provider-name="Cobra@Anto">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.25.1+matrix.1" />
