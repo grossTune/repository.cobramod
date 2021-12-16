@@ -1,2 +1,0 @@
-cobra_android.zip filter=lfs diff=lfs merge=lfs -text
-cobra_update.zip filter=lfs diff=lfs merge=lfs -text
